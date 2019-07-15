@@ -1,0 +1,19 @@
+{{ mixins.list(
+  name = 'nav',
+  modifications = { wrap: '', item: '', link: '' },
+  list = [
+    { link: 'послуги', modItem: 'has-dropdown', item: mixins.list(
+      name = 'nav',
+      modifications = { wrap: 'nav--dropdown', item: '', link: '' },
+      list = [
+        { link: 'Web Site development' },
+        { link: 'Seo + Adwords' },
+        { link: 'Branding' },
+        { link: 'Smm' }
+      ]
+    ) },
+    { link: 'проекти' },
+    { link: 'про компанію' },
+    { link: 'зв’язок з нами' }
+  ]
+) }}

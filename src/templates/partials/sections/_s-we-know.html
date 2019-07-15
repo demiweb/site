@@ -1,0 +1,32 @@
+<!-- begin section -->
+<section class="section s-we-know pb-lg">
+  <div class="s-we-know__title-block title-block title-block--btn">
+    <div class="container">
+      <h2 class="h2">ми знаємо, що потрібно саме вам</h2>
+      <div class="title-block__word word">we know</div>
+      <div class="title-block__btn">
+        {{ mixins.btn(
+          title = 'замовити консультацію',
+          mod = 'btn--xl'
+        ) }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-8">
+      <div class="s-we-know__content">
+        <div class="s-we-know__title">
+          <h2 class="title title--ttn">Ми працюємо для вас, і ділимося своїм досвідом</h2>
+        </div>
+
+        <div class="s-we-know__text">Наша студія веб дизайну по розробці сайтів під ключ в Києві пропонує вам розробку сайтів будь-якої складності і тематики. Нашої компанії під силу виготовлення сайтів будь-якого типу: створення інтернет-магазину, сайт візитка, корпоративний сайт, сайт для бізнесу, сайт каталог, створення Лендінгем (landing page). Так, ви можете замовити у нас сайт будь-якого призначення в Вінниці, Києві та по всій Україні. У нас в команді працюють кращі розробники з усієї країни по веб-програмуванню, у яких більше 5 років досвіду і навичок створення якісного продукту.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="s-we-know__clients">
+    {% include "partials/_clients.html" %}
+  </div>
+</section>
+<!-- end section -->

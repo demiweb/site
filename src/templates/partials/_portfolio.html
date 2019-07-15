@@ -1,0 +1,80 @@
+{%set
+portfolio = [
+  {
+    subttl: 'Корпоративний сайт',
+    nmb: '01',
+    title: 'Olmaks',
+    text: 'Перший мультибрендовий салон електромобілей в Україні. 
+12 років досвіду на автомобільному ринку США дозволяють «Olmaks Group»
+купувати дійсно якісні електромобілі за вигідними цінами.',
+    img: '1.jpg',
+    logo: '1.png',
+    logoColor: '#10ad44'
+  },
+  {
+    subttl: 'Корпоративний сайт',
+    nmb: '02',
+    title: 'ABS',
+    text: 'Компанія «ABS» є офіціальним дистриб’ютором 
+ООО «МОНБАТ УКРАЇНА» - ексклюзивного представника акумуляторних 
+батарей ТМ «MONBAT»; ТМ «START»; ТМ «WINMAXX» та ТМ «MONOIL».',
+    img: '2.jpg',
+    logo: '2.png',
+    logoColor: '#d8232a'
+  },
+  {
+    subttl: 'Інтернет-магазин',
+    nmb: '03',
+    title: 'Mario',
+    text: 'Продукція під торговою маркою Маріо добре відома
+і затребувана на території України і за її межами. Компанія 
+лідирує на Україні і в країнах СНД серед виробників даної продукції.',
+    img: '3.jpg',
+    logo: '3.png',
+    logoColor: '#ff8200'
+  }
+]
+%}
+<!-- begin portfolio -->
+<div class="portfolio">
+  {% for i in portfolio %}
+  <!-- begin portfolio-item -->
+  <div class="portfolio-item">
+    <div class="container">
+      <div class="portfolio-item__content">
+        <div class="portfolio-item__content-inner">
+        <div class="portfolio-item__subttl">{{ i.subttl }}</div>
+
+        <div class="portfolio-item__block">
+          <div class="portfolio-item__nmb">{{ i.nmb }}</div>
+
+          <div class="portfolio-item__title">
+            <h2 class="title title--ttn">{{ i.title }}</h2>
+          </div>
+
+          <div class="portfolio-item__text">{{ i.text | safe }}</div>
+
+          <div class="portfolio-item__link">
+            <a href="#" class="link-arrow">
+              <span class="link-arrow__title">Дивитися проект</span>
+              <span class="link-arrow__arrow">
+                {{ mixins.icon('arrow-long') }}
+              </span>
+            </a>
+          </div>
+        </div>        
+      </div>
+      </div>
+    </div>
+
+    <div class="portfolio-item__right">
+      <div class="portfolio-item__logo" style="background-color: {{ i.logoColor }};">
+        <img data-src="img/logos/{{ i.logo }}" alt="" class="js-lazy">
+      </div>
+      <div class="portfolio-item__img js-lazy" data-background-image="img/portfolio/{{ i.img }}"></div>
+    </div>
+  </div>
+  <!-- end portfolio-item -->
+  {% endfor %}
+</div>
+<!-- end portfolio -->

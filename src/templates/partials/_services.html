@@ -1,0 +1,46 @@
+{%set
+services = [
+  {
+    title: 'Web site development',
+    text: 'Ми створюємо сайти, які є природним продовженням фірмового стилю компанії, 
+викликають довіру відвідувачів і бажання співпрацювати з компанією.'
+  },
+  {
+    title: 'Seo + Adwords',
+    text: 'Ми створимо максимальну віддачу від кожного переходу на сайт, 
+так як вашу рекламу побачать ті, хто є частиною вашої цільової аудиторії'
+  },
+  {
+    title: 'Branding',
+    text: 'Ми створимо максимальну віддачу від кожного переходу на сайт, 
+так як вашу рекламу побачать ті, хто є частиною вашої цільової аудиторії'
+  },
+  {
+    title: 'Smm',
+    text: 'Ми створимо максимальну віддачу від кожного переходу на сайт, 
+так як вашу рекламу побачать ті, хто є частиною вашої цільової аудиторії'
+  }
+]
+%}
+
+<!-- begin services -->
+<div class="services">
+  {% for i in services %}
+  <!-- begin service-item -->
+  <div class="service-item">
+    <div class="container">
+      <div class="service-item__block">
+        <div class="service-item__title">
+          <h2 class="title">{{ i.title | safe }}</h2>
+        </div>
+
+        <div class="service-item__text">{{ i.text | safe }}</div>
+      </div>
+
+      <a href="#" class="service-item__link">{{ mixins.icon('arrow') }}</a>
+    </div>
+  </div>
+  <!-- end service-item -->
+  {% endfor %}
+</div>
+<!-- end services -->

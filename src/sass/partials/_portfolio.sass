@@ -1,0 +1,64 @@
+.portfolio-item
+  $this: &
+  position: relative
+  &:nth-child(odd)
+    color: $white
+    background-color: $black-lighten
+  &__right
+    position: absolute
+    right: 0
+    bottom: 0
+    top: 0
+    width: 50%
+  &__content
+    width: 50%
+    height: 100%
+    height: 100vh
+    +flex(center, normal, column)
+  &__img
+    +cover
+    +coverdiv
+  &__logo
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    z-index: 1
+    left: 0
+    width: 225px
+    height: 120px
+    +flex(center, center)
+  &__subttl
+    margin-bottom: 40px
+    color: $gray-dark
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 20px
+    +sm
+      margin-bottom: 15px
+  &__title
+    margin-bottom: 25px
+    +lg
+      margin-bottom: 20px
+    +md
+      margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+  &__nmb
+    position: absolute
+    font-size: 16px
+    top: 77px
+    right: calc(100% + 40px)
+    color: $gray-dark
+  &__content-inner
+    position: relative
+  &__text
+    margin-bottom: 90px
+    +xl
+      margin-bottom: 70px
+    +lg
+      margin-bottom: 50px
+    +md
+      margin-bottom: 40px
+    +sm
+      margin-bottom: 30px

@@ -1,0 +1,50 @@
+.nav
+  $this: &
+  +light
+  li
+    display: inline-block
+    position: relative
+    +notlast
+      margin-right: 45px
+    &.has-dropdown      
+      a
+        position: relative
+        padding-right: 15px
+        +before
+          +icon-arrow(8, 8, 1, currentColor, -45)
+          position: absolute
+          top: .2em
+          right: 0
+      &:hover
+        #{$this}--dropdown
+          visibility: visible
+          opacity: 1
+      
+  a
+    +tr(color .3s)
+    text-transform: uppercase
+    display: inline-block
+    +hover
+      color: $gray
+
+  &--dropdown
+    visibility: hidden
+    opacity: 0
+    position: absolute
+    z-index: 1
+    top: calc(100%)
+    padding-top: 25px
+    left: 0
+    color: $gray
+    white-space: nowrap
+    +tr(opacity .3s, visibility .3s)
+    li
+      display: block
+      +notlast
+        margin-bottom: 15px
+    a
+      text-transform: none
+      +before
+        display: none
+      +hover
+        color: $white

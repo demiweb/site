@@ -1,0 +1,56 @@
+.hero
+  background-color: $purple-dark
+  padding-top: $padding-lg
+  padding-bottom: $padding-lg
+  overflow: hidden
+  color: $white
+  position: relative
+  margin-top: -$header-height
+  +cover
+  +before
+    +coverdiv
+    +image('white-transp-pattern.png')
+    background-repeat: repeat
+    background-size: auto
+    z-index: 0
+  &__inner
+    +flex(flex-start, center)
+    position: relative
+    z-index: 1
+  &__content
+    width: 50%
+  &__img
+    width: 50%
+    text-align: right
+    img[data-loaded="true"]
+      margin-left: -10%
+  &__title
+    margin-bottom: 60px
+    .title
+      small
+        display: block
+    +xl
+      margin-bottom: 50px
+    +lg
+      margin-bottom: 40px
+    +md
+      margin-bottom: 30px
+    +sm
+      margin-bottom: 15px
+  &__subttl
+    text-transform: uppercase
+    +light
+    margin-bottom: 20px
+    +md
+      margin-bottom: 10px
+  &__btns
+    +flex
+  &__btn
+    +notlast
+      margin-right: 30px
+  &__scroll-down
+    position: absolute
+    left: 50%
+    transform: translate(-50%, 0)
+    bottom: 0
+    z-index: 1

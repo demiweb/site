@@ -3,15 +3,97 @@ body
   line-height: 1.4
   font-size: $fz
   +reg
-  color: $c-text
+  color: $black
   +no-scroll
 
 input, textarea
   font-family: inherit
+  font-size: inherit
+  color: inherit
   +placeholder
     font-family: inherit
+    font-size: inherit
 
 .icon
   display: inline-block
   fill: currentColor
   font-size: inherit
+
+.container
+  +xlmin
+    max-width: 1440px
+
+.scroll-down
+  width: 90px
+  height: 90px
+  background-color: $yellow
+  position: relative
+  color: $white
+  margin-top: 20px
+  +flex(center, center)
+  +hover
+    .icon
+      transform: translate(0, 0) rotate(90deg)
+  .icon
+    font-size: $fz-arrow
+    transform: translate(0, -100%) rotate(90deg)
+    +tr(transform .5s)
+
+.word
+  // +black
+  +bold
+  font-size: 236px
+  line-height: .9
+  letter-spacing: -.05em
+  text-transform: uppercase
+  -webkit-text-fill-color: transparent
+  -webkit-background-clip: text
+  // background-color: #000
+  +image('black-pattern.png')
+  background-repeat: repeat
+  background-size: auto
+  color: $black
+  position: absolute
+  z-index: 0
+
+.title-block
+  position: relative
+  padding-top: $padding-mdl
+  padding-bottom: $padding-mdl
+  padding-left: percentage(1/12)
+  overflow: hidden
+  
+  h2, .title
+    position: relative
+    z-index: 1
+  &__word
+    z-index: 1
+    right: 0
+    bottom: 0
+  &__square-wrap
+    @extend .container
+    z-index: 0
+    pointer-events: none
+    width: 100%
+    height: 100%
+    top: 0
+    position: absolute
+    left: 50%
+    transform: translate(-50%, 0)
+    +before
+      bottom: 0
+      top: 0
+      left: 0
+      position: absolute
+      z-index: 0
+      background-color: $yellow
+      width: percentage(3/12)
+
+.link-arrow
+  +bold
+  color: $gray
+  text-transform: uppercase
+  .icon
+    font-size: 8px
+    margin-left: 15px
+    fill: $white

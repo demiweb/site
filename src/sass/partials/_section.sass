@@ -1,0 +1,55 @@
+.section
+  position: relative
+
+.s-more
+  .word
+    left: 0
+    top: $padding-lg
+  .container
+    position: relative
+    z-index: 1
+  &__title
+    margin-bottom: 175px
+  &__block
+    width: percentage(8/12)
+    margin-left: percentage(4/12)
+    position: relative
+  &__block-title
+    margin-bottom: 30px
+    +lg
+      margin-bottom: 20px
+    +md
+      margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+  &__text
+    margin-bottom: 50px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 20px
+    +sm
+      margin-bottom: 15px
+  &__title-lg
+    margin-bottom: 90px
+    +xl
+      margin-bottom: 70px
+    +lg
+      margin-bottom: 50px
+    +md
+      margin-bottom: 30px
+    +sm
+      margin-bottom: 20px
+  &__btn
+    text-align: right
+  &__arrow
+    position: absolute
+    bottom: 0
+    left: 0% - percentage(360/930)
+    color: $c-border
+    font-size: $fz-arrow
+    +rotate(90)
+
+.s-portfolio
+  .word
+    right: -5%

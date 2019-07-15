@@ -1,0 +1,74 @@
+.header
+  $this: &
+  color: $white  
+  position: relative
+  z-index: 15
+  height: $header-height
+  +flex(flex-start, center)
+  padding-left: 30px
+  padding-right: 30px
+  padding-top: 20px
+  &__logo
+    padding-right: 25px
+  &__phone
+    padding-left: 25px
+    padding-right: 25px
+    position: relative
+    &::before,
+    &::after
+      content: ''
+      position: absolute
+      background-color: $gray
+      width: 1px
+      height: 38px
+      top: 50%
+      transform: translate(0, -50%)
+    &::before
+      left: 0
+    &::after
+      right: 0
+  &__nav
+    padding-left: 25px
+    flex-grow: 1
+
+.header-phone
+  $this: &
+  +light
+  &__inner
+    position: relative
+
+    &:hover
+      #{$this}__list
+        visibility: visible
+        opacity: 1
+
+  &__phone
+    display: block
+  &__list
+    position: absolute
+    top: 100%
+    padding-top: 25px
+    left: 0
+    z-index: 1
+    visibility: hidden
+    opacity: 0
+    +tr(visibility .3s, opacity .3s)
+  &__subttl
+    color: $gray
+    font-size: 10px
+  &__title
+    +tr(color .3s)
+    position: relative
+    display: inline-block
+    padding-right: 15px
+    +hover
+      color: $gray
+    +before
+      +icon-arrow(8, 8, 1, currentColor, -45)
+      position: absolute
+      top: .2em
+      right: 0
+  &__phone
+    +tr(color .3s)
+    +hover
+      color: $gray

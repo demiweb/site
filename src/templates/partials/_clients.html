@@ -1,0 +1,38 @@
+{%set
+clients = [
+  { text: '100+' },
+  { img: '4.png' },
+  { img: '7.png' },
+  { img: '5.png' },
+  { img: '6.png' },
+  { img: '8.png' },
+  { img: '9.png' },
+  { img: '10.png' },
+  { img: '11.png' }
+]
+%}
+
+<!-- begin clients -->
+<div class="clients">
+  <div class="container"> 
+    <div class="clients__table">
+      <!-- begin clients-table -->
+      <div class="clients-table">
+        {% for i in clients %}
+        <div class="clients-table__item">
+          {% if i.img %}
+          <img data-src="img/logos/{{ i.img.jpg }}" alt="" class="js-lazy">
+          {% endif %}
+          {% if i.text %}
+          {{ i.text | safe }}
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      <!-- end clients-table -->
+    </div>
+  </div>
+
+  <div class="clients__word word">Client’s <br> feedback</div>
+</div>
+<!-- end clients -->

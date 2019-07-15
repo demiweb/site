@@ -1,0 +1,44 @@
+<!-- begin hero -->
+<section class="hero js-lazy" data-background-image="img/bg-hero.jpg">
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__content">
+        <div class="hero__subttl">Створення та розробка сайтів в Україні</div>
+
+        <div class="hero__title">
+          <h1 class="title"><small>Допоможемо</small> реалізувати ваші ідеї <small>у якісний продукт</small></h1>
+        </div>
+
+        <div class="hero__btns">
+          <div class="hero__btn">
+            {{ mixins.btn(
+              title = 'замовити консультацію',
+              mod = ''
+            ) }}
+          </div>
+          <div class="hero__btn">
+            {{ mixins.btn(
+              title = 'наші послуги',
+              mod = 'btn--transp-white'
+            ) }}
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hero__img">
+        <img data-src="img/logo-lg.png" alt="" class="js-lazy">
+      </div>
+
+      
+    </div>
+    
+  </div>
+
+  <div class="hero__scroll-down">
+    <a href="#" class="scroll-down">
+      {{ mixins.icon('arrow') }}
+    </a>
+  </div>
+</section>
+<!-- end hero -->

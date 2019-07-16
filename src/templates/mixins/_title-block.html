@@ -1,0 +1,13 @@
+{% macro titleBlock(mod, title, word) %}
+<div class="title-block{% if mod %} {{ mod }}{% endif %}">
+  <div class="title-block__square-wrap"></div>
+
+  <div class="container">
+    <div class="title-block__title">
+      <h2 class="title">{{ title | safe }}</h2>
+    </div>    
+  </div>
+
+  <div class="title-block__word word">{{ word | safe }}</div>
+</div>
+{% endmacro %}

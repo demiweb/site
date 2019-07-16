@@ -30,13 +30,25 @@
   &__nav
     padding-left: 25px
     flex-grow: 1
+    +lg
+      position: fixed
+      z-index: 15
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      padding: 15px
+      background-color: $white
+      +vertical
+  &__burger
+    +lg
+      flex-grow: 1
 
 .header-phone
   $this: &
   +light
   &__inner
     position: relative
-
     &:hover
       #{$this}__list
         visibility: visible
@@ -61,14 +73,45 @@
     position: relative
     display: inline-block
     padding-right: 15px
+    font-size: 19px
+    +bold
     +hover
       color: $gray
     +before
       +icon-arrow(8, 8, 1, currentColor, -45)
       position: absolute
-      top: .2em
+      top: .4em
       right: 0
   &__phone
     +tr(color .3s)
     +hover
       color: $gray
+
+.burger
+  display: block
+  width: 39px
+  height: 18px
+  margin-left: auto
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+  span:after
+    top: 18px
+  span 
+    position: relative
+    display: block
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: currentColor
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+  &.is-active span 
+    background-color: transparent
+  &.is-active span:before 
+    transform: rotate(45deg) translate(-1px, 0px)
+  &.is-active span:after 
+    transform: rotate(-45deg) translate(6px, -7px)

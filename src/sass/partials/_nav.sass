@@ -1,12 +1,23 @@
 .nav
   $this: &
   +light
+  +lg
+    color: $black
+    font-size: 24px
+    text-align: center
+    display: inline-block
+    vertical-align: middle
   li
     display: inline-block
     position: relative
     +notlast
       margin-right: 45px
-    &.has-dropdown      
+    +lg
+      display: block
+      +notlast
+        margin-right: 0
+        margin-bottom: 15px
+    &.has-dropdown  
       a
         position: relative
         padding-right: 15px
@@ -15,11 +26,12 @@
           position: absolute
           top: .2em
           right: 0
+          +lg
+            top: .5em
       &:hover
         #{$this}--dropdown
           visibility: visible
-          opacity: 1
-      
+          opacity: 1      
   a
     +tr(color .3s)
     text-transform: uppercase
@@ -38,6 +50,9 @@
     color: $gray
     white-space: nowrap
     +tr(opacity .3s, visibility .3s)
+    +lg
+      // position: static
+      // display: block
     li
       display: block
       +notlast

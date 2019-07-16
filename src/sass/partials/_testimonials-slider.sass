@@ -1,0 +1,164 @@
+.testimonials-slider
+  overflow: hidden
+  +flex()
+  &__wrap
+    position: relative
+    max-width: 1675px
+    margin-left: auto
+    margin-right: auto
+    background-color: $white
+    padding-top: 90px
+    padding-bottom: 90px
+    .custom-slider-wrap
+      position: relative
+  &__btns
+    position: absolute
+    bottom: -2px
+    left: 50%
+    transform: translate(-50%, 0)
+    z-index: 1
+    +flex()
+  &__img-cover
+    position: absolute
+    top: 0
+    width: 50%
+    padding-top: 31.5%
+    left: auto
+    pointer-events: none
+    overflow: hidden
+    +before
+      position: absolute
+      background-color: $yellow
+      width: 100%
+      top: 0
+      left: 0
+      height: 100%
+      z-index: 1
+      
+      transform: translate(-100%, 0)
+    &.is-animate
+      +before
+        transform: translate(0, 0)
+        +tr(transform .3s)
+    &.is-finishing-animate
+      +before
+        +tr(transform .3s)
+        transform: translate(100%, 0)
+  
+
+.testimonial
+  $this: &
+  flex: 0 0 100%
+  visibility: hidden
+  opacity: 0
+  &.is-active
+    visibility: visible
+    opacity: 1
+    #{$this}__img
+      display: block
+    #{$this}__caption,
+    #{$this}__text
+      opacity: 1
+      transform: translate(0, 0)    
+  &.is-animate
+    #{$this}__caption,
+    #{$this}__text
+      opacity: 0
+      transform: translate(0, 15px)   
+  &__inner
+    +flex(flex-start, normal, row, wrap)
+  &__left
+    width: 50%
+    position: relative
+    overflow: hidden
+    
+  &__right
+    width: 50%
+    padding-left: percentage(1/12)
+    +flex(flex-start, center)
+  &__img
+    +cover
+    padding-top: 63%
+    display: none
+  &__caption
+    padding: 20px 0px 10px
+    height: 90px
+    width: 50%
+    opacity: 0
+    transform: translate(0, 15px)
+    +tr(transform .5s, opacity .5s)
+  &__title
+    margin-bottom: 15px
+    +bold
+    font-size: 18px
+  &__text
+    opacity: 0
+    transform: translate(0, 15px)
+    +tr(opacity .3s, transform .3s)  
+
+.slider-btn
+  $this: &
+  +flex(flex-start, center)
+  width: 92px
+  height: 92px
+  position: relative
+  overflow: hidden
+  background-color: $white
+  .icon
+    font-size: $fz-arrow
+    position: relative
+    z-index: 2
+    +tr(transform .4s)
+  +before
+    +coverdiv
+    z-index: 1
+    +tr(transform .4s)
+  &__back-svg,
+  &__front-svg
+    +coverdiv
+    +flex(flex-start, center)
+    z-index: 0
+    overflow: hidden
+    +tr(transform .4s)
+    .icon
+      z-index: 0
+  &__front-svg
+    z-index: 2
+
+  &--prev
+    justify-content: flex-end
+    .icon
+      +rotate(180)
+    +before
+      background-color: $gray-lighten
+    +hover
+      +before
+        transform: translate(-50%, 0)
+      .icon
+        transform: translate(-50%, 0) rotate(180deg)
+  &--next
+    color: $white
+    +before
+      background-color: $yellow
+    +hover
+      +before
+        transform: translate(50%, 0)
+      .icon
+        transform: translate(50%, 0)
+
+    #{$this}__back-svg
+      left: 0
+      color: $yellow
+  &--two-svg
+    +before
+      display: none
+    #{$this}__front-svg
+      background-color: $yellow
+    +hover      
+      #{$this}__front-svg
+        transform: translate(50%, 0)
+        .icon
+          transform: translate(-50%, 0)
+      #{$this}__back-svg
+        .icon
+          transform: translate(60%, 0)

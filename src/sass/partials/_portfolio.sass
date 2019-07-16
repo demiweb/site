@@ -4,12 +4,24 @@
   &:nth-child(odd)
     color: $white
     background-color: $black-lighten
+    .link-arrow
+      color: $gray
+      .icon
+        fill: $white
+    #{$this}__subttl
+      color: $gray-dark
+    #{$this}__nmb
+      color: $gray-dark
   &__right
     position: absolute
     right: 0
     bottom: 0
     top: 0
     width: 50%
+    overflow: hidden
+    +hover
+      #{$this}__img
+        animation-play-state: running
   &__content
     width: 50%
     height: 100%
@@ -18,6 +30,8 @@
   &__img
     +cover
     +coverdiv
+    animation: scale 10s infinite alternate
+    animation-play-state: paused
   &__logo
     position: absolute
     top: 50%
@@ -29,7 +43,7 @@
     +flex(center, center)
   &__subttl
     margin-bottom: 40px
-    color: $gray-dark
+    color: $gray-light
     +lg
       margin-bottom: 30px
     +md
@@ -49,7 +63,8 @@
     font-size: 16px
     top: 77px
     right: calc(100% + 40px)
-    color: $gray-dark
+    // color: $gray-dark
+    +medium
   &__content-inner
     position: relative
   &__text
@@ -62,3 +77,9 @@
       margin-bottom: 40px
     +sm
       margin-bottom: 30px
+
+@keyframes scale
+  0%
+    transform: scale(1) rotate(0deg)
+  100%
+    transform: scale(1.4) rotate(5deg)

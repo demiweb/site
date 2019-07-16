@@ -1,12 +1,10 @@
 <!-- begin section -->
-<section class="section">
-  <div class="container">
-    <div class="title-block">
-      <h2 class="title">Послуги <br>
-      для реалізації ваших ідей</h2>
-      <div class="title-block__word word">services</div>
-    </div>
-  </div>
+<section class="section s-services">
+    {{ mixins.titleBlock(
+      mod = '',
+      title = 'Послуги <br> для реалізації ваших ідей',
+      word = 'services'
+    ) }}
 
   {% include "partials/_services.html" %}
 </section>

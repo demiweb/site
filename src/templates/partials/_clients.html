@@ -1,6 +1,6 @@
 {%set
 clients = [
-  { text: '100+' },
+  { text: '100+', mod: 'clients-table__item-lg' },
   { img: '4.png' },
   { img: '7.png' },
   { img: '5.png' },
@@ -19,9 +19,9 @@ clients = [
       <!-- begin clients-table -->
       <div class="clients-table">
         {% for i in clients %}
-        <div class="clients-table__item">
+        <div class="clients-table__item{% if i.mod %} {{ i.mod }}{% endif %}">
           {% if i.img %}
-          <img data-src="img/logos/{{ i.img.jpg }}" alt="" class="js-lazy">
+          <img data-src="img/logos/{{ i.img }}" alt="" class="js-lazy">
           {% endif %}
           {% if i.text %}
           {{ i.text | safe }}
@@ -33,6 +33,6 @@ clients = [
     </div>
   </div>
 
-  <div class="clients__word word">Client’s <br> feedback</div>
+  <div class="clients__word word word--sm">Client’s <br> feedback</div>
 </div>
 <!-- end clients -->

@@ -1,5 +1,9 @@
 .section
   position: relative
+  &--white-color
+    color: $white
+  &--black
+    background-color: $black
 
 .s-more
   .word
@@ -53,3 +57,118 @@
 .s-portfolio
   .word
     right: -5%
+  &__link
+    text-transform: uppercase
+    display: inline-block
+    text-align: center
+    +bold
+    .icon
+      display: block
+      margin-left: auto
+      margin-right: auto
+      font-size: 30px
+      margin-bottom: 5px
+  &__link-wrap
+    text-align: center
+    padding-top: 50px
+    +lg
+      padding-top: 30px
+    +md
+      padding-top: 20px
+    +sm
+      padding-top: 15px
+
+.s-services
+  .word
+    right: -7%
+
+.s-we-know
+  overflow: hidden
+  .word
+    right: -13%
+  &__title-block
+    margin-bottom: 240px
+  &__title
+    margin-bottom: 80px
+  &__content
+    max-width: 930px
+    margin-bottom: 95px
+
+.s-testimonials  
+  position: relative
+  +before
+    position: absolute
+    width: 100%
+    height: 50%
+    left: 0
+    top: 0
+    z-index: 0
+    background-image: linear-gradient( 0deg, rgb(46,5,56) 0%, rgb(2,2,2) 100%)
+  &__title
+    position: relative
+    z-index: 1
+    margin-bottom: 95px
+    +xl
+      margin-bottom: 75px
+    +lg
+      margin-bottom: 50px
+    +md
+      margin-bottom: 30px
+    +sm
+      margin-bottom: 20px
+  &__slider
+    position: relative
+    z-index: 1
+
+.s-order
+  &__inner
+    +flex(flex-start, normal, row, wrap)
+  &__left
+    width: percentage(8/12)
+  &__right
+    width: percentage(4/12)
+  &__title
+    margin-bottom: 55px
+    +xl
+      margin-bottom: 45px
+    +lg
+      margin-bottom: 35px
+    +md
+      margin-bottom: 25px
+    +sm
+      margin-bottom: 15px
+  &__contacts
+    margin-bottom: 50px
+    +xl
+      margin-bottom: 40px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 20px
+    +sm
+      margin-bottom: 10px
+  &__btns
+    +flex(flex-start, normal, row, wrap)
+  &__btn
+    width: percentage(3/8)
+    +notlast
+      margin-right: 30px
+
+
+.order-contacts
+  &__mail
+    text-transform: uppercase
+    font-size: 18px
+    +tr(color .3s)
+    margin-bottom: 10px
+    +hover
+      color: $gray
+  &__phone
+    @extend .title
+    +reg
+    +tr(color .3s)
+    +hover
+      color: $gray
+  &__text
+    text-transform: uppercase
+    margin-top: 10px

@@ -7,7 +7,7 @@ testimonials = [
     text: 'Наша студія веб дизайну по розробці сайтів під ключ в Києві пропонує вам розробку сайтів будь-якої складності і тематики. Нашої компанії під силу виготовлення сайтів будь-якого типу: створення інтернет-магазину, сайт візитка, корпоративний сайт, сайт для бізнесу, сайт каталог, створення Лендінгем (landing page). Так, ви можете замовити у нас сайт будь-якого призначення в Вінниці, Києві та по всій Україні. У нас в команді працюють кращі розробники з усієї країни по веб-програмуванню, у яких більше 5 років досвіду і навичок створення якісного продукту.'
   },
   {
-    img: '28-reviews_1.jpg',
+    img: '32-reviews_3.png',
     title: 'Шатилов А.С.',
     subttl: 'Керівник інформаціонно-рекламного відділу "100 ШИН"',
     text: 'Наша студія веб дизайну по розробці сайтів під ключ в Києві пропонує вам розробку сайтів будь-якої складності і тематики. Нашої компанії під силу виготовлення сайтів будь-якого типу: створення інтернет-магазину, сайт візитка, корпоративний сайт, сайт для бізнесу, сайт каталог, створення Лендінгем (landing page). Так, ви можете замовити у нас сайт будь-якого призначення в Вінниці, Києві та по всій Україні. У нас в команді працюють кращі розробники з усієї країни по веб-програмуванню, у яких більше 5 років досвіду і навичок створення якісного продукту.'
@@ -19,7 +19,7 @@ testimonials = [
     text: 'Наша студія веб дизайну по розробці сайтів під ключ в Києві пропонує вам розробку сайтів будь-якої складності і тематики. Нашої компанії під силу виготовлення сайтів будь-якого типу: створення інтернет-магазину, сайт візитка, корпоративний сайт, сайт для бізнесу, сайт каталог, створення Лендінгем (landing page). Так, ви можете замовити у нас сайт будь-якого призначення в Вінниці, Києві та по всій Україні. У нас в команді працюють кращі розробники з усієї країни по веб-програмуванню, у яких більше 5 років досвіду і навичок створення якісного продукту.'
   },
   {
-    img: '28-reviews_1.jpg',
+    img: '32-reviews_3.png',
     title: 'Шатилов А.С.',
     subttl: 'Керівник інформаціонно-рекламного відділу "100 ШИН"',
     text: 'Наша студія веб дизайну по розробці сайтів під ключ в Києві пропонує вам розробку сайтів будь-якої складності і тематики. Нашої компанії під силу виготовлення сайтів будь-якого типу: створення інтернет-магазину, сайт візитка, корпоративний сайт, сайт для бізнесу, сайт каталог, створення Лендінгем (landing page). Так, ви можете замовити у нас сайт будь-якого призначення в Вінниці, Києві та по всій Україні. У нас в команді працюють кращі розробники з усієї країни по веб-програмуванню, у яких більше 5 років досвіду і навичок створення якісного продукту.'
@@ -28,8 +28,55 @@ testimonials = [
 %}
 
 <!-- begin testimonials-slider -->
-<div class="testimonials-slider js-slider-custom">
+<div class="testimonials-slider__wrap">
   <div class="container">
+    <div class="custom-slider-wrap js-slider-custom">    
+      <div class="testimonials-slider custom-slider">
+        {% for i in testimonials %}
+        <!-- begin testimonial -->
+        <div class="testimonial custom-slide">
+            <div class="testimonial__inner">
+              <div class="testimonial__left">
+                <div class="testimonial__img js-lazy" data-background-image="img/testimonials/{{ i.img }}"></div>
+
+                
+              </div>
+
+              <div class="testimonial__right">
+                <div class="testimonial__text">{{ i.text | safe }}</div>
+              </div>
+
+              <div class="testimonial__caption">
+                <div class="testimonial__title">{{ i.title | safe }}</div>
+
+                <div class="testimonial__subttl">{{ i.subttl | safe }}</div>
+              </div>
+            </div>
+        </div>
+        <!-- end testimonial -->
+        {% endfor %}
+      </div>
+
+      <div class="testimonials-slider__img-cover js-img-cover"></div>
+
+      <div class="testimonials-slider__btns">
+        <button class="testimonials-slider__prev slider-btn slider-btn--prev js-prev">{{ mixins.icon('arrow') }}</button>
+        <button class="testimonials-slider__next slider-btn slider-btn--two-svg slider-btn--next js-next">
+          <span class="slider-btn__front-svg">
+            {{ mixins.icon('arrow') }}
+          </span>
+          <span class="slider-btn__back-svg">
+            {{ mixins.icon('arrow') }}
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+{#   <div class="container">
     <div class="testimonials-slider__left">
       <div class="testimonials-slider__imgs">
         {% for i in testimonials %}
@@ -59,7 +106,7 @@ testimonials = [
         {% endfor %}
       </div>
     </div>
-  </div>
+  </div> #}
   
 </div>
 <!-- end testimonials-slider -->

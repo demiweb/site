@@ -1,0 +1,44 @@
+.services
+
+
+.service-item
+  $this: &
+  padding-top: 85px
+  padding-bottom: 85px
+  color: $white
+  background-color: $purple-dark
+  position: relative
+  overflow: hidden
+  +tr(color .5s)
+  +notlast
+    border-bottom: 1px solid  $purple
+  +before
+    +coverdiv
+    background-color: $white
+    z-index: 0
+    transform: translate(-100%, 0)
+    +tr(transform .5s)
+  +hover
+    color: $black
+    border-bottom-color: transparent
+    +before
+      transform: translate(0, 0)
+  &__inner
+    position: relative
+    z-index: 1
+    +flex(space-between, center)
+  &__title
+    margin-bottom: 30px
+    +lg
+      margin-bottom: 20px
+    +md
+      margin-bottom: 15px
+  &__block
+    max-width: 590px
+  &__link
+    .icon
+      font-size: $fz-arrow
+      +tr(transform .3s)
+    +hover
+      .icon
+        transform: translate(10px, 0)

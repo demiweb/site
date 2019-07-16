@@ -1,14 +1,11 @@
 <!-- begin section -->
 <section class="section s-portfolio pb-lg">
-  <div class="s-portfolio__title title-block">
-    <div class="title-block__square-wrap"></div>
-    
-    <div class="container">
-      <h2 class="title">роботи, якими<br> ми пишаємося</h2>
-    </div>
 
-    <div class="title-block__word word">portfolio</div>
-  </div>
+  {{ mixins.titleBlock(
+    mod = 's-portfolio__title',
+    title = 'роботи, якими<br> ми пишаємося',
+    word = 'portfolio'
+  ) }}
 
 
     <div class="s-portfolio__portfolio">
@@ -16,10 +13,12 @@
     </div> 
 
     <div class="container">
-      <a href="#" class="s-portfolio__link">
-        {{ mixins.icon('web-design') }}
-        Дивитися портфоліо
-      </a>
+      <div class="s-portfolio__link-wrap">
+        <a href="#" class="s-portfolio__link">
+          {{ mixins.icon('web-design') }}
+          Дивитися портфоліо
+        </a>
+      </div>      
     </div>  
   
 </section>

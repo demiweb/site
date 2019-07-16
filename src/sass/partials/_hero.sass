@@ -1,11 +1,9 @@
 .hero
-  background-color: $purple-dark
-  padding-top: $padding-lg
-  padding-bottom: $padding-lg
+  background-color: $purple-dark  
   overflow: hidden
   color: $white
   position: relative
-  margin-top: -$header-height
+  margin-top: -$header-height  
   +cover
   +before
     +coverdiv
@@ -16,14 +14,41 @@
   &__inner
     +flex(flex-start, center)
     position: relative
+    padding-top: $padding-lg
+    padding-bottom: $padding-lg
+    height: 100vh
     z-index: 1
   &__content
     width: 50%
   &__img
     width: 50%
     text-align: right
-    img[data-loaded="true"]
-      margin-left: -10%
+    margin-right: -10%
+    margin-top: 5%
+    // img[data-loaded="true"]
+    //   margin-left: -10%
+  &__img-in
+    position: relative
+    display: inline-block
+    // font-size: 65vh
+    +css-lock(200, 600, 320, 1499, font-size)
+    line-height: .9
+    img
+      position: absolute
+      top: .1em
+      left: 0
+      z-index: 0
+      max-width: 90%
+    .icon
+      position: relative
+      z-index: 1
+      fill: $white
+      // fill: transparent
+      // stroke: $white
+      // stroke-width: 5px
+      // stroke-dasharray: 15000
+      // stroke-dashoffset: 15000
+      // animation: logo 3s forwards
   &__title
     margin-bottom: 60px
     .title
@@ -54,3 +79,7 @@
     transform: translate(-50%, 0)
     bottom: 0
     z-index: 1
+
+  @keyframes logo
+    100%
+      stroke-dashoffset: 0

@@ -1,0 +1,22 @@
+.footer
+  background-color: $black
+  color: $white
+  &__logo
+    background-color: $white
+    padding: 10px
+    font-size: 0
+    margin-right: 20px
+    .icon
+      font-size: 30px
+      fill: $black
+  &__inner
+    +flex(flex-start, center)
+  &__meta
+    flex-grow: 1
+    text-transform: uppercase
+    font-size: 10px
+    p
+      +notlast
+        margin-bottom: 5px
+    a
+      text-decoration: underline

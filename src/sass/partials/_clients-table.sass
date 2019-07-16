@@ -1,0 +1,33 @@
+.clients
+  overflow: hidden
+  position: relative
+  &__table
+  &__word
+    top: 50%
+    transform: translate(0, -50%)
+
+
+.clients-table
+  // +flex(flex-start, normal, row, wrap)
+  width: percentage(8/12)
+  position: relative
+  +before
+    height: 1px
+    background-color: $c-border
+    position: absolute
+    top: 50%
+    left: 100%
+    transform: translate(0, -50%)
+    width: 100vw
+  +clr
+  &__item
+    float: left
+    width: 25%
+    +flex(center, center)
+    height: 170px
+    border: 1px solid $c-border
+  &__item-lg
+    width: 50%
+    height: 340px
+    font-size: 160px
+    +bold

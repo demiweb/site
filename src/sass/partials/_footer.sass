@@ -1,6 +1,8 @@
 .footer
   background-color: $black
   color: $white
+  +xs
+    text-align: center
   &__logo
     background-color: $white
     padding: 10px
@@ -9,14 +11,35 @@
     .icon
       font-size: 30px
       fill: $black
+    +sm
+      margin-right: 15px
+    +xs
+      margin-right: 0
+      width: 50px
+      margin-bottom: 10px
+      margin-left: auto
+      margin-right: auto
   &__inner
     +flex(flex-start, center)
+    +xs
+      display: block
   &__meta
     flex-grow: 1
     text-transform: uppercase
     font-size: 10px
+    padding-right: 15px
+    +xs
+      padding-right: 10px
+      margin-bottom: 15px
     p
       +notlast
         margin-bottom: 5px
     a
       text-decoration: underline
+  &__scroll-top
+    height: 100%
+    +flex(flex-start, flex-end)
+    +xs
+      .scroll-to
+        margin-left: auto
+        margin-right: auto

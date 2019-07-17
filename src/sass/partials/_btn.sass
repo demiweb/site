@@ -13,6 +13,19 @@
   +hover
     background-color: transparent
     color: $yellow
+  +lg
+    padding-left: 30px
+    padding-right: 30px
+  +md
+    padding-left: 20px
+    padding-right: 20px
+    padding-top: 10px
+    padding-bottom: 10px
+  +sm
+    padding-left: 10px
+    padding-right: 10px
+  +xs
+    width: 100%
 
   &--transp-white
     border-color: $white
@@ -27,6 +40,8 @@
     border-bottom-color: transparent
     border-left-color: transparent
     overflow: hidden
+    +xs
+      border-color: $yellow
     +bold
     +before
       width: 100%
@@ -41,9 +56,10 @@
       top: 0
       transform: translate(30%, 0)
       +tr(transform .3s, background-color .3s)
+      +xs
+        display: none
     +hover
       color: $black
-
       +before
         transform: translate(0, 0)
         background-color: $yellow
@@ -53,10 +69,34 @@
   &--xl
     font-size: 24px
     padding: 23px 105px
+    +css-lock(16, 24, 320, 1499, font-size)
+    +lg
+      padding-left: 50px
+      padding-right: 50px
+      padding-top: 18px
+      padding-bottom: 18px
+    +md
+      padding-left: 30px
+      padding-right: 30px
+      padding-top: 16px
+      padding-bottom: 16px
+    +sm
+      padding-left: 20px
+      padding-right: 20px
+      padding-top: 12px
+      padding-bottom: 12px
+    +xs
+      padding-left: 10px
+      padding-right: 10px
+
   &--lg
     font-size: 18px
     padding-top: 21px
     padding-bottom: 21px
+    +md
+      font-size: 16px
+    +sm
+      font-size: $fz
   &--full
     width: 100%
     padding-left: 15px

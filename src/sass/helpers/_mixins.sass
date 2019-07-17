@@ -12,8 +12,12 @@
   @media only screen and (max-height: $height + "px")
     @content
 
-=rhmin($height)
-  @media only screen and (min-height: $height + "px")
+=rh($height)
+  @media only screen and (max-height: $height + "px")
+    @content
+
+=rmix($width, $height)
+  @media only screen and (max-width: $width+ "px") and (max-height: $height + "px")
     @content
 
 @mixin css-lock($min-size: 1, $max-size: 1.4, $min-width: 20, $max-width: 100, $property: font-size, $unit: px)
@@ -22,6 +26,14 @@
   @media (max-width: #{$min-width}#{$unit})
     #{$property}: #{$min-size}#{$unit}
   @media (min-width: #{$max-width}#{$unit})
+    #{$property}: #{$max-size}#{$unit}
+
+@mixin css-lock-height($min-size: 1, $max-size: 1.4, $min-width: 20, $max-width: 100, $property: font-size, $unit: px)
+  #{$property}: #{$max-size}#{$unit}
+  #{$property}: calc(#{$min-size}#{$unit} + (#{$max-size} - #{$min-size}) * ((100vh - #{$min-width}#{$unit}) / (#{$max-width} - #{$min-width})))
+  @media (max-height: #{$min-width}#{$unit})
+    #{$property}: #{$min-size}#{$unit}
+  @media (min-height: #{$max-width}#{$unit})
     #{$property}: #{$max-size}#{$unit}
 
 =text-overflow

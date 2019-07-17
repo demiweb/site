@@ -4,6 +4,7 @@ export const {
   $HTMLBODY,
   $HTML,
   $BODY,
+  OUT,
 
   ACTIVE,
   OPEN,
@@ -23,6 +24,7 @@ export const {
   $HTMLBODY: $('html, body'),
   $HTML: $('html'),
   $BODY: $('body'),
+  OUT: document.querySelector('.out'),
 
   ACTIVE: 'is-active',
   OPEN: 'is-open',

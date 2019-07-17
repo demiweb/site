@@ -5,12 +5,22 @@
   &__word
     top: 50%
     transform: translate(0, -50%)
+    +md
+      top: auto
+      transform: translate(0, 0)
+      bottom: 0
 
 
 .clients-table
   // +flex(flex-start, normal, row, wrap)
   width: percentage(8/12)
   position: relative
+  +lg
+    width: percentage(10/12)
+  +md
+    width: 100%
+    +before
+      display: none
   +before
     height: 1px
     background-color: $c-border
@@ -26,8 +36,18 @@
     +flex(center, center)
     height: 170px
     border: 1px solid $c-border
+    padding: 10px
+    +md
+      width: 33.33333%
+    +xs
+      width: 50%
   &__item-lg
     width: 50%
     height: 340px
-    font-size: 160px
+    +css-lock(40, 160, 320, 1499, font-size)
     +bold
+    +md
+      width: 100%
+      height: auto
+    +xs
+      width: 100%

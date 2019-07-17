@@ -12,6 +12,10 @@
       color: $gray-dark
     #{$this}__nmb
       color: $gray-dark
+  +xs
+    +flex(flex-start, normal, column)
+    > .container
+      order: 1
   &__right
     position: absolute
     right: 0
@@ -22,11 +26,25 @@
     +hover
       #{$this}__img
         animation-play-state: running
+    +xs
+      width: 100%
+      position: relative
+      padding-top: 40%
+      order: 0
+    +xss
+      padding-top: 60%
   &__content
     width: 50%
     height: 100%
     height: 100vh
+    height: calc(var(--vh, 1vh) * 100)
     +flex(center, normal, column)
+    padding-right: 10px
+    +xs
+      width: 100%
+      height: auto
+      padding-top: 25px
+      padding-bottom: 25px
   &__img
     +cover
     +coverdiv
@@ -38,9 +56,16 @@
     transform: translate(0, -50%)
     z-index: 1
     left: 0
-    width: 225px
-    height: 120px
+    width: 1.875em
+    height: 1em
+    padding: .2em
+    +css-lock(50, 120, 320, 1499, font-size)
     +flex(center, center)
+    +xs
+      top: auto
+      bottom: 0
+      left: 50%
+      transform: translate(-50%, 0)
   &__subttl
     margin-bottom: 40px
     color: $gray-light
@@ -63,8 +88,9 @@
     font-size: 16px
     top: 77px
     right: calc(100% + 40px)
-    // color: $gray-dark
     +medium
+    +r(1530)
+      position: static
   &__content-inner
     position: relative
   &__text

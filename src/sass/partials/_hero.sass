@@ -11,46 +11,75 @@
     background-repeat: repeat
     background-size: auto
     z-index: 0
+  +sm
+    margin-top: -$header-height-sm
   &__inner
     +flex(flex-start, center)
     position: relative
     padding-top: $padding-lg
     padding-bottom: $padding-lg
     height: 100vh
+    height: calc(var(--vh, 1vh) * 100)
     z-index: 1
   &__content
     width: 50%
+    position: relative
+    overflow: hidden
+    +md
+      width: 70%
+    +sm
+      width: 100%
+    +before
+      +coverdiv
+      z-index: 1
+      background-color: $yellow
+      transform: translate(-100%, 0)
+      +tr(transform 1s)
+    &.is-show
+      +before
+        transform: translate(100%, 0)
+
   &__img
     width: 50%
     text-align: right
     margin-right: -10%
     margin-top: 5%
-    // img[data-loaded="true"]
-    //   margin-left: -10%
+    opacity: 0
+    transform: translate(-100%, 0)  
+    +md
+      width: 30%
+    +sm
+      display: none
+
   &__img-in
     position: relative
     display: inline-block
-    // font-size: 65vh
     +css-lock(200, 600, 320, 1499, font-size)
     line-height: .9
+    +rmix(1499, 640)
+      font-size: 400px
+    +rmix(1199, 540)
+      font-size: 300px
     img
       position: absolute
       top: .1em
       left: 0
       z-index: 0
       max-width: 90%
+      opacity: 0
     .icon
       position: relative
       z-index: 1
-      fill: $white
-      // fill: transparent
-      // stroke: $white
-      // stroke-width: 5px
-      // stroke-dasharray: 15000
-      // stroke-dashoffset: 15000
-      // animation: logo 3s forwards
+      fill: transparent
+      &.is-animate
+        stroke: $white
+        stroke-width: 5px
+        stroke-dasharray: 15000
+        stroke-dashoffset: 15000
+        animation: logo 1s forwards
   &__title
     margin-bottom: 60px
+    opacity: 0
     .title
       small
         display: block
@@ -64,22 +93,38 @@
       margin-bottom: 15px
   &__subttl
     text-transform: uppercase
+    opacity: 0
     +light
     margin-bottom: 20px
     +md
       margin-bottom: 10px
   &__btns
     +flex
+    +xs
+      display: block
   &__btn
+    opacity: 0
     +notlast
       margin-right: 30px
+      +md
+        margin-right: 15px
+      +xs
+        margin-right: 0
+        margin-bottom: 10px
   &__scroll-down
     position: absolute
+    opacity: 0
     left: 50%
     transform: translate(-50%, 0)
     bottom: 0
     z-index: 1
 
   @keyframes logo
+    0%
+      fill: transparent
+    50%
+      fill: transparent
+      stroke-dashoffset: 0
     100%
+      fill: $white
       stroke-dashoffset: 0

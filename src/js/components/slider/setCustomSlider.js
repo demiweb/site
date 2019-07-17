@@ -1,6 +1,7 @@
 import { ACTIVE } from '../../constants';
 import { getObjectValues } from '../../helpers';
 import Animator from './Animator';
+import { debounce } from 'throttle-debounce';
 
 class Slider {
   constructor(wrap) {
@@ -18,6 +19,8 @@ class Slider {
     if(!this.slides.length) return;
     this._initFirstSlide();
     this._setSlidesPosition();
+    this.setPositions = debounce(66, this._setSlidesPosition.bind(this));
+    window.addEventListener('resize', this.setPositions);
     this._paginate();
   };
 
@@ -25,6 +28,8 @@ class Slider {
     const left = this.slides[0].getBoundingClientRect().left;
 
     this.slides.forEach(slide => {
+      slide.style.transform = 'translate(0, 0)';
+      const currTranslate = window.getComputedStyle(slide);
       const currentLeft = slide.getBoundingClientRect().left;
       const leftOffest = currentLeft - left;
       slide.style.transform = `translate(-${leftOffest}px, 0)`;

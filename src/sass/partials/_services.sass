@@ -3,8 +3,9 @@
 
 .service-item
   $this: &
-  padding-top: 85px
-  padding-bottom: 85px
+  display: block
+  +css-lock(30, 85, 320, 1499, padding-top)
+  +css-lock(30, 85, 320, 1499, padding-bottom)
   color: $white
   background-color: $purple-dark
   position: relative
@@ -23,22 +24,33 @@
     border-bottom-color: transparent
     +before
       transform: translate(0, 0)
+    #{$this}__link
+      transform: translate(0, 0)
   &__inner
     position: relative
     z-index: 1
     +flex(space-between, center)
+
   &__title
     margin-bottom: 30px
+    display: block
     +lg
       margin-bottom: 20px
     +md
       margin-bottom: 15px
   &__block
     max-width: 590px
+    display: block
+    padding-right: 10px
   &__link
+    display: block    
+    +tr(transform .3s)
     .icon
       font-size: $fz-arrow
       +tr(transform .3s)
-    +hover
-      .icon
-        transform: translate(10px, 0)
+      +sm
+        font-size: $fz-arrow-sm
+    .no-touch &
+      transform: translate(-20px, 0)
+  &__text
+    display: block

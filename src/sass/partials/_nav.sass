@@ -31,7 +31,10 @@
       &:hover
         #{$this}--dropdown
           visibility: visible
-          opacity: 1      
+          opacity: 1 
+          +lg
+            max-height: 400px
+            overflow: visible     
   a
     +tr(color .3s)
     text-transform: uppercase
@@ -51,8 +54,14 @@
     white-space: nowrap
     +tr(opacity .3s, visibility .3s)
     +lg
-      // position: static
-      // display: block
+      position: static
+      visibility: visible
+      opacity: 1
+      display: block
+      max-height: 0
+      padding: 0
+      overflow: hidden
+      +tr(max-height .3s)
     li
       display: block
       +notlast

@@ -8,16 +8,22 @@
 .s-more
   .word
     left: 0
-    top: $padding-lg
+    +css-lock(30, 125, 320, 1499, top)
   .container
     position: relative
     z-index: 1
   &__title
-    margin-bottom: 175px
+    +css-lock(20, 175, 320, 1499, margin-bottom)
   &__block
     width: percentage(8/12)
     margin-left: percentage(4/12)
     position: relative
+    +md
+      width: percentage(10/12)
+      margin-left: percentage(2/12)
+    +xs
+      width: auto
+      margin-left: 0
   &__block-title
     margin-bottom: 30px
     +lg
@@ -50,13 +56,33 @@
     position: absolute
     bottom: 0
     left: 0% - percentage(360/930)
-    color: $c-border
-    font-size: $fz-arrow
-    +rotate(90)
+    color: $c-border    
+    .icon
+      font-size: $fz-arrow
+      +rotate(90)
+      +sm
+        font-size: $fz-arrow-sm
+    +md
+      left: -16%
+    +xs
+      position: static
+      display: block
+      width: 40px
+      margin-top: 10px
+      margin-bottom: 10px
+      margin-left: auto
+      margin-right: auto
+
 
 .s-portfolio
   .word
     right: -5%
+    +sm
+      right: -10%
+    +xs
+      right: -20%
+    +xss
+      right: -30%
   &__link
     text-transform: uppercase
     display: inline-block
@@ -87,14 +113,14 @@
   .word
     right: -13%
   &__title-block
-    margin-bottom: 240px
+    +css-lock(30, 240, 320, 1499, margin-bottom)
   &__title
-    margin-bottom: 80px
+    +css-lock(15, 80, 320, 1499, margin-bottom)
   &__content
     max-width: 930px
-    margin-bottom: 95px
+    +css-lock(15, 95, 320, 1499, margin-bottom)
 
-.s-testimonials  
+.s-testimonials
   position: relative
   +before
     position: absolute
@@ -125,8 +151,19 @@
     +flex(flex-start, normal, row, wrap)
   &__left
     width: percentage(8/12)
+    padding-right: 15px
+    +md
+      width: 60%
+    +sm
+      width: 100%
+      margin-bottom: 15px
+      padding-right: 0
   &__right
     width: percentage(4/12)
+    +md
+      width: 40%
+    +sm
+      width: 100%
   &__title
     margin-bottom: 55px
     +xl
@@ -149,10 +186,23 @@
       margin-bottom: 10px
   &__btns
     +flex(flex-start, normal, row, wrap)
+    +xl
+      display: block
   &__btn
     width: percentage(3/8)
     +notlast
       margin-right: 30px
+    +xl
+      width: 50%
+      +notlast
+        margin-right: 0
+        margin-bottom: 15px
+    +lg
+      width: 60%
+    +md
+      width: 70%
+    +sm
+      width: auto
 
 
 .order-contacts
@@ -163,6 +213,8 @@
     margin-bottom: 10px
     +hover
       color: $gray
+    +sm
+      font-size: $fz
   &__phone
     @extend .title
     +reg

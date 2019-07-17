@@ -1,10 +1,11 @@
 ---
 title: home
+page: home
+mainClass: page-home
 ---
 {% extends "layouts/_layout.html" %}
 
-{% block content %}
-  {% include "partials/_header.html" %}
+{% block content %}  
   {% include "partials/_hero.html" %}
   {% include "partials/sections/_s-home-more.html" %}
   {% include "partials/sections/_s-portfolio.html" %}
@@ -12,7 +13,4 @@ title: home
   {% include "partials/sections/_s-we-know.html" %}
   {% include "partials/sections/_s-testimonials.html" %}
   {% include "partials/sections/_s-order.html" %}
-  {% include "partials/_footer.html" %}
 {% endblock %}
-
-

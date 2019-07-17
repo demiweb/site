@@ -1,5 +1,5 @@
 <!-- begin header -->
-<header class="header">
+<header class="header js-header">
   <div class="header__logo">
     <a href="/" class="logo">
       <img data-src="img/logo.png" alt="" class="js-lazy">
@@ -24,12 +24,13 @@
     <!-- end header-phone -->
   </div>
 
-  <div class="header__nav">
+  <div class="header__nav js-menu">
     {% include "partials/_nav.html" %}
+    <a href="#" class="header__nav-close js-menu-close"></a>
   </div>
 
   <div class="header__burger">
-    <a href="#" class="burger"><span></span></a>
+    <a href="#" class="burger js-burger"><span></span></a>
   </div>
 </header>
 <!-- end header -->

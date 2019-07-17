@@ -1,0 +1,50 @@
+.fadeIn
+  animation-name: fadeIn
+.fadeInLeft
+  animation-name: fadeInLeft
+.fadeInRight
+  animation-name: fadeInRight
+.overlayedLeft
+  animation-name: fadeIn
+  +before
+    animation-name: overlayedLeft
+    animation-fill-mode: forwards
+    animation-duration: 1s
+.fadeInBottomSm
+  animation-name: fadeInBottomSm
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes fadeInLeft
+  0%
+    opacity: 0
+    transform: translate(-100%, 0)
+  100%
+    opacity: 1
+    transform: translate(0, 0)
+
+@keyframes fadeInRight
+  0%
+    opacity: 0
+    transform: translate(100%, 0)
+  100%
+    opacity: 1
+    transform: translate(0, 0)
+
+@keyframes overlayedLeft
+  0%
+    transform: translate(-100%, 0)
+  100%
+    transform: translate(100%, 0)
+
+@keyframes fadeInBottomSm
+  0%
+    opacity: 0
+    transform: translate(0, 30px)
+  100%
+    opacity: 1
+    transform: translate(0, 0)

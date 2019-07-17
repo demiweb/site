@@ -1,6 +1,7 @@
 .header
   $this: &
-  color: $white  
+  opacity: 0
+  color: $white
   position: relative
   z-index: 15
   height: $header-height
@@ -8,8 +9,31 @@
   padding-left: 30px
   padding-right: 30px
   padding-top: 20px
+  +sm
+    height: $header-height-sm
+    padding-top: 10px
+    padding-left: 15px
+    padding-right: 15px
+  &.is-fixed
+    position: fixed
+    left: 0
+    right: 0
+    top: 0
+    background-color: $white
+    color: $black
+    padding-top: 10px
+    padding-bottom: 10px
+    box-shadow: 0 0 10px rgba($gray, .3)
+    #{$this}__nav
+      display: none
+      &.is-active
+        display: block
+    #{$this}__burger
+      flex-grow: 1
   &__logo
     padding-right: 25px
+    +xs
+      padding-right: 10px
   &__phone
     padding-left: 25px
     padding-right: 25px
@@ -27,6 +51,9 @@
       left: 0
     &::after
       right: 0
+    +xs
+      padding-left: 10px
+      padding-right: 10px
   &__nav
     padding-left: 25px
     flex-grow: 1
@@ -40,6 +67,22 @@
       padding: 15px
       background-color: $white
       +vertical
+      visibility: hidden
+      opacity: 0
+      +tr(visibility .3s, opacity .3s)
+      &.is-active
+        display: block
+        visibility: visible
+        opacity: 1
+  &__nav-close    
+    +icon-close(20, 2, $black)
+    position: absolute
+    top: 20px
+    right: 20px
+    z-index: 1
+    display: none
+    +lg
+      display: block
   &__burger
     +lg
       flex-grow: 1
@@ -82,6 +125,8 @@
       position: absolute
       top: .4em
       right: 0
+    +xs
+      font-size: $fz
   &__phone
     +tr(color .3s)
     +hover
@@ -92,6 +137,10 @@
   width: 39px
   height: 18px
   margin-left: auto
+  +xs
+    // width: 30px
+    padding-left: 9px
+    // margin-left: 10px
   span:after, span:before 
     content: ""
     position: absolute
@@ -106,7 +155,7 @@
     width: 100%
     height: 2px
     background-color: currentColor
-    transition: all 0.3s
+    transition: transform 0.3s
     backface-visibility: hidden
     border-radius: 2px
   &.is-active span 

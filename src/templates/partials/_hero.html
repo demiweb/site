@@ -1,12 +1,12 @@
 <!-- begin hero -->
-<section class="hero js-lazy" data-background-image="img/bg-hero.jpg">
+<section class="hero js-lazy" data-background-image="img/bg-hero.jpg" data-scroll-to-target="hero">
   <div class="container">
     <div class="hero__inner">
       <div class="hero__content">
         <div class="hero__subttl">Створення та розробка сайтів в Україні</div>
 
         <div class="hero__title">
-          <h1 class="title"><small>Допоможемо</small> реалізувати ваші ідеї <small>у якісний продукт</small></h1>
+          <div class="title"><small>Допоможемо</small> реалізувати ваші ідеї <small>у якісний продукт</small></div>
         </div>
 
         <div class="hero__btns">
@@ -31,15 +31,13 @@
           <img data-src="img/logo-lg-pattern.png" alt="" class="js-lazy">
           {{ mixins.icon('D') }}
         </div>        
-      </div>
-
-      
+      </div>      
     </div>
     
   </div>
 
   <div class="hero__scroll-down">
-    <a href="#" class="scroll-down">
+    <a href="more" class="scroll-to scroll-to--down js-scroll-to-btn">
       {{ mixins.icon('arrow') }}
     </a>
   </div>

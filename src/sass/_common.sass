@@ -4,7 +4,10 @@ body
   font-size: $fz
   +reg
   color: $black
+  min-width: 320px
   +no-scroll
+  +sm
+    font-size: $fz-sm
 
 input, textarea
   font-family: inherit
@@ -19,7 +22,17 @@ input, textarea
   fill: currentColor
   font-size: inherit
 
+.overflow-hidden
+  overflow: hidden
+
+.out
+  &.has-fixed-header
+    padding-top: $header-height
+    +sm
+      padding-top: $header-height-sm
+
 .container
+  display: block
   max-width: 1440px
   padding-left: 15px
   padding-right: 15px
@@ -28,41 +41,44 @@ input, textarea
   // +xlmin
   //   max-width: 1440px
 
-.scroll-down
+.scroll-to
   width: 90px
   height: 90px
   background-color: $yellow
   position: relative
   color: $white
-  margin-top: 20px
   +flex(center, center)
-  +hover
-    .icon
-      transform: translate(0, 0) rotate(90deg)
+  flex: 0 0 90px
+  +sm
+    width: 70px
+    height: 70px
+    flex: 0 0 70px
   .icon
-    font-size: $fz-arrow
-    transform: translate(0, -100%) rotate(90deg)
+    font-size: $fz-arrow    
     +tr(transform .5s)
-
-.scroll-top
-  width: 90px
-  height: 90px
-  background-color: $yellow
-  position: relative
-  color: $white
-  +flex(center, flex-end)
-  +hover
+    +sm
+      font-size: $fz-arrow-sm
+  &--down
+    margin-top: 20px
     .icon
-      transform: translate(0, -50%) rotate(-90deg)
-  .icon
-    font-size: $fz-arrow
-    transform: rotate(-90deg)
-    +tr(transform .5s)
+      transform: translate(0, -100%) rotate(90deg)
+    +sm
+      margin-top: 15px
+    +hover
+      .icon
+        transform: translate(0, 0) rotate(90deg)
+  &--up
+    align-items: flex-end
+    .icon
+      transform: rotate(-90deg)
+    +hover
+      .icon
+        transform: translate(0, -50%) rotate(-90deg)
 
 .word
   // +black
   +bold
-  font-size: 236px
+  +css-lock(70, 236, 320, 1499, font-size)
   line-height: .9
   letter-spacing: -.05em
   text-transform: uppercase
@@ -75,20 +91,23 @@ input, textarea
   color: $gray-lighten
   position: absolute
   z-index: 0
+  opacity: 0
   &--sm
-    font-size: 170px
+    +css-lock(70, 170, 320, 1499, font-size)
 
 .title-block
   $this: &
   position: relative
-  padding-top: $padding-mdl
-  padding-bottom: $padding-mdl  
+  +css-lock(30, 100, 320, 1499, padding-top)  
+  +css-lock(30, 100, 320, 1499, padding-bottom)  
   overflow: hidden
   
   &__title
     position: relative
     z-index: 1
     padding-left: percentage(1/12)
+    +xs
+      padding-left: 0
   &__word
     z-index: 1
     right: 0
@@ -111,12 +130,17 @@ input, textarea
       z-index: 0
       background-color: $yellow
       width: percentage(3/12)
+    +xs
+      +before
+        width: percentage(4/12)
 
   &--btn
     background-color: $gray-lighten
     overflow: visible
     #{$this}__word
       transform: translate(0, 50%)
+      +xs
+        display: none
     #{$this}__btn
       @extend .container
       width: 100%
@@ -146,6 +170,7 @@ input, textarea
   max-height: 460px
   overflow: hidden
   position: relative
+  padding-right: 8px
   .ps
     &:hover
       // .ps__rail-y
@@ -170,15 +195,30 @@ input, textarea
       left: 0
       border-radius: 0
       background-color: $gray-dark !important
-  h6, .h6
+  h1, h2, h3, h4, h5, h6
     margin-bottom: 25px
     +lg
       margin-bottom: 15px
     +md
       margin-bottom: 10px
+  h1
+    @extend .h6
+  h2
+    @extend .h6
+    @extend .h6--ttn
+    @extend .h6--lg
   p
     margin-bottom: 20px
     +lg
       margin-bottom: 15px
     +md
       margin-bottom: 10px
+
+.overlayed
+  position: relative
+  overflow: hidden
+  +before
+    +coverdiv
+    z-index: 2
+    background-color: $yellow
+    transform: translate(-100%, 0)

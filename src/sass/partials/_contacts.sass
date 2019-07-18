@@ -1,0 +1,24 @@
+.contacts
+  &__btn
+    margin-left: -80px
+
+.contact
+  position: relative
+  color: $white
+  padding-left: 23px
+  margin-bottom: 35px
+  &__icon
+    position: absolute
+    top: 0
+    left: 0
+    .icon
+      font-size: $fz
+  &__text
+    a
+      display: block
+      +tr(color .3s)
+      +hover
+        color: $gray
+
+  &--lg
+    font-size: 20px

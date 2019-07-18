@@ -2,7 +2,7 @@
 <header class="header js-header">
   <div class="header__logo">
     <a href="/" class="logo">
-      <img data-src="img/logo.png" alt="" class="js-lazy">
+      {{ mixins.icon('logo') }}
     </a>
   </div>
 
@@ -24,7 +24,7 @@
     <!-- end header-phone -->
   </div>
 
-  <div class="header__nav js-menu">
+  <div class="header__nav">
     {% include "partials/_nav.html" %}
     <a href="#" class="header__nav-close js-menu-close"></a>
   </div>

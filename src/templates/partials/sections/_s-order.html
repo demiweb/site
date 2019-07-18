@@ -3,11 +3,11 @@
   <div class="container">
     <div class="s-order__inner">
       <div class="s-order__left">
-        <div class="s-order__title">
-          <div class="title title--ttn">А ви готові розробити <br> по справжньому крутий проект?</div>
+        <div class="s-order__title overlayed js-anim-el" data-anim-name="overlayedLeft">
+          <div class="title title--ttn js-anim-el" data-anim-name="fadeIn">А ви готові розробити <br> по справжньому крутий проект?</div>
         </div>
 
-        <div class="s-order__contacts">
+        <div class="s-order__contacts js-anim-el" data-anim-name="fadeInBottomSm">
           <!-- begin order-contacts -->
           <div class="order-contacts">
             <div class="order-contacts__mail">
@@ -25,7 +25,7 @@
           <!-- end order-contacts -->
         </div>
 
-        <div class="s-order__btns">
+        <div class="s-order__btns js-anim-el" data-anim-name="fadeInBottomSm">
           <div class="s-order__btn">
             {{ mixins.btn(
               title = 'замовити консультацію',
@@ -41,7 +41,7 @@
         </div>
       </div>
 
-      <div class="s-order__right">
+      <div class="s-order__right js-anim-el" data-anim-name="fadeInRightSm" data-anim-delay="0.5s">
         {% include "partials/_seo-text.html" %}        
       </div>
     </div>

@@ -17,11 +17,11 @@ clients = [
   <div class="container"> 
     <div class="clients__table">
       <!-- begin clients-table -->
-      <div class="clients-table">
+      <div class="clients-table js-anim-in-vieport-with-gsap">
         {% for i in clients %}
         <div class="clients-table__item{% if i.mod %} {{ i.mod }}{% endif %}">
           {% if i.img %}
-          <img data-src="img/logos/{{ i.img }}" alt="" class="js-lazy">
+          <img data-src="img/logos/{{ i.img }}" alt="" class="js-lazy animated-img">
           {% endif %}
           {% if i.text %}
           {{ i.text | safe }}
@@ -33,6 +33,8 @@ clients = [
     </div>
   </div>
 
-  <div class="clients__word word word--sm">Client’s <br> feedback</div>
+  <div class="clients__word word word--sm js-anim-el" data-anim-name="fadeIn">
+    <div class="word__inner js-parallax-scroll">Client’s <br> feedback</div>
+  </div>
 </div>
 <!-- end clients -->

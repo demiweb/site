@@ -1,13 +1,15 @@
 {% macro titleBlock(mod, title, word) %}
 <div class="title-block{% if mod %} {{ mod }}{% endif %}">
-  <div class="title-block__square-wrap"></div>
+  <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
 
   <div class="container">
-    <div class="title-block__title">
+    <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
       <div class="title">{{ title | safe }}</div>
     </div>    
   </div>
 
-  <div class="title-block__word word">{{ word | safe }}</div>
+  <div class="title-block__word word js-anim-el" data-anim-name="fadeInLeft">
+    <div class="word__inner js-parallax-scroll">{{ word | safe }}</div>
+  </div>
 </div>
 {% endmacro %}

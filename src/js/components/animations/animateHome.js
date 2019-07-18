@@ -1,10 +1,12 @@
 import PageAnimator from './PageAnimator';
+import BlockAnimator from './BlockAnimator';
 import { TimelineLite } from 'gsap';
 import { ANIMATE, SHOW } from '../../constants';
 
 export default function animateHome() {
   const page = document.querySelector('.page-home');
 
+  // hero animations
   const animator = new PageAnimator(page);
   animator.elements = {
     header: document.querySelector('.header'),
@@ -14,72 +16,199 @@ export default function animateHome() {
     heroContent: page.querySelector('.hero__content'),
     heroSubttl: page.querySelector('.hero__subttl'),
     heroTitle: page.querySelector('.hero__title'),
+    heroTitleEl: page.querySelector('.hero__title .title'),
     heroBtns: page.querySelectorAll('.hero__btn'),
     scrollDown: page.querySelector('.hero__scroll-down')
   };
   animator.animate = () => {
     const tl = new TimelineLite();
 
-    tl
-      .fromTo(
-        animator.elements.letterWrap,
-        1,
-        { opacity: 0 },
-        { opacity: 1 }
-      )
-      .call(() => {
-        animator.elements.letter.classList.add(ANIMATE);
-      })
-      .fromTo(
-        animator.elements.letterImg,
-        1,
-        { opacity: 0, y: -30, x: 30 },
-        { opacity: 1, y: 0, x: 0 }
-      )
-      .fromTo(
-        animator.elements.letterWrap,
-        0.5,
-        { x: '-100%' },
-        { x: '0%' }
-      )
-      .call(() => {
-        animator.elements.heroContent.classList.add(SHOW);
-      })
-      .fromTo(
-        animator.elements.heroSubttl,
-        0.5,
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1 },
-        '+=.5'
-      )
-      .fromTo(
-        animator.elements.heroTitle,
-        0.5,
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1 },
-        '-=.3'
-      )
-      .staggerFromTo(
-        animator.elements.heroBtns,
-        0.5,
-        { opacity: 0, y: 15 },
-        { opacity: 1, y: 0 },
-        0.1
-      )
-      .fromTo(
-        animator.elements.header,
-        0.5,
-        { opacity: 0, y: '-100%' },
-        { opacity: 1, y: '0%' },
-        '-=0.5'
-      )
-      .fromTo(
-        animator.elements.scrollDown,
-        0.5,
-        { opacity: 0, y: '100%' },
-        { opacity: 1, y: '0%' },
-        '-=0.5'
-      );
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      tl
+        .fromTo(
+          animator.elements.letterWrap,
+          1,
+          { opacity: 0 },
+          { opacity: 1 }
+        )
+        .call(() => {
+          animator.elements.letter.classList.add(ANIMATE);
+        })
+        .fromTo(
+          animator.elements.letterImg,
+          1,
+          { opacity: 0, y: -30, x: 30 },
+          { opacity: 1, y: 0, x: 0 }
+        )
+        .fromTo(
+          animator.elements.letterWrap,
+          0.5,
+          { x: '-100%' },
+          { x: '0%' }
+        )
+        .fromTo(
+          animator.elements.heroTitle,
+          0,
+          { opacity: 0 },
+          { opacity: 1 }
+        )
+        .call(() => {
+          animator.elements.heroTitle.classList.add('overlayedLeft');
+        })
+        .fromTo(
+          animator.elements.heroTitleEl,
+          0.5,
+          { opacity: 0 },
+          { opacity: 1 },
+          '+=.5'
+        )
+        .fromTo(
+          animator.elements.heroSubttl,
+          0.5,
+          { y: -30, opacity: 0 },
+          { y: 0, opacity: 1 },
+          '-=.5'
+        )
+        .staggerFromTo(
+          animator.elements.heroBtns,
+          0.5,
+          { opacity: 0, y: 15 },
+          { opacity: 1, y: 0 },
+          0.1
+        )
+        .fromTo(
+          animator.elements.header,
+          0.5,
+          { opacity: 0, y: '-100%' },
+          { opacity: 1, y: '0%' },
+          '-=0.5'
+        )
+        .fromTo(
+          animator.elements.scrollDown,
+          0.5,
+          { opacity: 0, y: '100%' },
+          { opacity: 1, y: '0%' },
+          '-=0.5'
+        );
+    } else {
+      tl
+        .fromTo(
+          animator.elements.heroTitle,
+          0,
+          { opacity: 0 },
+          { opacity: 1 }
+        )
+        .call(() => {
+          animator.elements.heroTitle.classList.add('overlayedLeft');
+        })
+        .fromTo(
+          animator.elements.heroTitleEl,
+          0.5,
+          { opacity: 0 },
+          { opacity: 1 },
+          '+=.5'
+        )
+        .fromTo(
+          animator.elements.heroSubttl,
+          0.5,
+          { y: -30, opacity: 0 },
+          { y: 0, opacity: 1 },
+          '-=.5'
+        )
+        .staggerFromTo(
+          animator.elements.heroBtns,
+          0.5,
+          { opacity: 0, y: 15 },
+          { opacity: 1, y: 0 },
+          0.1
+        )
+        .fromTo(
+          animator.elements.header,
+          0.5,
+          { opacity: 0, y: '-100%' },
+          { opacity: 1, y: '0%' },
+          '-=0.5'
+        )
+        .fromTo(
+          animator.elements.scrollDown,
+          0.5,
+          { opacity: 0, y: '100%' },
+          { opacity: 1, y: '0%' },
+          '-=0.5'
+        );
+    };
+
+    
   };
   animator.init();
+
+  // blocks animations
+  // =================== table =======================
+  const table = document.querySelector('.js-anim-in-vieport-with-gsap.clients-table');
+  if(table) {
+    const blockAnimator = new BlockAnimator(table, {
+      observer: {
+        threshold: 0.25
+      }
+    });
+    blockAnimator.animate = (entry, observer) => {
+      const cols = entry.target.querySelectorAll('.clients-table__item');
+
+      const tl = new TimelineLite({
+        onComplete: () => {
+          observer.unobserve(entry.target);
+        }
+      });
+
+      tl
+        .staggerFromTo(
+          cols,
+          0.7,
+          { opacity: 0, y: 15, x: 15 },
+          { opacity: 1, y: 0, x: 0 },
+          0.1
+        );
+    };
+    blockAnimator.init();
+  };
+  // =================== table =======================
+
+  // =================== slider =======================
+  const slider = document.querySelector('.js-anim-in-vieport-with-gsap.testimonials-slider__wrap');
+
+  if(slider) {
+    const blockAnimator = new BlockAnimator(slider, {
+      observer: {
+        threshold: 0.4
+      }
+    });
+    blockAnimator.animate = (entry, observer) => {
+      const img = entry.target.querySelector('.testimonial__img');
+      const imgCover = entry.target.querySelector('.testimonials-slider__img-cover');
+      const IMG_ANIM_DURATION = 500;
+
+      const tl = new TimelineLite({
+        onComplete: () => {
+          observer.unobserve(entry.target);
+        }
+      });
+
+      tl        
+        .call(() => {
+          imgCover.classList.add(ANIMATE);
+          setTimeout(() => {
+            imgCover.classList.remove(ANIMATE);
+            imgCover.classList.add('is-finishing-animate');
+            entry.target.classList.add(SHOW);
+
+            setTimeout(() => {
+              imgCover.classList.remove('is-finishing-animate');              
+            }, IMG_ANIM_DURATION);
+          }, IMG_ANIM_DURATION);
+        });
+    };
+    blockAnimator.init();
+  };
+  // =================== slider =======================
+  
 };

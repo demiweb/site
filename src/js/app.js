@@ -1,3 +1,5 @@
+import 'intersection-observer';
+
 import { setVhProperty } from './helpers';
 import setTouchClassName from './components/setTouchClassName';
 // import sayHello from './lib/sayHello';
@@ -9,6 +11,8 @@ import scrollTo from './components/scrollTo';
 import toggleHeader from './components/toggleHeader';
 import setAnimations from './components/animations/setAnimations';
 import animateOnScroll from './components/animeteOnScroll';
+import addClassesOnScroll from './components/addClassesOnScroll';
+import setParralax from './components/setParralax';
 
 $(function() {
   // sayHello();
@@ -22,4 +26,6 @@ $(function() {
   toggleHeader();
   setAnimations();
   animateOnScroll();
+  addClassesOnScroll();
+  setParralax();
 });

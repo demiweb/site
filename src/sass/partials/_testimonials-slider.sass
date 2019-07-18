@@ -24,6 +24,20 @@
     +md
       padding-top: 20px
       padding-bottom: 20px
+    &.is-show
+      .testimonial
+        &.is-active
+          .testimonial__caption,
+          .testimonial__text
+            opacity: 1
+            transform: translate(0, 0)  
+        &__img
+          opacity: 1
+        &.is-animate
+          .testimonial__caption,
+          .testimonial__text
+            opacity: 0
+            transform: translate(0, 15px) 
 
   &__btns
     position: absolute
@@ -80,15 +94,15 @@
     opacity: 1
     #{$this}__img
       display: block
-    #{$this}__caption,
-    #{$this}__text
-      opacity: 1
-      transform: translate(0, 0)    
+    // #{$this}__caption,
+    // #{$this}__text
+    //   opacity: 1
+    //   transform: translate(0, 0)    
   &.is-animate
-    #{$this}__caption,
-    #{$this}__text
-      opacity: 0
-      transform: translate(0, 15px)   
+    // #{$this}__caption,
+    // #{$this}__text
+    //   opacity: 0
+    //   transform: translate(0, 15px)   
   &__inner
     +flex(flex-start, normal, row, wrap)
   &__left
@@ -115,6 +129,7 @@
     padding-top: 63%
     height: 100%
     display: none
+    opacity: 0
     +md
       padding-top: 0
       height: 350px

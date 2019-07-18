@@ -1,0 +1,128 @@
+<!-- begin menu -->
+<div class="menu js-menu">
+  <div class="menu__content">
+    <div class="menu__word word word--purple">
+      <div class="word__inner">menu</div>
+    </div>
+
+    <div class="container">
+      <div class="menu__inner">
+        <div class="menu__top">
+          <div class="menu__logo">
+            <a href="/" class="logo">
+              {{ mixins.icon('logo') }}
+            </a>
+          </div>
+
+          <div class="menu__phone">
+            <!-- begin header-phone -->
+            <div class="header-phone header-phone--menu">
+              <a href="tel:0800337167" class="header-phone__title">0 800 337 167</a>
+              <div class="header-phone__subttl">(Безкоштовно по всій Україні)</div>
+            </div>
+            <!-- end header-phone -->
+          </div>
+        </div>
+
+        <div class="menu__main">
+          <div class="menu__main-in">
+            <div class="menu__left">
+              <div class="menu__nav">
+                {{ mixins.list(
+                  name = 'nav',
+                  modifications = { wrap: 'nav--lg', item: '', link: '' },
+                  list = [
+                    { item: '<span>01</span>', link: 'послуги' },
+                    { item: '<span>02</span>', link: 'проекти' },
+                    { item: '<span>03</span>', link: 'про компанію' },
+                    { item: '<span>04</span>', link: 'відгуки' },
+                    { item: '<span>05</span>', link: 'зв’язок з нами' }
+                  ]
+                ) }}
+              </div>
+            </div>
+
+            <div class="menu__center">
+              <div class="menu__nav">
+                <div class="menu__title">послуги</div>
+
+                {{ mixins.list(
+                  name = 'nav',
+                  modifications = { wrap: 'nav--sm', item: '', link: '' },
+                  list = [
+                    { link: 'Web site development' },
+                    { link: 'Seo + Adwords' },
+                    { link: 'Branding' },
+                    { link: 'Smm' }
+                  ]
+                ) }}
+              </div>
+            </div>
+
+            <div class="menu__right">
+              <div class="menu__title">зв’язок з нами</div>
+
+              <div class="menu__contacts">
+                <!-- begin contacts -->
+                <div class="contacts">
+                  <!-- begin contact -->
+                  <div class="contact contact--lg">
+                    <div class="contact__icon">{{ mixins.icon('call-answer') }}</div>
+
+                    <div class="contact__text">
+                      <a href="tel:0443338538">044 333 8538</a>
+                      <a href="tel:0800337167">0 800 337 167</a>
+                    </div>
+                  </div>
+                  <!-- end contact -->
+                  <!-- begin contact -->
+                  <div class="contact">
+                    <div class="contact__icon">{{ mixins.icon('location') }}</div>
+
+                    <div class="contact__text">
+                      Київ, вул. Бульвар Марії Приймаченко 1/27, м. Дружби Народів
+                    </div>
+                  </div>
+                  <!-- end contact -->
+                  <!-- begin contact -->
+                  <div class="contact">
+                    <div class="contact__icon">{{ mixins.icon('envelope') }}</div>
+
+                    <div class="contact__text">
+                      <a href="mailto:order@demiweb.pro">order@demiweb.pro</a>
+                    </div>
+                  </div>
+                  <!-- end contact -->
+
+                  <div class="contacts__btn">
+                    {{ mixins.btn(
+                      title = '<span class="btn__title">ПОСТАВИТИ ПИТАННЯ</span>',
+                      mod = 'btn--half btn--half-white btn--half-sm'
+                    ) }}
+                  </div>
+                </div>
+                <!-- end contacts -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu__aside">
+    <a href="#" class="menu__close js-menu-close"></a>
+
+    <div class="menu__social">
+      {{ mixins.list(
+        name = 'social',
+        modifications = { wrap: '', item: '', link: '' },
+        list = [
+          { item: '', link: mixins.icon('instagram') , modItem: '', modLink: '' },
+          { item: '', link: mixins.icon('facebook') , modItem: '', modLink: '' }
+        ]
+      ) }}
+    </div>
+  </div>
+</div>
+<!-- end menu -->

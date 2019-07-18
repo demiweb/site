@@ -2,11 +2,14 @@
 <section class="section s-we-know pb-lg">
   <div class="s-we-know__title-block title-block title-block--btn">
     <div class="container">
-      <div class="title-block__title">
+      <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
         <div class="title">ми знаємо, що потрібно саме вам</div>
       </div>
-      <div class="title-block__word word">we know</div>
-      <div class="title-block__btn">
+      <div class="title-block__word word js-anim-el" data-anim-name="fadeInLeft">
+        <div class="word__inner js-parallax-scroll">we know</div>
+      </div>
+
+      <div class="title-block__btn js-anim-el" data-anim-name="fadeIn">
         {{ mixins.btn(
           title = 'замовити консультацію',
           mod = 'btn--xl'
@@ -18,11 +21,11 @@
   <div class="container">
     <div class="s-we-know__content">
       <div class="s-we-know__content">
-        <div class="s-we-know__title">
-          <div class="title title--ttn">Ми працюємо для вас,<br> і ділимося своїм досвідом</div>
+        <div class="s-we-know__title overlayed js-anim-el" data-anim-name="overlayedLeft">
+          <div class="title title--ttn js-anim-el" data-anim-name="fadeIn">Ми працюємо для вас,<br> і ділимося своїм досвідом</div>
         </div>
 
-        <div class="s-we-know__text">Наша студія веб дизайну по розробці сайтів під ключ в Києві пропонує вам розробку сайтів будь-якої складності і тематики. Нашої компанії під силу виготовлення сайтів будь-якого типу: створення інтернет-магазину, сайт візитка, корпоративний сайт, сайт для бізнесу, сайт каталог, створення Лендінгем (landing page). Так, ви можете замовити у нас сайт будь-якого призначення в Вінниці, Києві та по всій Україні. У нас в команді працюють кращі розробники з усієї країни по веб-програмуванню, у яких більше 5 років досвіду і навичок створення якісного продукту.</div>
+        <div class="s-we-know__text js-anim-el" data-anim-name="fadeInBottomSm">Наша студія веб дизайну по розробці сайтів під ключ в Києві пропонує вам розробку сайтів будь-якої складності і тематики. Нашої компанії під силу виготовлення сайтів будь-якого типу: створення інтернет-магазину, сайт візитка, корпоративний сайт, сайт для бізнесу, сайт каталог, створення Лендінгем (landing page). Так, ви можете замовити у нас сайт будь-якого призначення в Вінниці, Києві та по всій Україні. У нас в команді працюють кращі розробники з усієї країни по веб-програмуванню, у яких більше 5 років досвіду і навичок створення якісного продукту.</div>
       </div>
     </div>
   </div>

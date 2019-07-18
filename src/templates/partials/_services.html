@@ -27,21 +27,23 @@ services = [
 <div class="services">
   {% for i in services %}
   <!-- begin service-item -->
-  <a href="#" class="service-item">
-    <span class="container">
-      <span class="service-item__inner">
-        <span class="service-item__block">
-          <span class="service-item__title">
-            <span class="title title--ttn">{{ i.title | safe }}</span>
+  <div class="service-item__wrap js-vieport-related-el">
+    <a href="#" class="service-item">
+      <span class="container">
+        <span class="service-item__inner">
+          <span class="service-item__block">
+            <span class="service-item__title">
+              <span class="title title--ttn">{{ i.title | safe }}</span>
+            </span>
+
+            <span class="service-item__text">{{ i.text | safe }}</span>
           </span>
 
-          <span class="service-item__text">{{ i.text | safe }}</span>
+          <span class="service-item__link">{{ mixins.icon('arrow') }}</span>
         </span>
-
-        <span class="service-item__link">{{ mixins.icon('arrow') }}</span>
       </span>
-    </span>
-  </a>
+    </a>
+  </div>
   <!-- end service-item -->
   {% endfor %}
 </div>

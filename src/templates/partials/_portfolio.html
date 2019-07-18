@@ -39,39 +39,41 @@ portfolio = [
 <div class="portfolio">
   {% for i in portfolio %}
   <!-- begin portfolio-item -->
-  <div class="portfolio-item">
-    <div class="container">
-      <div class="portfolio-item__content">
-        <div class="portfolio-item__content-inner">
-        <div class="portfolio-item__subttl">{{ i.subttl }}</div>
+  <div class="portfolio-item js-vieport-related-el"  data-threshold="0.4">
+    <div class="portfolio-item__inner">
+      <div class="container">
+        <div class="portfolio-item__content">
+          <div class="portfolio-item__content-inner">
+          <div class="portfolio-item__subttl">{{ i.subttl }}</div>
 
-        <div class="portfolio-item__block">
-          <div class="portfolio-item__nmb">{{ i.nmb }}</div>
+          <div class="portfolio-item__block">
+            <div class="portfolio-item__nmb">{{ i.nmb }}</div>
 
-          <div class="portfolio-item__title">
-            <div class="title title--medium title--ttn">{{ i.title }}</div>
-          </div>
+            <div class="portfolio-item__title">
+              <div class="title title--medium title--ttn">{{ i.title }}</div>
+            </div>
 
-          <div class="portfolio-item__text">{{ i.text | safe }}</div>
+            <div class="portfolio-item__text">{{ i.text | safe }}</div>
 
-          <div class="portfolio-item__link">
-            <a href="#" class="link-arrow">
-              <span class="link-arrow__title">Дивитися проект</span>
-              <span class="link-arrow__arrow">
-                {{ mixins.icon('arrow-long') }}
-              </span>
-            </a>
-          </div>
-        </div>        
+            <div class="portfolio-item__link">
+              <a href="#" class="link-arrow">
+                <span class="link-arrow__title">Дивитися проект</span>
+                <span class="link-arrow__arrow">
+                  {{ mixins.icon('arrow-long') }}
+                </span>
+              </a>
+            </div>
+          </div>        
+        </div>
+        </div>
       </div>
-      </div>
-    </div>
 
-    <div class="portfolio-item__right">
-      <div class="portfolio-item__logo" style="background-color: {{ i.logoColor }};">
-        <img data-src="img/logos/{{ i.logo }}" alt="" class="js-lazy">
+      <div class="portfolio-item__right">
+        <div class="portfolio-item__logo" style="background-color: {{ i.logoColor }};">
+          <img data-src="img/logos/{{ i.logo }}" alt="" class="js-lazy">
+        </div>
+        <div class="portfolio-item__img js-lazy" data-background-image="img/portfolio/{{ i.img }}"></div>
       </div>
-      <div class="portfolio-item__img js-lazy" data-background-image="img/portfolio/{{ i.img }}"></div>
     </div>
   </div>
   <!-- end portfolio-item -->

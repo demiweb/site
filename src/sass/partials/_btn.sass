@@ -8,11 +8,20 @@
   text-transform: uppercase
   color: $black
   position: relative
+  overflow: hidden
   +light
   +tr(color .3s, background-color .3s, border-color .3s)
   +hover
     background-color: transparent
     color: $yellow
+  //   +after
+  //     transform: translate(100%, 0)
+  // +after
+  //   +coverdiv
+  //   z-index: 1
+  //   background-color: $yellow
+  //   transform: translate(-100%, 0)
+  //   +tr(transform .5s)
   +lg
     padding-left: 30px
     padding-right: 30px
@@ -66,6 +75,14 @@
     #{$this}__title
       position: relative
       z-index: 1
+  &--half-white
+    color: $white
+    +hover
+      color: $white
+  &--half-sm
+    font-size: $fz
+    padding-left: 80px
+    padding-right: 80px
   &--xl
     font-size: 24px
     padding: 23px 105px

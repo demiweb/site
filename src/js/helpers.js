@@ -21,3 +21,25 @@ export function setVhProperty() {
   setProperty();
   window.addEventListener('resize', setPropertyDebounced);
 };
+
+export function isInView({ el, onEnter, once = true, options }) {
+  if (!options) {
+    options = {
+      threshold: 0.25
+    };
+  };
+
+  function callback(entries, observer) {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        onEnter(entry, observer);
+
+        if (once) {
+          observer.unobserve(entry.target);
+        };
+      };
+    });
+  };
+  const observer = new IntersectionObserver(callback, options);
+  observer.observe(el);
+};

@@ -14,6 +14,9 @@
     z-index: 1
   &__title
     +css-lock(20, 175, 320, 1499, margin-bottom)
+    max-width: 720px
+    .h3
+      opacity: 0
   &__block
     width: percentage(8/12)
     margin-left: percentage(4/12)
@@ -115,10 +118,15 @@
   &__title-block
     +css-lock(30, 240, 320, 1499, margin-bottom)
   &__title
+    max-width: 650px
     +css-lock(15, 80, 320, 1499, margin-bottom)
+    .title
+      opacity: 0
   &__content
     max-width: 930px
     +css-lock(15, 95, 320, 1499, margin-bottom)
+  &__text
+    opacity: 0
 
 .s-testimonials
   position: relative
@@ -134,6 +142,9 @@
     position: relative
     z-index: 1
     margin-bottom: 95px
+    max-width: 1000px
+    .title
+      opacity: 0
     +xl
       margin-bottom: 75px
     +lg
@@ -149,6 +160,7 @@
 .s-order
   &__inner
     +flex(flex-start, normal, row, wrap)
+    overflow: hidden
   &__left
     width: percentage(8/12)
     padding-right: 15px
@@ -160,12 +172,15 @@
       padding-right: 0
   &__right
     width: percentage(4/12)
+    opacity: 0
     +md
       width: 40%
     +sm
       width: 100%
   &__title
     margin-bottom: 55px
+    .title
+      opacity: 0
     +xl
       margin-bottom: 45px
     +lg
@@ -176,6 +191,7 @@
       margin-bottom: 15px
   &__contacts
     margin-bottom: 50px
+    opacity: 0
     +xl
       margin-bottom: 40px
     +lg
@@ -186,6 +202,7 @@
       margin-bottom: 10px
   &__btns
     +flex(flex-start, normal, row, wrap)
+    opacity: 0
     +xl
       display: block
   &__btn
@@ -209,18 +226,20 @@
   &__mail
     text-transform: uppercase
     font-size: 18px
-    +tr(color .3s)
     margin-bottom: 10px
-    +hover
-      color: $gray
+    a
+      +tr(color .3s)
+      +hover
+        color: $gray
     +sm
       font-size: $fz
   &__phone
     @extend .title
-    +reg
-    +tr(color .3s)
-    +hover
-      color: $gray
+    +reg    
+    a
+      +tr(color .3s)
+      +hover
+        color: $gray
   &__text
     text-transform: uppercase
     margin-top: 10px

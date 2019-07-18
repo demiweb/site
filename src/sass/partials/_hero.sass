@@ -29,15 +29,6 @@
       width: 70%
     +sm
       width: 100%
-    +before
-      +coverdiv
-      z-index: 1
-      background-color: $yellow
-      transform: translate(-100%, 0)
-      +tr(transform 1s)
-    &.is-show
-      +before
-        transform: translate(100%, 0)
 
   &__img
     width: 50%
@@ -62,7 +53,8 @@
       font-size: 300px
     img
       position: absolute
-      top: .1em
+      margin-top: .1em
+      top: 0
       left: 0
       z-index: 0
       max-width: 90%
@@ -81,6 +73,7 @@
     margin-bottom: 60px
     opacity: 0
     .title
+      opacity: 0
       small
         display: block
     +xl

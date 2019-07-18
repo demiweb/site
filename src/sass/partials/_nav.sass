@@ -1,22 +1,11 @@
 .nav
   $this: &
   +light
-  +lg
-    color: $black
-    font-size: 24px
-    text-align: center
-    display: inline-block
-    vertical-align: middle
   li
     display: inline-block
     position: relative
     +notlast
       margin-right: 45px
-    +lg
-      display: block
-      +notlast
-        margin-right: 0
-        margin-bottom: 15px
     &.has-dropdown  
       a
         position: relative
@@ -26,15 +15,10 @@
           position: absolute
           top: .2em
           right: 0
-          +lg
-            top: .5em
       &:hover
         #{$this}--dropdown
           visibility: visible
           opacity: 1 
-          +lg
-            max-height: 400px
-            overflow: visible     
   a
     +tr(color .3s)
     text-transform: uppercase
@@ -53,15 +37,6 @@
     color: $gray
     white-space: nowrap
     +tr(opacity .3s, visibility .3s)
-    +lg
-      position: static
-      visibility: visible
-      opacity: 1
-      display: block
-      max-height: 0
-      padding: 0
-      overflow: hidden
-      +tr(max-height .3s)
     li
       display: block
       +notlast
@@ -72,3 +47,66 @@
         display: none
       +hover
         color: $white
+
+  &--lg
+    // color: $white
+    font-size: 24px
+    text-transform: uppercase
+    +bold
+    li
+      display: block
+      position: relative
+      padding-left: 45px
+      +notlast
+        margin-right: 0
+        margin-bottom: 65px
+      span
+        font-size: $fz
+        +reg
+        position: absolute
+        left: 0
+        top: .5em
+        +rotate(-90)
+    a
+      position: relative
+      overflow: hidden
+      +hover
+        color: inherit
+        +before
+          transform: translate(0, 0)
+      +before
+        height: 6px
+        left: -5px
+        right: -5px
+        position: absolute
+        z-index: -1
+        background-color: $yellow
+        bottom: .3em
+        transform: translate(-100%, 0)
+        +tr(transform .3s)
+
+  &--sm
+    // color: $white
+    li
+      display: block
+      +notlast
+        margin-right: 0
+        margin-bottom: 40px
+    a
+      text-transform: none
+      overflow: hidden
+      position: relative
+      +hover
+        color: inherit
+        +before
+            transform: translate(0, 0)
+      +before
+        height: 4px
+        left: -5px
+        right: -5px
+        position: absolute
+        z-index: -1
+        background-color: $yellow
+        bottom: .3em
+        transform: translate(-100%, 0)
+        +tr(transform .3s)

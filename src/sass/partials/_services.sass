@@ -10,7 +10,8 @@
   background-color: $purple-dark
   position: relative
   overflow: hidden
-  +tr(color .5s)
+  transform: translate(-100%, 0)
+  +tr(color .5s, transform .4s ease-out)
   +notlast
     border-bottom: 1px solid  $purple
   +before
@@ -26,6 +27,11 @@
       transform: translate(0, 0)
     #{$this}__link
       transform: translate(0, 0)
+  &__wrap
+    overflow: hidden
+    &.is-show
+      #{$this}
+        transform: translate(0, 0)
   &__inner
     position: relative
     z-index: 1

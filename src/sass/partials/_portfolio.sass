@@ -1,6 +1,9 @@
 .portfolio-item
   $this: &
+  $transition-time: .5s
   position: relative
+  // transform: scaleX(0)
+  +tr(transform $transition-time)
   &:nth-child(odd)
     color: $white
     background-color: $black-lighten
@@ -16,6 +19,16 @@
     +flex(flex-start, normal, column)
     > .container
       order: 1
+  &.is-show
+    #{$this}__inner
+      transform: scaleX(1)
+    #{$this}__content
+      transform: translate(0, 0)
+    #{$this}__right
+      transform: translate(0, 0)
+  &__inner
+    transform: scaleX(0)
+    +tr(transform $transition-time)
   &__right
     position: absolute
     right: 0
@@ -23,6 +36,8 @@
     top: 0
     width: 50%
     overflow: hidden
+    // transform: translate(-100%, 0)
+    +tr(transform $transition-time)
     +hover
       #{$this}__img
         animation-play-state: running
@@ -40,6 +55,8 @@
     height: calc(var(--vh, 1vh) * 100)
     +flex(center, normal, column)
     padding-right: 10px
+    // transform: translate(100%, 0)
+    +tr(transform $transition-time)
     +xs
       width: 100%
       height: auto

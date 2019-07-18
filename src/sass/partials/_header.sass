@@ -58,22 +58,23 @@
     padding-left: 25px
     flex-grow: 1
     +lg
-      position: fixed
-      z-index: 15
-      width: 100%
-      height: 100%
-      top: 0
-      left: 0
-      padding: 15px
-      background-color: $white
-      +vertical
-      visibility: hidden
-      opacity: 0
-      +tr(visibility .3s, opacity .3s)
-      &.is-active
-        display: block
-        visibility: visible
-        opacity: 1
+      display: none
+      // position: fixed
+      // z-index: 15
+      // width: 100%
+      // height: 100%
+      // top: 0
+      // left: 0
+      // padding: 15px
+      // background-color: $white
+      // +vertical
+      // visibility: hidden
+      // opacity: 0
+      // +tr(visibility .3s, opacity .3s)
+      // &.is-active
+      //   display: block
+      //   visibility: visible
+      //   opacity: 1
   &__nav-close    
     +icon-close(20, 2, $black)
     position: absolute
@@ -131,6 +132,12 @@
     +tr(color .3s)
     +hover
       color: $gray
+  &--menu
+    #{$this}__subttl
+      color: $gray-light
+    #{$this}__title
+      +before
+        display: none
 
 .burger
   display: block
@@ -158,9 +165,9 @@
     transition: transform 0.3s
     backface-visibility: hidden
     border-radius: 2px
-  &.is-active span 
-    background-color: transparent
-  &.is-active span:before 
-    transform: rotate(45deg) translate(-1px, 0px)
-  &.is-active span:after 
-    transform: rotate(-45deg) translate(6px, -7px)
+  // &.is-active span 
+  //   background-color: transparent
+  // &.is-active span:before 
+  //   transform: rotate(45deg) translate(-1px, 0px)
+  // &.is-active span:after 
+  //   transform: rotate(-45deg) translate(6px, -7px)

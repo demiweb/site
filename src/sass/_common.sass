@@ -22,6 +22,10 @@ input, textarea
   fill: currentColor
   font-size: inherit
 
+.animated-img
+  &[data-loaded="true"]
+    animation: fadeIn 1s
+
 .overflow-hidden
   overflow: hidden
 
@@ -40,6 +44,13 @@ input, textarea
   margin-right: auto
   // +xlmin
   //   max-width: 1440px
+
+.logo
+  display: block
+  color: $white
+  font-size: 0
+  .icon
+    +css-lock(21, 33, 320, 575, font-size)
 
 .scroll-to
   width: 90px
@@ -82,16 +93,23 @@ input, textarea
   line-height: .9
   letter-spacing: -.05em
   text-transform: uppercase
-  -webkit-text-fill-color: transparent
-  -webkit-background-clip: text
-  // background-color: #000
-  +image('black-pattern.png')
-  background-repeat: repeat
-  background-size: auto
-  color: $gray-lighten
+  // -webkit-text-fill-color: transparent
+  // -webkit-background-clip: text
+  // +image('black-pattern.png')
+  // background-repeat: repeat
+  // background-size: auto
+  // color: $gray-lighten
   position: absolute
   z-index: 0
   opacity: 0
+  &__inner
+    -webkit-text-fill-color: transparent
+    -webkit-background-clip: text
+    +image('black-pattern.png')
+    background-repeat: repeat
+    background-size: auto
+    color: $gray-lighten
+
   &--sm
     +css-lock(70, 170, 320, 1499, font-size)
 
@@ -106,6 +124,7 @@ input, textarea
     position: relative
     z-index: 1
     padding-left: percentage(1/12)
+    opacity: 0
     +xs
       padding-left: 0
   &__word
@@ -122,6 +141,7 @@ input, textarea
     position: absolute
     left: 50%
     transform: translate(-50%, 0)
+    overflow: hidden
     +before
       bottom: 0
       top: 0
@@ -129,7 +149,8 @@ input, textarea
       position: absolute
       z-index: 0
       background-color: $yellow
-      width: percentage(3/12)
+      width: 100%
+      transform: translate(-100%, 0)
     +xs
       +before
         width: percentage(4/12)
@@ -149,6 +170,7 @@ input, textarea
       bottom: 0
       left: 50%
       transform: translate(-50%, 50%)
+      opacity: 0
     #{$this}__title
       padding-left: 0
 

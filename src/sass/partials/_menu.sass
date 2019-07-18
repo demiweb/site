@@ -1,0 +1,79 @@
+.menu
+  position: fixed
+  z-index: 20
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  background-color: $black
+  visibility: hidden
+  opacity: 0
+  color: $white
+  +tr(opacety .3s, visibility .3s)
+  +flex()
+  &.is-active
+    visibility: visible
+    opacity: 1
+  &__top
+    +flex(flex-start, center)
+    height: $header-height
+    +sm
+      height: $header-height-sm
+  &__inner
+    +flex(flex-start, normal, column)
+    height: 100%    
+  &__content
+    flex-grow: 1
+    > .container
+      height: 100%
+  &__logo
+    padding-right: 25px
+    +xs
+      padding-right: 10px
+  &__phone
+    padding-left: 25px
+    position: relative
+    &::before,
+      content: ''
+      position: absolute
+      background-color: $gray
+      width: 1px
+      height: 38px
+      top: 50%
+      transform: translate(0, -50%)
+      left: 0
+  &__aside
+    background-color: $white
+    width: 110px
+    +flex(center, center, column)
+    position: relative
+  &__close
+    color: $gray
+    +icon-close(20, 1, currentColor)
+    position: absolute
+    top: 50px
+    left: 50%
+    transform: translate(-50%, 0)
+    z-index: 1
+    +tr(color .3s)
+    +hover
+      color: $black
+  &__main
+    +flex(center, normal, column)
+    flex-grow: 1
+    padding-bottom: $header-height
+    +sm
+      padding-bottom: $header-height-sm
+  &__main-in
+    +flex(flex-start, normal, row, wrap)
+  &__left,
+  &__center,
+  &__right
+    width: 33.33333%
+  &__title
+    text-transform: uppercase
+    font-size: 24px
+    +bold
+    margin-bottom: 35px
+
+

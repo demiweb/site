@@ -20,15 +20,10 @@
     > .container
       order: 1
   &.is-show
-    #{$this}__inner
-      transform: scaleX(1)
-    #{$this}__content
+    #{$this}__content-inner
       transform: translate(0, 0)
-    #{$this}__right
+    #{$this}__right-inner
       transform: translate(0, 0)
-  &__inner
-    transform: scaleX(0)
-    +tr(transform $transition-time)
   &__right
     position: absolute
     right: 0
@@ -36,16 +31,21 @@
     top: 0
     width: 50%
     overflow: hidden
-    // transform: translate(-100%, 0)
-    +tr(transform $transition-time)
     +hover
       #{$this}__img
         animation-play-state: running
     +xs
       width: 100%
       position: relative
-      padding-top: 40%
+      // padding-top: 40%
       order: 0
+    
+  &__right-inner
+    height: 100%
+    transform: translate(-100%, 0)
+    +tr(transform $transition-time)
+    +xs
+      padding-top: 40%
     +xss
       padding-top: 60%
   &__content
@@ -55,8 +55,7 @@
     height: calc(var(--vh, 1vh) * 100)
     +flex(center, normal, column)
     padding-right: 10px
-    // transform: translate(100%, 0)
-    +tr(transform $transition-time)
+    overflow: hidden
     +xs
       width: 100%
       height: auto
@@ -109,7 +108,9 @@
     +r(1530)
       position: static
   &__content-inner
-    position: relative
+    position: relative    
+    transform: translate(calc(100% + 15px), 0)
+    +tr(transform $transition-time)
   &__text
     margin-bottom: 90px
     +xl

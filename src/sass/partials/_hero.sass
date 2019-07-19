@@ -1,4 +1,5 @@
 .hero
+  $this: &
   background-color: $purple-dark  
   overflow: hidden
   color: $white
@@ -49,16 +50,10 @@
     line-height: .9
     +rmix(1499, 640)
       font-size: 400px
+    +rmix(1499, 540)
+      font-size: 350px
     +rmix(1199, 540)
       font-size: 300px
-    img
-      position: absolute
-      margin-top: .1em
-      top: 0
-      left: 0
-      z-index: 0
-      max-width: 90%
-      opacity: 0
     .icon
       position: relative
       z-index: 1
@@ -69,6 +64,15 @@
         stroke-dasharray: 15000
         stroke-dashoffset: 15000
         animation: logo 1s forwards
+    .letter-shadow
+      &:nth-child(2)
+        fill: $white
+        position: absolute
+        margin-top: .05em
+        margin-left: -.05em
+        top: 0
+        left: 0
+        z-index: 0
   &__title
     margin-bottom: 60px
     opacity: 0
@@ -111,6 +115,25 @@
     transform: translate(-50%, 0)
     bottom: 0
     z-index: 1
+
+
+  &--content
+    overflow: visible
+    #{$this}__inner
+      flex-direction: column
+      align-items: normal
+      justify-content: flex-start
+    #{$this}__content
+      flex-grow: 1
+      +flex(center, normal, column)
+    #{$this}__scroll-down
+      transform: translate(0, 0)
+      left: percentage(375/1920)
+      bottom: -15px
+    #{$this}__content
+      width: percentage(7/12)
+    #{$this}__text
+      width: percentage(7/12)
 
   @keyframes logo
     0%

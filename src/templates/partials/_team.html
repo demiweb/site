@@ -1,0 +1,26 @@
+{%set
+team = [
+  { title: 'Олександра Сандюк', subttl: 'Project Manager' },
+  { title: 'Євгеній Кроха', subttl: 'Web designer' },
+  { title: 'Юрій Прізвище', subttl: 'Front-end developer' },
+  { title: 'Інна Прізвище', subttl: 'Marketing Manager' }
+]
+%}
+
+<!-- begin team -->
+<div class="team">
+  {% for i in team %}
+  <!-- begin specialist -->
+  <div class="specialist">
+    <div class="specialist__img-wrap">
+      <div class="specialist__img js-lazy" data-background-image="img/team/1.jpg"></div>
+    </div>
+
+    <div class="specialist__title h4">{{ i.title | safe }}</div>
+
+    <div class="specialist__subttl">{{ i.subttl | safe }}</div>
+  </div>
+  <!-- end specialist -->
+  {% endfor %}
+</div>
+<!-- end team -->

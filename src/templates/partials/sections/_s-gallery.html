@@ -1,0 +1,19 @@
+<!-- begin section -->
+<section class="section s-galery pt-md pb-lg">
+  <div class="section__title-block s-gallery__title-block">
+    {{ mixins.titleBlock(
+      title = '<small>у нашій власній</small> фотогалереї',
+      titleMod = 'glitch--bottom',
+      text = 'фотогалереї',
+      subttl = 'ми завжди відкриті до вас і показуємо це',
+      word = 'Gallery'
+    ) }}
+  </div>
+
+  <div class="section__gallery s-gallery__gallery">
+    <div class="container">
+      {% include "partials/_gallery.html" %}
+    </div>
+  </div>
+</section>
+<!-- end section -->

@@ -1,0 +1,42 @@
+---
+title: about
+page: about
+mainClass: page-about
+hero: {
+  modifications: {
+    section: 'hero--content'
+  },
+  bgImage: 'bg-hero-about.jpg',
+  subttl: 'ми цінуємо свою репутацію',
+  title: '<small>не вміємо робити погано,</small> <strong class="glitch" data-text="видаємо тільки найкращі">видаємо тільки найкращі</strong> <small>результати та проекти</small>',
+  text: 'З перших секунд співпраці з нами ви зрозумієте, що потрапили
+до правильних рук. Дружелюбні менеджери з’ясують, 
+як реалізувати для вас найкращий проект. 
+А професійні технічні спеціалісти втілять це у життя.',
+  breadcrumbs: {
+    list: [
+      { link: 'Головна' },
+      { item: '-' },
+      { link: 'про компанію', modLink: 'is-active' }
+    ]
+  },
+  scrollToTarget: 'numbers'
+}
+clients: {
+  modifications: {
+    table: 'clients-table--full'
+  }
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}  
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-numbers.html" %}
+  {% include "partials/sections/_s-office.html" %}
+  {% include "partials/sections/_s-team.html" %}
+  {% include "partials/sections/_s-principles.html" %}
+  {% include "partials/sections/_s-order-bg.html" %}
+  {% include "partials/sections/_s-gallery.html" %}
+  {% include "partials/sections/_s-order.html" %}
+{% endblock %}

@@ -1,0 +1,21 @@
+<!-- begin gallery -->
+<div class="gallery js-galley">
+  <div class="gallery__square"></div>
+
+  <div class="gallery__img-wrap">
+    {% for i in range(0, 5) %}
+    <div class="gallery__img js-lazy" data-background-image="img/gallery/1.jpg"></div>
+    <div class="gallery__caption">
+      <div class="gallery__title h4">Офісні будні</div>
+
+      <div class="gallery__subttl"> 26.06.2019</div>
+    </div>
+    {% endfor %}
+
+    <div class="gallery__btns">
+      <button class="gallery__prev slider-btn slider-btn--prev js-prev">{{ mixins.icon('arrow') }}</button>
+      <button class="gallery__next slider-btn slider-btn--next js-next">{{ mixins.icon('arrow') }}</button>
+    </div>
+  </div>  
+</div>
+<!-- end gallery -->

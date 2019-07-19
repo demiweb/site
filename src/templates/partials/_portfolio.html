@@ -69,10 +69,13 @@ portfolio = [
       </div>
 
       <div class="portfolio-item__right">
-        <div class="portfolio-item__logo" style="background-color: {{ i.logoColor }};">
-          <img data-src="img/logos/{{ i.logo }}" alt="" class="js-lazy">
+        <div class="portfolio-item__right-inner">
+
+          <div class="portfolio-item__logo" style="background-color: {{ i.logoColor }};">
+            <img data-src="img/logos/{{ i.logo }}" alt="" class="js-lazy">
+          </div>
+          <div class="portfolio-item__img js-lazy" data-background-image="img/portfolio/{{ i.img }}"></div>
         </div>
-        <div class="portfolio-item__img js-lazy" data-background-image="img/portfolio/{{ i.img }}"></div>
       </div>
     </div>
   </div>

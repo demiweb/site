@@ -50,7 +50,8 @@
 
   &--lg
     // color: $white
-    font-size: 24px
+    // font-size: 24px
+    +css-lock(16, 24, 320, 1499, font-size)
     text-transform: uppercase
     +bold
     li
@@ -60,13 +61,33 @@
       +notlast
         margin-right: 0
         margin-bottom: 65px
+        +lg
+          margin-bottom: 45px
+        +md
+          margin-bottom: 35px
+        +sm
+          margin-bottom: 25px
+        +xs
+          margin-bottom: 15px
+        +xss
+          margin-bottom: 5px
+      +lg
+        padding-left: 35px
+      +md
+        padding-left: 25px
+      +sm
+        padding-left: 20px
+      +xss
+        padding-left: 0
       span
-        font-size: $fz
+        font-size: .58em
         +reg
         position: absolute
         left: 0
         top: .5em
         +rotate(-90)
+        +xss
+          display: none
     a
       position: relative
       overflow: hidden
@@ -91,7 +112,11 @@
       display: block
       +notlast
         margin-right: 0
-        margin-bottom: 40px
+        margin-bottom: 25px
+        +xs
+          margin-bottom: 15px
+        +xss
+          margin-bottom: 5px
     a
       text-transform: none
       overflow: hidden

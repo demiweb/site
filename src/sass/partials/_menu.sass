@@ -1,29 +1,55 @@
 .menu
+  $this: &
   position: fixed
   z-index: 20
   left: 0
   right: 0
   top: 0
   bottom: 0
-  background-color: $black
+  background-color: $white
   visibility: hidden
   opacity: 0
   color: $white
-  +tr(opacety .3s, visibility .3s)
+  +tr(opacity .5s, visibility .5s, transform .5s)
   +flex()
+  transform: translate(-100%, 0)
   &.is-active
     visibility: visible
     opacity: 1
+    transform: translate(0, 0)
+    #{$this}__content
+      transform: translate(0, 0)
+      opacity: 1
+  &__word
+    bottom: 60px
+    left: percentage(470/1920)
+    +xl
+      bottom: 50px
+    +lg
+      bottom: 50px
+    +md
+      bottom: 40px
+    +sm
+      bottom: 25px
+    +xs
+      bottom: 15px
   &__top
     +flex(flex-start, center)
     height: $header-height
+    margin-bottom: 15px
     +sm
       height: $header-height-sm
   &__inner
     +flex(flex-start, normal, column)
-    height: 100%    
+    height: 100%
   &__content
     flex-grow: 1
+    background-color: $black
+    transform: translate(-100%, 0)
+    position: relative
+    overflow: auto
+    opacity: 0
+    +tr(transform .8s, opacity .8s)
     > .container
       height: 100%
   &__logo
@@ -33,6 +59,8 @@
   &__phone
     padding-left: 25px
     position: relative
+    +xs
+      padding-left: 10px
     &::before,
       content: ''
       position: absolute
@@ -43,7 +71,7 @@
       transform: translate(0, -50%)
       left: 0
   &__aside
-    background-color: $white
+    // background-color: $white
     width: 110px
     +flex(center, center, column)
     position: relative
@@ -58,6 +86,12 @@
     +tr(color .3s)
     +hover
       color: $black
+    +lg
+      top: 40px
+    +md
+      top: 30px
+    +sm
+      top: 20px
   &__main
     +flex(center, normal, column)
     flex-grow: 1
@@ -66,14 +100,41 @@
       padding-bottom: $header-height-sm
   &__main-in
     +flex(flex-start, normal, row, wrap)
+  &__nav
+    +sm
+      margin-bottom: 25px
   &__left,
   &__center,
   &__right
     width: 33.33333%
+  &__left
+    +sm
+      width: 50%
+      padding-right: 5px
+  &__center
+    +flex(center, normal)
+    +sm
+      width: 50%
+      justify-content: flex-start
+      padding-left: 5px
+  &__right
+    +flex(flex-end, normal)
+    +sm
+      width: 100%
+      justify-content: flex-start
   &__title
     text-transform: uppercase
-    font-size: 24px
+    +css-lock(16, 24, 320, 1499, font-size)
     +bold
     margin-bottom: 35px
+    +lg
+      margin-bottom: 25px
+    +md
+      margin-bottom: 15px
+  &__contacts
+    max-width: 335px
+    overflow: hidden
+    +sm
+      max-width: none
 
 

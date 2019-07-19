@@ -1,0 +1,97 @@
+.title-block
+  $this: &
+  position: relative
+  padding-top: 15px
+  padding-bottom: 15px
+  min-height: 320px
+  // +css-lock(30, 100, 320, 1499, padding-top)  
+  // +css-lock(30, 100, 320, 1499, padding-bottom)
+  // overflow: hidden
+  +flex(center, normal, column)
+  .container
+    width: 100%
+  
+  &__title
+    position: relative
+    z-index: 2
+    padding-left: percentage(1/12)
+    opacity: 0
+    +xs
+      padding-left: 0
+    .title
+      small
+        display: block
+  &__subttl
+    text-transform: uppercase
+    position: relative
+    z-index: 2
+    padding-left: percentage(1/12)
+    margin-bottom: 25px
+    +sm
+      margin-bottom: 15px
+    +xs
+      padding-left: 0
+      margin-bottom: 10px
+  &__subttl-bottom
+    padding-top: 25px
+    +sm
+      padding-top: 15px
+    +xs
+      padding-top: 10px
+  &__text
+    position: relative
+    z-index: 2
+    padding-left: percentage(1/12)
+    padding-top: 25px
+    a
+      text-decoration: underline
+      color: $blue
+    +sm
+      padding-top: 15px
+    +xs
+      padding-left: 0
+      padding-top: 10px
+  &__word
+    z-index: 1
+    right: 0
+    bottom: 0
+  &__square-wrap
+    @extend .container
+    z-index: 0
+    pointer-events: none
+    width: 100%
+    height: 100%
+    top: 0
+    position: absolute
+    left: 50%
+    transform: translate(-50%, 0)
+    overflow: hidden
+    +before
+      bottom: 0
+      top: 0
+      left: 0
+      position: absolute
+      z-index: 0
+      background-color: $yellow
+      width: 100%
+      transform: translate(-100%, 0)
+
+  &--btn
+    background-color: $gray-lighten
+    overflow: visible
+    #{$this}__word
+      // transform: translate(0, 50%)
+      bottom: -.45em
+      +xs
+        display: none
+    #{$this}__btn
+      @extend .container
+      width: 100%
+      position: absolute
+      z-index: 1
+      bottom: 0
+      left: 50%
+      transform: translate(-50%, 50%)
+      opacity: 0
+    #{$this}__title
+      padding-left: 0

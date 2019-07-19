@@ -1,9 +1,34 @@
 .section
+  $this: &
   position: relative
+  &__title-block
+    +css-lock(30, 100, 320, 1499, margin-bottom)
   &--white-color
     color: $white
   &--black
     background-color: $black
+  &--img
+    &__inner
+      +flex(flex-start, normal, row, wrap)
+    &__content
+      width: percentage(7/12)
+      +flex(center, normal, column)
+    &__img
+      width: percentage(5/12)
+      text-align: right
+
+.section-img
+  display: inline-block
+  width: percentage(4/5)
+  padding-top: 110%
+  +cover
+  position: relative
+  +before
+    +coverdiv
+    z-index: -1
+    top: 10%
+    left: -10%
+    background-color: $gray-lighten
 
 .s-more
   .word

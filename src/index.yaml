@@ -2,3 +2,4 @@ ProjectTitle: site
 
 PageList:
 - file: home.html
+- file: about.html

@@ -13,7 +13,7 @@
     <!-- BEGIN content -->
     <div class="out">
       <!-- begin header -->
-      <header class="header js-header">
+      <header class="header header--transparent js-header">
         <div class="header__logo">
           <a href="/" class="logo">
             <!-- begin icon-logo -->
@@ -132,8 +132,8 @@
                     </div>
                   </div>
                   <div class="menu__right">
-                    <div class="menu__title">зв’язок з нами</div>
                     <div class="menu__contacts">
+                      <div class="menu__title">зв’язок з нами</div>
                       <!-- begin contacts -->
                       <div class="contacts">
                         <!-- begin contact -->
@@ -222,13 +222,13 @@
       <!-- begin main -->
       <main class="main page-home">
         <!-- begin hero -->
-        <section class="hero js-lazy" data-background-image="img/bg-hero.jpg" data-scroll-to-target="hero">
+        <section class="hero js-lazy" data-background-image="img/hero/bg-hero.jpg" data-scroll-to-target="hero">
           <div class="container">
             <div class="hero__inner">
               <div class="hero__content">
                 <div class="hero__subttl">Створення та розробка сайтів в Україні</div>
                 <div class="hero__title overlayed">
-                  <div class="title"><small>Допоможемо</small> реалізувати ваші ідеї <small>у якісний продукт</small></div>
+                  <div class="title"><small>Допоможемо</small> <strong class="glitch" data-text="реалізувати ваші ідеї">реалізувати ваші ідеї</strong> <small>у якісний продукт</small></div>
                 </div>
                 <div class="hero__btns">
                   <div class="hero__btn">
@@ -241,14 +241,23 @@
               </div>
               <div class="hero__img">
                 <div class="hero__img-in js-parallax-scene">
-                  <img data-src="img/logo-lg-pattern.png" alt="" class="js-lazy" data-depth="0.1">
-                  <div data-depth="0.2">
+                  <div data-depth="0.1">
                     <!-- begin icon-D -->
                     <svg width="1.000em" height="1em" viewBox="0 0 2834.65 2834.65" class="icon icon-D">
                       <path d="M2277.478 452.18C2004.532 191.052 1652.85 60.488 1222.475 60.488H147.778v1693.604h606.261V607.661h468.436c246.699 0 446.796 77.456 600.331 232.271 153.487 154.864 230.278 354.34 230.278 598.382 0 246.7-76.127 446.789-228.333 600.324-152.205 153.536-352.967 230.279-602.276 230.279H147.778v547.173h1074.696c427.765 0 778.782-131.181 1053.009-393.638 274.228-262.457 411.389-590.506 411.389-984.139 0-396.294-136.497-725.005-409.394-986.133z" />
                     </svg>
                     <!-- end icon-D -->
                   </div>
+                  <svg data-depth="0.2" width="1em" height="1em" viewBox="0 0 2834.65 2834.65" class="letter-shadow">
+                    <defs>
+                      <pattern x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse" id="mypattern">
+                        <path fill="rgba(255, 255, 255, .6)" d="M4,0.990777969 C4,0.443586406 4.44386482,0 5,0 C5.55228475,0 6,0.45097518 6,0.990777969 L6,5.00922203 C6,5.55641359 5.55613518,6 5,6 C4.44771525,6 4,5.54902482 4,5.00922203 L4,0.990777969 Z M10,8.99077797 C10,8.44358641 10.4438648,8 11,8 C11.5522847,8 12,8.45097518 12,8.99077797 L12,13.009222 C12,13.5564136 11.5561352,14 11,14 C10.4477153,14 10,13.5490248 10,13.009222 L10,8.99077797 Z"></path>
+                      </pattern>
+                    </defs>
+                    <g fill="url(#mypattern)">
+                      <path d="M2277.478 452.18C2004.532 191.052 1652.85 60.488 1222.475 60.488H147.778v1693.604h606.261V607.661h468.436c246.699 0 446.796 77.456 600.331 232.271 153.487 154.864 230.278 354.34 230.278 598.382 0 246.7-76.127 446.789-228.333 600.324-152.205 153.536-352.967 230.279-602.276 230.279H147.778v547.173h1074.696c427.765 0 778.782-131.181 1053.009-393.638 274.228-262.457 411.389-590.506 411.389-984.139 0-396.294-136.497-725.005-409.394-986.133z" />
+                    </g>
+                  </svg>
                 </div>
               </div>
             </div>
@@ -279,7 +288,7 @@
               </div>
               <div class="s-more__text">Наша студія веб дизайну по розробці сайтів під ключ в Києві пропонує вам розробку сайтів будь-якої складності і тематики. Нашої компанії під силу виготовлення сайтів будь-якого типу: створення інтернет-магазину, сайт візитка, корпоративний сайт, сайт для бізнесу, сайт каталог, створення Лендінгем (landing page). Так, ви можете замовити у нас сайт будь-якого призначення в Вінниці, Києві та по всій Україні. У нас в команді працюють кращі розробники з усієї країни по веб-програмуванню, у яких більше 5 років досвіду і навичок створення якісного продукту.</div>
               <div class="s-more__title-lg overlayed js-anim-el" data-anim-name="overlayedLeft">
-                <div class="title">7 років на ринку IT 100+ реалізованих проектів +150% середній приріст конверсій</div>
+                <div class="title glitch" data-text="7 років на ринку IT">7 років на ринку IT<br> 100+ реалізованих проектів<br> +150% середній приріст конверсій</div>
               </div>
               <div class="s-more__btn">
                 <a href="#" class="btn btn--half"><span class="btn__title">детальніше про нашу компанію</span></a>
@@ -296,18 +305,20 @@
         </section>
         <!-- end section -->
         <!-- begin section -->
-        <section class="section s-portfolio pb-lg" data-scroll-to-target="portfolio">
+        <section class="section s-portfolio overflow-hidden pb-lg" data-scroll-to-target="portfolio">
+          <!-- begin title-block -->
           <div class="title-block s-portfolio__title">
             <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
             <div class="container">
               <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
-                <div class="title">роботи, якими<br> ми пишаємося</div>
+                <div class="title glitch" data-text="роботи, якими">роботи, якими<br> ми пишаємося</div>
               </div>
             </div>
             <div class="title-block__word word js-anim-el" data-anim-name="fadeInLeft">
               <div class="word__inner js-parallax-scroll">portfolio</div>
             </div>
           </div>
+          <!-- end title-block -->
           <div class="s-portfolio__portfolio">
             <!-- begin portfolio -->
             <div class="portfolio">
@@ -341,10 +352,12 @@
                     </div>
                   </div>
                   <div class="portfolio-item__right">
-                    <div class="portfolio-item__logo" style="background-color: #10ad44;">
-                      <img data-src="img/logos/1.png" alt="" class="js-lazy">
+                    <div class="portfolio-item__right-inner">
+                      <div class="portfolio-item__logo" style="background-color: #10ad44;">
+                        <img data-src="img/logos/1.png" alt="" class="js-lazy">
+                      </div>
+                      <div class="portfolio-item__img js-lazy" data-background-image="img/portfolio/1.jpg"></div>
                     </div>
-                    <div class="portfolio-item__img js-lazy" data-background-image="img/portfolio/1.jpg"></div>
                   </div>
                 </div>
               </div>
@@ -379,10 +392,12 @@
                     </div>
                   </div>
                   <div class="portfolio-item__right">
-                    <div class="portfolio-item__logo" style="background-color: #d8232a;">
-                      <img data-src="img/logos/2.png" alt="" class="js-lazy">
+                    <div class="portfolio-item__right-inner">
+                      <div class="portfolio-item__logo" style="background-color: #d8232a;">
+                        <img data-src="img/logos/2.png" alt="" class="js-lazy">
+                      </div>
+                      <div class="portfolio-item__img js-lazy" data-background-image="img/portfolio/2.jpg"></div>
                     </div>
-                    <div class="portfolio-item__img js-lazy" data-background-image="img/portfolio/2.jpg"></div>
                   </div>
                 </div>
               </div>
@@ -417,10 +432,12 @@
                     </div>
                   </div>
                   <div class="portfolio-item__right">
-                    <div class="portfolio-item__logo" style="background-color: #ff8200;">
-                      <img data-src="img/logos/3.png" alt="" class="js-lazy">
+                    <div class="portfolio-item__right-inner">
+                      <div class="portfolio-item__logo" style="background-color: #ff8200;">
+                        <img data-src="img/logos/3.png" alt="" class="js-lazy">
+                      </div>
+                      <div class="portfolio-item__img js-lazy" data-background-image="img/portfolio/3.jpg"></div>
                     </div>
-                    <div class="portfolio-item__img js-lazy" data-background-image="img/portfolio/3.jpg"></div>
                   </div>
                 </div>
               </div>
@@ -442,18 +459,20 @@
         </section>
         <!-- end section -->
         <!-- begin section -->
-        <section class="section s-services">
+        <section class="section s-services overflow-hidden">
+          <!-- begin title-block -->
           <div class="title-block">
             <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
             <div class="container">
               <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
-                <div class="title">Послуги <br> для реалізації ваших ідей</div>
+                <div class="title glitch" data-text="Послуги">Послуги <br> для реалізації ваших ідей</div>
               </div>
             </div>
             <div class="title-block__word word js-anim-el" data-anim-name="fadeInLeft">
               <div class="word__inner js-parallax-scroll">services</div>
             </div>
           </div>
+          <!-- end title-block -->
           <!-- begin services -->
           <div class="services">
             <!-- begin service-item -->
@@ -557,7 +576,7 @@
           <div class="s-we-know__title-block title-block title-block--btn">
             <div class="container">
               <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
-                <div class="title">ми знаємо, що потрібно саме вам</div>
+                <div class="title glitch" data-text="ми знаємо,">ми знаємо, що потрібно саме вам</div>
               </div>
               <div class="title-block__word word js-anim-el" data-anim-name="fadeInLeft">
                 <div class="word__inner js-parallax-scroll">we know</div>
@@ -613,9 +632,6 @@
                   <!-- end clients-table -->
                 </div>
               </div>
-              <div class="clients__word word word--sm js-anim-el" data-anim-name="fadeIn">
-                <div class="word__inner js-parallax-scroll">Client’s <br> feedback</div>
-              </div>
             </div>
             <!-- end clients -->
           </div>
@@ -625,7 +641,7 @@
         <section class="section s-testimonials pt-md pb-mdl">
           <div class="container">
             <div class="s-testimonials__title overlayed js-anim-el" data-anim-name="overlayedLeft">
-              <div class="title title--ttn title--white js-anim-el" data-anim-name="fadeIn">Нас рекомендують, <br> тому що ми створюємо не просто сайти...</div>
+              <div class="title title--ttn title--white glitch js-anim-el" data-anim-name="fadeIn" data-text="Нас рекомендують,">Нас рекомендують, <br> тому що ми створюємо не просто сайти...</div>
             </div>
           </div>
           <div class="s-testimonials__slider">
@@ -738,7 +754,7 @@
             <div class="s-order__inner">
               <div class="s-order__left">
                 <div class="s-order__title overlayed js-anim-el" data-anim-name="overlayedLeft">
-                  <div class="title title--ttn js-anim-el" data-anim-name="fadeIn">А ви готові розробити <br> по справжньому крутий проект?</div>
+                  <div class="title title--ttn glitch js-anim-el" data-anim-name="fadeIn" data-text="А ви готові">А ви готові розробити <br> по справжньому крутий проект?</div>
                 </div>
                 <div class="s-order__contacts js-anim-el" data-anim-name="fadeInBottomSm">
                   <!-- begin order-contacts -->

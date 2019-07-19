@@ -1,0 +1,30 @@
+{%set
+numbers = [
+  { title: '100+', text: 'Успішних реалізованих проектів, які <br>
+до сьогоднішнього дня працюють<br>
+ на своїх власників' },
+  { title: '7+', text: 'Років на ринку IT. За цей час ми отримали <br>
+стільки досвіду, що не одна проблема<br>
+ не встоїть перед нами' },
+  { title: '0', text: 'Незадоволених клієнтів,<br>
+провалених проектів,<br>
+негативних відгуків' },
+{ title: '10', text: 'За десятибальною шкалою - середня <br>
+оцінка наших послуг клієнтами<br>
+у 2019 році'}
+]
+%}
+
+<!-- begin numbers -->
+<div class="numbers">
+  {% for i in numbers %}
+  <!-- begin number -->
+  <div class="number">
+    <div class="number__title title">{{ i.title | safe }}</div>
+
+    <div class="number__text text--gray-light">{{ i.text | safe }}</div>
+  </div>
+  <!-- end number -->
+  {% endfor %}
+</div>
+<!-- end numbers -->

@@ -1,6 +1,13 @@
+.no-touch
+  .no-scroll
+    .header
+      &.is-fixed
+        right: 17px
+
 .header
   $this: &
   opacity: 0
+  background-color: $black
   color: $white
   position: relative
   z-index: 15
@@ -8,7 +15,8 @@
   +flex(flex-start, center)
   padding-left: 30px
   padding-right: 30px
-  padding-top: 20px
+  padding-top: 10px
+  padding-bottom: 10px
   +sm
     height: $header-height-sm
     padding-top: 10px
@@ -59,22 +67,6 @@
     flex-grow: 1
     +lg
       display: none
-      // position: fixed
-      // z-index: 15
-      // width: 100%
-      // height: 100%
-      // top: 0
-      // left: 0
-      // padding: 15px
-      // background-color: $white
-      // +vertical
-      // visibility: hidden
-      // opacity: 0
-      // +tr(visibility .3s, opacity .3s)
-      // &.is-active
-      //   display: block
-      //   visibility: visible
-      //   opacity: 1
   &__nav-close    
     +icon-close(20, 2, $black)
     position: absolute
@@ -87,6 +79,9 @@
   &__burger
     +lg
       flex-grow: 1
+
+  &--transparent
+    background-color: transparent
 
 .header-phone
   $this: &

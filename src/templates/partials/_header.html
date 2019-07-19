@@ -1,5 +1,5 @@
 <!-- begin header -->
-<header class="header js-header">
+<header class="header{% if header.mod %} {{ header.mod }}{% endif %} js-header">
   <div class="header__logo">
     <a href="/" class="logo">
       {{ mixins.icon('logo') }}

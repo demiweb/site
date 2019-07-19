@@ -2,6 +2,8 @@
   overflow: hidden
   position: relative
   &__table
+    position: relative
+    z-index: 1
   &__word
     top: 50%
     transform: translate(0, -50%)
@@ -32,6 +34,7 @@
   +clr
   &__item
     float: left
+    background-color: $white
     width: 25%
     +flex(center, center)
     height: 170px

@@ -5,14 +5,14 @@ import { ANIMATE, SHOW } from '../../constants';
 
 export default function animateHome() {
   const page = document.querySelector('.page-home');
+  if(!page) return;
 
   // hero animations
-  const animator = new PageAnimator(page);
-  animator.elements = {
+  const elements = {
     header: document.querySelector('.header'),
     letterWrap: page.querySelector('.hero__img'),
     letter: page.querySelector('.hero__img .icon-D'),
-    letterImg: page.querySelector('.hero__img img'),
+    letterShadow: page.querySelector('.hero__img .letter-shadow'),
     heroContent: page.querySelector('.hero__content'),
     heroSubttl: page.querySelector('.hero__subttl'),
     heroTitle: page.querySelector('.hero__title'),
@@ -20,71 +20,72 @@ export default function animateHome() {
     heroBtns: page.querySelectorAll('.hero__btn'),
     scrollDown: page.querySelector('.hero__scroll-down')
   };
+  const animator = new PageAnimator(page);  
   animator.animate = () => {
     const tl = new TimelineLite();
 
     if (window.matchMedia('(min-width: 768px)').matches) {
       tl
         .fromTo(
-          animator.elements.letterWrap,
+          elements.letterWrap,
           1,
           { opacity: 0 },
           { opacity: 1 }
         )
         .call(() => {
-          animator.elements.letter.classList.add(ANIMATE);
+          elements.letter.classList.add(ANIMATE);
         })
         .fromTo(
-          animator.elements.letterImg,
+          elements.letterShadow,
           1,
           { opacity: 0, y: -30, x: 30 },
           { opacity: 1, y: 0, x: 0 }
         )
         .fromTo(
-          animator.elements.letterWrap,
+          elements.letterWrap,
           0.5,
           { x: '-100%' },
           { x: '0%' }
         )
         .fromTo(
-          animator.elements.heroTitle,
+          elements.heroTitle,
           0,
           { opacity: 0 },
           { opacity: 1 }
         )
         .call(() => {
-          animator.elements.heroTitle.classList.add('overlayedLeft');
+          elements.heroTitle.classList.add('overlayedLeft');
         })
         .fromTo(
-          animator.elements.heroTitleEl,
+          elements.heroTitleEl,
           0.5,
           { opacity: 0 },
           { opacity: 1 },
           '+=.5'
         )
         .fromTo(
-          animator.elements.heroSubttl,
+          elements.heroSubttl,
           0.5,
           { y: -30, opacity: 0 },
           { y: 0, opacity: 1 },
           '-=.5'
         )
         .staggerFromTo(
-          animator.elements.heroBtns,
+          elements.heroBtns,
           0.5,
           { opacity: 0, y: 15 },
           { opacity: 1, y: 0 },
           0.1
         )
         .fromTo(
-          animator.elements.header,
+          elements.header,
           0.5,
           { opacity: 0, y: '-100%' },
           { opacity: 1, y: '0%' },
           '-=0.5'
         )
         .fromTo(
-          animator.elements.scrollDown,
+          elements.scrollDown,
           0.5,
           { opacity: 0, y: '100%' },
           { opacity: 1, y: '0%' },
@@ -93,52 +94,50 @@ export default function animateHome() {
     } else {
       tl
         .fromTo(
-          animator.elements.heroTitle,
+          elements.heroTitle,
           0,
           { opacity: 0 },
           { opacity: 1 }
         )
         .call(() => {
-          animator.elements.heroTitle.classList.add('overlayedLeft');
+          elements.heroTitle.classList.add('overlayedLeft');
         })
         .fromTo(
-          animator.elements.heroTitleEl,
+          elements.heroTitleEl,
           0.5,
           { opacity: 0 },
           { opacity: 1 },
           '+=.5'
         )
         .fromTo(
-          animator.elements.heroSubttl,
+          elements.heroSubttl,
           0.5,
           { y: -30, opacity: 0 },
           { y: 0, opacity: 1 },
           '-=.5'
         )
         .staggerFromTo(
-          animator.elements.heroBtns,
+          elements.heroBtns,
           0.5,
           { opacity: 0, y: 15 },
           { opacity: 1, y: 0 },
           0.1
         )
         .fromTo(
-          animator.elements.header,
+          elements.header,
           0.5,
           { opacity: 0, y: '-100%' },
           { opacity: 1, y: '0%' },
           '-=0.5'
         )
         .fromTo(
-          animator.elements.scrollDown,
+          elements.scrollDown,
           0.5,
           { opacity: 0, y: '100%' },
           { opacity: 1, y: '0%' },
           '-=0.5'
         );
-    };
-
-    
+    };    
   };
   animator.init();
 

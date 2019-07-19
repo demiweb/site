@@ -1,23 +1,11 @@
-{%set
-clients = [
-  { text: '100+', mod: 'clients-table__item-lg' },
-  { img: '4.png' },
-  { img: '7.png' },
-  { img: '5.png' },
-  { img: '6.png' },
-  { img: '8.png' },
-  { img: '9.png' },
-  { img: '10.png' },
-  { img: '11.png' }
-]
-%}
+
 
 <!-- begin clients -->
-<div class="clients">
+<div class="clients{% if clients.modifications.wrap %} {{ clients.modifications.wrap }}{% endif %}">
   <div class="container"> 
     <div class="clients__table">
       <!-- begin clients-table -->
-      <div class="clients-table js-anim-in-vieport-with-gsap">
+      <div class="clients-table{% if clients.modifications.table %} {{ clients.modifications.table }}{% endif %} js-anim-in-vieport-with-gsap">
         {% for i in clients %}
         <div class="clients-table__item{% if i.mod %} {{ i.mod }}{% endif %}">
           {% if i.img %}
@@ -32,9 +20,11 @@ clients = [
       <!-- end clients-table -->
     </div>
   </div>
-
+  
+  {% if clients.word %}
   <div class="clients__word word word--sm js-anim-el" data-anim-name="fadeIn">
     <div class="word__inner js-parallax-scroll">Client’s <br> feedback</div>
   </div>
+  {% endif %}
 </div>
 <!-- end clients -->

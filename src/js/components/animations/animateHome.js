@@ -2,6 +2,7 @@ import PageAnimator from './PageAnimator';
 import BlockAnimator from './BlockAnimator';
 import { TimelineLite } from 'gsap';
 import { ANIMATE, SHOW } from '../../constants';
+import { animateTable } from './commonAnimations';
 
 export default function animateHome() {
   const page = document.querySelector('.page-home');
@@ -143,33 +144,7 @@ export default function animateHome() {
 
   // blocks animations
   // =================== table =======================
-  const table = document.querySelector('.js-anim-in-vieport-with-gsap.clients-table');
-  if(table) {
-    const blockAnimator = new BlockAnimator(table, {
-      observer: {
-        threshold: 0.25
-      }
-    });
-    blockAnimator.animate = (entry, observer) => {
-      const cols = entry.target.querySelectorAll('.clients-table__item');
-
-      const tl = new TimelineLite({
-        onComplete: () => {
-          observer.unobserve(entry.target);
-        }
-      });
-
-      tl
-        .staggerFromTo(
-          cols,
-          0.7,
-          { opacity: 0, y: 15, x: 15 },
-          { opacity: 1, y: 0, x: 0 },
-          0.1
-        );
-    };
-    blockAnimator.init();
-  };
+  animateTable();
   // =================== table =======================
 
   // =================== slider =======================
@@ -209,5 +184,22 @@ export default function animateHome() {
     blockAnimator.init();
   };
   // =================== slider =======================
-  
+
+  // =================== portfolio =======================
+  const portfolioItems = [].slice.call(document.querySelectorAll('.js-vieport-related-el.portfolio-item'));
+
+  if(portfolioItems.length > 0) {
+    portfolioItems.forEach(item => {
+      const content = item.querySelector('.portfolio-item__content-inner');
+
+      content.addEventListener('transitionend', (e) => {
+        const contentWrap = e.currentTarget.parentNode.classList.contains('portfolio-item__content') ? e.currentTarget.parentNode : null;
+
+        if (!contentWrap) return;
+
+        contentWrap.classList.add('overflow-visible');
+      });      
+    });
+  };
+  // =================== portfolio =======================  
 };

@@ -6,7 +6,7 @@
     <div class="clients__table">
       <!-- begin clients-table -->
       <div class="clients-table{% if clients.modifications.table %} {{ clients.modifications.table }}{% endif %} js-anim-in-vieport-with-gsap">
-        {% for i in clients %}
+        {% for i in clients.table %}
         <div class="clients-table__item{% if i.mod %} {{ i.mod }}{% endif %}">
           {% if i.img %}
           <img data-src="img/logos/{{ i.img }}" alt="" class="js-lazy animated-img">

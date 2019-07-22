@@ -71,7 +71,7 @@
       <!-- end header -->
       <!-- begin menu -->
       <div class="menu js-menu">
-        <div class="menu__content">
+        <div class="menu__content js-scrollbar">
           <div class="menu__word word word--purple">
             <div class="word__inner">menu</div>
           </div>
@@ -239,7 +239,7 @@
               <div class="hero__content">
                 <div class="hero__subttl">ми цінуємо свою репутацію</div>
                 <div class="hero__title overlayed">
-                  <div class="title"><small>не вміємо робити погано,</small> <strong class="glitch" data-text="видаємо тільки найкращі">видаємо тільки найкращі</strong> <small>результати та проекти</small></div>
+                  <div class="title"><small>не вміємо робити погано,</small> <strong class="glitch" data-text="видаємо тільки">видаємо тільки найкращі</strong> <small>результати та проекти</small></div>
                 </div>
                 <div class="hero__text">З перших секунд співпраці з нами ви зрозумієте, що потрапили до правильних рук. Дружелюбні менеджери з’ясують, як реалізувати для вас найкращий проект. А професійні технічні спеціалісти втілять це у життя.</div>
               </div>
@@ -257,13 +257,13 @@
         </section>
         <!-- end hero -->
         <!-- begin section -->
-        <section class="section s-numbers pt-lg pb-sml" data-scroll-to-target="numbers">
+        <section class="section s-numbers pt-lg pb-sml overflow-hidden" data-scroll-to-target="numbers">
           <div class="section__title-block s-numbers__title-block">
             <!-- begin title-block -->
             <div class="title-block">
               <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
               <div class="container">
-                <div class="title-block__subttl">нам є чим пишатися</div>
+                <div class="title-block__subttl js-anim-el" data-anim-name="fadeInTopSm">нам є чим пишатися</div>
                 <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
                   <div class="title glitch glitch--bottom" data-text="це цифрами"><small>і ми доведемо</small>це цифрами</div>
                 </div>
@@ -314,17 +314,21 @@
             <div class="section--img__inner">
               <div class="section--img__content">
                 <!-- begin title-block -->
-                <div class="title-block">
-                  <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
+                <div class="title-block title-block--no-container">
+                  <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRightShort"></div>
                   <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
                     <div class="title glitch glitch--bottom" data-text="у центрі києва"><small>наш офіс знаходиться</small> у центрі києва</div>
                   </div>
-                  <div class="title-block__text">Ви можете завітати до нас за адресою: м.Київ, бул. Марії Приймаченко, 1/27, офіс 107, 108. Наші спеціалісти з радістю зустрінуть вас та ви зможете особисто обговорити свій проект, розрахувати його вартість та з’ясувати усі моменти, які вас до цього хвилювали. Також ви можете написати нам або зателефонувати за контактними даними у розділі <a href="#">Контакти</a>. </div>
+                  <div class="title-block__text js-anim-el" data-anim-name="fadeInBottomSm">Ви можете завітати до нас за адресою: м.Київ, бул. Марії Приймаченко, 1/27, офіс 107, 108. Наші спеціалісти з радістю зустрінуть вас та ви зможете особисто обговорити свій проект, розрахувати його вартість та з’ясувати усі моменти, які вас до цього хвилювали. Також ви можете написати нам або зателефонувати за контактними даними у розділі <a href="#">Контакти</a>. </div>
                 </div>
                 <!-- end title-block -->
               </div>
               <div class="section--img__img">
-                <div class="section-img js-lazy" data-background-image="img/about/office.jpg"></div>
+                <div class="section-img">
+                  <div class="section-img__inner overlayed js-anim-el" data-anim-name="overlayedLeft">
+                    <div class="section-img__img js-lazy js-anim-el" data-anim-name="fadeIn" data-anim-duration="1.5s" data-background-image="img/about/office.jpg"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -340,7 +344,7 @@
                 <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
                   <div class="title glitch" data-text="наша команда:">наша команда:</div>
                 </div>
-                <div class="title-block__subttl title-block__subttl-bottom">Ми відібрали лише найкращих спеціалістів</div>
+                <div class="title-block__subttl title-block__subttl-bottom js-anim-el" data-anim-name="fadeInBottomSm">Ми відібрали лише найкращих спеціалістів</div>
               </div>
               <div class="title-block__word word js-anim-el" data-anim-name="fadeInLeft">
                 <div class="word__inner js-parallax-scroll">Team</div>
@@ -352,39 +356,55 @@
             <!-- begin team -->
             <div class="team">
               <!-- begin specialist -->
-              <div class="specialist">
-                <div class="specialist__img-wrap">
-                  <div class="specialist__img js-lazy" data-background-image="img/team/1.jpg"></div>
+              <div class="specialist__wrap">
+                <div class="specialist">
+                  <div class="specialist__img-wrap overlayed">
+                    <div class="specialist__img js-lazy" data-background-image="img/team/1.jpg"></div>
+                  </div>
+                  <div class="specialist__bottom">
+                    <div class="specialist__title h4 h4--ttn h4--medium">Олександра Сандюк</div>
+                    <div class="specialist__subttl text--gray-light">Project Manager</div>
+                  </div>
                 </div>
-                <div class="specialist__title h4">Олександра Сандюк</div>
-                <div class="specialist__subttl">Project Manager</div>
               </div>
               <!-- end specialist -->
               <!-- begin specialist -->
-              <div class="specialist">
-                <div class="specialist__img-wrap">
-                  <div class="specialist__img js-lazy" data-background-image="img/team/1.jpg"></div>
+              <div class="specialist__wrap">
+                <div class="specialist">
+                  <div class="specialist__img-wrap overlayed">
+                    <div class="specialist__img js-lazy" data-background-image="img/team/1.jpg"></div>
+                  </div>
+                  <div class="specialist__bottom">
+                    <div class="specialist__title h4 h4--ttn h4--medium">Євгеній Кроха</div>
+                    <div class="specialist__subttl text--gray-light">Web designer</div>
+                  </div>
                 </div>
-                <div class="specialist__title h4">Євгеній Кроха</div>
-                <div class="specialist__subttl">Web designer</div>
               </div>
               <!-- end specialist -->
               <!-- begin specialist -->
-              <div class="specialist">
-                <div class="specialist__img-wrap">
-                  <div class="specialist__img js-lazy" data-background-image="img/team/1.jpg"></div>
+              <div class="specialist__wrap">
+                <div class="specialist">
+                  <div class="specialist__img-wrap overlayed">
+                    <div class="specialist__img js-lazy" data-background-image="img/team/1.jpg"></div>
+                  </div>
+                  <div class="specialist__bottom">
+                    <div class="specialist__title h4 h4--ttn h4--medium">Юрій Прізвище</div>
+                    <div class="specialist__subttl text--gray-light">Front-end developer</div>
+                  </div>
                 </div>
-                <div class="specialist__title h4">Юрій Прізвище</div>
-                <div class="specialist__subttl">Front-end developer</div>
               </div>
               <!-- end specialist -->
               <!-- begin specialist -->
-              <div class="specialist">
-                <div class="specialist__img-wrap">
-                  <div class="specialist__img js-lazy" data-background-image="img/team/1.jpg"></div>
+              <div class="specialist__wrap">
+                <div class="specialist">
+                  <div class="specialist__img-wrap overlayed">
+                    <div class="specialist__img js-lazy" data-background-image="img/team/1.jpg"></div>
+                  </div>
+                  <div class="specialist__bottom">
+                    <div class="specialist__title h4 h4--ttn h4--medium">Інна Прізвище</div>
+                    <div class="specialist__subttl text--gray-light">Marketing Manager</div>
+                  </div>
                 </div>
-                <div class="specialist__title h4">Інна Прізвище</div>
-                <div class="specialist__subttl">Marketing Manager</div>
               </div>
               <!-- end specialist -->
             </div>
@@ -393,17 +413,17 @@
         </section>
         <!-- end section -->
         <!-- begin section -->
-        <section class="section s-principles pt-sml pb-mdl">
+        <section class="section s-principles pt-sml pb-mdl overflow-hidden">
           <div class="section__title-block s-principles__title-block">
             <!-- begin title-block -->
             <div class="title-block">
               <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
               <div class="container">
-                <div class="title-block__subttl">ми завжди керуємося</div>
+                <div class="title-block__subttl js-anim-el" data-anim-name="fadeInTopSm">ми завжди керуємося</div>
                 <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
                   <div class="title glitch glitch--bottom" data-text="принципами роботи"><small>єдиними та непохитними</small> принципами роботи</div>
                 </div>
-                <div class="title-block__text">Ніякі договори та контракти не гарантують вам вдалої співпраці. Тільки, якщо у компанії є свої власні норми та правила, виковані роками — ви можете бути впевнені у результаті.</div>
+                <div class="title-block__text js-anim-el" data-anim-name="fadeInBottomSm">Ніякі договори та контракти не гарантують вам вдалої співпраці.<br> Тільки, якщо у компанії є свої власні норми та правила, <br> виковані роками — ви можете бути впевнені у результаті.</div>
               </div>
               <div class="title-block__word word js-anim-el" data-anim-name="fadeInLeft">
                 <div class="word__inner js-parallax-scroll">principles</div>
@@ -415,45 +435,57 @@
             <!-- begin principles -->
             <div class="principles">
               <!-- begin principle -->
-              <div class="principle">
-                <div class="principle__nmb">01/</div>
-                <div class="principle__title">Відповідаємо за якість</div>
-                <div class="principle__text">Ми не прагнемо «сдати» проект поскоріше, нам важливо, щоб продукт працював і ви розповідали про нас друзям</div>
+              <div class="principle__wrap">
+                <div class="principle">
+                  <div class="principle__nmb text--gray-light">01/</div>
+                  <div class="principle__title h4 h4--ttn h4--bold">Відповідаємо за якість</div>
+                  <div class="principle__text text--gray-light">Ми не прагнемо «сдати» проект поскоріше,<br> нам важливо, щоб продукт працював<br> і ви розповідали про нас друзям</div>
+                </div>
               </div>
               <!-- end principle -->
               <!-- begin principle -->
-              <div class="principle">
-                <div class="principle__nmb">02/</div>
-                <div class="principle__title">Чуємо клієнта</div>
-                <div class="principle__text">Перед початком роботи, ми уважно вислухаємо усі ваші побажання та зробимо усе, щоб втілити їх у життя</div>
+              <div class="principle__wrap">
+                <div class="principle">
+                  <div class="principle__nmb text--gray-light">02/</div>
+                  <div class="principle__title h4 h4--ttn h4--bold">Чуємо клієнта</div>
+                  <div class="principle__text text--gray-light">Перед початком роботи, ми уважно вислухаємо<br> усі ваші побажання та зробимо усе,<br> щоб втілити їх у життя</div>
+                </div>
               </div>
               <!-- end principle -->
               <!-- begin principle -->
-              <div class="principle">
-                <div class="principle__nmb">03/</div>
-                <div class="principle__title">Підходимо з розумом </div>
-                <div class="principle__text">Спочатку ми продумуємо, аналізуємо та плануємо, а вже потім починаємо розробляти, проектувати та впроваджувати</div>
+              <div class="principle__wrap">
+                <div class="principle">
+                  <div class="principle__nmb text--gray-light">03/</div>
+                  <div class="principle__title h4 h4--ttn h4--bold">Підходимо з розумом </div>
+                  <div class="principle__text text--gray-light">Спочатку ми продумуємо, аналізуємо та плануємо,<br> а вже потім починаємо розробляти, проектувати<br> та впроваджувати</div>
+                </div>
               </div>
               <!-- end principle -->
               <!-- begin principle -->
-              <div class="principle">
-                <div class="principle__nmb">04/</div>
-                <div class="principle__title">Будуємо на майбутнє</div>
-                <div class="principle__text">Нам цікаво працювати з вами на постійній основі, тому ми вкладаємося у кожний проект, як у довгострокову інвестицію</div>
+              <div class="principle__wrap">
+                <div class="principle">
+                  <div class="principle__nmb text--gray-light">04/</div>
+                  <div class="principle__title h4 h4--ttn h4--bold">Будуємо на майбутнє</div>
+                  <div class="principle__text text--gray-light">Нам цікаво працювати з вами на постійній основі,<br> тому ми вкладаємося у кожний проект,<br> як у довгострокову інвестицію</div>
+                </div>
               </div>
               <!-- end principle -->
               <!-- begin principle -->
-              <div class="principle">
-                <div class="principle__nmb">05/</div>
-                <div class="principle__title">Діємо рішуче</div>
-                <div class="principle__text">Ми завжди орієнтуємося на розробку найкращого проекту в Україні за вашою тематикою, а це потребує сміливих ідей</div>
+              <div class="principle__wrap">
+                <div class="principle">
+                  <div class="principle__nmb text--gray-light">05/</div>
+                  <div class="principle__title h4 h4--ttn h4--bold">Діємо рішуче</div>
+                  <div class="principle__text text--gray-light">Ми завжди орієнтуємося на розробку найкращого<br> проекту в Україні за вашою тематикою, а це<br> потребує сміливих ідей</div>
+                </div>
               </div>
               <!-- end principle -->
               <!-- begin principle -->
-              <div class="principle">
-                <div class="principle__nmb">06/</div>
-                <div class="principle__title">Пишаємося собою</div>
-                <div class="principle__text">Після кожного проекту ми стаємо на декілька пунктів щасливішими, адже ми знову створили продукт, який цінують</div>
+              <div class="principle__wrap">
+                <div class="principle">
+                  <div class="principle__nmb text--gray-light">06/</div>
+                  <div class="principle__title h4 h4--ttn h4--bold">Пишаємося собою</div>
+                  <div class="principle__text text--gray-light">Після кожного проекту ми стаємо на декілька<br> пунктів щасливішими, адже ми знову<br> створили продукт, який цінують</div>
+                </div>
               </div>
               <!-- end principle -->
             </div>
@@ -467,7 +499,7 @@
             <div class="s-order__inner">
               <div class="s-order__left">
                 <div class="s-order__title overlayed js-anim-el" data-anim-name="overlayedLeft">
-                  <div class="title title--ttn glitch js-anim-el" data-anim-name="fadeIn" data-text="Це - Олександра.">Це - Олександра. Вона знає, як зробити крутий проект для вашого бізнесу</div>
+                  <div class="title title--ttn glitch js-anim-el" data-anim-name="fadeIn" data-text="Це - Олександра.">Це - Олександра. Вона знає,<br> як зробити крутий проект<br> для вашого бізнесу</div>
                 </div>
                 <div class="s-order__contacts js-anim-el" data-anim-name="fadeInBottomSm">
                   <!-- begin order-contacts -->
@@ -499,18 +531,77 @@
         </section>
         <!-- end section -->
         <!-- begin section -->
-        <section class="section s-galery pt-md pb-lg">
+        <section class="section s-feedbacks pt-lg pb-md overflow-hidden">
+          <div class="section__title-block s-feedbacks__title-block">
+            <!-- begin title-block -->
+            <div class="title-block">
+              <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
+              <div class="container">
+                <div class="title-block__subttl js-anim-el" data-anim-name="fadeInTopSm">про нас з радістю</div>
+                <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
+                  <div class="title glitch glitch--bottom" data-text="клієнти та партнери"><small>розповідають наші</small> клієнти та партнери</div>
+                </div>
+                <div class="title-block__text js-anim-el" data-anim-name="fadeInBottomSm">У нас багато прикладів, коли клієнти були нам вдячні та поверталися до нас знову.<br> Ми цінуємо кожного, хто завітає до нас, тому у відповідь отримуємо<br> ще більше позитиву та визнання.</div>
+              </div>
+              <div class="title-block__word word word--sm js-anim-el" data-anim-name="fadeInLeft">
+                <div class="word__inner js-parallax-scroll">Client’s <br> feedback</div>
+              </div>
+            </div>
+            <!-- end title-block -->
+          </div>
+          <div class="s-feedbacks__table">
+            <!-- begin clients -->
+            <div class="clients">
+              <div class="container">
+                <div class="clients__table">
+                  <!-- begin clients-table -->
+                  <div class="clients-table clients-table--full js-anim-in-vieport-with-gsap">
+                    <div class="clients-table__item">
+                      <img data-src="img/logos/4.png" alt="" class="js-lazy animated-img">
+                    </div>
+                    <div class="clients-table__item">
+                      <img data-src="img/logos/7.png" alt="" class="js-lazy animated-img">
+                    </div>
+                    <div class="clients-table__item">
+                      <img data-src="img/logos/5.png" alt="" class="js-lazy animated-img">
+                    </div>
+                    <div class="clients-table__item">
+                      <img data-src="img/logos/6.png" alt="" class="js-lazy animated-img">
+                    </div>
+                    <div class="clients-table__item">
+                      <img data-src="img/logos/8.png" alt="" class="js-lazy animated-img">
+                    </div>
+                    <div class="clients-table__item">
+                      <img data-src="img/logos/9.png" alt="" class="js-lazy animated-img">
+                    </div>
+                    <div class="clients-table__item">
+                      <img data-src="img/logos/10.png" alt="" class="js-lazy animated-img">
+                    </div>
+                    <div class="clients-table__item">
+                      <img data-src="img/logos/11.png" alt="" class="js-lazy animated-img">
+                    </div>
+                  </div>
+                  <!-- end clients-table -->
+                </div>
+              </div>
+            </div>
+            <!-- end clients -->
+          </div>
+        </section>
+        <!-- end section -->
+        <!-- begin section -->
+        <section class="section s-gallery pt-md pb-lg overflow-hidden">
           <div class="section__title-block s-gallery__title-block">
             <!-- begin title-block -->
             <div class="title-block">
               <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
               <div class="container">
-                <div class="title-block__subttl">ми завжди відкриті до вас і показуємо це</div>
+                <div class="title-block__subttl js-anim-el" data-anim-name="fadeInTopSm">ми завжди відкриті до вас і показуємо це</div>
                 <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
                   <div class="title glitch glitch--bottom" data-text="фотогалереї"><small>у нашій власній</small> фотогалереї</div>
                 </div>
               </div>
-              <div class="title-block__word word js-anim-el" data-anim-name="fadeInLeft">
+              <div class="title-block__word word word--sm js-anim-el" data-anim-name="fadeInLeft">
                 <div class="word__inner js-parallax-scroll">Gallery</div>
               </div>
             </div>
@@ -519,48 +610,73 @@
           <div class="section__gallery s-gallery__gallery">
             <div class="container">
               <!-- begin gallery -->
-              <div class="gallery js-galley">
-                <div class="gallery__square"></div>
-                <div class="gallery__img-wrap">
-                  <div class="gallery__img js-lazy" data-background-image="img/gallery/1.jpg"></div>
-                  <div class="gallery__caption">
-                    <div class="gallery__title h4">Офісні будні</div>
-                    <div class="gallery__subttl"> 26.06.2019</div>
-                  </div>
-                  <div class="gallery__img js-lazy" data-background-image="img/gallery/1.jpg"></div>
-                  <div class="gallery__caption">
-                    <div class="gallery__title h4">Офісні будні</div>
-                    <div class="gallery__subttl"> 26.06.2019</div>
-                  </div>
-                  <div class="gallery__img js-lazy" data-background-image="img/gallery/1.jpg"></div>
-                  <div class="gallery__caption">
-                    <div class="gallery__title h4">Офісні будні</div>
-                    <div class="gallery__subttl"> 26.06.2019</div>
-                  </div>
-                  <div class="gallery__img js-lazy" data-background-image="img/gallery/1.jpg"></div>
-                  <div class="gallery__caption">
-                    <div class="gallery__title h4">Офісні будні</div>
-                    <div class="gallery__subttl"> 26.06.2019</div>
-                  </div>
-                  <div class="gallery__img js-lazy" data-background-image="img/gallery/1.jpg"></div>
-                  <div class="gallery__caption">
-                    <div class="gallery__title h4">Офісні будні</div>
-                    <div class="gallery__subttl"> 26.06.2019</div>
+              <div class="gallery js-gallery js-anim-in-vieport-with-gsap">
+                <div class="gallery__inner">
+                  <div class="gallery__square gallery-cover"></div>
+                  <div class="gallery__img-wrap  js-lightgallery">
+                    <a class="gallery__img gallery-img js-lazy" href="img/gallery/1.jpg" data-exthumbimage="img/gallery/1.jpg" data-background-image="img/gallery/1.jpg">
+                      <div class="gallery__caption">
+                        <div class="gallery__title h4 h4--ttn h4--bold">Офісні будні</div>
+                        <div class="gallery__subttl">26.06.2019</div>
+                      </div>
+                    </a>
+                    <a class="gallery__img gallery-img js-lazy" href="img/testimonials/28-reviews_1.jpg" data-exthumbimage="img/testimonials/28-reviews_1.jpg" data-background-image="img/testimonials/28-reviews_1.jpg">
+                      <div class="gallery__caption">
+                        <div class="gallery__title h4 h4--ttn h4--bold">Офісні будні</div>
+                        <div class="gallery__subttl">26.06.2019</div>
+                      </div>
+                    </a>
+                    <a class="gallery__img gallery-img js-lazy" href="img/gallery/1.jpg" data-exthumbimage="img/gallery/1.jpg" data-background-image="img/gallery/1.jpg">
+                      <div class="gallery__caption">
+                        <div class="gallery__title h4 h4--ttn h4--bold">Офісні будні</div>
+                        <div class="gallery__subttl">26.06.2019</div>
+                      </div>
+                    </a>
+                    <a class="gallery__img gallery-img js-lazy" href="img/testimonials/28-reviews_1.jpg" data-exthumbimage="img/testimonials/28-reviews_1.jpg" data-background-image="img/testimonials/28-reviews_1.jpg">
+                      <div class="gallery__caption">
+                        <div class="gallery__title h4 h4--ttn h4--bold">Офісні будні</div>
+                        <div class="gallery__subttl">26.06.2019</div>
+                      </div>
+                    </a>
+                    <a class="gallery__img gallery-img js-lazy" href="img/gallery/1.jpg" data-exthumbimage="img/gallery/1.jpg" data-background-image="img/gallery/1.jpg">
+                      <div class="gallery__caption">
+                        <div class="gallery__title h4 h4--ttn h4--bold">Офісні будні</div>
+                        <div class="gallery__subttl">26.06.2019</div>
+                      </div>
+                    </a>
                   </div>
                   <div class="gallery__btns">
-                    <button class="gallery__prev slider-btn slider-btn--prev js-prev">
-                      <!-- begin icon-arrow -->
-                      <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
-                        <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
-                      </svg>
-                      <!-- end icon-arrow -->
+                    <button class="gallery__prev slider-btn slider-btn--prev slider-btn--two-svg js-prev">
+                      <span class="slider-btn__front-svg">
+                        <!-- begin icon-arrow -->
+                        <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
+                          <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
+                        </svg>
+                        <!-- end icon-arrow -->
+                      </span>
+                      <span class="slider-btn__back-svg">
+                        <!-- begin icon-arrow -->
+                        <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
+                          <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
+                        </svg>
+                        <!-- end icon-arrow -->
+                      </span>
                     </button>
-                    <button class="gallery__next slider-btn slider-btn--next js-next">
-                      <!-- begin icon-arrow -->
-                      <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
-                        <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
-                      </svg>
-                      <!-- end icon-arrow -->
+                    <button class="gallery__next slider-btn slider-btn--next slider-btn--two-svg js-next">
+                      <span class="slider-btn__front-svg">
+                        <!-- begin icon-arrow -->
+                        <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
+                          <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
+                        </svg>
+                        <!-- end icon-arrow -->
+                      </span>
+                      <span class="slider-btn__back-svg">
+                        <!-- begin icon-arrow -->
+                        <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
+                          <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
+                        </svg>
+                        <!-- end icon-arrow -->
+                      </span>
                     </button>
                   </div>
                 </div>

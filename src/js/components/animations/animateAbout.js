@@ -1,64 +1,113 @@
-import PageAnimator from './PageAnimator';
+// import PageAnimator from './PageAnimator';
 import BlockAnimator from './BlockAnimator';
 import { TimelineLite } from 'gsap';
 import { ANIMATE, SHOW } from '../../constants';
+import { animateTable, animateHero, animateTeam } from './commonAnimations';
+import { isInView } from '../../helpers';
 
 export default function animateHome() {
   const page = document.querySelector('.page-about');
   if(!page) return;
 
   // hero animations
-  const elements = {
-    header: document.querySelector('.header'),
-    heroContent: page.querySelector('.hero__content'),
-    heroSubttl: page.querySelector('.hero__subttl'),
-    heroTitle: page.querySelector('.hero__title'),
-    heroTitleEl: page.querySelector('.hero__title .title'),
-    scrollDown: page.querySelector('.hero__scroll-down')
-  };
+  animateHero(page);
 
-  const animator = new PageAnimator(page);  
-  animator.animate = () => {
-    const tl = new TimelineLite();
+  // blocks animations
+  // =================== table =======================
+  animateTable();
+  // =================== table =======================
 
-    tl
-      .fromTo(
-        elements.heroTitle,
-        0,
-        { opacity: 0 },
-        { opacity: 1 }
-      )
-      .call(() => {
-        elements.heroTitle.classList.add('overlayedLeft');
-      })
-      .fromTo(
-        elements.heroTitleEl,
-        0.5,
-        { opacity: 0 },
-        { opacity: 1 },
-        '+=.5'
-      )
-      .fromTo(
-        elements.heroSubttl,
-        0.5,
-        { y: -30, opacity: 0 },
-        { y: 0, opacity: 1 },
-        '-=.5'
-      )
-      .fromTo(
-        elements.header,
-        0.5,
-        { opacity: 0, y: '-100%' },
-        { opacity: 1, y: '0%' },
-        '-=0.5'
-      )
-      .fromTo(
-        elements.scrollDown,
-        0.5,
-        { opacity: 0, y: '100%' },
-        { opacity: 1, y: '0%' },
-        '-=0.5'
-      );
+  // =================== numbers section =======================
+  const numbersWraps = [].slice.call(document.querySelectorAll('.numbers'));
+
+  if(numbersWraps.length > 0) {
+    numbersWraps.forEach(wrap => {
+      isInView({
+        el: wrap,
+        onEnter: (entry, observer) => {
+          const blocks = entry.target.querySelectorAll('.number');
+
+          if(!blocks) return;
+          const tl = new TimelineLite();
+          tl
+            .staggerFromTo(
+              blocks,
+              0.5,
+              { opacity: 0, y: 30 },
+              { opacity: 1, y: 0 },
+              0.2
+            );
+        }
+      });
+    });
   };
-  animator.init();
+  // =================== numbers section =======================
+
+  // =================== animateTeam =======================
+  animateTeam();
+  // =================== animateTeam =======================
+
+  // =================== principles =======================
+  const principles = [].slice.call(document.querySelectorAll('.principles'));
+
+  if(principles.length > 0) {
+    principles.forEach(wrap => {
+      isInView({
+        el: wrap,
+        onEnter: (entry, observer) => {
+          const blocks = entry.target.querySelectorAll('.principle');
+
+          if(!blocks) return;
+          const tl = new TimelineLite();
+          tl
+            .staggerFromTo(
+              blocks,
+              0.5,
+              { opacity: 0, y: 30 },
+              { opacity: 1, y: 0 },
+              0.2
+            );
+        }
+      });
+    });
+  };
+  // =================== principles =======================
+
+  // =================== gallery =======================
+  const gallery = document.querySelector('.js-anim-in-vieport-with-gsap.js-gallery');
+
+  if(gallery) {
+    const blockAnimator = new BlockAnimator(gallery, {
+      observer: {
+        threshold: 0.4
+      }
+    });
+    blockAnimator.animate = (entry, observer) => {
+      const img = entry.target.querySelector('.gallery__img');
+      const imgCover = entry.target.querySelector('.gallery-cover');
+      const IMG_ANIM_DURATION = 500;
+
+      const tl = new TimelineLite({
+        onComplete: () => {
+          observer.unobserve(entry.target);
+        }
+      });
+
+      tl        
+        .call(() => {
+          imgCover.classList.add(ANIMATE);
+          setTimeout(() => {
+            imgCover.classList.remove(ANIMATE);
+            imgCover.classList.add('is-finishing-animate');
+            entry.target.classList.add(SHOW);
+
+            setTimeout(() => {
+              imgCover.classList.remove('is-finishing-animate');              
+            }, IMG_ANIM_DURATION);
+          }, IMG_ANIM_DURATION);
+        });
+    };
+    blockAnimator.init();
+  };
+  // =================== gallery =======================
 };

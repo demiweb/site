@@ -1,0 +1,102 @@
+.gallery
+  $this: &
+  width: percentage(10/12)
+  padding-left: 5%
+  padding-bottom: 5%
+  position: relative
+  color: $white
+  +lg
+    width: percentage(11/12)
+  +md
+    width: 100%
+  +xs
+    padding-left: 0
+    padding-right: 0
+    +before
+      left: -15px
+  +before
+    position: absolute
+    width: percentage(4/12)
+    background-color: $gray-lighten
+    bottom: 0
+    left: 0
+    top: 5%
+    z-index: 0
+  &.is-show
+      #{$this}__img
+        opacity: 1
+  &__img-wrap
+    position: relative
+    z-index: 1
+  &__square
+    +coverdiv
+    z-index: 2
+    pointer-events: none
+    overflow: hidden
+    +before
+      position: absolute
+      background-color: $yellow
+      width: 100%
+      top: 0
+      left: 0
+      height: 100%
+      z-index: 1      
+      transform: translate(-101%, 0)
+    &.is-animate
+      +before
+        transform: translate(0, 0)
+        +tr(transform .3s)
+    &.is-finishing-animate
+      +before
+        +tr(transform .3s)
+        transform: translate(101%, 0)
+  &__inner
+    position: relative
+    padding-top: 40%
+    +sm
+      padding-top: 50%
+  &__img-wrap
+    +coverdiv
+    
+  &__img
+    +cover
+    +coverdiv
+    background-color: $gray
+    display: none
+    opacity: 0
+    &.is-active
+      display: block
+  &__caption
+    position: absolute
+    bottom: 30px
+    left: 30px
+    +lg
+      bottom: 20px
+      left: 20px
+    +md
+      bottom: 15px
+      left: 15px
+    +sm
+      bottom: 10px
+      left: 10px
+  &__subttl
+    color: $gray-light
+  &__btns
+    position: absolute
+    z-index: 3
+    bottom: -30px
+    +css-lock(10, 60, 320, 1499, right)
+    +flex()
+  &__prev
+    margin-right: 30px
+    +xl
+      margin-right: 20px
+    +lg
+      margin-right: 15px
+    +md
+      margin-right: 10px
+    +sm
+      margin-right: 5px
+  &__prev,
+  &__next
+    color: $white

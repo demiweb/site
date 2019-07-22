@@ -4,14 +4,14 @@
     <div class="section--img__inner">
       <div class="section--img__content">
         <!-- begin title-block -->
-        <div class="title-block">
-          <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
+        <div class="title-block title-block--no-container">
+          <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRightShort"></div>
 
           <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
             <div class="title glitch glitch--bottom" data-text="у центрі києва"><small>наш офіс знаходиться</small> у центрі києва</div>
           </div>
 
-          <div class="title-block__text">Ви можете завітати до нас за адресою: м.Київ, бул. Марії Приймаченко, 1/27, офіс 107, 108.
+          <div class="title-block__text js-anim-el" data-anim-name="fadeInBottomSm">Ви можете завітати до нас за адресою: м.Київ, бул. Марії Приймаченко, 1/27, офіс 107, 108.
   Наші спеціалісти з радістю зустрінуть вас та ви зможете особисто обговорити свій проект, 
   розрахувати його вартість та з’ясувати усі моменти, які вас до цього хвилювали. 
   Також ви можете написати нам або зателефонувати за контактними даними у розділі <a href="#">Контакти</a>.
@@ -21,7 +21,11 @@
       </div>
 
       <div class="section--img__img">
-        <div class="section-img js-lazy" data-background-image="img/about/office.jpg"></div>
+        <div class="section-img">
+          <div class="section-img__inner overlayed js-anim-el" data-anim-name="overlayedLeft">
+            <div class="section-img__img js-lazy js-anim-el" data-anim-name="fadeIn" data-anim-duration="1.5s" data-background-image="img/about/office.jpg"></div>
+          </div>          
+        </div>
       </div>
     </div>
   </div>

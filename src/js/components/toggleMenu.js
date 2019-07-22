@@ -100,8 +100,8 @@ export default function toggleMenu() {
       .fromTo(
         $btn,
         0.4,
-        { x: '150%' },
-        { x: '0%' }
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1 }
       )
       .fromTo(
         $top,

@@ -22,6 +22,12 @@
     height: 100vh
     height: calc(var(--vh, 1vh) * 100)
     z-index: 1
+    +xl
+      padding-top: $padding-mdl
+      padding-bottom: $padding-mdl
+    +lg
+      padding-top: $padding-md
+      padding-bottom: $padding-md
   &__content
     width: 50%
     position: relative
@@ -115,6 +121,8 @@
     transform: translate(-50%, 0)
     bottom: 0
     z-index: 1
+  &__text
+    opacity: 0
 
 
   &--content
@@ -132,8 +140,12 @@
       bottom: -15px
     #{$this}__content
       width: percentage(7/12)
+      +md
+        width: 70%
+      +sm
+        width: 100%
     #{$this}__text
-      width: percentage(7/12)
+      max-width: 465px
 
   @keyframes logo
     0%

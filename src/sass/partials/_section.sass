@@ -13,19 +13,38 @@
     &__content
       width: percentage(7/12)
       +flex(center, normal, column)
+      .title-block
+        +r(1410)
+          margin-left: -15px
+      +xs
+        width: 100%
+        margin-bottom: 15px
+        .title-block--no-container
+          padding-left: 15px
+          padding-right: 15px
     &__img
       width: percentage(5/12)
       text-align: right
+      +xs
+        width: 100%
+        .section-img
+          padding-top: 40%
+          width: 100%
 
 .section-img
   display: inline-block
   width: percentage(4/5)
-  padding-top: 110%
-  +cover
   position: relative
+  &__img
+    +cover
+    background-color: $gray
+    position: relative
+    z-index: 1
+    padding-top: 150%
+    opacity: 0
   +before
     +coverdiv
-    z-index: -1
+    z-index: 0
     top: 10%
     left: -10%
     background-color: $gray-lighten
@@ -183,6 +202,7 @@
     z-index: 1
 
 .s-order
+  $this: &
   &__inner
     +flex(flex-start, normal, row, wrap)
     overflow: hidden
@@ -246,6 +266,10 @@
     +sm
       width: auto
 
+  &--bg
+    +cover
+    #{$this}__title
+
 
 .order-contacts
   &__mail
@@ -268,3 +292,33 @@
   &__text
     text-transform: uppercase
     margin-top: 10px
+
+.s-numbers
+  .word
+    margin-bottom: .2em
+    right: -5%
+
+.s-team
+  .word
+    margin-bottom: .15em
+    right: 0
+    left: 35%
+
+.s-principles
+  .word
+    bottom: auto
+    top: 0
+    right: -12%
+
+.s-feedbacks
+  .word
+    bottom: auto
+    top: 0
+    right: -18%
+
+.s-gallery
+  .word
+    right: auto
+    left: 35%
+    bottom: -.3em
+

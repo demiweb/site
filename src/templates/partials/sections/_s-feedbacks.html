@@ -1,34 +1,39 @@
 {%set
-clients = [
-  { text: '100+', mod: 'clients-table__item-lg' },
-  { img: '4.png' },
-  { img: '7.png' },
-  { img: '5.png' },
-  { img: '6.png' },
-  { img: '8.png' },
-  { img: '9.png' },
-  { img: '10.png' },
-  { img: '11.png' }
-]
+clients = {
+  modifications: {
+    table: 'clients-table--full'
+  },
+  table: [    
+    { img: '4.png' },
+    { img: '7.png' },
+    { img: '5.png' },
+    { img: '6.png' },
+    { img: '8.png' },
+    { img: '9.png' },
+    { img: '10.png' },
+    { img: '11.png' }
+  ]
+}
 %}
-
 <!-- begin section -->
-<section class="section s-feedbacks pt-lg pb-md">
+<section class="section s-feedbacks pt-lg pb-md overflow-hidden">
   <div class="section__title-block s-feedbacks__title-block">
     {{ mixins.titleBlock(
-      subttl = 'про нас з радістю'
-      title = '<small>розповідають наші</small><br> клієнти та партнери',
+      subttl = 'про нас з радістю',
+      title = '<small>розповідають наші</small> клієнти та партнери',
+      titleMod = 'glitch--bottom',
+      wordMod = 'word--sm',
       text = 'клієнти та партнери',
-      par = 'У нас багато прикладів, коли клієнти були нам вдячні та поверталися до нас знову. 
-      Ми цінуємо кожного, хто завітає до нас, тому у відповідь отримуємо
+      par = 'У нас багато прикладів, коли клієнти були нам вдячні та поверталися до нас знову.<br>
+      Ми цінуємо кожного, хто завітає до нас, тому у відповідь отримуємо<br>
       ще більше позитиву та визнання.',
-      word: 'Client’s <br>
+      word = 'Client’s <br>
       feedback'
     ) }}
   </div>
 
   <div class="s-feedbacks__table">
-    {% include "partials/_clients-table.html" %}
+    {% include "partials/_clients.html" %}
   </div>
 </section>
 <!-- end section -->

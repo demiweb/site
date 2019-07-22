@@ -14,6 +14,7 @@
 
 
 .clients-table
+  $this: &
   // +flex(flex-start, normal, row, wrap)
   width: percentage(8/12)
   position: relative
@@ -55,3 +56,36 @@
       height: auto
     +xs
       width: 100%
+
+  &--full
+    width: 100%
+    +before
+      background-color: $white
+      transform: translate(0, 0)
+      left: 0
+      bottom: 0
+      top: auto
+      width: 100%
+      z-index: 1
+    +lg
+      width: 100%
+    #{$this}__item
+      border: 0
+      border-right: 1px dashed  $c-border
+      border-bottom: 1px dashed  $c-border
+      &:nth-child(4n - 4)
+        border-right-width: 0
+      +md
+        width: 25%
+      +sm
+        width: 33.33333%
+        &:nth-child(3n - 3)
+          border-right-width: 0
+        &:nth-child(4n - 4)
+          border-right-width: 1px
+      +xs
+        width: 50%
+        &:nth-child(3n - 3)
+          border-right-width: 1px
+        &:nth-child(even)
+          border-right-width: 0

@@ -126,6 +126,7 @@
       padding-right: 15px
   &__img
     +cover
+    background-color: $gray
     padding-top: 63%
     height: 100%
     display: none
@@ -209,6 +210,19 @@
         transform: translate(-50%, 0)
       .icon
         transform: translate(-50%, 0) rotate(180deg)
+    &.slider-btn--two-svg
+      #{$this}__front-svg,
+      #{$this}__back-svg,
+        justify-content: flex-end
+      +hover        
+        #{$this}__front-svg
+          transform: translate(-50%, 0)
+          .icon
+            transform: translate(40%, 0) rotate(180deg)
+        #{$this}__back-svg
+          color: $yellow
+          .icon
+            transform: translate(-60%, 0) rotate(180deg)
   &--next
     color: $white
     +before
@@ -218,20 +232,22 @@
         transform: translate(50%, 0)
       .icon
         transform: translate(50%, 0)
+    &.slider-btn--two-svg
+      +hover
+        #{$this}__front-svg
+          transform: translate(50%, 0)
+          .icon
+            transform: translate(-50%, 0)
+        #{$this}__back-svg
+          .icon
+            transform: translate(60%, 0)
 
     #{$this}__back-svg
       left: 0
       color: $yellow
+
   &--two-svg
     +before
       display: none
     #{$this}__front-svg
       background-color: $yellow
-    +hover      
-      #{$this}__front-svg
-        transform: translate(50%, 0)
-        .icon
-          transform: translate(-50%, 0)
-      #{$this}__back-svg
-        .icon
-          transform: translate(60%, 0)

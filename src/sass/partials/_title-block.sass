@@ -3,13 +3,16 @@
   position: relative
   padding-top: 15px
   padding-bottom: 15px
-  min-height: 320px
+  // min-height: 320px
+  +css-lock(170, 320, 320, 1499, min-height)  
   // +css-lock(30, 100, 320, 1499, padding-top)  
   // +css-lock(30, 100, 320, 1499, padding-bottom)
   // overflow: hidden
   +flex(center, normal, column)
-  .container
+  > .container
     width: 100%
+  #{$this}__square-wrap
+    max-width: 1410px
   
   &__title
     position: relative
@@ -27,6 +30,7 @@
     z-index: 2
     padding-left: percentage(1/12)
     margin-bottom: 25px
+    opacity: 0
     +sm
       margin-bottom: 15px
     +xs
@@ -43,6 +47,7 @@
     z-index: 2
     padding-left: percentage(1/12)
     padding-top: 25px
+    opacity: 0
     a
       text-decoration: underline
       color: $blue
@@ -57,9 +62,11 @@
     bottom: 0
   &__square-wrap
     @extend .container
+    padding-left: 0
+    padding-right: 0
     z-index: 0
     pointer-events: none
-    width: 100%
+    // width: 100%
     height: 100%
     top: 0
     position: absolute
@@ -95,3 +102,12 @@
       opacity: 0
     #{$this}__title
       padding-left: 0
+
+  &--gray
+    +css-lock(170, 275, 320, 1499, min-height)  
+    > .container
+      +css-lock(0, 65, 320, 1499, padding-top)  
+    #{$this}__square-wrap
+      padding-top: 0
+      +before
+        background-color: $gray-lighten

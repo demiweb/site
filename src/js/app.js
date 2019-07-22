@@ -13,6 +13,7 @@ import setAnimations from './components/animations/setAnimations';
 import animateOnScroll from './components/animeteOnScroll';
 import addClassesOnScroll from './components/addClassesOnScroll';
 import setParralax from './components/setParralax';
+import setGallery from './components/gallery/setGallery';
 
 $(function() {
   // sayHello();
@@ -28,4 +29,5 @@ $(function() {
   animateOnScroll();
   addClassesOnScroll();
   setParralax();
+  setGallery();
 });

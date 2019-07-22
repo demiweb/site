@@ -1,20 +1,56 @@
+{%set
+gallery = [
+  { img: 'img/gallery/1.jpg', title: 'Офісні будні', date: '26.06.2019' },
+  { img: 'img/testimonials/28-reviews_1.jpg', title: 'Офісні будні', date: '26.06.2019' },
+  { img: 'img/gallery/1.jpg', title: 'Офісні будні', date: '26.06.2019' },
+  { img: 'img/testimonials/28-reviews_1.jpg', title: 'Офісні будні', date: '26.06.2019' },
+  { img: 'img/gallery/1.jpg', title: 'Офісні будні', date: '26.06.2019' }
+]
+%}
+
 <!-- begin gallery -->
-<div class="gallery js-galley">
-  <div class="gallery__square"></div>
+<div class="gallery js-gallery js-anim-in-vieport-with-gsap">  
 
-  <div class="gallery__img-wrap">
-    {% for i in range(0, 5) %}
-    <div class="gallery__img js-lazy" data-background-image="img/gallery/1.jpg"></div>
-    <div class="gallery__caption">
-      <div class="gallery__title h4">Офісні будні</div>
+  <div class="gallery__inner">
+    <div class="gallery__square gallery-cover"></div>
 
-      <div class="gallery__subttl"> 26.06.2019</div>
-    </div>
-    {% endfor %}
+    
+    <div class="gallery__img-wrap  js-lightgallery">
+      {% for i in gallery %}
+      <a
+        class="gallery__img gallery-img js-lazy"
+        href="{{ i.img }}"        
+        data-exthumbimage="{{ i.img }}"
+        data-background-image="{{ i.img }}">
+        <div class="gallery__caption">
+          <div class="gallery__title h4 h4--ttn h4--bold">{{ i.title }}</div>
+
+          <div class="gallery__subttl">{{ i.date }}</div>
+        </div>
+      </a>
+      {% endfor %}   
+    </div>    
+    
+    
+    
 
     <div class="gallery__btns">
-      <button class="gallery__prev slider-btn slider-btn--prev js-prev">{{ mixins.icon('arrow') }}</button>
-      <button class="gallery__next slider-btn slider-btn--next js-next">{{ mixins.icon('arrow') }}</button>
+      <button class="gallery__prev slider-btn slider-btn--prev slider-btn--two-svg js-prev">
+        <span class="slider-btn__front-svg">
+          {{ mixins.icon('arrow') }}
+        </span>
+        <span class="slider-btn__back-svg">
+          {{ mixins.icon('arrow') }}
+        </span>
+      </button>
+      <button class="gallery__next slider-btn slider-btn--next slider-btn--two-svg js-next">
+        <span class="slider-btn__front-svg">
+          {{ mixins.icon('arrow') }}
+        </span>
+        <span class="slider-btn__back-svg">
+          {{ mixins.icon('arrow') }}
+        </span>
+      </button>
     </div>
   </div>  
 </div>

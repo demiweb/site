@@ -8,6 +8,7 @@ body
   +no-scroll
   +sm
     font-size: $fz-sm
+    line-height: 1.5
 
 input, textarea
   font-family: inherit
@@ -130,6 +131,19 @@ input, textarea
     margin-left: 15px
     fill: $gray-light
     +tr(transform .3s)
+    +sm
+      margin-left: 5px
+  &--prev
+    .icon
+      transform: scaleX(-1)
+      margin-left: 0
+      margin-right: 15px
+      +sm
+        margin-right: 5px
+    +hover
+      .icon
+        transform: translate(-15px, 0) scaleX(-1)
+
 
 .scrolled-text
   font-size: 10px

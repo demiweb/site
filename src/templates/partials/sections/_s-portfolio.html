@@ -1,12 +1,31 @@
 <!-- begin section -->
-<section class="section s-portfolio overflow-hidden pb-lg" data-scroll-to-target="portfolio">
-
+<section class="section s-portfolio overflow-hidden pb-lg{% if sectionPortfolio.mod %} {{ sectionPortfolio.mod }}{% endif %}" data-scroll-to-target="portfolio">
+  
+  {% if not sectionPortfolio.noTitleBlock %}
   {{ mixins.titleBlock(
     mod = 's-portfolio__title',
     title = 'роботи, якими<br> ми пишаємося',
     text = 'роботи, якими',
     word = 'portfolio'
   ) }}
+  {% endif %}
+
+  {% if sectionPortfolio.nav %}
+  <div class="s-portfolio__nav section__nav js-anim-el" data-anim-name="fadeInBottomSm">
+    {{ mixins.list(
+      name = 'nav',
+      modifications = { wrap: 'nav--articles', item: '', link: '' },
+      list = [
+        { link: 'Корпоративні сайти <sup>15</sup>' },
+        { link: 'Сайти-візитки <sup>11</sup>' },
+        { link: 'Інтернет-магазини <sup>4</sup>' },
+        { link: 'Landing Pages <sup>3</sup>' },
+        { link: 'сайти-каталоги <sup>3</sup>' },
+        { link: 'Редизайн сайтів <sup>3</sup>' }
+      ]
+    ) }}
+  </div>
+  {% endif %}
 
 
     <div class="s-portfolio__portfolio">
@@ -15,10 +34,17 @@
 
     <div class="container">
       <div class="s-portfolio__link-wrap">
+        {% if sectionPortfolio.more %}
+        {{ mixins.btn(
+          title = '<span class="btn__title">' + mixins.icon('loading') +'завантажити більше</span>',
+          mod = 'btn--half'
+        ) }}
+        {% else %}
         <a href="#" class="s-portfolio__link">
           {{ mixins.icon('web-design') }}
           Дивитися портфоліо
         </a>
+        {% endif %}
       </div>      
     </div>  
   

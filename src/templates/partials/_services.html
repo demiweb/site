@@ -1,34 +1,9 @@
-{%set
-services = [
-  {
-    title: 'Web site development',
-    text: 'Ми створюємо сайти, які є природним продовженням фірмового стилю компанії, 
-викликають довіру відвідувачів і бажання співпрацювати з компанією.'
-  },
-  {
-    title: 'Seo + Adwords',
-    text: 'Ми створимо максимальну віддачу від кожного переходу на сайт, 
-так як вашу рекламу побачать ті, хто є частиною вашої цільової аудиторії'
-  },
-  {
-    title: 'Branding',
-    text: 'Ми створимо максимальну віддачу від кожного переходу на сайт, 
-так як вашу рекламу побачать ті, хто є частиною вашої цільової аудиторії'
-  },
-  {
-    title: 'Smm',
-    text: 'Ми створимо максимальну віддачу від кожного переходу на сайт, 
-так як вашу рекламу побачать ті, хто є частиною вашої цільової аудиторії'
-  }
-]
-%}
-
 <!-- begin services -->
-<div class="services">
-  {% for i in services %}
+<div class="services{% if services.mod %} {{ services.mod }}{% endif %}">
+  {% for i in services.items %}
   <!-- begin service-item -->
   <div class="service-item__wrap js-vieport-related-el">
-    <a href="#" class="service-item">
+    <a href="#" class="service-item{% if i.mod %} {{ i.mod }}{% endif %}">
       <span class="container">
         <span class="service-item__inner">
           <span class="service-item__block">

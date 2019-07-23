@@ -1,0 +1,67 @@
+---
+title: services
+page: services
+mainClass: page-services
+hero: {
+  modifications: {
+    section: 'hero--content'
+  },
+  subttl: 'ми надаємо повний спектр послуг',
+  title: '<small>ми не просто створюємо сайти,</small><strong class="glitch" data-text="ми не просто">ми не просто створюємо сайти,</strong><small>щоб вони працювали</small>',
+  text: 'Ви отримаєте повністю готовий проект, який буде працювати на вас, про нього будуть говорити та найголовніше — який 
+буде приносити вам прибуток.',
+  bgImage: 'bg-hero-services.jpg',
+  breadcrumbs: {
+    list: [
+      { link: 'Головна' },
+      { item: '-' },
+      { link: 'послуги', modLink: 'is-active' }
+    ]
+  },
+  scrollToTarget: 'services'
+}
+servicesSection: {
+  scrollTarget: true,
+  mod: 'pt-lg pb-lg'
+}
+services: {
+  items: [
+    {
+      title: 'Web site development',
+      text: 'Ми створюємо сайти, які є природним продовженням фірмового стилю компанії, 
+  викликають довіру відвідувачів і бажання співпрацювати з компанією.',
+      mod: 'service-item--white'
+    },
+    {
+      title: 'Seo + Adwords',
+      text: 'Ми створимо максимальну віддачу від кожного переходу на сайт, 
+  так як вашу рекламу побачать ті, хто є частиною вашої цільової аудиторії',
+      mod: 'service-item--white'
+    },
+    {
+      title: 'Branding',
+      text: 'Ми створимо максимальну віддачу від кожного переходу на сайт, 
+  так як вашу рекламу побачать ті, хто є частиною вашої цільової аудиторії',
+      mod: 'service-item--white'
+    },
+    {
+      title: 'Smm',
+      text: 'Ми створимо максимальну віддачу від кожного переходу на сайт, 
+  так як вашу рекламу побачать ті, хто є частиною вашої цільової аудиторії',
+      mod: 'service-item--white'
+    }
+  ]
+}
+sectionOrder: {
+  small: true,
+  mod: 's-order--sm',
+  noGlith: true
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}  
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-services.html" %}
+  {% include "partials/sections/_s-order.html" %}
+{% endblock %}

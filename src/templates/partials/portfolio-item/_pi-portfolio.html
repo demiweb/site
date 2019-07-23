@@ -1,0 +1,34 @@
+<!-- begin pi-section -->
+<section class="pi-section">
+  <div class="pi-section__word word word--sm js-anim-el" data-anim-name="fadeInLeft">
+    <div class="word__inner">portfolio</div>
+  </div>
+
+  <div class="container">
+    {{ mixins.piTitleBlock(
+      title = 'дивіться інші наші роботи, якими ми пишаємося',
+      titleMod = 'pi-section__title-mb-lg'
+    ) }}   
+  </div>
+
+  {% include "partials/_portfolio.html" %}
+
+  <div class="container">
+    <div class="pi-section__links">
+      <a href="#" class="link-arrow link-arrow--prev">        
+        <span class="link-arrow__arrow">
+          {{ mixins.icon('arrow-long') }}
+        </span>
+        <span class="link-arrow__title">попередній проект</span>
+      </a>
+
+      <a href="#" class="link-arrow link-arrow--next">
+        <span class="link-arrow__title">наступний проект</span>
+        <span class="link-arrow__arrow">
+          {{ mixins.icon('arrow-long') }}
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- end pi-section -->

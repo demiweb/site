@@ -1,0 +1,145 @@
+.blog
+  &__articles
+
+.article
+  +flex(flex-start, normal, row, wrap)
+  margin-bottom: 60px
+  +tr(box-shadow .3s)
+  margin-left: -15px
+  margin-right: -15px
+  padding-left: 15px
+  padding-right: 15px
+  +hover
+    box-shadow: 0 0 10px rgba($gray, .4)
+  +xl
+    margin-bottom: 50px
+  +lg
+    margin-bottom: 50px
+  +md
+    margin-bottom: 40px
+  +sm
+    margin-bottom: 25px
+  +xs
+    margin-bottom: 15px
+  &__content
+    width: 50%
+    +flex(center, normal, column)
+    padding-right: 45px
+    opacity: 0
+    +lg
+      padding-right: 15px
+    +sm
+      width: 100%
+      display: block
+      padding-right: 0
+      margin-bottom: 15px
+  &__img
+    width: 50%
+    display: block
+    padding-left: 15px
+    overflow: hidden
+    +sm
+      width: 100%
+      padding-left: 0
+  &__title
+    display: block
+    margin-bottom: 20px
+    strong
+      display: block
+    +md
+      margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+  &__text
+    display: block
+    margin-bottom: 40px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 20px
+    +sm
+      margin-bottom: 10px
+  &__btn
+    display: block
+    margin-bottom: 30px
+    +md
+      margin-bottom: 20px
+    +sm
+      margin-bottom: 10px
+  &__meta
+    display: block
+    margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+  &__user
+    display: block
+
+.meta
+  +flex(flex-start, center)
+  color: $gray-light
+  font-size: 12px
+  &__item
+    +flex(flex-start, center)
+    +notlast
+      margin-right: 30px
+  &__icon
+    font-size: 0
+    display: block
+    margin-right: 5px
+    .icon
+      font-size: 16px
+
+.user
+  +flex(flex-start, center)
+  &__img
+    +cover
+    display: block
+    width: 60px
+    height: 60px
+    flex: 0 0 60px
+    +md
+      width: 40px
+      height: 40px
+      flex: 0 0 40px
+  &__text
+    display: block
+    padding-left: 10px
+    color: $gray-light
+    font-size: 10px
+    line-height: 1.4
+    +reg
+
+.article-img
+  display: block
+  padding-left: 8%
+  padding-bottom: 8%
+  position: relative
+  +before
+    +coverdiv
+    z-index: 0
+    top: 15px
+    left: 0
+    width: 100%
+    background-color: $yellow
+    transform: translate(8%, -8%)
+    opacity: 0
+    +tr(opacity .3s, transform .3s)
+  +sm
+    padding-left: 4%
+    padding-bottom: 4%
+  &.is-show
+    +before
+      opacity: 1
+      transform: translate(0, 0)
+  &__inner
+    display: block
+  &__img
+    +cover
+    display: block
+    background-color: $gray
+    position: relative
+    z-index: 1
+    padding-top: 85%
+    opacity: 0
+    +sm
+      padding-top: 50%

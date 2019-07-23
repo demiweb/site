@@ -1,0 +1,87 @@
+.pi-section
+  position: relative
+  overflow: hidden
+  +css-lock(30, 100, 320, 1499, padding-top)
+  +css-lock(30, 100, 320, 1499, padding-bottom)
+  > .container
+    position: relative
+    z-index: 1
+  &__word
+    right: -5%
+    top: 0
+    white-space: nowrap
+  &__title
+    text-align: center
+    max-width: 880px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 25px
+    +sm
+      margin-bottom: 20px
+    +xs
+      margin-bottom: 10px
+  &__title-lg
+    max-width: 1000px
+  &__title-mb-lg
+    +css-lock(30, 100, 320, 1499, margin-bottom)
+  &__subttl
+    max-width: 510px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 60px
+    text-align: center
+    +xl
+      margin-bottom: 50px
+    +lg
+      margin-bottom: 40px
+    +md
+      margin-bottom: 30px
+    +sm
+      margin-bottom: 20px
+    +xs
+      margin-bottom: 10px
+  &__right-img
+    position: absolute
+    z-index: 0
+    bottom: 0
+    right: 0
+    text-align: right
+    img
+      display: inline-block
+    +xl
+      img
+        max-width: 80%
+    +lg
+      img
+        max-width: 70%
+    +md
+      img
+        max-width: 50%
+    +sm
+      display: none
+  &__links
+    +flex(center, center)
+    padding-top: 60px
+    padding-bottom: 60px
+    .link-arrow
+      margin-left: 20px
+      margin-right: 20px
+    +lg
+      padding-top: 40px
+      padding-bottom: 40px
+    +sm
+      padding-top: 20px
+      padding-bottom: 20px
+      .link-arrow
+        margin-left: 5px
+        margin-right: 5px
+    +xs
+      flex-direction: column
+      padding-bottom: 0
+      .link-arrow
+        margin-bottom: 10px
+  &__img-center
+    text-align: center
+    img
+      display: inline-block
+

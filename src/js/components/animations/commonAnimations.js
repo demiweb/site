@@ -34,7 +34,17 @@ export function animateTable() {
 };
 
 export function animateHero(page) {
-  const elements = {
+  const {
+    header,
+    heroContent,
+    heroSubttl,
+    heroTitle,
+    heroTitleEl,
+    scrollDown,
+    text,
+    breadcrumbs,
+    heroBtns
+  } = {
     header: document.querySelector('.header'),
     heroContent: page.querySelector('.hero__content'),
     heroSubttl: page.querySelector('.hero__subttl'),
@@ -42,7 +52,8 @@ export function animateHero(page) {
     heroTitleEl: page.querySelector('.hero__title .title'),
     scrollDown: page.querySelector('.hero__scroll-down'),
     text: page.querySelector('.hero__text'),
-    breadcrumbs: page.querySelector('.breadcrumbs')
+    breadcrumbs: page.querySelector('.breadcrumbs'),
+    heroBtns: page.querySelectorAll('.hero__btn')
   };
 
   const animator = new PageAnimator(page);  
@@ -51,55 +62,68 @@ export function animateHero(page) {
 
     tl
       .fromTo(
-        elements.heroTitle,
+        heroTitle,
         0,
         { opacity: 0 },
         { opacity: 1 }
       )
       .call(() => {
-        elements.heroTitle.classList.add('overlayedLeft');
+        heroTitle.classList.add('overlayedLeft');
       })
       .fromTo(
-        elements.heroTitleEl,
+        heroTitleEl,
         0.5,
         { opacity: 0 },
         { opacity: 1 },
         '+=.5'
       )
       .fromTo(
-        elements.heroSubttl,
+        heroSubttl,
         0.5,
         { y: -30, opacity: 0 },
         { y: 0, opacity: 1 },
         '-=.5'
       )
       .fromTo(
-        elements.header,
+        header,
         0.5,
         { opacity: 0, y: '-100%' },
         { opacity: 1, y: '0%' },
         '-=0.5'
       )
       .fromTo(
-        elements.scrollDown,
+        scrollDown,
         0.5,
         { opacity: 0, y: '100%' },
         { opacity: 1, y: '0%' },
         '-=0.5'
       )
       .fromTo(
-        elements.breadcrumbs,
+        breadcrumbs,
         0.5,
         { opacity: 0, y: '-100%' },
         { opacity: 1, y: '0%' },
         '-=0.5'
-      )
-      .fromTo(
-        elements.text,
+      );
+      
+    if (text) {
+      tl.fromTo(
+        text,
         0.5,
         { opacity: 0, y: 30 },
         { opacity: 1, y: 0 }
       );
+    };
+
+    if (heroBtns.length > 0) {
+      tl.staggerFromTo(
+        heroBtns,
+        0.5,
+        { opacity: 0, y: 15 },
+        { opacity: 1, y: 0 },
+        0.1
+      );
+    }
   };
   animator.init();
 };
@@ -148,4 +172,22 @@ export function animateTeam() {
       }
     });
   });
-}
+};
+
+export function addPortfolioContentOverflowVisible() {
+  const portfolioItems = [].slice.call(document.querySelectorAll('.js-vieport-related-el.portfolio-item'));
+
+  if(portfolioItems.length > 0) {
+    portfolioItems.forEach(item => {
+      const content = item.querySelector('.portfolio-item__content-inner');
+
+      content.addEventListener('transitionend', (e) => {
+        const contentWrap = e.currentTarget.parentNode.classList.contains('portfolio-item__content') ? e.currentTarget.parentNode : null;
+
+        if (!contentWrap) return;
+
+        contentWrap.classList.add('overflow-visible');
+      });      
+    });
+  };
+};

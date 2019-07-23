@@ -3,3 +3,7 @@ ProjectTitle: site
 PageList:
 - file: home.html
 - file: about.html
+- file: services.html
+- file: portfolio.html
+- file: portfolio-item.html
+- file: blog.html

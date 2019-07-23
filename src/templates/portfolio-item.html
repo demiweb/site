@@ -1,0 +1,59 @@
+---
+title: portfolio-item
+page: portfolio-item
+mainClass: page-portfolio-item
+hero: {
+  modifications: {
+    section: 'hero--content hero--content-center'
+  },
+  subttl: 'Корпоративний сайт',
+  subtitleMod: 'hero__subttl-ttn',
+  title: '<strong class="glitch">Olmaks</strong>',
+  titleMod: 'title--ttn',
+  text: 'Перший мультибрендовий салон електромобілей в Україні. 
+12 років досвіду на автомобільному ринку США дозволяють 
+«Olmaks Group» купувати дійсно якісні електромобілі за вигідними цінами.',
+  btns: true,
+  bgImage: 'bg-hero-olmaks.jpg',
+  breadcrumbs: {
+    list: [
+      { link: 'Головна' },
+      { item: '-' },
+      { link: 'Проекти' },
+      { item: '-' },
+      { link: 'Olmaks', modLink: 'is-active' }
+    ]
+  },
+  scrollToTarget: 'portfolio-item-hero'
+}
+sectionOrder: {
+  small: true,
+  mod: 's-order--sm',
+  noGlith: true
+}
+portfolio: [
+  {
+    subttl: 'Корпоративний сайт',
+    nmb: '01',
+    title: 'Olmaks',
+    text: 'Перший мультибрендовий салон електромобілей в Україні. 
+12 років досвіду на автомобільному ринку США дозволяють «Olmaks Group»
+купувати дійсно якісні електромобілі за вигідними цінами.',
+    img: '1.jpg',
+    logo: '1.png',
+    logoColor: '#10ad44'
+  }
+]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}  
+  {% include "partials/_hero.html" %}
+  {% include "partials/portfolio-item/_pi-hero.html" %}
+  {% include "partials/portfolio-item/_pi-preview.html" %}
+  {% include "partials/portfolio-item/_pi-layers.html" %}
+  {% include "partials/portfolio-item/_pi-adaptive.html" %}
+  {% include "partials/portfolio-item/_pi-colors.html" %}
+  {% include "partials/portfolio-item/_pi-portfolio.html" %}
+  {% include "partials/sections/_s-order.html" %}
+{% endblock %}

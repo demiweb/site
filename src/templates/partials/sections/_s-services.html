@@ -1,5 +1,5 @@
 <!-- begin section -->
-<section class="section s-services overflow-hidden">
+<section class="section s-services overflow-hidden{% if servicesSection.mod %} {{ servicesSection.mod }}{% endif %}" {% if servicesSection.scrollTarget %}data-scroll-to-target="services"{% endif %}>
     {{ mixins.titleBlock(
       mod = '',
       title = 'Послуги <br> для реалізації ваших ідей',

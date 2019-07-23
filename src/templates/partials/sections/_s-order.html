@@ -1,10 +1,14 @@
 <!-- begin section -->
-<section class="section section--black section--white-color s-order pt-lgl pb-xl">
+<section class="section section--black section--white-color s-order pt-lgl pb-xl{% if sectionOrder.mod %} {{ sectionOrder.mod }}{% endif %}">
   <div class="container">
     <div class="s-order__inner">
       <div class="s-order__left">
         <div class="s-order__title overlayed js-anim-el" data-anim-name="overlayedLeft">
+          {% if not sectionOrder.noGlith %}
           <div class="title title--ttn glitch js-anim-el" data-anim-name="fadeIn" data-text="А ви готові">А ви готові розробити <br> по справжньому крутий проект?</div>
+          {% else %}
+          <div class="title title--ttn js-anim-el" data-anim-name="fadeIn">А ви готові розробити <br> по справжньому крутий проект?</div>
+          {% endif %}
         </div>
 
         <div class="s-order__contacts js-anim-el" data-anim-name="fadeInBottomSm">
@@ -41,9 +45,13 @@
         </div>
       </div>
 
+      {% if not sectionOrder.small %}
       <div class="s-order__right js-anim-el" data-anim-name="fadeInRightSm" data-anim-delay="0.5s">
         {% include "partials/_seo-text.html" %}        
       </div>
+      {% endif %}
+
+      
     </div>
   </div>
 </section>

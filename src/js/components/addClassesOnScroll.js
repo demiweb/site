@@ -8,9 +8,13 @@ export default function addClassesOnScroll() {
 
   els.forEach(el => {
     let threshold = el.getAttribute('data-threshold');
+    let delay = el.getAttribute('data-delay');
 
     if (threshold) {
       threshold = +threshold;
+    };
+    if (delay) {
+      delay = +delay;
     };
 
     if (threshold === null) {
@@ -18,11 +22,19 @@ export default function addClassesOnScroll() {
     } else {
       threshold = threshold;
     };
+
+    if (delay === null) {
+      delay = 0;
+    } else {
+      delay = delay;
+    };
     
     isInView({
       el,
       onEnter: (entry, observer) => {
-        entry.target.classList.add(SHOW);
+        setTimeout(() => {
+          entry.target.classList.add(SHOW);
+        }, delay);
       },
       options: {
         threshold: threshold

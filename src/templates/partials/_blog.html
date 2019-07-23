@@ -1,0 +1,103 @@
+{%set
+articles = [
+  {
+    title: '16 вересня відбудеться IT-конференція <strong>у Стокгольмі за участі Вадима Паясу</strong> та олексія олійника',
+    text: '!6 вересня нас з вами чекає неймовірна подія, яка точно буде цікава всім тим, кого цікавть веб-дизайн, Front-End та Back-End розробка, нові технологіїї та IT-галузь у цілому. Відбудеться цей захід у Центральному Палаці Стокгольму в центрі міста...',
+    img: '1.jpg'
+  },
+  {
+    title: 'як відточювати свої професійні навички <strong>та бути продуктивним щодня</strong>',
+    text: '!6 вересня нас з вами чекає неймовірна подія, яка точно буде цікава всім тим, кого цікавть веб-дизайн, Front-End та Back-End розробка, нові технологіїї та IT-галузь у цілому. Відбудеться цей захід у Центральному Палаці Стокгольму в центрі міста...',
+    img: '2.jpg'
+  },
+  {
+    title: '16 вересня відбудеться IT-конференція <strong>у Стокгольмі за участі Вадима Паясу</strong> та олексія олійника',
+    text: '!6 вересня нас з вами чекає неймовірна подія, яка точно буде цікава всім тим, кого цікавть веб-дизайн, Front-End та Back-End розробка, нові технологіїї та IT-галузь у цілому. Відбудеться цей захід у Центральному Палаці Стокгольму в центрі міста...',
+    img: '1.jpg'
+  },
+  {
+    title: 'як відточювати свої професійні навички <strong>та бути продуктивним щодня</strong>',
+    text: '!6 вересня нас з вами чекає неймовірна подія, яка точно буде цікава всім тим, кого цікавть веб-дизайн, Front-End та Back-End розробка, нові технологіїї та IT-галузь у цілому. Відбудеться цей захід у Центральному Палаці Стокгольму в центрі міста...',
+    img: '2.jpg'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section pt-lg pb-md">
+  <div class="container">
+    <div class="section__nav js-anim-el" data-anim-name="fadeInBottomSm">
+      {{ mixins.list(
+        name = 'nav',
+        modifications = { wrap: 'nav--articles', item: '', link: '' },
+        list = [
+          { link: 'Статті <sup>15</sup>' },
+          { link: 'події <sup>11</sup>' },
+          { link: 'поради <sup>4</sup>' },
+          { link: 'інструменти <sup>3</sup>' },
+          { link: 'маркетинг <sup>3</sup>' },
+          { link: 'дизайн <sup>3</sup>' }
+        ]
+      ) }}
+    </div>
+
+    <!-- begin blog -->
+    <div class="blog">
+      <div class="blog__articles">
+        {% for i in articles %}
+        <!-- begin article -->
+        <a href="#" class="article">
+          <span class="article__content js-anim-el" data-anim-name="fadeInBottomSm">
+            <span class="article__meta">
+              {{ mixins.meta() }}
+            </span>
+
+            <span class="article__title">
+              <span class="h4">{{ i.title | safe }}</span>
+            </span>
+
+            <span class="article__text">{{ i.text | safe }}</span>
+
+            <span class="article__btn">
+              <span class="link-arrow">
+                <span class="link-arrow__title">ЧИТАТИ НОВИНУ</span>
+                <span class="link-arrow__arrow">
+                  {{ mixins.icon('arrow-long') }}
+                </span>
+              </span>
+            </span>
+
+            <span class="article__user">
+              <!-- begin user -->
+              <span class="user">
+                <span class="user__img js-lazy" data-background-image="img/blog/user.jpg"></span>
+
+                <span class="user__text">
+                  <p>Олександра Сандюк</p>
+                  <p>23 серпня 2019</p>
+                </span>
+              </span>
+              <!-- end user -->
+            </span>
+          </span>
+
+          <span class="article__img">
+            <span class="article-img js-vieport-related-el" data-delay="700">
+              <span class="article-img__inner overlayed js-anim-el" data-anim-name="overlayedLeft">
+                <span class="article-img__img js-lazy js-anim-el" data-anim-name="fadeIn" data-anim-duration="1.5s" data-background-image="img/about/office.jpg"></span>
+              </span>
+            </span>
+          </span>
+
+          
+        </a>
+        <!-- end article -->
+        {% endfor %}
+      </div>
+
+      <div class="blog__pagination"></div>
+    </div>
+    <!-- end blog -->
+  </div>
+</section>
+<!-- end section -->

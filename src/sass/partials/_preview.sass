@@ -1,0 +1,40 @@
+.preview
+  position: relative
+  text-align: center
+  &__inner
+    display: inline-block
+    position: relative
+  &__bg
+    // +cover
+    // background-size: contain
+    // padding-top: 55%
+    text-align: center
+    font-size: 0
+    img
+      display: inline-block
+  &__img
+    position: absolute
+    top: 7.5%
+    left: 50%
+    bottom: 12%
+    transform: translate(-45%, 0)
+    width: 78%
+    overflow: hidden
+    text-align: left
+    img
+      width: 100%
+      max-width: 90%
+    .ps
+      // &__rail-y
+      //   top: 100px !important
+      //   bottom: 0 !important
+  &__scroll-word
+    position: absolute
+    right: 5.1%
+    top: 0
+    transform: rotate(90deg)
+    +lg
+      right: 4.5%
+    +md
+      display: none
+

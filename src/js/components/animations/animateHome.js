@@ -2,7 +2,7 @@ import PageAnimator from './PageAnimator';
 import BlockAnimator from './BlockAnimator';
 import { TimelineLite } from 'gsap';
 import { ANIMATE, SHOW } from '../../constants';
-import { animateTable } from './commonAnimations';
+import { animateTable, addPortfolioContentOverflowVisible } from './commonAnimations';
 
 export default function animateHome() {
   const page = document.querySelector('.page-home');
@@ -186,20 +186,6 @@ export default function animateHome() {
   // =================== slider =======================
 
   // =================== portfolio =======================
-  const portfolioItems = [].slice.call(document.querySelectorAll('.js-vieport-related-el.portfolio-item'));
-
-  if(portfolioItems.length > 0) {
-    portfolioItems.forEach(item => {
-      const content = item.querySelector('.portfolio-item__content-inner');
-
-      content.addEventListener('transitionend', (e) => {
-        const contentWrap = e.currentTarget.parentNode.classList.contains('portfolio-item__content') ? e.currentTarget.parentNode : null;
-
-        if (!contentWrap) return;
-
-        contentWrap.classList.add('overflow-visible');
-      });      
-    });
-  };
+  addPortfolioContentOverflowVisible();
   // =================== portfolio =======================  
 };

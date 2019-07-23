@@ -1,0 +1,78 @@
+---
+title: portfolio
+page: portfolio
+mainClass: page-portfolio
+hero: {
+  modifications: {
+    section: 'hero--content hero--gray'
+  },
+  subttl: 'про наші проекти говорить вся україна',
+  title: '<small>ми знаємо, як зробити </small><strong class="glitch" data-text="найкращий">найкращий проект</strong><small>у вашій галузі</small>',
+  text: 'Наша студія вкладає 100% уваги саме у ваш проект, тому
+на виході ви завжди отримуєте якісний та довершений
+продукт, який працює.',
+  bgImageRight: 'bg-hero-portfolio.png',
+  breadcrumbs: {
+    modifications: { wrap: 'breadcrumbs--black' },
+    list: [
+      { link: 'Головна' },
+      { item: '-' },
+      { link: 'Проекти', modLink: 'is-active' }
+    ]
+  },
+  scrollToTarget: 'portfolio'
+}
+sectionOrder: {
+  small: true,
+  mod: 's-order--sm',
+  noGlith: true
+}
+sectionPortfolio: {
+  noTitleBlock: true,
+  mod: 'pt-lg',
+  more: true,
+  nav: true
+}
+portfolio: [
+  {
+    subttl: 'Корпоративний сайт',
+    nmb: '01',
+    title: 'Olmaks',
+    text: 'Перший мультибрендовий салон електромобілей в Україні. 
+12 років досвіду на автомобільному ринку США дозволяють «Olmaks Group»
+купувати дійсно якісні електромобілі за вигідними цінами.',
+    img: '1.jpg',
+    logo: '1.png',
+    logoColor: '#10ad44'
+  },
+  {
+    subttl: 'Корпоративний сайт',
+    nmb: '02',
+    title: 'ABS',
+    text: 'Компанія «ABS» є офіціальним дистриб’ютором 
+ООО «МОНБАТ УКРАЇНА» - ексклюзивного представника акумуляторних 
+батарей ТМ «MONBAT»; ТМ «START»; ТМ «WINMAXX» та ТМ «MONOIL».',
+    img: '2.jpg',
+    logo: '2.png',
+    logoColor: '#d8232a'
+  },
+  {
+    subttl: 'Інтернет-магазин',
+    nmb: '03',
+    title: 'Mario',
+    text: 'Продукція під торговою маркою Маріо добре відома
+і затребувана на території України і за її межами. Компанія 
+лідирує на Україні і в країнах СНД серед виробників даної продукції.',
+    img: '3.jpg',
+    logo: '3.png',
+    logoColor: '#ff8200'
+  }
+]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}  
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-portfolio.html" %}
+  {% include "partials/sections/_s-order.html" %}
+{% endblock %}

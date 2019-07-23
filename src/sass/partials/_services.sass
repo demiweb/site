@@ -1,6 +1,7 @@
 .services
 
 
+
 .service-item
   $this: &
   display: block
@@ -60,3 +61,12 @@
       transform: translate(-20px, 0)
   &__text
     display: block
+
+  &--white
+    background-color: $white
+    color: $black
+    border-bottom-color: transparent
+    +before
+      background-color: $purple-dark
+    +hover
+      color: $white

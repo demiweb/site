@@ -1,0 +1,11 @@
+{% from 'mixins/_icon.html' import icon %}
+
+{% macro meta(events = 'Події', views = '223', comments = '3 коментарі') %}
+<!-- begin meta -->
+<span class="meta">
+  <span class="meta__item"><span class="meta__icon">{{ icon('folder') }}</span> {{ events }}</span>
+  <span class="meta__item"><span class="meta__icon">{{ icon('view') }}</span> {{ views }}</span>
+  <span class="meta__item"><span class="meta__icon">{{ icon('big-speech-balloon') }}</span> {{ comments }}</span>
+</span>
+<!-- end meta -->
+{% endmacro %}

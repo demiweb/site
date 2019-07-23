@@ -135,3 +135,36 @@
         bottom: .3em
         transform: translate(-100%, 0)
         +tr(transform .3s)
+
+  &--articles
+    +reg
+    li
+      // margin-left: 35px
+      // margin-right: 35px
+      +css-lock(5, 35, 320, 1499, margin-left)
+      +css-lock(5, 35, 320, 1499, margin-right)
+      +notlast
+        +css-lock(5, 35, 320, 1499, margin-right)
+        
+    a
+      position: relative
+      overflow: hidden
+      sup
+        display: inline-block
+        vertical-align: top
+        font-size: .7em
+      +hover
+        color: inherit
+        +before
+            transform: translate(0, 0)
+      +before
+        height: 4px
+        left: -5px
+        right: -5px
+        position: absolute
+        z-index: -1
+        background-color: $yellow
+        bottom: .3em
+        transform: translate(-100%, 0)
+        +tr(transform .3s)
+

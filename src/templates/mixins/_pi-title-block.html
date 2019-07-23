@@ -1,0 +1,9 @@
+{% macro piTitleBlock(title, subttl, titleMod) %}
+<div class="pi-section__title{% if titleMod %} {{ titleMod }}{% endif %} js-anim-el overlayed" data-anim-name="overlayedLeft">
+  <div class="title">{{ title | safe }}</div>
+</div>
+
+{% if subttl %}
+<div class="pi-section__subttl js-anim-el" data-anim-name="fadeInBottomSm">{{ subttl | safe }}</div>
+{% endif %}
+{% endmacro %}

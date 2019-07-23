@@ -1,0 +1,62 @@
+.pi-hero
+  position: relative
+  background-color: $white
+  padding-bottom: 25%
+  color: $white
+  +css-lock(30, 150, 320, 1499, margin-top)
+  > .container
+    position: relative
+    z-index: 1
+  +lg
+    padding-bottom: 20%
+  +sm
+    background-color: $black
+    padding-bottom: 10%
+  &__bg
+    position: absolute
+    z-index: 0
+    right: 0
+    top: 0
+    left: 0
+    bottom: 0
+    +sm
+      display: none
+  &__content
+    +flex
+    +sm
+      display: block
+      +clr
+  &__content-text
+    +sm
+      // padding-left: 15px
+  &__logo
+    width: percentage(3/12)
+    margin-left: percentage(1/12)
+    +lg
+      margin-left: 0
+    +sm
+      float: left
+      margin-right: 15px
+      margin-bottom: 15px
+  &__title-block
+    margin-bottom: 55px
+    +xl
+      margin-bottom: 45px
+    +lg
+      margin-bottom: 35px
+    +md
+      margin-bottom: 25px
+    +sm
+      margin-bottom: 15px
+  &__descr
+    margin-left: 28%
+    +lg
+      margin-left: 15%
+    +sm
+      margin-left: 0
+  &__descr-title
+    margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+  &__descr-text
+    max-width: 630px

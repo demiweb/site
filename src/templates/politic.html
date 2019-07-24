@@ -1,0 +1,27 @@
+---
+title: politic
+page: politic
+mainClass: page-politic
+hero: {
+  modifications: {
+    section: 'hero--content hero--content-center'
+  },
+  title: '<small>Політика</small><strong class="glitch" data-text="конфеденційності">конфеденційності</strong>',
+  titleMod: title--sm,
+  bgImage: 'bg-hero-politic.jpg',
+  breadcrumbs: {
+    list: [
+      { link: 'Головна' },
+      { item: '-' },
+      { link: 'політика конфеденційності', modLink: 'is-active' },
+    ]
+  },
+  scrollToTarget: 'terms'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}  
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-politic.html" %}
+{% endblock %}

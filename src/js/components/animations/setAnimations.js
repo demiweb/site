@@ -1,15 +1,12 @@
+import { animateHero, addPortfolioContentOverflowVisible, animateNumbers } from './commonAnimations';
 import animateHome from './animateHome';
 import animateAbout from './animateAbout';
-import animateServices from './animateServices';
-import animatePortfolio from './animatePortfolio';
-import animatePortfolioItem from './animatePortfolioItem';
-import animateBlog from './animateBlog';
 
 export default function setAnimations() {
+  animateHero();
+  addPortfolioContentOverflowVisible();
+  animateNumbers();
+
   animateHome();
   animateAbout();
-  animateServices();
-  animatePortfolio();
-  animatePortfolioItem();
-  animateBlog();
 };

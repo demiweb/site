@@ -1,4 +1,4 @@
-import { ANIMATE } from '../constants';
+import { ANIMATE, VISIBLE } from '../constants';
 
 class Animator {
   constructor(el, options) {
@@ -34,6 +34,9 @@ class Animator {
 
         setTimeout(() => {
           el.style.opacity = '1';
+          el.style.animationDuration = '';
+          el.style.animationDelay = '';
+          el.style.animationIterations = '';
           this.counter++;
 
           if (animationIterations) {
@@ -43,7 +46,10 @@ class Animator {
           } else if (!this.options.infinite) {
             observer.unobserve(el);
           };
-          
+
+          if (this.options.onComplete) {
+            this.options.onComplete(this.el);
+          };          
         }, DELAY);
       } else {
         el.classList.remove(animationName);
@@ -66,7 +72,10 @@ export default function animateOnScroll() {
     const animator = new Animator(el, {
       observer: {
         threshold: 0.25
-      }      
+      },
+      onComplete: (el) => {
+        el.classList.add(VISIBLE);
+      }     
     });
     animator.init();
   });

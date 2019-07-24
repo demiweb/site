@@ -7,3 +7,6 @@ PageList:
 - file: portfolio.html
 - file: portfolio-item.html
 - file: blog.html
+- file: blog-article.html
+- file: politic.html
+- file: review.html

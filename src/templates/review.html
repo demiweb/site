@@ -1,0 +1,41 @@
+---
+title: review
+page: review
+mainClass: page-review
+hero: {
+  modifications: {
+    section: 'hero--content'
+  },
+  subttl: 'нам довіряють',
+  title: '<small>створення візуального образу</small><strong class="glitch" data-text="свого бізнесу">свого бізнесу в інтернеті</strong><small>більше 100 компаній</small>',
+  bgImage: 'bg-hero-review.jpg',
+  breadcrumbs: {
+    list: [
+      { link: 'Головна' },
+      { item: '-' },
+      { link: 'відгуки', modLink: 'is-active' },
+    ]
+  },
+  scrollToTarget: 'numbers'
+}
+sectionNumbers: {
+  titleBlockHidden: true
+}
+numbers: [
+  { title: '100+', text: 'Власників бізнесу,<br>
+які нам довіряють' },
+  { title: '800000+', text: 'Гривень ми допомогли заробити<br>
+нашим клієнтам' },
+  { title: '30+', text: 'Реальних відгуків<br>
+про нашу роботу' },
+{ title: '10000+', text: 'Робочих годин, які ми<br>
+конвертували у безцінний досвід'}
+]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}  
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-numbers.html" %}
+  {% include "partials/sections/_s-review.html" %}
+{% endblock %}

@@ -1,0 +1,73 @@
+<!-- begin section -->
+<section class="section section--gray-lighten s-order s-order--subscribe pt-lg pb-mdl">
+  <div class="container">
+    <div class="s-order__inner">
+      <div class="s-order__left">
+        <div class="s-order__subttl js-anim-el" data-anim-name="fadeInTopSm">подобаються наші статті?</div>
+
+        <div class="s-order__title overlayed js-anim-el" data-anim-name="overlayedLeft">
+          <div class="title title--ttn title--light js-anim-el" data-anim-name="fadeIn">Отримуйте щотижневу <strong class="glitch" data-text="підписку">підписку на свій Email</strong></div>
+        </div>
+
+        <div class="s-order__text js-anim-el" data-anim-name="fadeInBottomSm">
+          <p>Залиште свої дані у формі та отримуйте щотижневу підписку
+          від Demiweb International абсолютно безкоштовно.</p>
+          <p>Скасувати підписку можна у будь-який момент.</p>
+        </div>
+
+        <div class="s-order__form js-anim-el" data-anim-name="fadeInBottomSm">
+          <!-- begin form -->
+          <div class="form">
+            <form>
+              <div class="form__inner">
+                <div class="form__field form__field-50">
+                  {{ mixins.input(
+                    name = 'input',
+                    mod = '',
+                    type = 'text',
+                    placeholder = 'Введіть ваше ім’я',
+                    value = '',
+                    fieldClass = ''
+                  ) }}
+                </div>
+                <div class="form__field form__field-50">
+                  {{ mixins.input(
+                    name = 'input',
+                    mod = '',
+                    type = 'email',
+                    placeholder = 'Введіть ваш Email',
+                    value = '',
+                    fieldClass = ''
+                  ) }}
+                </div>
+                <div class="form__field form__btn">
+                  {{ mixins.btn(
+                    title = 'Підписатися',
+                    mod = 'btn--full btn--lg',
+                    href = false
+                  ) }}
+                </div>
+                <div class="form__checkbox form__field">
+                  {{ mixins.input(
+                    name = 'checkbox',
+                    mod = '',
+                    type = 'checkbox',
+                    placeholder = '',
+                    value = '',
+                    fieldClass = '',
+                    fieldAttributes = { 'checked': '' },
+                    label = { last: 'Ви погоджуєтеся з умовами обробки персональних даних.<br> <a href="#">Політика конфеденційності.</a>', span: true }
+                  ) }}
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- end form -->
+        </div>
+      </div>
+    </div>  
+  </div>
+
+  <div class="s-order__img js-anim-el js-lazy" data-anim-name="fadeIn" data-anim-duration="2s" data-background-image="img/blog/book.png"></div>
+</section>
+<!-- end section -->

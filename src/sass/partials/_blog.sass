@@ -1,26 +1,34 @@
 .blog
   &__articles
+  &__article
+    margin-left: -15px
+    margin-right: -15px
+    padding-left: 15px
+    padding-right: 15px
+    margin-bottom: 60px
+    +xl
+      margin-bottom: 50px
+    +lg
+      margin-bottom: 50px
+    +md
+      margin-bottom: 40px
+    +sm
+      margin-bottom: 25px
+    +xs
+      margin-bottom: 15px
 
 .article
-  +flex(flex-start, normal, row, wrap)
-  margin-bottom: 60px
-  +tr(box-shadow .3s)
-  margin-left: -15px
-  margin-right: -15px
-  padding-left: 15px
-  padding-right: 15px
+  $this: &
+  +flex(flex-start, normal, row, wrap)  
+  +tr(box-shadow .3s)  
   +hover
-    box-shadow: 0 0 10px rgba($gray, .4)
-  +xl
-    margin-bottom: 50px
-  +lg
-    margin-bottom: 50px
-  +md
-    margin-bottom: 40px
-  +sm
-    margin-bottom: 25px
-  +xs
-    margin-bottom: 15px
+    .article-img__img
+      animation-play-state: running
+    .link-arrow
+      .icon
+        transform: translate(15px, 0)
+    #{$this}__title
+      color: $purple-light
   &__content
     width: 50%
     +flex(center, normal, column)
@@ -44,6 +52,7 @@
   &__title
     display: block
     margin-bottom: 20px
+    +tr(color .3s)
     strong
       display: block
     +md
@@ -73,6 +82,30 @@
       margin-bottom: 10px
   &__user
     display: block
+  
+  &--sm
+    display: block
+    padding-left: 0
+    padding-right: 0
+    .article-img
+      +md
+        padding-left: 5%
+        padding-bottom: 5%
+      &__img
+        +md
+          padding-top: 50%
+        &.is-visible
+         animation-duration: 5s
+    #{$this}__img
+      width: 100%
+      padding: 0
+      margin-bottom: 20px
+      +sm
+        margin-bottom: 10px
+    #{$this}__title
+    #{$this}__content
+      width: 100%
+      padding: 0
 
 .meta
   +flex(flex-start, center)
@@ -82,6 +115,10 @@
     +flex(flex-start, center)
     +notlast
       margin-right: 30px
+      +lg
+        margin-right: 20px
+      +md
+        margin-right: 10px
   &__icon
     font-size: 0
     display: block
@@ -127,7 +164,7 @@
   +sm
     padding-left: 4%
     padding-bottom: 4%
-  &.is-show
+  &.is-visible
     +before
       opacity: 1
       transform: translate(0, 0)
@@ -140,6 +177,107 @@
     position: relative
     z-index: 1
     padding-top: 85%
-    opacity: 0
+    opacity: 0    
     +sm
       padding-top: 50%
+    &.is-visible
+      animation: scale 10s infinite alternate
+      animation-play-state: paused
+
+.blog-article
+  article
+    margin-bottom: 60px
+    +xl
+      margin-bottom: 50px
+    +lg
+      margin-bottom: 40px
+    +md
+      margin-bottom: 30px
+    +sm
+      margin-bottom: 20px
+    +xs
+      margin-bottom: 15px
+  img
+    width: 100%
+    margin-bottom: 25px
+    &:last-child
+      margin-bottom: 0
+    +lg
+      margin-bottom: 20px
+    +md
+      margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+  h2
+    +css-lock(18, 24, 320, 1499, font-size)
+    line-height: 1.2
+    +medium
+    margin-bottom: 25px
+    +lg
+      margin-bottom: 20px
+    +md
+      margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+  ol
+    list-style-type: decimal
+    padding-left: 1em
+  ul
+    margin-bottom: 50px
+    &:last-child
+      margin-bottom: 0
+    +xl
+      margin-bottom: 40px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 20px
+    +sm
+      margin-bottom: 15px
+    li
+      &::before
+        content: "\2022"
+        // width: 1em
+        display: inline-block
+        margin-right: .5em
+  li
+    position: relative
+    margin-bottom: 25px
+    &:last-child
+      margin-bottom: 0    
+    +lg
+      margin-bottom: 20px
+    +md
+      margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+  p
+    margin-bottom: 25px
+    &:last-child
+      margin-bottom: 0
+    +lg
+      margin-bottom: 20px
+    +md
+      margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+  a
+    color: $blue
+    text-decoration: underline
+  blockquote
+    li
+      margin-bottom: 0
+
+.blog-aside
+  &__article
+    margin-bottom: 90px
+    +xl
+      margin-bottom: 70px
+    +lg
+      margin-bottom: 50px
+    +md
+      margin-bottom: 40px
+    +sm
+      margin-bottom: 25px
+    +xs
+      margin-bottom: 15px

@@ -10,14 +10,13 @@ hero: {
   title: '<small>найцікавіші новини та поради</small><strong class="glitch" data-text="в IT-галузі">в IT-галузі та огляди</strong><small>нових технологій</small>',
   bgImage: 'bg-hero-blog.jpg',
   breadcrumbs: {
-    modifications: { wrap: 'breadcrumbs--black' },
     list: [
       { link: 'Головна' },
       { item: '-' },
       { link: 'блог', modLink: 'is-active' }
     ]
   },
-  scrollToTarget: 'portfolio'
+  scrollToTarget: 'blog'
 }
 ---
 {% extends "layouts/_layout.html" %}
@@ -25,4 +24,5 @@ hero: {
 {% block content %}  
   {% include "partials/_hero.html" %}
   {% include "partials/_blog.html" %}
+  {% include "partials/sections/_s-subsribe.html" %}
 {% endblock %}

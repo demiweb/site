@@ -8,7 +8,7 @@ export const {
 
   ACTIVE,
   OPEN,
-  SHOW,
+  VISIBLE,
   FOCUS,
   ANIMATE,
   HIDDEN,
@@ -28,7 +28,7 @@ export const {
 
   ACTIVE: 'is-active',
   OPEN: 'is-open',
-  SHOW: 'is-show',
+  VISIBLE: 'is-visible',
   FOCUS: 'has-focus',
   ANIMATE: 'is-animate',
   HIDDEN: 'is-hidden',

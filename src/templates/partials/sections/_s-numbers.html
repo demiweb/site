@@ -1,5 +1,6 @@
 <!-- begin section -->
 <section class="section s-numbers pt-lg pb-sml overflow-hidden" data-scroll-to-target="numbers">
+  {% if not sectionNumbers.titleBlockHidden %}
   <div class="section__title-block s-numbers__title-block">
     {{ mixins.titleBlock(
       subttl = 'нам є чим пишатися',
@@ -9,6 +10,7 @@
       word = 'numbers'
     ) }}
   </div>
+  {% endif %}
 
   <div class="s-numbers__numbers">
     <div class="container">

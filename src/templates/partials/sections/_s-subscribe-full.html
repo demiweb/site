@@ -1,0 +1,77 @@
+{%set
+form = [
+  { name: 'textarea', type: '', placeholder: 'Залиште ваш коментар', icon: mixins.icon('pencil-edit-button', false), mod: 'textarea--has-icon', fieldClass: 'js-textarea js-input' },
+  { name: 'input', type: 'text', placeholder: 'Введіть ваше ім’я', icon: mixins.icon('man-user', false), mod: 'input--has-icon', wrapMod: 'form__field-50', fieldClass: 'js-input' },
+  { name: 'input', type: 'email', placeholder: 'Введіть ваш Email', icon: mixins.icon('envelope', false), mod: 'input--has-icon', wrapMod: 'form__field-50', fieldClass: 'js-input' }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--gray-lighten s-order s-order--subscribe pt-xll pb-xl">
+  <div class="container">
+    <div class="s-order__inner">
+      <div class="s-order__left">
+        <div class="s-order__subttl js-anim-el" data-anim-name="fadeInTopSm">сподобалася стаття?</div>
+
+        <div class="s-order__title overlayed js-anim-el" data-anim-name="overlayedLeft">
+          <div class="title title--ttn title--light js-anim-el" data-anim-name="fadeIn">Залиште ваш коментар та оформіть підписку <strong class="glitch" data-text="на всі">на всі наші новини</strong></div>
+        </div>
+
+        <div class="s-order__text js-anim-el" data-anim-name="fadeInBottomSm">
+          <p>Залиште свої дані у формі та отримуйте щотижневу підписку
+          від Demiweb International абсолютно безкоштовно.</p>
+          <p>Скасувати підписку можна у будь-який момент.</p>
+        </div>        
+      </div>
+
+      <div class="s-order__right js-anim-el" data-anim-name="fadeInRightSm" data-anim-delay="0.5s">
+        <div class="s-order__form js-anim-el" data-anim-name="fadeInBottomSm">
+          <!-- begin form -->
+          <div class="form">
+            <form>
+              <div class="form__inner">
+                {% for i in form %}
+                <div class="form__field{% if i.wrapMod %} {{ i.wrapMod }}{% endif %}">
+                  {{ mixins.input(
+                    name = i.name,
+                    mod = i.mod,
+                    type = i.type,
+                    placeholder = i.placeholder,
+                    value = '',
+                    fieldClass = i.fieldClass,
+                    label = { first: i.icon }
+                  ) }}
+                </div>
+                {% endfor %}
+
+
+                <div class="form__field form__btn">
+                  {{ mixins.btn(
+                    title = 'залишити дані',
+                    mod = 'btn--full btn--lg',
+                    href = false
+                  ) }}
+                </div>
+                <div class="form__checkbox form__field">
+                  {{ mixins.input(
+                    name = 'checkbox',
+                    mod = '',
+                    type = 'checkbox',
+                    placeholder = '',
+                    value = '',
+                    fieldClass = '',
+                    fieldAttributes = { 'checked': '' },
+                    label = { last: 'Ви погоджуєтеся з умовами обробки персональних даних.<br> <a href="#">Політика конфеденційності.</a>', span: true }
+                  ) }}
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- end form -->
+        </div>
+      </div>
+    </div>  
+  </div>
+
+</section>
+<!-- end section -->

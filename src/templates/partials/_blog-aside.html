@@ -1,0 +1,74 @@
+{%set
+articles = [
+  {
+    meta: mixins.meta(),
+    title: 'It-Конференція<strong>у Стокгольмі</strong>',
+    text: '16 вересня нас з вами чекає неймовірна подія, яка точно буде цікава всім ...',
+    img: 'aside-1.jpg'
+  },
+  {
+    meta: mixins.meta('Поради'),
+    title: 'як встигати все<strong>і трохи більше</strong>',
+    text: 'Кожного, хто працює в офісі хвилюють ці питання: Як встигати більше? Як...',
+    img: 'aside-2.jpg'
+  },
+  {
+    meta: mixins.meta(),
+    title: 'It-Конференція<strong>у Стокгольмі</strong>',
+    text: '16 вересня нас з вами чекає неймовірна подія, яка точно буде цікава всім ...',
+    img: 'aside-1.jpg'
+  }
+]
+%}
+
+<!-- begin aside -->
+<aside class="blog-aside">
+  {% for i in articles %}
+  <div class="blog-aside__article">
+    <a href="#" class="article article--sm">
+      <span class="article__meta js-anim-el" data-anim-name="fadeInBottomSm">
+        {{ i.meta | safe }}
+      </span>
+
+      <span class="article__img">
+        <span class="article-img js-vieport-related-el" data-delay="700">
+          <span class="article-img__inner overlayed js-anim-el" data-anim-name="overlayedLeft">
+            <span class="article-img__img js-lazy js-anim-el" data-anim-name="fadeIn" data-anim-duration="1.5s" data-background-image="img/blog/article/{{ i.img }}"></span>
+          </span>
+        </span>
+      </span>
+
+      <span class="article__content js-anim-el" data-anim-name="fadeInBottomSm">
+        <span class="article__title">
+          <span class="h4">{{ i.title | safe }}</span>
+        </span>
+
+        <span class="article__text">{{ i.text | safe }}</span>
+
+        <span class="article__btn">
+          <span class="link-arrow">
+            <span class="link-arrow__title">ЧИТАТИ НОВИНУ</span>
+            <span class="link-arrow__arrow">
+              {{ mixins.icon('arrow-long') }}
+            </span>
+          </span>
+        </span>
+
+        <span class="article__user">
+          <!-- begin user -->
+          <span class="user">
+            <span class="user__img js-lazy" data-background-image="img/blog/user.jpg"></span>
+
+            <span class="user__text">
+              <p>Олександра Сандюк</p>
+              <p>23 серпня 2019</p>
+            </span>
+          </span>
+          <!-- end user -->
+        </span>     
+      </span>      
+    </a>
+  </div>
+  {% endfor %}
+</aside>
+<!-- end aside -->

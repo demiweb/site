@@ -1,16 +1,14 @@
 // import PageAnimator from './PageAnimator';
 import BlockAnimator from './BlockAnimator';
 import { TimelineLite } from 'gsap';
-import { ANIMATE, SHOW } from '../../constants';
-import { animateTable, animateHero, animateTeam } from './commonAnimations';
+import { ANIMATE, VISIBLE } from '../../constants';
+import { animateTable, animateTeam } from './commonAnimations';
 import { isInView } from '../../helpers';
 
 export default function animateHome() {
   const page = document.querySelector('.page-about');
   if(!page) return;
 
-  // hero animations
-  animateHero(page);
 
   // blocks animations
   // =================== table =======================
@@ -18,29 +16,7 @@ export default function animateHome() {
   // =================== table =======================
 
   // =================== numbers section =======================
-  const numbersWraps = [].slice.call(document.querySelectorAll('.numbers'));
-
-  if(numbersWraps.length > 0) {
-    numbersWraps.forEach(wrap => {
-      isInView({
-        el: wrap,
-        onEnter: (entry, observer) => {
-          const blocks = entry.target.querySelectorAll('.number');
-
-          if(!blocks) return;
-          const tl = new TimelineLite();
-          tl
-            .staggerFromTo(
-              blocks,
-              0.5,
-              { opacity: 0, y: 30 },
-              { opacity: 1, y: 0 },
-              0.2
-            );
-        }
-      });
-    });
-  };
+  
   // =================== numbers section =======================
 
   // =================== animateTeam =======================
@@ -99,7 +75,7 @@ export default function animateHome() {
           setTimeout(() => {
             imgCover.classList.remove(ANIMATE);
             imgCover.classList.add('is-finishing-animate');
-            entry.target.classList.add(SHOW);
+            entry.target.classList.add(VISIBLE);
 
             setTimeout(() => {
               imgCover.classList.remove('is-finishing-animate');              

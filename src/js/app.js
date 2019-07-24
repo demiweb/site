@@ -14,6 +14,8 @@ import animateOnScroll from './components/animeteOnScroll';
 import addClassesOnScroll from './components/addClassesOnScroll';
 import setParralax from './components/setParralax';
 import setGallery from './components/gallery/setGallery';
+import setTextareaAutoHeight from './components/setTextareaAutoHeight';
+import setInputsFocus from './components/setInputsFocus';
 
 $(function() {
   // sayHello();
@@ -30,4 +32,6 @@ $(function() {
   addClassesOnScroll();
   setParralax();
   setGallery();
+  setTextareaAutoHeight();
+  setInputsFocus();
 });

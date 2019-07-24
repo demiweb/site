@@ -227,7 +227,7 @@
             <div class="hero__inner">
               <div class="hero__breadcrumbs">
                 <!-- begin breadcrumbs -->
-                <div class="breadcrumbs breadcrumbs--black">
+                <div class="breadcrumbs">
                   <ul>
                     <li><a href="#">Головна</a></li>
                     <li>-</li>
@@ -245,7 +245,7 @@
             </div>
           </div>
           <div class="hero__scroll-down">
-            <a href="portfolio" class="scroll-to scroll-to--down js-scroll-to-btn">
+            <a href="blog" class="scroll-to scroll-to--down js-scroll-to-btn">
               <!-- begin icon-arrow -->
               <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
                 <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
@@ -256,7 +256,7 @@
         </section>
         <!-- end hero -->
         <!-- begin section -->
-        <section class="section pt-lg pb-md">
+        <section class="section pt-lg pb-md" data-scroll-to-target="blog">
           <div class="container">
             <div class="section__nav js-anim-el" data-anim-name="fadeInBottomSm">
               <!-- begin nav -->
@@ -275,291 +275,377 @@
             <!-- begin blog -->
             <div class="blog">
               <div class="blog__articles">
-                <!-- begin article -->
-                <a href="#" class="article">
-                  <span class="article__content js-anim-el" data-anim-name="fadeInBottomSm">
-                    <span class="article__meta">
-                      <!-- begin meta -->
-                      <span class="meta">
-                        <span class="meta__item"><span class="meta__icon">
-                            <!-- begin icon-folder -->
-                            <svg viewBox="0 0 60 60" class="icon icon-folder" width="1.000em" height="1em">
-                              <path d="M57.49 21.5H55v-7h-2v-4H25.086l-3.571-5H2.732A2.736 2.736 0 0 0 0 8.232v43.687h.006c-.005.563.17 1.114.522 1.575A2.546 2.546 0 0 0 2.565 54.5h44.759c1.156 0 2.174-.779 2.45-1.813L60 24.649v-.177c0-1.722-1.056-2.972-2.51-2.972zm-4.49 0h-8v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-2.269a2.596 2.596 0 0 0-1.731.674V16.5h42v5zM5 37.793V22.5h5.695a2.304 2.304 0 0 0-.414.813l-.317.87L5 37.793zM9 20.5H6.414L7 19.914l2-2V20.5zm42-8v2H9.586L7 17.086V12.5h44zM2 8.232c0-.404.329-.732.732-.732h17.753l2.143 3H5v8.586l-2 2v22.085l-1 2.728V8.232zm45.869 43.851a.566.566 0 0 1-.545.417H2.565a.552.552 0 0 1-.448-.222c-.063-.082-.16-.256-.123-.408L3 49.112v.001l9.16-25.114.026-.082a.566.566 0 0 1 .545-.417H57.49c.38 0 .477.546.502.819L47.869 52.083z" />
-                            </svg>
-                            <!-- end icon-folder -->
-                          </span> Події</span>
-                        <span class="meta__item"><span class="meta__icon">
-                            <!-- begin icon-view -->
-                            <svg viewBox="0 0 59.2 59.2" class="icon icon-view" width="1.000em" height="1em">
-                              <path d="M51.062 21.561c-11.889-11.889-31.232-11.889-43.121 0L0 29.501l8.138 8.138c5.944 5.944 13.752 8.917 21.561 8.917s15.616-2.972 21.561-8.917l7.941-7.941-8.139-8.137zm-1.217 14.664c-11.109 11.108-29.184 11.108-40.293 0l-6.724-6.724 6.527-6.527c11.109-11.108 29.184-11.108 40.293 0l6.724 6.724-6.527 6.527z" />
-                              <path d="M28.572 21.57c-3.86 0-7 3.14-7 7a1 1 0 0 0 2 0c0-2.757 2.243-5 5-5a1 1 0 0 0 0-2z" />
-                              <path d="M29.572 16.57c-7.168 0-13 5.832-13 13s5.832 13 13 13 13-5.832 13-13-5.831-13-13-13zm0 24c-6.065 0-11-4.935-11-11s4.935-11 11-11 11 4.935 11 11-4.934 11-11 11z" />
-                            </svg>
-                            <!-- end icon-view -->
-                          </span> 223</span>
-                        <span class="meta__item"><span class="meta__icon">
-                            <!-- begin icon-big-speech-balloon -->
-                            <svg viewBox="0 0 612 612" class="icon icon-big-speech-balloon" width="1.000em" height="1em">
-                              <path d="M535.04 0H76.961C35.939 0 2.564 33.375 2.564 74.399V374.89c0 41.023 33.375 74.399 74.399 74.399h250.863v144.555a18.158 18.158 0 0 0 18.15 18.155 18.154 18.154 0 0 0 13.727-6.268l135.52-156.442h39.815c41.023 0 74.398-33.375 74.398-74.399V74.399C609.438 33.375 576.063 0 535.04 0zm38.088 374.891c0 21.001-17.085 38.089-38.088 38.089 0 0-46.972.012-47.248 0a18.14 18.14 0 0 0-14.583 6.268L364.138 545.161V431.137c0-10.026-8.129-18.155-18.155-18.155H76.961c-21.002 0-38.089-17.088-38.089-38.089V74.399c.002-21.001 17.087-38.089 38.089-38.089h458.077c21.002 0 38.088 17.088 38.088 38.089V374.89h.002z" />
-                              <path d="M509.29 119.751H102.713c-10.026 0-18.155 8.129-18.155 18.155s8.129 18.155 18.155 18.155H509.29c10.026 0 18.155-8.129 18.155-18.155s-8.127-18.155-18.155-18.155zM509.29 206.489H102.713c-10.026 0-18.155 8.129-18.155 18.155 0 10.026 8.129 18.155 18.155 18.155H509.29c10.026 0 18.155-8.129 18.155-18.155 0-10.026-8.127-18.155-18.155-18.155zM295.159 293.225H102.713c-10.026 0-18.155 8.129-18.155 18.155s8.129 18.155 18.155 18.155h192.448c10.026 0 18.155-8.129 18.155-18.155-.002-10.025-8.129-18.155-18.157-18.155z" />
-                            </svg>
-                            <!-- end icon-big-speech-balloon -->
-                          </span> 3 коментарі</span>
+                <div class="blog__article">
+                  <!-- begin article -->
+                  <a href="#" class="article">
+                    <span class="article__content js-anim-el" data-anim-name="fadeInBottomSm">
+                      <span class="article__meta">
+                        <!-- begin meta -->
+                        <span class="meta">
+                          <span class="meta__item"><span class="meta__icon">
+                              <!-- begin icon-folder -->
+                              <svg viewBox="0 0 60 60" class="icon icon-folder" width="1.000em" height="1em">
+                                <path d="M57.49 21.5H55v-7h-2v-4H25.086l-3.571-5H2.732A2.736 2.736 0 0 0 0 8.232v43.687h.006c-.005.563.17 1.114.522 1.575A2.546 2.546 0 0 0 2.565 54.5h44.759c1.156 0 2.174-.779 2.45-1.813L60 24.649v-.177c0-1.722-1.056-2.972-2.51-2.972zm-4.49 0h-8v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-2.269a2.596 2.596 0 0 0-1.731.674V16.5h42v5zM5 37.793V22.5h5.695a2.304 2.304 0 0 0-.414.813l-.317.87L5 37.793zM9 20.5H6.414L7 19.914l2-2V20.5zm42-8v2H9.586L7 17.086V12.5h44zM2 8.232c0-.404.329-.732.732-.732h17.753l2.143 3H5v8.586l-2 2v22.085l-1 2.728V8.232zm45.869 43.851a.566.566 0 0 1-.545.417H2.565a.552.552 0 0 1-.448-.222c-.063-.082-.16-.256-.123-.408L3 49.112v.001l9.16-25.114.026-.082a.566.566 0 0 1 .545-.417H57.49c.38 0 .477.546.502.819L47.869 52.083z" />
+                              </svg>
+                              <!-- end icon-folder -->
+                            </span> Події</span>
+                          <span class="meta__item"><span class="meta__icon">
+                              <!-- begin icon-view -->
+                              <svg viewBox="0 0 59.2 59.2" class="icon icon-view" width="1.000em" height="1em">
+                                <path d="M51.062 21.561c-11.889-11.889-31.232-11.889-43.121 0L0 29.501l8.138 8.138c5.944 5.944 13.752 8.917 21.561 8.917s15.616-2.972 21.561-8.917l7.941-7.941-8.139-8.137zm-1.217 14.664c-11.109 11.108-29.184 11.108-40.293 0l-6.724-6.724 6.527-6.527c11.109-11.108 29.184-11.108 40.293 0l6.724 6.724-6.527 6.527z" />
+                                <path d="M28.572 21.57c-3.86 0-7 3.14-7 7a1 1 0 0 0 2 0c0-2.757 2.243-5 5-5a1 1 0 0 0 0-2z" />
+                                <path d="M29.572 16.57c-7.168 0-13 5.832-13 13s5.832 13 13 13 13-5.832 13-13-5.831-13-13-13zm0 24c-6.065 0-11-4.935-11-11s4.935-11 11-11 11 4.935 11 11-4.934 11-11 11z" />
+                              </svg>
+                              <!-- end icon-view -->
+                            </span> 223</span>
+                          <span class="meta__item"><span class="meta__icon">
+                              <!-- begin icon-big-speech-balloon -->
+                              <svg viewBox="0 0 612 612" class="icon icon-big-speech-balloon" width="1.000em" height="1em">
+                                <path d="M535.04 0H76.961C35.939 0 2.564 33.375 2.564 74.399V374.89c0 41.023 33.375 74.399 74.399 74.399h250.863v144.555a18.158 18.158 0 0 0 18.15 18.155 18.154 18.154 0 0 0 13.727-6.268l135.52-156.442h39.815c41.023 0 74.398-33.375 74.398-74.399V74.399C609.438 33.375 576.063 0 535.04 0zm38.088 374.891c0 21.001-17.085 38.089-38.088 38.089 0 0-46.972.012-47.248 0a18.14 18.14 0 0 0-14.583 6.268L364.138 545.161V431.137c0-10.026-8.129-18.155-18.155-18.155H76.961c-21.002 0-38.089-17.088-38.089-38.089V74.399c.002-21.001 17.087-38.089 38.089-38.089h458.077c21.002 0 38.088 17.088 38.088 38.089V374.89h.002z" />
+                                <path d="M509.29 119.751H102.713c-10.026 0-18.155 8.129-18.155 18.155s8.129 18.155 18.155 18.155H509.29c10.026 0 18.155-8.129 18.155-18.155s-8.127-18.155-18.155-18.155zM509.29 206.489H102.713c-10.026 0-18.155 8.129-18.155 18.155 0 10.026 8.129 18.155 18.155 18.155H509.29c10.026 0 18.155-8.129 18.155-18.155 0-10.026-8.127-18.155-18.155-18.155zM295.159 293.225H102.713c-10.026 0-18.155 8.129-18.155 18.155s8.129 18.155 18.155 18.155h192.448c10.026 0 18.155-8.129 18.155-18.155-.002-10.025-8.129-18.155-18.157-18.155z" />
+                              </svg>
+                              <!-- end icon-big-speech-balloon -->
+                            </span> 3 коментарі</span>
+                        </span>
+                        <!-- end meta -->
                       </span>
-                      <!-- end meta -->
+                      <span class="article__title">
+                        <span class="h4">16 вересня відбудеться IT-конференція <strong>у Стокгольмі за участі Вадима Паясу</strong> та олексія олійника</span>
+                      </span>
+                      <span class="article__text">!6 вересня нас з вами чекає неймовірна подія, яка точно буде цікава всім тим, кого цікавть веб-дизайн, Front-End та Back-End розробка, нові технологіїї та IT-галузь у цілому. Відбудеться цей захід у Центральному Палаці Стокгольму в центрі міста...</span>
+                      <span class="article__btn">
+                        <span class="link-arrow">
+                          <span class="link-arrow__title">ЧИТАТИ НОВИНУ</span>
+                          <span class="link-arrow__arrow">
+                            <!-- begin icon-arrow-long -->
+                            <svg height="1em" width="8.304em" viewBox="0 0 66.433596 8" class="icon icon-arrow-long">
+                              <path style="stroke-width:.99999994" d="M62.434 0l-1 1 2 2H0v2h63.434l-2 2 1 1 4-4z" />
+                            </svg>
+                            <!-- end icon-arrow-long -->
+                          </span>
+                        </span>
+                      </span>
+                      <span class="article__user">
+                        <!-- begin user -->
+                        <span class="user">
+                          <span class="user__img js-lazy" data-background-image="img/blog/user.jpg"></span>
+                          <span class="user__text">
+                            <p>Олександра Сандюк</p>
+                            <p>23 серпня 2019</p>
+                          </span>
+                        </span>
+                        <!-- end user -->
+                      </span>
                     </span>
-                    <span class="article__title">
-                      <span class="h4">16 вересня відбудеться IT-конференція <strong>у Стокгольмі за участі Вадима Паясу</strong> та олексія олійника</span>
-                    </span>
-                    <span class="article__text">!6 вересня нас з вами чекає неймовірна подія, яка точно буде цікава всім тим, кого цікавть веб-дизайн, Front-End та Back-End розробка, нові технологіїї та IT-галузь у цілому. Відбудеться цей захід у Центральному Палаці Стокгольму в центрі міста...</span>
-                    <span class="article__btn">
-                      <span class="link-arrow">
-                        <span class="link-arrow__title">ЧИТАТИ НОВИНУ</span>
-                        <span class="link-arrow__arrow">
-                          <!-- begin icon-arrow-long -->
-                          <svg viewBox="0 0 102.2 8" class="icon icon-arrow-long" width="12.775em" height="1em">
-                            <path d="M98.2 0l-1 1 2 2H.2v2h99l-2 2 1 1 4-4z" />
-                          </svg>
-                          <!-- end icon-arrow-long -->
+                    <span class="article__img">
+                      <span class="article-img js-vieport-related-el" data-delay="700">
+                        <span class="article-img__inner overlayed js-anim-el" data-anim-name="overlayedLeft">
+                          <span class="article-img__img js-lazy js-anim-el" data-anim-name="fadeIn" data-anim-duration="1.5s" data-background-image="img/about/office.jpg"></span>
                         </span>
                       </span>
                     </span>
-                    <span class="article__user">
-                      <!-- begin user -->
-                      <span class="user">
-                        <span class="user__img js-lazy" data-background-image="img/blog/user.jpg"></span>
-                        <span class="user__text">
-                          <p>Олександра Сандюк</p>
-                          <p>23 серпня 2019</p>
+                  </a>
+                  <!-- end article -->
+                </div>
+                <div class="blog__article">
+                  <!-- begin article -->
+                  <a href="#" class="article">
+                    <span class="article__content js-anim-el" data-anim-name="fadeInBottomSm">
+                      <span class="article__meta">
+                        <!-- begin meta -->
+                        <span class="meta">
+                          <span class="meta__item"><span class="meta__icon">
+                              <!-- begin icon-folder -->
+                              <svg viewBox="0 0 60 60" class="icon icon-folder" width="1.000em" height="1em">
+                                <path d="M57.49 21.5H55v-7h-2v-4H25.086l-3.571-5H2.732A2.736 2.736 0 0 0 0 8.232v43.687h.006c-.005.563.17 1.114.522 1.575A2.546 2.546 0 0 0 2.565 54.5h44.759c1.156 0 2.174-.779 2.45-1.813L60 24.649v-.177c0-1.722-1.056-2.972-2.51-2.972zm-4.49 0h-8v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-2.269a2.596 2.596 0 0 0-1.731.674V16.5h42v5zM5 37.793V22.5h5.695a2.304 2.304 0 0 0-.414.813l-.317.87L5 37.793zM9 20.5H6.414L7 19.914l2-2V20.5zm42-8v2H9.586L7 17.086V12.5h44zM2 8.232c0-.404.329-.732.732-.732h17.753l2.143 3H5v8.586l-2 2v22.085l-1 2.728V8.232zm45.869 43.851a.566.566 0 0 1-.545.417H2.565a.552.552 0 0 1-.448-.222c-.063-.082-.16-.256-.123-.408L3 49.112v.001l9.16-25.114.026-.082a.566.566 0 0 1 .545-.417H57.49c.38 0 .477.546.502.819L47.869 52.083z" />
+                              </svg>
+                              <!-- end icon-folder -->
+                            </span> Події</span>
+                          <span class="meta__item"><span class="meta__icon">
+                              <!-- begin icon-view -->
+                              <svg viewBox="0 0 59.2 59.2" class="icon icon-view" width="1.000em" height="1em">
+                                <path d="M51.062 21.561c-11.889-11.889-31.232-11.889-43.121 0L0 29.501l8.138 8.138c5.944 5.944 13.752 8.917 21.561 8.917s15.616-2.972 21.561-8.917l7.941-7.941-8.139-8.137zm-1.217 14.664c-11.109 11.108-29.184 11.108-40.293 0l-6.724-6.724 6.527-6.527c11.109-11.108 29.184-11.108 40.293 0l6.724 6.724-6.527 6.527z" />
+                                <path d="M28.572 21.57c-3.86 0-7 3.14-7 7a1 1 0 0 0 2 0c0-2.757 2.243-5 5-5a1 1 0 0 0 0-2z" />
+                                <path d="M29.572 16.57c-7.168 0-13 5.832-13 13s5.832 13 13 13 13-5.832 13-13-5.831-13-13-13zm0 24c-6.065 0-11-4.935-11-11s4.935-11 11-11 11 4.935 11 11-4.934 11-11 11z" />
+                              </svg>
+                              <!-- end icon-view -->
+                            </span> 223</span>
+                          <span class="meta__item"><span class="meta__icon">
+                              <!-- begin icon-big-speech-balloon -->
+                              <svg viewBox="0 0 612 612" class="icon icon-big-speech-balloon" width="1.000em" height="1em">
+                                <path d="M535.04 0H76.961C35.939 0 2.564 33.375 2.564 74.399V374.89c0 41.023 33.375 74.399 74.399 74.399h250.863v144.555a18.158 18.158 0 0 0 18.15 18.155 18.154 18.154 0 0 0 13.727-6.268l135.52-156.442h39.815c41.023 0 74.398-33.375 74.398-74.399V74.399C609.438 33.375 576.063 0 535.04 0zm38.088 374.891c0 21.001-17.085 38.089-38.088 38.089 0 0-46.972.012-47.248 0a18.14 18.14 0 0 0-14.583 6.268L364.138 545.161V431.137c0-10.026-8.129-18.155-18.155-18.155H76.961c-21.002 0-38.089-17.088-38.089-38.089V74.399c.002-21.001 17.087-38.089 38.089-38.089h458.077c21.002 0 38.088 17.088 38.088 38.089V374.89h.002z" />
+                                <path d="M509.29 119.751H102.713c-10.026 0-18.155 8.129-18.155 18.155s8.129 18.155 18.155 18.155H509.29c10.026 0 18.155-8.129 18.155-18.155s-8.127-18.155-18.155-18.155zM509.29 206.489H102.713c-10.026 0-18.155 8.129-18.155 18.155 0 10.026 8.129 18.155 18.155 18.155H509.29c10.026 0 18.155-8.129 18.155-18.155 0-10.026-8.127-18.155-18.155-18.155zM295.159 293.225H102.713c-10.026 0-18.155 8.129-18.155 18.155s8.129 18.155 18.155 18.155h192.448c10.026 0 18.155-8.129 18.155-18.155-.002-10.025-8.129-18.155-18.157-18.155z" />
+                              </svg>
+                              <!-- end icon-big-speech-balloon -->
+                            </span> 3 коментарі</span>
+                        </span>
+                        <!-- end meta -->
+                      </span>
+                      <span class="article__title">
+                        <span class="h4">як відточювати свої професійні навички <strong>та бути продуктивним щодня</strong></span>
+                      </span>
+                      <span class="article__text">!6 вересня нас з вами чекає неймовірна подія, яка точно буде цікава всім тим, кого цікавть веб-дизайн, Front-End та Back-End розробка, нові технологіїї та IT-галузь у цілому. Відбудеться цей захід у Центральному Палаці Стокгольму в центрі міста...</span>
+                      <span class="article__btn">
+                        <span class="link-arrow">
+                          <span class="link-arrow__title">ЧИТАТИ НОВИНУ</span>
+                          <span class="link-arrow__arrow">
+                            <!-- begin icon-arrow-long -->
+                            <svg height="1em" width="8.304em" viewBox="0 0 66.433596 8" class="icon icon-arrow-long">
+                              <path style="stroke-width:.99999994" d="M62.434 0l-1 1 2 2H0v2h63.434l-2 2 1 1 4-4z" />
+                            </svg>
+                            <!-- end icon-arrow-long -->
+                          </span>
                         </span>
                       </span>
-                      <!-- end user -->
-                    </span>
-                  </span>
-                  <span class="article__img">
-                    <span class="article-img js-vieport-related-el" data-delay="700">
-                      <span class="article-img__inner overlayed js-anim-el" data-anim-name="overlayedLeft">
-                        <span class="article-img__img js-lazy js-anim-el" data-anim-name="fadeIn" data-anim-duration="1.5s" data-background-image="img/about/office.jpg"></span>
-                      </span>
-                    </span>
-                  </span>
-                </a>
-                <!-- end article -->
-                <!-- begin article -->
-                <a href="#" class="article">
-                  <span class="article__content js-anim-el" data-anim-name="fadeInBottomSm">
-                    <span class="article__meta">
-                      <!-- begin meta -->
-                      <span class="meta">
-                        <span class="meta__item"><span class="meta__icon">
-                            <!-- begin icon-folder -->
-                            <svg viewBox="0 0 60 60" class="icon icon-folder" width="1.000em" height="1em">
-                              <path d="M57.49 21.5H55v-7h-2v-4H25.086l-3.571-5H2.732A2.736 2.736 0 0 0 0 8.232v43.687h.006c-.005.563.17 1.114.522 1.575A2.546 2.546 0 0 0 2.565 54.5h44.759c1.156 0 2.174-.779 2.45-1.813L60 24.649v-.177c0-1.722-1.056-2.972-2.51-2.972zm-4.49 0h-8v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-2.269a2.596 2.596 0 0 0-1.731.674V16.5h42v5zM5 37.793V22.5h5.695a2.304 2.304 0 0 0-.414.813l-.317.87L5 37.793zM9 20.5H6.414L7 19.914l2-2V20.5zm42-8v2H9.586L7 17.086V12.5h44zM2 8.232c0-.404.329-.732.732-.732h17.753l2.143 3H5v8.586l-2 2v22.085l-1 2.728V8.232zm45.869 43.851a.566.566 0 0 1-.545.417H2.565a.552.552 0 0 1-.448-.222c-.063-.082-.16-.256-.123-.408L3 49.112v.001l9.16-25.114.026-.082a.566.566 0 0 1 .545-.417H57.49c.38 0 .477.546.502.819L47.869 52.083z" />
-                            </svg>
-                            <!-- end icon-folder -->
-                          </span> Події</span>
-                        <span class="meta__item"><span class="meta__icon">
-                            <!-- begin icon-view -->
-                            <svg viewBox="0 0 59.2 59.2" class="icon icon-view" width="1.000em" height="1em">
-                              <path d="M51.062 21.561c-11.889-11.889-31.232-11.889-43.121 0L0 29.501l8.138 8.138c5.944 5.944 13.752 8.917 21.561 8.917s15.616-2.972 21.561-8.917l7.941-7.941-8.139-8.137zm-1.217 14.664c-11.109 11.108-29.184 11.108-40.293 0l-6.724-6.724 6.527-6.527c11.109-11.108 29.184-11.108 40.293 0l6.724 6.724-6.527 6.527z" />
-                              <path d="M28.572 21.57c-3.86 0-7 3.14-7 7a1 1 0 0 0 2 0c0-2.757 2.243-5 5-5a1 1 0 0 0 0-2z" />
-                              <path d="M29.572 16.57c-7.168 0-13 5.832-13 13s5.832 13 13 13 13-5.832 13-13-5.831-13-13-13zm0 24c-6.065 0-11-4.935-11-11s4.935-11 11-11 11 4.935 11 11-4.934 11-11 11z" />
-                            </svg>
-                            <!-- end icon-view -->
-                          </span> 223</span>
-                        <span class="meta__item"><span class="meta__icon">
-                            <!-- begin icon-big-speech-balloon -->
-                            <svg viewBox="0 0 612 612" class="icon icon-big-speech-balloon" width="1.000em" height="1em">
-                              <path d="M535.04 0H76.961C35.939 0 2.564 33.375 2.564 74.399V374.89c0 41.023 33.375 74.399 74.399 74.399h250.863v144.555a18.158 18.158 0 0 0 18.15 18.155 18.154 18.154 0 0 0 13.727-6.268l135.52-156.442h39.815c41.023 0 74.398-33.375 74.398-74.399V74.399C609.438 33.375 576.063 0 535.04 0zm38.088 374.891c0 21.001-17.085 38.089-38.088 38.089 0 0-46.972.012-47.248 0a18.14 18.14 0 0 0-14.583 6.268L364.138 545.161V431.137c0-10.026-8.129-18.155-18.155-18.155H76.961c-21.002 0-38.089-17.088-38.089-38.089V74.399c.002-21.001 17.087-38.089 38.089-38.089h458.077c21.002 0 38.088 17.088 38.088 38.089V374.89h.002z" />
-                              <path d="M509.29 119.751H102.713c-10.026 0-18.155 8.129-18.155 18.155s8.129 18.155 18.155 18.155H509.29c10.026 0 18.155-8.129 18.155-18.155s-8.127-18.155-18.155-18.155zM509.29 206.489H102.713c-10.026 0-18.155 8.129-18.155 18.155 0 10.026 8.129 18.155 18.155 18.155H509.29c10.026 0 18.155-8.129 18.155-18.155 0-10.026-8.127-18.155-18.155-18.155zM295.159 293.225H102.713c-10.026 0-18.155 8.129-18.155 18.155s8.129 18.155 18.155 18.155h192.448c10.026 0 18.155-8.129 18.155-18.155-.002-10.025-8.129-18.155-18.157-18.155z" />
-                            </svg>
-                            <!-- end icon-big-speech-balloon -->
-                          </span> 3 коментарі</span>
-                      </span>
-                      <!-- end meta -->
-                    </span>
-                    <span class="article__title">
-                      <span class="h4">як відточювати свої професійні навички <strong>та бути продуктивним щодня</strong></span>
-                    </span>
-                    <span class="article__text">!6 вересня нас з вами чекає неймовірна подія, яка точно буде цікава всім тим, кого цікавть веб-дизайн, Front-End та Back-End розробка, нові технологіїї та IT-галузь у цілому. Відбудеться цей захід у Центральному Палаці Стокгольму в центрі міста...</span>
-                    <span class="article__btn">
-                      <span class="link-arrow">
-                        <span class="link-arrow__title">ЧИТАТИ НОВИНУ</span>
-                        <span class="link-arrow__arrow">
-                          <!-- begin icon-arrow-long -->
-                          <svg viewBox="0 0 102.2 8" class="icon icon-arrow-long" width="12.775em" height="1em">
-                            <path d="M98.2 0l-1 1 2 2H.2v2h99l-2 2 1 1 4-4z" />
-                          </svg>
-                          <!-- end icon-arrow-long -->
+                      <span class="article__user">
+                        <!-- begin user -->
+                        <span class="user">
+                          <span class="user__img js-lazy" data-background-image="img/blog/user.jpg"></span>
+                          <span class="user__text">
+                            <p>Олександра Сандюк</p>
+                            <p>23 серпня 2019</p>
+                          </span>
                         </span>
+                        <!-- end user -->
                       </span>
                     </span>
-                    <span class="article__user">
-                      <!-- begin user -->
-                      <span class="user">
-                        <span class="user__img js-lazy" data-background-image="img/blog/user.jpg"></span>
-                        <span class="user__text">
-                          <p>Олександра Сандюк</p>
-                          <p>23 серпня 2019</p>
-                        </span>
-                      </span>
-                      <!-- end user -->
-                    </span>
-                  </span>
-                  <span class="article__img">
-                    <span class="article-img js-vieport-related-el" data-delay="700">
-                      <span class="article-img__inner overlayed js-anim-el" data-anim-name="overlayedLeft">
-                        <span class="article-img__img js-lazy js-anim-el" data-anim-name="fadeIn" data-anim-duration="1.5s" data-background-image="img/about/office.jpg"></span>
-                      </span>
-                    </span>
-                  </span>
-                </a>
-                <!-- end article -->
-                <!-- begin article -->
-                <a href="#" class="article">
-                  <span class="article__content js-anim-el" data-anim-name="fadeInBottomSm">
-                    <span class="article__meta">
-                      <!-- begin meta -->
-                      <span class="meta">
-                        <span class="meta__item"><span class="meta__icon">
-                            <!-- begin icon-folder -->
-                            <svg viewBox="0 0 60 60" class="icon icon-folder" width="1.000em" height="1em">
-                              <path d="M57.49 21.5H55v-7h-2v-4H25.086l-3.571-5H2.732A2.736 2.736 0 0 0 0 8.232v43.687h.006c-.005.563.17 1.114.522 1.575A2.546 2.546 0 0 0 2.565 54.5h44.759c1.156 0 2.174-.779 2.45-1.813L60 24.649v-.177c0-1.722-1.056-2.972-2.51-2.972zm-4.49 0h-8v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-2.269a2.596 2.596 0 0 0-1.731.674V16.5h42v5zM5 37.793V22.5h5.695a2.304 2.304 0 0 0-.414.813l-.317.87L5 37.793zM9 20.5H6.414L7 19.914l2-2V20.5zm42-8v2H9.586L7 17.086V12.5h44zM2 8.232c0-.404.329-.732.732-.732h17.753l2.143 3H5v8.586l-2 2v22.085l-1 2.728V8.232zm45.869 43.851a.566.566 0 0 1-.545.417H2.565a.552.552 0 0 1-.448-.222c-.063-.082-.16-.256-.123-.408L3 49.112v.001l9.16-25.114.026-.082a.566.566 0 0 1 .545-.417H57.49c.38 0 .477.546.502.819L47.869 52.083z" />
-                            </svg>
-                            <!-- end icon-folder -->
-                          </span> Події</span>
-                        <span class="meta__item"><span class="meta__icon">
-                            <!-- begin icon-view -->
-                            <svg viewBox="0 0 59.2 59.2" class="icon icon-view" width="1.000em" height="1em">
-                              <path d="M51.062 21.561c-11.889-11.889-31.232-11.889-43.121 0L0 29.501l8.138 8.138c5.944 5.944 13.752 8.917 21.561 8.917s15.616-2.972 21.561-8.917l7.941-7.941-8.139-8.137zm-1.217 14.664c-11.109 11.108-29.184 11.108-40.293 0l-6.724-6.724 6.527-6.527c11.109-11.108 29.184-11.108 40.293 0l6.724 6.724-6.527 6.527z" />
-                              <path d="M28.572 21.57c-3.86 0-7 3.14-7 7a1 1 0 0 0 2 0c0-2.757 2.243-5 5-5a1 1 0 0 0 0-2z" />
-                              <path d="M29.572 16.57c-7.168 0-13 5.832-13 13s5.832 13 13 13 13-5.832 13-13-5.831-13-13-13zm0 24c-6.065 0-11-4.935-11-11s4.935-11 11-11 11 4.935 11 11-4.934 11-11 11z" />
-                            </svg>
-                            <!-- end icon-view -->
-                          </span> 223</span>
-                        <span class="meta__item"><span class="meta__icon">
-                            <!-- begin icon-big-speech-balloon -->
-                            <svg viewBox="0 0 612 612" class="icon icon-big-speech-balloon" width="1.000em" height="1em">
-                              <path d="M535.04 0H76.961C35.939 0 2.564 33.375 2.564 74.399V374.89c0 41.023 33.375 74.399 74.399 74.399h250.863v144.555a18.158 18.158 0 0 0 18.15 18.155 18.154 18.154 0 0 0 13.727-6.268l135.52-156.442h39.815c41.023 0 74.398-33.375 74.398-74.399V74.399C609.438 33.375 576.063 0 535.04 0zm38.088 374.891c0 21.001-17.085 38.089-38.088 38.089 0 0-46.972.012-47.248 0a18.14 18.14 0 0 0-14.583 6.268L364.138 545.161V431.137c0-10.026-8.129-18.155-18.155-18.155H76.961c-21.002 0-38.089-17.088-38.089-38.089V74.399c.002-21.001 17.087-38.089 38.089-38.089h458.077c21.002 0 38.088 17.088 38.088 38.089V374.89h.002z" />
-                              <path d="M509.29 119.751H102.713c-10.026 0-18.155 8.129-18.155 18.155s8.129 18.155 18.155 18.155H509.29c10.026 0 18.155-8.129 18.155-18.155s-8.127-18.155-18.155-18.155zM509.29 206.489H102.713c-10.026 0-18.155 8.129-18.155 18.155 0 10.026 8.129 18.155 18.155 18.155H509.29c10.026 0 18.155-8.129 18.155-18.155 0-10.026-8.127-18.155-18.155-18.155zM295.159 293.225H102.713c-10.026 0-18.155 8.129-18.155 18.155s8.129 18.155 18.155 18.155h192.448c10.026 0 18.155-8.129 18.155-18.155-.002-10.025-8.129-18.155-18.157-18.155z" />
-                            </svg>
-                            <!-- end icon-big-speech-balloon -->
-                          </span> 3 коментарі</span>
-                      </span>
-                      <!-- end meta -->
-                    </span>
-                    <span class="article__title">
-                      <span class="h4">16 вересня відбудеться IT-конференція <strong>у Стокгольмі за участі Вадима Паясу</strong> та олексія олійника</span>
-                    </span>
-                    <span class="article__text">!6 вересня нас з вами чекає неймовірна подія, яка точно буде цікава всім тим, кого цікавть веб-дизайн, Front-End та Back-End розробка, нові технологіїї та IT-галузь у цілому. Відбудеться цей захід у Центральному Палаці Стокгольму в центрі міста...</span>
-                    <span class="article__btn">
-                      <span class="link-arrow">
-                        <span class="link-arrow__title">ЧИТАТИ НОВИНУ</span>
-                        <span class="link-arrow__arrow">
-                          <!-- begin icon-arrow-long -->
-                          <svg viewBox="0 0 102.2 8" class="icon icon-arrow-long" width="12.775em" height="1em">
-                            <path d="M98.2 0l-1 1 2 2H.2v2h99l-2 2 1 1 4-4z" />
-                          </svg>
-                          <!-- end icon-arrow-long -->
+                    <span class="article__img">
+                      <span class="article-img js-vieport-related-el" data-delay="700">
+                        <span class="article-img__inner overlayed js-anim-el" data-anim-name="overlayedLeft">
+                          <span class="article-img__img js-lazy js-anim-el" data-anim-name="fadeIn" data-anim-duration="1.5s" data-background-image="img/about/office.jpg"></span>
                         </span>
                       </span>
                     </span>
-                    <span class="article__user">
-                      <!-- begin user -->
-                      <span class="user">
-                        <span class="user__img js-lazy" data-background-image="img/blog/user.jpg"></span>
-                        <span class="user__text">
-                          <p>Олександра Сандюк</p>
-                          <p>23 серпня 2019</p>
+                  </a>
+                  <!-- end article -->
+                </div>
+                <div class="blog__article">
+                  <!-- begin article -->
+                  <a href="#" class="article">
+                    <span class="article__content js-anim-el" data-anim-name="fadeInBottomSm">
+                      <span class="article__meta">
+                        <!-- begin meta -->
+                        <span class="meta">
+                          <span class="meta__item"><span class="meta__icon">
+                              <!-- begin icon-folder -->
+                              <svg viewBox="0 0 60 60" class="icon icon-folder" width="1.000em" height="1em">
+                                <path d="M57.49 21.5H55v-7h-2v-4H25.086l-3.571-5H2.732A2.736 2.736 0 0 0 0 8.232v43.687h.006c-.005.563.17 1.114.522 1.575A2.546 2.546 0 0 0 2.565 54.5h44.759c1.156 0 2.174-.779 2.45-1.813L60 24.649v-.177c0-1.722-1.056-2.972-2.51-2.972zm-4.49 0h-8v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-2.269a2.596 2.596 0 0 0-1.731.674V16.5h42v5zM5 37.793V22.5h5.695a2.304 2.304 0 0 0-.414.813l-.317.87L5 37.793zM9 20.5H6.414L7 19.914l2-2V20.5zm42-8v2H9.586L7 17.086V12.5h44zM2 8.232c0-.404.329-.732.732-.732h17.753l2.143 3H5v8.586l-2 2v22.085l-1 2.728V8.232zm45.869 43.851a.566.566 0 0 1-.545.417H2.565a.552.552 0 0 1-.448-.222c-.063-.082-.16-.256-.123-.408L3 49.112v.001l9.16-25.114.026-.082a.566.566 0 0 1 .545-.417H57.49c.38 0 .477.546.502.819L47.869 52.083z" />
+                              </svg>
+                              <!-- end icon-folder -->
+                            </span> Події</span>
+                          <span class="meta__item"><span class="meta__icon">
+                              <!-- begin icon-view -->
+                              <svg viewBox="0 0 59.2 59.2" class="icon icon-view" width="1.000em" height="1em">
+                                <path d="M51.062 21.561c-11.889-11.889-31.232-11.889-43.121 0L0 29.501l8.138 8.138c5.944 5.944 13.752 8.917 21.561 8.917s15.616-2.972 21.561-8.917l7.941-7.941-8.139-8.137zm-1.217 14.664c-11.109 11.108-29.184 11.108-40.293 0l-6.724-6.724 6.527-6.527c11.109-11.108 29.184-11.108 40.293 0l6.724 6.724-6.527 6.527z" />
+                                <path d="M28.572 21.57c-3.86 0-7 3.14-7 7a1 1 0 0 0 2 0c0-2.757 2.243-5 5-5a1 1 0 0 0 0-2z" />
+                                <path d="M29.572 16.57c-7.168 0-13 5.832-13 13s5.832 13 13 13 13-5.832 13-13-5.831-13-13-13zm0 24c-6.065 0-11-4.935-11-11s4.935-11 11-11 11 4.935 11 11-4.934 11-11 11z" />
+                              </svg>
+                              <!-- end icon-view -->
+                            </span> 223</span>
+                          <span class="meta__item"><span class="meta__icon">
+                              <!-- begin icon-big-speech-balloon -->
+                              <svg viewBox="0 0 612 612" class="icon icon-big-speech-balloon" width="1.000em" height="1em">
+                                <path d="M535.04 0H76.961C35.939 0 2.564 33.375 2.564 74.399V374.89c0 41.023 33.375 74.399 74.399 74.399h250.863v144.555a18.158 18.158 0 0 0 18.15 18.155 18.154 18.154 0 0 0 13.727-6.268l135.52-156.442h39.815c41.023 0 74.398-33.375 74.398-74.399V74.399C609.438 33.375 576.063 0 535.04 0zm38.088 374.891c0 21.001-17.085 38.089-38.088 38.089 0 0-46.972.012-47.248 0a18.14 18.14 0 0 0-14.583 6.268L364.138 545.161V431.137c0-10.026-8.129-18.155-18.155-18.155H76.961c-21.002 0-38.089-17.088-38.089-38.089V74.399c.002-21.001 17.087-38.089 38.089-38.089h458.077c21.002 0 38.088 17.088 38.088 38.089V374.89h.002z" />
+                                <path d="M509.29 119.751H102.713c-10.026 0-18.155 8.129-18.155 18.155s8.129 18.155 18.155 18.155H509.29c10.026 0 18.155-8.129 18.155-18.155s-8.127-18.155-18.155-18.155zM509.29 206.489H102.713c-10.026 0-18.155 8.129-18.155 18.155 0 10.026 8.129 18.155 18.155 18.155H509.29c10.026 0 18.155-8.129 18.155-18.155 0-10.026-8.127-18.155-18.155-18.155zM295.159 293.225H102.713c-10.026 0-18.155 8.129-18.155 18.155s8.129 18.155 18.155 18.155h192.448c10.026 0 18.155-8.129 18.155-18.155-.002-10.025-8.129-18.155-18.157-18.155z" />
+                              </svg>
+                              <!-- end icon-big-speech-balloon -->
+                            </span> 3 коментарі</span>
+                        </span>
+                        <!-- end meta -->
+                      </span>
+                      <span class="article__title">
+                        <span class="h4">16 вересня відбудеться IT-конференція <strong>у Стокгольмі за участі Вадима Паясу</strong> та олексія олійника</span>
+                      </span>
+                      <span class="article__text">!6 вересня нас з вами чекає неймовірна подія, яка точно буде цікава всім тим, кого цікавть веб-дизайн, Front-End та Back-End розробка, нові технологіїї та IT-галузь у цілому. Відбудеться цей захід у Центральному Палаці Стокгольму в центрі міста...</span>
+                      <span class="article__btn">
+                        <span class="link-arrow">
+                          <span class="link-arrow__title">ЧИТАТИ НОВИНУ</span>
+                          <span class="link-arrow__arrow">
+                            <!-- begin icon-arrow-long -->
+                            <svg height="1em" width="8.304em" viewBox="0 0 66.433596 8" class="icon icon-arrow-long">
+                              <path style="stroke-width:.99999994" d="M62.434 0l-1 1 2 2H0v2h63.434l-2 2 1 1 4-4z" />
+                            </svg>
+                            <!-- end icon-arrow-long -->
+                          </span>
                         </span>
                       </span>
-                      <!-- end user -->
-                    </span>
-                  </span>
-                  <span class="article__img">
-                    <span class="article-img js-vieport-related-el" data-delay="700">
-                      <span class="article-img__inner overlayed js-anim-el" data-anim-name="overlayedLeft">
-                        <span class="article-img__img js-lazy js-anim-el" data-anim-name="fadeIn" data-anim-duration="1.5s" data-background-image="img/about/office.jpg"></span>
+                      <span class="article__user">
+                        <!-- begin user -->
+                        <span class="user">
+                          <span class="user__img js-lazy" data-background-image="img/blog/user.jpg"></span>
+                          <span class="user__text">
+                            <p>Олександра Сандюк</p>
+                            <p>23 серпня 2019</p>
+                          </span>
+                        </span>
+                        <!-- end user -->
                       </span>
                     </span>
-                  </span>
-                </a>
-                <!-- end article -->
-                <!-- begin article -->
-                <a href="#" class="article">
-                  <span class="article__content js-anim-el" data-anim-name="fadeInBottomSm">
-                    <span class="article__meta">
-                      <!-- begin meta -->
-                      <span class="meta">
-                        <span class="meta__item"><span class="meta__icon">
-                            <!-- begin icon-folder -->
-                            <svg viewBox="0 0 60 60" class="icon icon-folder" width="1.000em" height="1em">
-                              <path d="M57.49 21.5H55v-7h-2v-4H25.086l-3.571-5H2.732A2.736 2.736 0 0 0 0 8.232v43.687h.006c-.005.563.17 1.114.522 1.575A2.546 2.546 0 0 0 2.565 54.5h44.759c1.156 0 2.174-.779 2.45-1.813L60 24.649v-.177c0-1.722-1.056-2.972-2.51-2.972zm-4.49 0h-8v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-2.269a2.596 2.596 0 0 0-1.731.674V16.5h42v5zM5 37.793V22.5h5.695a2.304 2.304 0 0 0-.414.813l-.317.87L5 37.793zM9 20.5H6.414L7 19.914l2-2V20.5zm42-8v2H9.586L7 17.086V12.5h44zM2 8.232c0-.404.329-.732.732-.732h17.753l2.143 3H5v8.586l-2 2v22.085l-1 2.728V8.232zm45.869 43.851a.566.566 0 0 1-.545.417H2.565a.552.552 0 0 1-.448-.222c-.063-.082-.16-.256-.123-.408L3 49.112v.001l9.16-25.114.026-.082a.566.566 0 0 1 .545-.417H57.49c.38 0 .477.546.502.819L47.869 52.083z" />
-                            </svg>
-                            <!-- end icon-folder -->
-                          </span> Події</span>
-                        <span class="meta__item"><span class="meta__icon">
-                            <!-- begin icon-view -->
-                            <svg viewBox="0 0 59.2 59.2" class="icon icon-view" width="1.000em" height="1em">
-                              <path d="M51.062 21.561c-11.889-11.889-31.232-11.889-43.121 0L0 29.501l8.138 8.138c5.944 5.944 13.752 8.917 21.561 8.917s15.616-2.972 21.561-8.917l7.941-7.941-8.139-8.137zm-1.217 14.664c-11.109 11.108-29.184 11.108-40.293 0l-6.724-6.724 6.527-6.527c11.109-11.108 29.184-11.108 40.293 0l6.724 6.724-6.527 6.527z" />
-                              <path d="M28.572 21.57c-3.86 0-7 3.14-7 7a1 1 0 0 0 2 0c0-2.757 2.243-5 5-5a1 1 0 0 0 0-2z" />
-                              <path d="M29.572 16.57c-7.168 0-13 5.832-13 13s5.832 13 13 13 13-5.832 13-13-5.831-13-13-13zm0 24c-6.065 0-11-4.935-11-11s4.935-11 11-11 11 4.935 11 11-4.934 11-11 11z" />
-                            </svg>
-                            <!-- end icon-view -->
-                          </span> 223</span>
-                        <span class="meta__item"><span class="meta__icon">
-                            <!-- begin icon-big-speech-balloon -->
-                            <svg viewBox="0 0 612 612" class="icon icon-big-speech-balloon" width="1.000em" height="1em">
-                              <path d="M535.04 0H76.961C35.939 0 2.564 33.375 2.564 74.399V374.89c0 41.023 33.375 74.399 74.399 74.399h250.863v144.555a18.158 18.158 0 0 0 18.15 18.155 18.154 18.154 0 0 0 13.727-6.268l135.52-156.442h39.815c41.023 0 74.398-33.375 74.398-74.399V74.399C609.438 33.375 576.063 0 535.04 0zm38.088 374.891c0 21.001-17.085 38.089-38.088 38.089 0 0-46.972.012-47.248 0a18.14 18.14 0 0 0-14.583 6.268L364.138 545.161V431.137c0-10.026-8.129-18.155-18.155-18.155H76.961c-21.002 0-38.089-17.088-38.089-38.089V74.399c.002-21.001 17.087-38.089 38.089-38.089h458.077c21.002 0 38.088 17.088 38.088 38.089V374.89h.002z" />
-                              <path d="M509.29 119.751H102.713c-10.026 0-18.155 8.129-18.155 18.155s8.129 18.155 18.155 18.155H509.29c10.026 0 18.155-8.129 18.155-18.155s-8.127-18.155-18.155-18.155zM509.29 206.489H102.713c-10.026 0-18.155 8.129-18.155 18.155 0 10.026 8.129 18.155 18.155 18.155H509.29c10.026 0 18.155-8.129 18.155-18.155 0-10.026-8.127-18.155-18.155-18.155zM295.159 293.225H102.713c-10.026 0-18.155 8.129-18.155 18.155s8.129 18.155 18.155 18.155h192.448c10.026 0 18.155-8.129 18.155-18.155-.002-10.025-8.129-18.155-18.157-18.155z" />
-                            </svg>
-                            <!-- end icon-big-speech-balloon -->
-                          </span> 3 коментарі</span>
-                      </span>
-                      <!-- end meta -->
-                    </span>
-                    <span class="article__title">
-                      <span class="h4">як відточювати свої професійні навички <strong>та бути продуктивним щодня</strong></span>
-                    </span>
-                    <span class="article__text">!6 вересня нас з вами чекає неймовірна подія, яка точно буде цікава всім тим, кого цікавть веб-дизайн, Front-End та Back-End розробка, нові технологіїї та IT-галузь у цілому. Відбудеться цей захід у Центральному Палаці Стокгольму в центрі міста...</span>
-                    <span class="article__btn">
-                      <span class="link-arrow">
-                        <span class="link-arrow__title">ЧИТАТИ НОВИНУ</span>
-                        <span class="link-arrow__arrow">
-                          <!-- begin icon-arrow-long -->
-                          <svg viewBox="0 0 102.2 8" class="icon icon-arrow-long" width="12.775em" height="1em">
-                            <path d="M98.2 0l-1 1 2 2H.2v2h99l-2 2 1 1 4-4z" />
-                          </svg>
-                          <!-- end icon-arrow-long -->
+                    <span class="article__img">
+                      <span class="article-img js-vieport-related-el" data-delay="700">
+                        <span class="article-img__inner overlayed js-anim-el" data-anim-name="overlayedLeft">
+                          <span class="article-img__img js-lazy js-anim-el" data-anim-name="fadeIn" data-anim-duration="1.5s" data-background-image="img/about/office.jpg"></span>
                         </span>
                       </span>
                     </span>
-                    <span class="article__user">
-                      <!-- begin user -->
-                      <span class="user">
-                        <span class="user__img js-lazy" data-background-image="img/blog/user.jpg"></span>
-                        <span class="user__text">
-                          <p>Олександра Сандюк</p>
-                          <p>23 серпня 2019</p>
+                  </a>
+                  <!-- end article -->
+                </div>
+                <div class="blog__article">
+                  <!-- begin article -->
+                  <a href="#" class="article">
+                    <span class="article__content js-anim-el" data-anim-name="fadeInBottomSm">
+                      <span class="article__meta">
+                        <!-- begin meta -->
+                        <span class="meta">
+                          <span class="meta__item"><span class="meta__icon">
+                              <!-- begin icon-folder -->
+                              <svg viewBox="0 0 60 60" class="icon icon-folder" width="1.000em" height="1em">
+                                <path d="M57.49 21.5H55v-7h-2v-4H25.086l-3.571-5H2.732A2.736 2.736 0 0 0 0 8.232v43.687h.006c-.005.563.17 1.114.522 1.575A2.546 2.546 0 0 0 2.565 54.5h44.759c1.156 0 2.174-.779 2.45-1.813L60 24.649v-.177c0-1.722-1.056-2.972-2.51-2.972zm-4.49 0h-8v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-5v-1a1 1 0 1 0-2 0v1h-2.269a2.596 2.596 0 0 0-1.731.674V16.5h42v5zM5 37.793V22.5h5.695a2.304 2.304 0 0 0-.414.813l-.317.87L5 37.793zM9 20.5H6.414L7 19.914l2-2V20.5zm42-8v2H9.586L7 17.086V12.5h44zM2 8.232c0-.404.329-.732.732-.732h17.753l2.143 3H5v8.586l-2 2v22.085l-1 2.728V8.232zm45.869 43.851a.566.566 0 0 1-.545.417H2.565a.552.552 0 0 1-.448-.222c-.063-.082-.16-.256-.123-.408L3 49.112v.001l9.16-25.114.026-.082a.566.566 0 0 1 .545-.417H57.49c.38 0 .477.546.502.819L47.869 52.083z" />
+                              </svg>
+                              <!-- end icon-folder -->
+                            </span> Події</span>
+                          <span class="meta__item"><span class="meta__icon">
+                              <!-- begin icon-view -->
+                              <svg viewBox="0 0 59.2 59.2" class="icon icon-view" width="1.000em" height="1em">
+                                <path d="M51.062 21.561c-11.889-11.889-31.232-11.889-43.121 0L0 29.501l8.138 8.138c5.944 5.944 13.752 8.917 21.561 8.917s15.616-2.972 21.561-8.917l7.941-7.941-8.139-8.137zm-1.217 14.664c-11.109 11.108-29.184 11.108-40.293 0l-6.724-6.724 6.527-6.527c11.109-11.108 29.184-11.108 40.293 0l6.724 6.724-6.527 6.527z" />
+                                <path d="M28.572 21.57c-3.86 0-7 3.14-7 7a1 1 0 0 0 2 0c0-2.757 2.243-5 5-5a1 1 0 0 0 0-2z" />
+                                <path d="M29.572 16.57c-7.168 0-13 5.832-13 13s5.832 13 13 13 13-5.832 13-13-5.831-13-13-13zm0 24c-6.065 0-11-4.935-11-11s4.935-11 11-11 11 4.935 11 11-4.934 11-11 11z" />
+                              </svg>
+                              <!-- end icon-view -->
+                            </span> 223</span>
+                          <span class="meta__item"><span class="meta__icon">
+                              <!-- begin icon-big-speech-balloon -->
+                              <svg viewBox="0 0 612 612" class="icon icon-big-speech-balloon" width="1.000em" height="1em">
+                                <path d="M535.04 0H76.961C35.939 0 2.564 33.375 2.564 74.399V374.89c0 41.023 33.375 74.399 74.399 74.399h250.863v144.555a18.158 18.158 0 0 0 18.15 18.155 18.154 18.154 0 0 0 13.727-6.268l135.52-156.442h39.815c41.023 0 74.398-33.375 74.398-74.399V74.399C609.438 33.375 576.063 0 535.04 0zm38.088 374.891c0 21.001-17.085 38.089-38.088 38.089 0 0-46.972.012-47.248 0a18.14 18.14 0 0 0-14.583 6.268L364.138 545.161V431.137c0-10.026-8.129-18.155-18.155-18.155H76.961c-21.002 0-38.089-17.088-38.089-38.089V74.399c.002-21.001 17.087-38.089 38.089-38.089h458.077c21.002 0 38.088 17.088 38.088 38.089V374.89h.002z" />
+                                <path d="M509.29 119.751H102.713c-10.026 0-18.155 8.129-18.155 18.155s8.129 18.155 18.155 18.155H509.29c10.026 0 18.155-8.129 18.155-18.155s-8.127-18.155-18.155-18.155zM509.29 206.489H102.713c-10.026 0-18.155 8.129-18.155 18.155 0 10.026 8.129 18.155 18.155 18.155H509.29c10.026 0 18.155-8.129 18.155-18.155 0-10.026-8.127-18.155-18.155-18.155zM295.159 293.225H102.713c-10.026 0-18.155 8.129-18.155 18.155s8.129 18.155 18.155 18.155h192.448c10.026 0 18.155-8.129 18.155-18.155-.002-10.025-8.129-18.155-18.157-18.155z" />
+                              </svg>
+                              <!-- end icon-big-speech-balloon -->
+                            </span> 3 коментарі</span>
+                        </span>
+                        <!-- end meta -->
+                      </span>
+                      <span class="article__title">
+                        <span class="h4">як відточювати свої професійні навички <strong>та бути продуктивним щодня</strong></span>
+                      </span>
+                      <span class="article__text">!6 вересня нас з вами чекає неймовірна подія, яка точно буде цікава всім тим, кого цікавть веб-дизайн, Front-End та Back-End розробка, нові технологіїї та IT-галузь у цілому. Відбудеться цей захід у Центральному Палаці Стокгольму в центрі міста...</span>
+                      <span class="article__btn">
+                        <span class="link-arrow">
+                          <span class="link-arrow__title">ЧИТАТИ НОВИНУ</span>
+                          <span class="link-arrow__arrow">
+                            <!-- begin icon-arrow-long -->
+                            <svg height="1em" width="8.304em" viewBox="0 0 66.433596 8" class="icon icon-arrow-long">
+                              <path style="stroke-width:.99999994" d="M62.434 0l-1 1 2 2H0v2h63.434l-2 2 1 1 4-4z" />
+                            </svg>
+                            <!-- end icon-arrow-long -->
+                          </span>
                         </span>
                       </span>
-                      <!-- end user -->
-                    </span>
-                  </span>
-                  <span class="article__img">
-                    <span class="article-img js-vieport-related-el" data-delay="700">
-                      <span class="article-img__inner overlayed js-anim-el" data-anim-name="overlayedLeft">
-                        <span class="article-img__img js-lazy js-anim-el" data-anim-name="fadeIn" data-anim-duration="1.5s" data-background-image="img/about/office.jpg"></span>
+                      <span class="article__user">
+                        <!-- begin user -->
+                        <span class="user">
+                          <span class="user__img js-lazy" data-background-image="img/blog/user.jpg"></span>
+                          <span class="user__text">
+                            <p>Олександра Сандюк</p>
+                            <p>23 серпня 2019</p>
+                          </span>
+                        </span>
+                        <!-- end user -->
                       </span>
                     </span>
-                  </span>
-                </a>
-                <!-- end article -->
+                    <span class="article__img">
+                      <span class="article-img js-vieport-related-el" data-delay="700">
+                        <span class="article-img__inner overlayed js-anim-el" data-anim-name="overlayedLeft">
+                          <span class="article-img__img js-lazy js-anim-el" data-anim-name="fadeIn" data-anim-duration="1.5s" data-background-image="img/about/office.jpg"></span>
+                        </span>
+                      </span>
+                    </span>
+                  </a>
+                  <!-- end article -->
+                </div>
               </div>
-              <div class="blog__pagination"></div>
+              <div class="blog__pagination">
+                <!-- begin pagination -->
+                <div class="pagination">
+                  <ul>
+                    <li><a href="#">
+                        <svg height="1em" width="8.304em" viewBox="0 0 66.433596 8" class="icon icon-arrow-long">
+                          <path style="stroke-width:.99999994" d="M62.434 0l-1 1 2 2H0v2h63.434l-2 2 1 1 4-4z" />
+                        </svg>
+                      </a></li>
+                    <li><a href="#" class=" is-active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#" class=" is-inactive">...</a></li>
+                    <li><a href="#">22</a></li>
+                    <li><a href="#">23</a></li>
+                    <li><a href="#">24</a></li>
+                    <li><a href="#">
+                        <svg height="1em" width="8.304em" viewBox="0 0 66.433596 8" class="icon icon-arrow-long">
+                          <path style="stroke-width:.99999994" d="M62.434 0l-1 1 2 2H0v2h63.434l-2 2 1 1 4-4z" />
+                        </svg>
+                      </a></li>
+                  </ul>
+                </div>
+                <!-- end pagination -->
+              </div>
             </div>
             <!-- end blog -->
           </div>
+        </section>
+        <!-- end section -->
+        <!-- begin section -->
+        <section class="section section--gray-lighten s-order s-order--subscribe pt-lg pb-mdl">
+          <div class="container">
+            <div class="s-order__inner">
+              <div class="s-order__left">
+                <div class="s-order__subttl js-anim-el" data-anim-name="fadeInTopSm">подобаються наші статті?</div>
+                <div class="s-order__title overlayed js-anim-el" data-anim-name="overlayedLeft">
+                  <div class="title title--ttn title--light js-anim-el" data-anim-name="fadeIn">Отримуйте щотижневу <strong class="glitch" data-text="підписку">підписку на свій Email</strong></div>
+                </div>
+                <div class="s-order__text js-anim-el" data-anim-name="fadeInBottomSm">
+                  <p>Залиште свої дані у формі та отримуйте щотижневу підписку від Demiweb International абсолютно безкоштовно.</p>
+                  <p>Скасувати підписку можна у будь-який момент.</p>
+                </div>
+                <div class="s-order__form js-anim-el" data-anim-name="fadeInBottomSm">
+                  <!-- begin form -->
+                  <div class="form">
+                    <form>
+                      <div class="form__inner">
+                        <div class="form__field form__field-50">
+                          <!-- begin input -->
+                          <div class="input">
+                            <input type="text" placeholder="Введіть ваше ім’я">
+                          </div>
+                          <!-- end input -->
+                        </div>
+                        <div class="form__field form__field-50">
+                          <!-- begin input -->
+                          <div class="input">
+                            <input type="email" placeholder="Введіть ваш Email">
+                          </div>
+                          <!-- end input -->
+                        </div>
+                        <div class="form__field form__btn">
+                          <button class="btn btn--full btn--lg">Підписатися</button>
+                        </div>
+                        <div class="form__checkbox form__field">
+                          <!-- begin checkbox -->
+                          <label class="checkbox">
+                            <input type="checkbox" checked="">
+                            <span>Ви погоджуєтеся з умовами обробки персональних даних.<br> <a href="#">Політика конфеденційності.</a></span>
+                          </label>
+                          <!-- end checkbox -->
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- end form -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="s-order__img js-anim-el js-lazy" data-anim-name="fadeIn" data-anim-duration="2s" data-background-image="img/blog/book.png"></div>
         </section>
         <!-- end section -->
       </main>

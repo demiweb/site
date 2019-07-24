@@ -1,5 +1,5 @@
 import { isInView } from '../helpers';
-import { SHOW } from '../constants';
+import { VISIBLE } from '../constants';
 
 export default function addClassesOnScroll() {
   const els = [].slice.call(document.querySelectorAll('.js-vieport-related-el'));
@@ -33,7 +33,7 @@ export default function addClassesOnScroll() {
       el,
       onEnter: (entry, observer) => {
         setTimeout(() => {
-          entry.target.classList.add(SHOW);
+          entry.target.classList.add(VISIBLE);
         }, delay);
       },
       options: {

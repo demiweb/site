@@ -1,0 +1,35 @@
+.checkbox
+  position: relative
+  padding-left: 1.5em
+  user-select: none
+  color: $gray-light
+  font-size: 10px
+  display: inline-block
+  input[type="checkbox"]
+    opacity: 0
+    visibility: hidden
+    position: absolute
+    &:checked + span
+      &::after
+        content: ''        
+        top: .4em
+        left: .3em
+        position: absolute
+        display: block
+        background-color: $yellow
+        width: .4em
+        height: .4em
+  span
+    a
+      color: $blue
+      text-decoration: underline
+    &::before
+      content: ''
+      border: 1px solid $yellow
+      width: 1em
+      height: 1em
+      top: .1em
+      left: 0
+      
+      position: absolute
+      display: block

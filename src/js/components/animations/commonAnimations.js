@@ -1,7 +1,8 @@
 import BlockAnimator from './BlockAnimator';
-import PageAnimator from './PageAnimator';
+// import PageAnimator from './PageAnimator';
 import { TimelineLite } from 'gsap';
 import { isInView } from '../../helpers';
+import { ANIMATE } from '../../constants';
 
 export function animateTable() {
   const table = document.querySelector('.js-anim-in-vieport-with-gsap.clients-table');
@@ -33,9 +34,12 @@ export function animateTable() {
   };
 };
 
-export function animateHero(page) {
+export function animateHero() {
   const {
     header,
+    letterWrap,
+    letter,
+    letterShadow,
     heroContent,
     heroSubttl,
     heroTitle,
@@ -43,61 +47,103 @@ export function animateHero(page) {
     scrollDown,
     text,
     breadcrumbs,
-    heroBtns
+    heroBtns,
+    heroMeta
   } = {
     header: document.querySelector('.header'),
-    heroContent: page.querySelector('.hero__content'),
-    heroSubttl: page.querySelector('.hero__subttl'),
-    heroTitle: page.querySelector('.hero__title'),
-    heroTitleEl: page.querySelector('.hero__title .title'),
-    scrollDown: page.querySelector('.hero__scroll-down'),
-    text: page.querySelector('.hero__text'),
-    breadcrumbs: page.querySelector('.breadcrumbs'),
-    heroBtns: page.querySelectorAll('.hero__btn')
+    letterWrap: document.querySelector('.hero__img'),
+    letter: document.querySelector('.hero__img .icon-D'),
+    letterShadow: document.querySelector('.hero__img .letter-shadow'),
+    heroContent: document.querySelector('.hero__content'),
+    heroSubttl: document.querySelector('.hero__subttl'),
+    heroTitle: document.querySelector('.hero__title'),
+    heroTitleEl: document.querySelector('.hero__title .title'),
+    scrollDown: document.querySelector('.hero__scroll-down'),
+    text: document.querySelector('.hero__text'),
+    breadcrumbs: document.querySelector('.breadcrumbs'),
+    heroBtns: document.querySelectorAll('.hero__btn'),
+    heroMeta: document.querySelectorAll('.hero__blog-meta')
   };
 
-  const animator = new PageAnimator(page);  
-  animator.animate = () => {
-    const tl = new TimelineLite();
+  const tl = new TimelineLite();
 
+  // ============= start CONDITION timeline =============
+  if (letterWrap && letter && letterShadow && window.matchMedia('(min-width: 768px)').matches) {
     tl
       .fromTo(
-        heroTitle,
-        0,
+        letterWrap,
+        1,
         { opacity: 0 },
         { opacity: 1 }
       )
       .call(() => {
-        heroTitle.classList.add('overlayedLeft');
+        letter.classList.add(ANIMATE);
       })
       .fromTo(
-        heroTitleEl,
-        0.5,
-        { opacity: 0 },
-        { opacity: 1 },
-        '+=.5'
+        letterShadow,
+        1,
+        { opacity: 0, y: -30, x: 30 },
+        { opacity: 1, y: 0, x: 0 }
       )
+      .fromTo(
+        letterWrap,
+        0.5,
+        { x: '-100%' },
+        { x: '0%' }
+      );
+  };
+  // ============= end CONDITION timeline =============
+  // ============= start COMMON timeline =============
+  tl
+    .fromTo(
+      heroTitle,
+      0,
+      { opacity: 0 },
+      { opacity: 1 }
+    )
+    .call(() => {
+      heroTitle.classList.add('overlayedLeft');
+    })
+    .fromTo(
+      heroTitleEl,
+      0.5,
+      { opacity: 0 },
+      { opacity: 1 },
+      '+=.5'
+    );
+  // ============= end COMMON timeline =============
+  // ============= start CONDITION timeline =============
+  if (heroSubttl) {
+    tl
       .fromTo(
         heroSubttl,
         0.5,
         { y: -30, opacity: 0 },
         { y: 0, opacity: 1 },
         '-=.5'
-      )
-      .fromTo(
-        header,
-        0.5,
-        { opacity: 0, y: '-100%' },
-        { opacity: 1, y: '0%' },
-        '-=0.5'
-      )
-      .fromTo(
-        scrollDown,
-        0.5,
-        { opacity: 0, y: '100%' },
-        { opacity: 1, y: '0%' },
-        '-=0.5'
-      )
+      );
+  };
+  // ============= end CONDITION timeline =============
+  // ============= start COMMON timeline =============
+  tl
+    .fromTo(
+      header,
+      0.5,
+      { opacity: 0, y: '-100%' },
+      { opacity: 1, y: '0%' },
+      '-=0.5'
+    )
+    .fromTo(
+      scrollDown,
+      0.5,
+      { opacity: 0, y: '100%' },
+      { opacity: 1, y: '0%' },
+      '-=0.5'
+    );
+  // ============= end COMMON timeline =============
+  // ============= start CONDITION timeline =============
+  if (breadcrumbs) {
+    tl
       .fromTo(
         breadcrumbs,
         0.5,
@@ -105,27 +151,36 @@ export function animateHero(page) {
         { opacity: 1, y: '0%' },
         '-=0.5'
       );
-      
-    if (text) {
-      tl.fromTo(
-        text,
-        0.5,
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0 }
-      );
-    };
-
-    if (heroBtns.length > 0) {
-      tl.staggerFromTo(
-        heroBtns,
-        0.5,
-        { opacity: 0, y: 15 },
-        { opacity: 1, y: 0 },
-        0.1
-      );
-    }
   };
-  animator.init();
+      
+  if (text) {
+    tl.fromTo(
+      text,
+      0.5,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0 }
+    );
+  };
+
+  if (heroBtns.length > 0) {
+    tl.staggerFromTo(
+      heroBtns,
+      0.5,
+      { opacity: 0, y: 15 },
+      { opacity: 1, y: 0 },
+      0.1
+    );
+  };
+
+  if (heroMeta) {
+    tl.fromTo(
+      heroMeta,
+      0.5,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0 }
+    );
+  };
+  // ============= end CONDITION timeline =============
 };
 
 export function animateTeam() {
@@ -188,6 +243,32 @@ export function addPortfolioContentOverflowVisible() {
 
         contentWrap.classList.add('overflow-visible');
       });      
+    });
+  };
+};
+
+export function animateNumbers() {
+  const numbersWraps = [].slice.call(document.querySelectorAll('.js-vieport-related-el.numbers'));
+
+  if(numbersWraps.length > 0) {
+    numbersWraps.forEach(wrap => {
+      isInView({
+        el: wrap,
+        onEnter: (entry, observer) => {
+          const blocks = entry.target.querySelectorAll('.number');
+
+          if(!blocks) return;
+          const tl = new TimelineLite();
+          tl
+            .staggerFromTo(
+              blocks,
+              0.5,
+              { opacity: 0, y: 30 },
+              { opacity: 1, y: 0 },
+              0.2
+            );
+        }
+      });
     });
   };
 };

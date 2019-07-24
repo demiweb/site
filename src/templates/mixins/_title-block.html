@@ -17,10 +17,12 @@
     <div class="title-block__text js-anim-el" data-anim-name="fadeInBottomSm">{{ par | safe }}</div>
     {% endif %}  
   </div>
-
+  
+  {% if word %}
   <div class="title-block__word word{% if wordMod %} {{ wordMod }}{% endif %} js-anim-el" data-anim-name="fadeInLeft">
     <div class="word__inner js-parallax-scroll">{{ word | safe }}</div>
   </div>
+  {% endif %}
 </div>
 <!-- end title-block -->
 {% endmacro %}

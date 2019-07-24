@@ -1,0 +1,16 @@
+<!-- begin section -->
+<section class="section">
+  <div class="section__title-block">
+    {{ mixins.titleBlock(
+      subttl = 'рекомендуємо також',
+      title = '<small>популярні статті</small>серед наших читачів',
+      text = 'серед наших',
+      titleMod = 'glitch--bottom glitch--xs-none'
+    ) }}
+  </div>
+
+  <div class="container">
+    {% include "partials/_popular-articles.html" %}
+  </div>
+</section>
+<!-- end section -->

@@ -32,6 +32,12 @@
         <div class="hero__text">{{ hero.text }}</div>
         {% endif %}
 
+        {% if hero.meta %}
+        <div class="hero__blog-meta">
+          {{ mixins.meta() }}
+        </div>
+        {% endif %}
+
         {% if hero.btns %}
         <div class="hero__btns">
           <div class="hero__btn">

@@ -26,8 +26,11 @@
       padding-top: $padding-mdl
       padding-bottom: $padding-mdl
     +lg
-      padding-top: $padding-md
-      padding-bottom: $padding-md
+      padding-top: $padding-md + 15px
+      padding-bottom: $padding-md + 15px
+    +xs
+      padding-top: $padding-sml + 10px
+      padding-bottom: $padding-sml + 10px
   &__content
     width: 50%
     position: relative
@@ -107,6 +110,8 @@
     +flex
     +xs
       display: block
+  &__blog-meta
+    opacity: 0
   &__btn
     opacity: 0
     +notlast

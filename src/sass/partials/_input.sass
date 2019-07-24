@@ -1,0 +1,103 @@
+.input
+  $this: &
+  position: relative
+  input
+    height: 70px
+    border: 1px solid  $c-border
+    background-color: $white
+    padding: 20px 30px
+    width: 100%
+    +tr(border-color .3s)
+    +placeholder
+      color: $gray-light
+    &:focus
+      border-color: $yellow
+    +md
+      height: 50px
+      padding: 15px 20px
+    +xs
+      height: 40px
+      padding: 10px
+  .icon
+    position: absolute
+    top: 28px
+    left: 30px
+    pointer-events: none
+    fill: $gray-light
+    +tr(fill .3s)
+  &.has-text
+    .icon
+      fill: currentColor
+  &.has-focus
+    .icon
+      fill: $yellow  
+
+  &--has-icon
+    +md
+      input
+        padding-left: 32px
+      .icon
+        left: 15px
+        top: 18px
+    +xs
+      input
+        padding-left: 25px
+      .icon
+        top: 13px
+        left: 10px
+    input
+      padding-left: 50px
+    
+
+.textarea
+  $this: &
+  position: relative
+  +md
+    textarea
+      padding: 10px 20px
+  +xs
+    textarea
+      padding: 10px
+  textarea
+    min-height: 100px
+    width: 100%
+    border: 1px solid  $c-border
+    resize: none
+    padding: 30px
+    padding-bottom: 15px
+    overflow: hidden
+    +tr(border-color .3s)
+    +placeholder
+      color: $gray-light
+    &:focus
+      border-color: $yellow
+  .icon
+    position: absolute
+    top: 32px
+    left: 30px
+    pointer-events: none
+    fill: $gray-light
+    +tr(fill .3s)
+  &.has-text
+    .icon
+      fill: currentColor
+  &.has-focus
+    .icon
+      fill: $yellow
+
+  &--has-icon
+    +md
+      textarea
+        padding-left: 32px
+      .icon
+        top: 14px
+        left: 15px
+    +xs
+      textarea
+        padding-left: 25px
+      .icon
+        top: 13px
+        left: 10px
+    textarea
+      padding-left: 50px
+

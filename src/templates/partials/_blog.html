@@ -24,7 +24,7 @@ articles = [
 %}
 
 <!-- begin section -->
-<section class="section pt-lg pb-md">
+<section class="section pt-lg pb-md" data-scroll-to-target="blog">
   <div class="container">
     <div class="section__nav js-anim-el" data-anim-name="fadeInBottomSm">
       {{ mixins.list(
@@ -45,57 +45,75 @@ articles = [
     <div class="blog">
       <div class="blog__articles">
         {% for i in articles %}
-        <!-- begin article -->
-        <a href="#" class="article">
-          <span class="article__content js-anim-el" data-anim-name="fadeInBottomSm">
-            <span class="article__meta">
-              {{ mixins.meta() }}
+        <div class="blog__article">
+          <!-- begin article -->
+          <a href="#" class="article">
+            <span class="article__content js-anim-el" data-anim-name="fadeInBottomSm">
+              <span class="article__meta">
+                {{ mixins.meta() }}
+              </span>
+
+              <span class="article__title">
+                <span class="h4">{{ i.title | safe }}</span>
+              </span>
+
+              <span class="article__text">{{ i.text | safe }}</span>
+
+              <span class="article__btn">
+                <span class="link-arrow">
+                  <span class="link-arrow__title">ЧИТАТИ НОВИНУ</span>
+                  <span class="link-arrow__arrow">
+                    {{ mixins.icon('arrow-long') }}
+                  </span>
+                </span>
+              </span>
+
+              <span class="article__user">
+                <!-- begin user -->
+                <span class="user">
+                  <span class="user__img js-lazy" data-background-image="img/blog/user.jpg"></span>
+
+                  <span class="user__text">
+                    <p>Олександра Сандюк</p>
+                    <p>23 серпня 2019</p>
+                  </span>
+                </span>
+                <!-- end user -->
+              </span>
             </span>
 
-            <span class="article__title">
-              <span class="h4">{{ i.title | safe }}</span>
-            </span>
-
-            <span class="article__text">{{ i.text | safe }}</span>
-
-            <span class="article__btn">
-              <span class="link-arrow">
-                <span class="link-arrow__title">ЧИТАТИ НОВИНУ</span>
-                <span class="link-arrow__arrow">
-                  {{ mixins.icon('arrow-long') }}
+            <span class="article__img">
+              <span class="article-img js-vieport-related-el" data-delay="700">
+                <span class="article-img__inner overlayed js-anim-el" data-anim-name="overlayedLeft">
+                  <span class="article-img__img js-lazy js-anim-el" data-anim-name="fadeIn" data-anim-duration="1.5s" data-background-image="img/about/office.jpg"></span>
                 </span>
               </span>
             </span>
 
-            <span class="article__user">
-              <!-- begin user -->
-              <span class="user">
-                <span class="user__img js-lazy" data-background-image="img/blog/user.jpg"></span>
-
-                <span class="user__text">
-                  <p>Олександра Сандюк</p>
-                  <p>23 серпня 2019</p>
-                </span>
-              </span>
-              <!-- end user -->
-            </span>
-          </span>
-
-          <span class="article__img">
-            <span class="article-img js-vieport-related-el" data-delay="700">
-              <span class="article-img__inner overlayed js-anim-el" data-anim-name="overlayedLeft">
-                <span class="article-img__img js-lazy js-anim-el" data-anim-name="fadeIn" data-anim-duration="1.5s" data-background-image="img/about/office.jpg"></span>
-              </span>
-            </span>
-          </span>
-
-          
-        </a>
-        <!-- end article -->
+            
+          </a>
+          <!-- end article -->
+        </div>
         {% endfor %}
       </div>
 
-      <div class="blog__pagination"></div>
+      <div class="blog__pagination">
+        {{ mixins.list(
+          name = 'pagination',
+          modifications = { wrap: '', item: '', link: '' },
+          list = [
+            { link:  mixins.icon('arrow-long', false) },
+            { link: '1', modLink: 'is-active' },
+            { link: '2' },
+            { link: '3' },
+            { link: '...', modLink: 'is-inactive' },
+            { link: '22' },
+            { link: '23' },
+            { link: '24' },
+            { link:  mixins.icon('arrow-long', false) }
+          ]
+        ) }}
+      </div>
     </div>
     <!-- end blog -->
   </div>

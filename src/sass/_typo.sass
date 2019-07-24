@@ -9,6 +9,19 @@ em, i
   font-style: normal
   +italic
 
+blockquote
+  +italic
+  background-color: $gray-lighten
+  padding: 25px
+  border-left: 4px solid $yellow
+  +md
+    padding: 15px
+    border-left-width: 2px
+  +sm
+    padding: 10px
+  li
+    margin-bottom: 0
+
 h1, h2, h3, h4, h5, h6
   font-weight: 400
 
@@ -70,16 +83,21 @@ h1, h2, h3, h4, h5, h6
   +bold
   +css-lock(28, 48, 320, 1499, font-size)
   line-height: 1
+  +tr(color .3s)
   small
     font-size: .75em
     +light
-
+  
+  &--sm
+    +css-lock(21, 36, 320, 1499, font-size)
   &--white
     color: $white
   &--ttn
     text-transform: none
   &--medium
     +medium
+  &--light
+    +light
 
 .text
   &--white

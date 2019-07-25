@@ -132,14 +132,19 @@ export function animateHero() {
       { opacity: 0, y: '-100%' },
       { opacity: 1, y: '0%' },
       '-=0.5'
-    )
-    .fromTo(
-      scrollDown,
-      0.5,
-      { opacity: 0, y: '100%' },
-      { opacity: 1, y: '0%' },
-      '-=0.5'
     );
+  // ============= start CONDITION timeline =============
+  if (scrollDown) {
+    tl
+      .fromTo(
+        scrollDown,
+        0.5,
+        { opacity: 0, y: '100%' },
+        { opacity: 1, y: '0%' },
+        '-=0.5'
+      );
+  };
+  // ============= end CONDITION timeline =============
   // ============= end COMMON timeline =============
   // ============= start CONDITION timeline =============
   if (breadcrumbs) {
@@ -247,15 +252,15 @@ export function addPortfolioContentOverflowVisible() {
   };
 };
 
-export function animateNumbers() {
-  const numbersWraps = [].slice.call(document.querySelectorAll('.js-vieport-related-el.numbers'));
+export function animateStagger() {
+  const numbersWraps = [].slice.call(document.querySelectorAll('.js-stagger'));
 
   if(numbersWraps.length > 0) {
     numbersWraps.forEach(wrap => {
       isInView({
         el: wrap,
         onEnter: (entry, observer) => {
-          const blocks = entry.target.querySelectorAll('.number');
+          const blocks = entry.target.querySelectorAll('.js-stagger-el');
 
           if(!blocks) return;
           const tl = new TimelineLite();

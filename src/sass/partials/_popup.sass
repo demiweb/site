@@ -1,0 +1,68 @@
+.popup
+  $this: &
+  position: fixed
+  z-index: 20
+  background-color: rgba($black, .5)
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  padding: 15px
+  overflow: auto
+  +vertical
+  visibility: hidden
+  opacity: 0
+  // +tr(opacity .3s, visibility .3s)
+  &.is-active
+    visibility: visible
+    opacity: 1
+    #{$this}__inner
+      transform: scale(1)
+  &__inner
+    display: inline-block
+    position: relative
+    vertical-align: middle
+    font-size: $fz
+    background-color: $white
+    width: 100%
+    max-width: 450px
+    padding: 55px 30px
+    transform: scale(0)
+    // +tr(transform .3s)
+    +md
+      padding: 30px 20px
+    +sm
+      padding: 20px 15px
+  &__close
+    +icon-close(14, 2, currentColor)
+    position: absolute
+    z-index: 2
+    top: 20px
+    right: 20px
+    +tr(color .3s)
+    +hover
+      color: $yellow
+    +md
+      top: 10px
+      right: 10px
+  &__title
+    margin-bottom: 15px
+    +md
+      margin-bottom: 10px
+  &__subttl
+    margin-bottom: 25px
+    +md
+      margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+  &__time
+    color: $gray-light
+    line-height: 1.4
+    margin-bottom: 25px
+    +md
+      margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+    .icon
+      font-size: 16px
+

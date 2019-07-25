@@ -3,6 +3,10 @@
   position: relative
   &__title-block
     +css-lock(30, 100, 320, 1499, margin-bottom)
+  &__faq
+    width: percentage(11/12)
+    +lg
+      width: auto
   &__nav
     text-align: center
     margin-bottom: 55px
@@ -42,7 +46,7 @@
       +xs
         width: 100%
         .section-img
-          padding-top: 40%
+          // padding-top: 40%
           width: 100%
 
 .section-img
@@ -59,7 +63,7 @@
   +before
     +coverdiv
     z-index: 0
-    top: 10%
+    top: 8%
     left: -10%
     background-color: $gray-lighten
 
@@ -424,3 +428,69 @@
     +sm
       display: none
 
+.s-consult
+  &__inner
+    max-width: 690px
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+  &__title
+    margin-bottom: 15px
+    +md
+      margin-bottom: 10px
+    +sm
+      margin-bottom: 5px
+  &__subttl
+    margin-bottom: 20px
+    +md
+      margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+
+.s-laptop-right
+  .word
+    bottom: auto
+    top: 10%
+    right: -45%
+  &__inner
+    +flex(flex-start, center)
+    +md
+      display: block
+  &__title-block
+    flex: 0 0 100%
+  &__img
+    position: relative
+    margin-left: -50%
+    z-index: 1
+    margin-top: -5%
+    // +css-lock(30, 125, 320, 1499, top)
+    right: 5%
+    width: 50%
+    +md
+      margin-left: 0
+      margin-top: 0
+      width: 100%
+      right: 0
+
+.s-features
+  &__inner
+    +flex(flex-start, normal, row, wrap)
+  &__img
+    width: percentage(4/12)
+    padding-right: 15px
+    +sm
+      padding-right: 5px
+    +xs
+      width: 100%
+      padding-right: 0
+      margin-bottom: 30px
+      order: 1
+  &__content
+    width: percentage(8/12)
+    padding-left: 15px
+    +sm
+      padding-left: 5px
+    +xs
+      width: 100%
+      padding-left: 0
+      order: 0

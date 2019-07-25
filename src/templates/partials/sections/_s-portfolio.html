@@ -2,12 +2,24 @@
 <section class="section s-portfolio overflow-hidden pb-lg{% if sectionPortfolio.mod %} {{ sectionPortfolio.mod }}{% endif %}" data-scroll-to-target="portfolio">
   
   {% if not sectionPortfolio.noTitleBlock %}
-  {{ mixins.titleBlock(
-    mod = 's-portfolio__title',
-    title = 'роботи, якими<br> ми пишаємося',
-    text = 'роботи, якими',
-    word = 'portfolio'
-  ) }}
+    {% if sectionPortfolio.titleBlock %}
+
+      {{ mixins.titleBlock(
+        mod = sectionPortfolio.titleBlock.mod,
+        title = sectionPortfolio.titleBlock.title,
+        text = sectionPortfolio.titleBlock.text,
+        word = sectionPortfolio.titleBlock.word,
+        subttl = sectionPortfolio.titleBlock.subttl
+      ) }}
+  
+      {% else %}
+      {{ mixins.titleBlock(
+        mod = 's-portfolio__title',
+        title = 'роботи, якими<br> ми пишаємося',
+        text = 'роботи, якими',
+        word = 'portfolio'
+      ) }}
+    {% endif %}
   {% endif %}
 
   {% if sectionPortfolio.nav %}
@@ -39,6 +51,22 @@
           title = '<span class="btn__title">' + mixins.icon('loading') +'завантажити більше</span>',
           mod = 'btn--half'
         ) }}
+        {% elseif sectionPortfolio.prevNext %}
+        <div class="pi-section__links">
+          <a href="#" class="link-arrow link-arrow--prev">
+            <span class="link-arrow__arrow">
+              {{ mixins.icon('arrow-long') }}
+            </span>
+            <span class="link-arrow__title">попередній проект</span>
+          </a>
+
+          <a href="#" class="link-arrow link-arrow--next">
+            <span class="link-arrow__title">наступний проект</span>
+            <span class="link-arrow__arrow">
+              {{ mixins.icon('arrow-long') }}
+            </span>
+          </a>
+        </div>
         {% else %}
         <a href="#" class="s-portfolio__link">
           {{ mixins.icon('web-design') }}

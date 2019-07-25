@@ -1,32 +1,9 @@
-{%set
-principles = [
-  { nmb: '01/', title: 'Відповідаємо за якість', text: 'Ми не прагнемо «сдати» проект поскоріше,<br>
-нам важливо, щоб продукт працював<br>
-і ви розповідали про нас друзям' },
-  { nmb: '02/', title: 'Чуємо клієнта', text: 'Перед початком роботи, ми уважно вислухаємо<br>
-усі ваші побажання та зробимо усе,<br> 
-щоб втілити їх у життя' },
-  { nmb: '03/', title: 'Підходимо з розумом ', text: 'Спочатку ми продумуємо, аналізуємо та плануємо,<br> 
-а вже потім починаємо розробляти, проектувати<br>
-та впроваджувати' },
-  { nmb: '04/', title: 'Будуємо на майбутнє', text: 'Нам цікаво працювати з вами на постійній основі,<br> 
-тому ми вкладаємося у кожний проект,<br> 
-як у довгострокову інвестицію' },
-  { nmb: '05/', title: 'Діємо рішуче', text: 'Ми завжди орієнтуємося на розробку найкращого<br>
-проекту в Україні за вашою тематикою, а це<br>
-потребує сміливих ідей' },
-  { nmb: '06/', title: 'Пишаємося собою', text: 'Після кожного проекту ми стаємо на декілька<br> 
-пунктів щасливішими, адже ми знову<br>
-створили продукт, який цінують' }
-]
-%}
-
 <!-- begin principles -->
-<div class="principles">
-  {% for i in principles %}
+<div class="principles{% if principles.mod %} {{ principles.mod }}{% endif %} js-stagger">
+  {% for i in principles.list %}
   <!-- begin principle -->
   <div class="principle__wrap">
-    <div class="principle">
+    <div class="principle js-stagger-el">
       <div class="principle__nmb text--gray-light">{{ i.nmb | safe }}</div>
 
       <div class="principle__title h4 h4--ttn h4--bold">{{ i.title | safe }}</div>
@@ -34,7 +11,13 @@ principles = [
       <div class="principle__text text--gray-light">{{ i.text | safe }}</div>
     </div>
   </div>
-  <!-- end principle -->
+  <!-- end principle -->  
   {% endfor %}
+
+  {% if principles.img %}
+  <div class="principles__img">
+    <img data-src="img/services/{{ principles.img }}" alt="" class="js-lazy animated-img">
+  </div>
+  {% endif %}
 </div>
 <!-- end principles -->

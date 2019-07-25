@@ -1,7 +1,71 @@
 .principles
+  $this: &
   +flex(flex-start, normal, row, wrap)
   margin-left: -15px
   margin-right: -15px
+
+  &--circle
+    margin-left: 0
+    margin-right: 0
+    // justify-content: space-between
+    display: block
+    position: relative
+    +clr
+    .principle      
+      &__wrap
+        padding-left: 0
+        padding-right: 0
+        width: 50%
+        max-width: 370px
+        margin-bottom: 100px
+        float: left
+        clear: left
+        +xl
+          margin-bottom: 80px
+        +lg
+          margin-bottom: 70px
+        +md
+          margin-bottom: 50px
+        +sm
+          margin-bottom: 30px
+        +xs
+          width: auto
+          max-width: none
+          float: none !important
+          margin-bottom: 15px
+        &:nth-child(even)
+          float: right
+          clear: right
+        &:nth-child(1)
+          margin-left: percentage(1/12)
+          +md
+            margin-left: 0
+        &:nth-child(2)
+          margin-right: percentage(1/12)
+          +md
+            margin-right: 0
+        &:nth-child(5)
+          margin-left: percentage(1/12)
+          +md
+            margin-left: 0
+        &:nth-child(6)
+          margin-right: percentage(1/12)
+          +md
+            margin-right: 0
+    #{$this}__img
+      +vcenter
+      z-index: 0
+      text-align: center
+      img
+        display: inline-block
+      +xl
+        img
+          max-width: 80%
+      +lg
+        img
+          max-width: 60%
+      +md
+        display: none
 
 .principle
   padding-left: 10%
@@ -14,6 +78,8 @@
     padding-left: 15px
     padding-right: 15px
     margin-bottom: 50px
+    position: relative
+    z-index: 1
     +xl
       margin-bottom: 40px
     +md

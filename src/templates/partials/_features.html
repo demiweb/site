@@ -1,0 +1,23 @@
+<!-- begin features -->
+<div class="features js-stagger">
+  {% for i in features %}
+  <div class="feature__wrap">
+    <!-- begin feature -->
+    <div class="feature js-stagger-el">
+      <div class="feature__inner">
+        <div class="feature__icon">
+          {{ mixins.icon(i.icon) }}
+        </div>
+
+        <div class="feature__title">
+          <div class="h4 h4--ttn h4--bold">{{ i.title | safe }}</div>
+        </div>
+
+        <div class="feature__text">{{ i.text | safe }}</div>
+      </div>
+    </div>
+    <!-- end feature -->
+  </div>
+  {% endfor %}
+</div>
+<!-- end features -->

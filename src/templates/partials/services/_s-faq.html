@@ -1,0 +1,17 @@
+<!-- begin section -->
+<section class="section pt-lg pb-mdl">
+    {{ mixins.titleBlock(
+        subttl = sectionFaq.titleBlock.subttl | safe,
+        title = sectionFaq.titleBlock.title | safe,
+        text = sectionFaq.titleBlock.text,
+        titleMod = sectionFaq.titleBlock.titleMod,
+        par = sectionFaq.titleBlock.par | safe
+      ) }}
+
+  <div class="container">
+    <div class="section__faq">
+      {% include "partials/_faq.html" %}
+    </div>
+  </div>  
+</section>
+<!-- end section -->

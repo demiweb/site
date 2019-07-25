@@ -15,39 +15,10 @@ export default function animateHome() {
   animateTable();
   // =================== table =======================
 
-  // =================== numbers section =======================
-  
-  // =================== numbers section =======================
-
   // =================== animateTeam =======================
   animateTeam();
   // =================== animateTeam =======================
 
-  // =================== principles =======================
-  const principles = [].slice.call(document.querySelectorAll('.principles'));
-
-  if(principles.length > 0) {
-    principles.forEach(wrap => {
-      isInView({
-        el: wrap,
-        onEnter: (entry, observer) => {
-          const blocks = entry.target.querySelectorAll('.principle');
-
-          if(!blocks) return;
-          const tl = new TimelineLite();
-          tl
-            .staggerFromTo(
-              blocks,
-              0.5,
-              { opacity: 0, y: 30 },
-              { opacity: 1, y: 0 },
-              0.2
-            );
-        }
-      });
-    });
-  };
-  // =================== principles =======================
 
   // =================== gallery =======================
   const gallery = document.querySelector('.js-anim-in-vieport-with-gsap.js-gallery');

@@ -1,0 +1,85 @@
+.faq
+  +clr
+  margin-left: -15px
+  margin-right: -15px
+
+.question
+  $this: &
+  opacity: 0
+  &__wrap
+    padding-left: 15px
+    padding-right: 15px    
+    width: 50%
+    max-width: 570px
+    +sm
+      width: 100%
+      float: none !important
+      max-width: none
+      width: auto
+    &:nth-child(odd)
+      float: left
+      clear: left
+    &:nth-child(even)
+      float: right
+      clear: right
+    &:last-child
+      .question__title
+        border-bottom: 1px solid  $c-border
+    &:first-child
+  &__title
+    position: relative
+    display: block
+    padding: 20px 0 15px
+    border-top: 1px solid  $c-border
+    border-bottom: 1px solid  $c-border
+    padding-right: 60px
+    +bold
+    +hover
+      .underlined
+        +before
+          transform: translate(0, 0)
+    +sm
+      padding: 15px 0 10px
+      padding-right: 50px
+    &.is-active
+      border-bottom-color: transparent
+      #{$this}__icon
+        +after
+          display: none
+  &__icon
+    position: absolute
+    right: 0
+    top: 50%
+    transform: translate(0, -50%)
+    border-radius: 50%
+    background-color: $gray-lighten
+    width: 38px
+    height: 38px
+    +sm
+      width: 30px
+      height: 30px
+    &::before,
+    &::after
+      content: ''
+      background-color: $gray-light
+      border-radius: 3px
+      +vcenter
+    &::before      
+      width: 11px
+      height: 3px
+    &::after
+      height: 11px
+      width: 3px
+
+    
+  &__text
+    display: none
+    padding-bottom: 25px
+    padding-right: 60px
+    border-bottom: 1px solid  $c-border
+    color: $gray-light
+    +sm
+      padding-bottom: 15px
+      padding-right: 40px
+
+

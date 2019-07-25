@@ -1,5 +1,5 @@
 
-import Rellax from 'rellax';
+// import Rellax from 'rellax';
 import Parallax from 'parallax-js';
 import isTouch from '../lib/detectTouch';
 

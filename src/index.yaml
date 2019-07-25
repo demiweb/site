@@ -10,3 +10,7 @@ PageList:
 - file: blog-article.html
 - file: politic.html
 - file: review.html
+- file: services-web-site-corporate.html
+- file: services-web-site-technical.html
+- file: services-web-site-refinement.html
+- file: popup-thanks.html

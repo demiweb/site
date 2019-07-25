@@ -1,18 +1,21 @@
 .title-block
   $this: &
   position: relative
-  padding-top: 15px
-  padding-bottom: 15px
+  // padding-top: 15px
+  +css-lock(20, 70, 320, 1499, padding-top)
+  +css-lock(20, 70, 320, 1499, padding-bottom)
+  // padding-bottom: 15px
   // min-height: 320px
-  +css-lock(170, 320, 320, 1499, min-height)  
-  // +css-lock(30, 100, 320, 1499, padding-top)  
-  // +css-lock(30, 100, 320, 1499, padding-bottom)
-  // overflow: hidden
+  +css-lock(170, 320, 320, 1499, min-height)
   +flex(center, normal, column)
   > .container
     width: 100%
   #{$this}__square-wrap
     max-width: 1410px
+  &__inner-50
+    width: 45%
+    +md
+      width: 100%
   
   &__title
     position: relative
@@ -56,6 +59,8 @@
     +xs
       padding-left: 0
       padding-top: 10px
+      br
+        display: none
   &__word
     z-index: 1
     right: 0
@@ -74,9 +79,9 @@
     transform: translate(-50%, 0)
     overflow: hidden
     +before
-      bottom: 0
       top: 0
       left: 0
+      +css-lock(170, 320, 320, 1499, height)
       position: absolute
       z-index: 0
       background-color: $yellow

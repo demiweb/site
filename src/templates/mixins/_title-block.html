@@ -1,21 +1,23 @@
-{% macro titleBlock(mod, title, text, word, subttl, par, titleMod, subttlBottom, animNames, wordMod) %}
+{% macro titleBlock(mod, title, text, word, subttl, par, titleMod, subttlBottom, animNames, wordMod, innerMod) %}
 <!-- begin title-block -->
 <div class="title-block{% if mod %} {{ mod }}{% endif %}">
   <div class="title-block__square-wrap js-anim-el" data-anim-name="{% if animNames.square %}{{ animNames.square }}{% else %}slideBeforeRight{% endif %}"></div>
 
   <div class="container">
-    {% if subttl %}
-    <div class="title-block__subttl js-anim-el" data-anim-name="fadeInTopSm">{{ subttl | safe }}</div>
-    {% endif %}
-    <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
-      <div class="title glitch{% if titleMod %} {{ titleMod }}{% endif %}" data-text="{{ text }}">{{ title | safe }}</div>
+    <div class="title-block__inner{% if innerMod %} {{ innerMod }}{% endif %}"> 
+      {% if subttl %}
+      <div class="title-block__subttl js-anim-el" data-anim-name="fadeInTopSm">{{ subttl | safe }}</div>
+      {% endif %}
+      <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
+        <div class="title glitch{% if titleMod %} {{ titleMod }}{% endif %}" data-text="{{ text }}">{{ title | safe }}</div>
+      </div>
+      {% if subttlBottom %}
+      <div class="title-block__subttl title-block__subttl-bottom js-anim-el" data-anim-name="fadeInBottomSm">{{ subttlBottom | safe }}</div>
+      {% endif %}
+      {% if par %}
+      <div class="title-block__text js-anim-el" data-anim-name="fadeInBottomSm">{{ par | safe }}</div>
+      {% endif %}
     </div>
-    {% if subttlBottom %}
-    <div class="title-block__subttl title-block__subttl-bottom js-anim-el" data-anim-name="fadeInBottomSm">{{ subttlBottom | safe }}</div>
-    {% endif %}
-    {% if par %}
-    <div class="title-block__text js-anim-el" data-anim-name="fadeInBottomSm">{{ par | safe }}</div>
-    {% endif %}  
   </div>
   
   {% if word %}

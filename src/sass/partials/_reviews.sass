@@ -3,29 +3,64 @@
   max-width: 1290px
 
 .review
+  $this: &
   max-width: 570px
+  width: 50%
   float: left
   position: relative
   +flex()
-  margin-bottom: 120px
+  +css-lock(15, 120, 320, 1499, margin-bottom)
   &:nth-child(2)
-    margin-top: 140px
+    +css-lock(50, 140, 576, 1499, margin-top)
   &:nth-child(even)
     float: right
+    padding-left: 15px
+  &:nth-child(odd)
+    padding-right: 15px
+  +xs
+    float: none
+    width: auto
+    &:nth-child(2)
+      margin-top: 0
+    &:nth-child(even)
+      padding-left: 0
+      float: none
+    &:nth-child(even)
+      padding-right: 0
+  &__logo
+    text-align: center
+    img
+      display: inline-block
   &__photo
     +cover
     height: 85px
     width: 85px
     border-radius: 50%
     margin-bottom: 15px
+    margin-left: auto
+    margin-right: auto
+    +md
+      width: 60px
+      height: 60px
+    +sm
+      width: 50px
+      height: 50px
   &__img
-    width: 95px
+    // width: 95px
     flex: 0 0 95px
     padding-top: 45px
+    +md
+      flex: 0 0 70px
+    +sm
+      flex: 0 0 50px
+      padding-top: 30px
+
   &__icon
     color: $yellow
     .icon
       font-size: 30px
+      +sm
+        font-size: 20px
     +md
   &__text
     margin-bottom: 20px
@@ -35,12 +70,55 @@
       margin-bottom: 10px
   &__content-bottom
     +flex(space-between, center)
+    +sm
+      display: block
   &__content
     padding-left: 30px
+    +md
+      padding-left: 15px
   &__link
     flex-grow: 1
+    +sm
+      margin-bottom: 10px
   &__author
     width: 160px
     flex: 0 0 160px
+  
+  &--img
+    +css-lock(15, 85, 320, 1499, margin-bottom)
+    &:nth-child(2)
+      margin-top: 0
+    #{$this}__content
+      +flex(flex-start, normal, row, wrap)
+      padding-left: 0
+    #{$this}__content-right
+      +flex(flex-start, center)
+      width: 35%
+      +sm
+        width: 100%
+    #{$this}__content-left
+      width: 65%
+      +sm
+        width: 100%
+    #{$this}__author
+      flex: 0 0 65%
+      text-align: center
+      +sm
+        flex: 0 0 100%
+        width: 100%
+      .author
+        width: 160px
+        margin-left: auto
+        margin-right: auto
+    #{$this}__text
+      margin-bottom: 0
+      text-align: center
+      img
+        display: inline-block
+    #{$this}__content-bottom
+      width: 100%
+    #{$this}__link
+      +sm
+        text-align: center
 
   

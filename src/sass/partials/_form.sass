@@ -1,4 +1,5 @@
 .form
+  $this: &
   &__inner
     +flex(flex-start, normal, row, wrap)
     margin-left: -15px
@@ -22,4 +23,15 @@
     line-height: 1.2
     text-align: center
   &__btn
-    margin-bottom: 20px
+    margin-bottom: 20px  
+
+
+  &--center
+    #{$this}__inner
+        justify-content: center
+  &--sm
+    #{$this}__field
+      +notlast
+        margin-bottom: 15px
+        +sm
+          margin-bottom: 10px

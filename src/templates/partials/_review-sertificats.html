@@ -1,0 +1,46 @@
+<!-- begin reviews -->
+<div class="reviews">
+  {% for i in range(0, 4) %}
+  <!-- begin review -->
+  <div class="review review--img js-anim-el" data-anim-name="fadeInBottomSm">
+    <div class="review__img">
+      <div class="review__photo js-lazy" data-background-image="img/review/photo-3.jpg"></div>
+      <div class="review__logo">
+        <img data-src="img/review/logo-3.png" alt="" class="js-lazy">
+      </div>
+    </div>
+
+    <div class="review__content">
+      <div class="review__content-left">
+        <div class="review__text">
+          <img data-src="img/review/sertificate.png" alt="" class="js-lazy">
+        </div>        
+      </div>
+
+      <div class="review__content-right">
+        <div class="review__link">
+          <a href="#" class="link-arrow link-arrow--short">
+            <span class="link-arrow__title">Дивитися проект</span>
+            <span class="link-arrow__arrow">
+              {{ mixins.icon('arrow-long') }}
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="review__content-bottom">
+        <div class="review__author">
+          <!-- begin author -->
+          <div class="author">
+            <div class="author__name">Іван Назаренко</div>
+            <div class="author__text">Генеральний директор компанії «Mario»</div>
+          </div>
+          <!-- end author -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end review -->
+  {% endfor %}
+</div>
+<!-- end reviews -->

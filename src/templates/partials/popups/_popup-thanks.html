@@ -1,0 +1,31 @@
+{% set name = 'thanks' %}
+{% set mod = '' %}
+
+{% if popup.thanks %}
+  {% set active = true %}
+{% endif %}
+
+{% extends "layouts/_popup.html" %}
+
+{% block content %}
+
+  <div class="popup__title">
+    <div class="h4 h4--bold">Дякуємо за заявку</div>
+  </div>
+
+  <div class="popup__subttl">Наш менеджер зв’яжеться з вами у найближчий час</div>
+
+  <div class="popup__time">
+    {{ mixins.icon('passage-of-time') }}
+    <p>Пн - Пт</p>
+    <p>10:00 - 18:00</p>
+  </div>
+
+  <div class="popup__btn">
+    {{ mixins.btn(
+      title = 'на головну',
+      mod = 'btn--full'
+    ) }}
+  </div>
+
+{% endblock %}

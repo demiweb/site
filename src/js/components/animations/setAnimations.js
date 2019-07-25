@@ -1,11 +1,11 @@
-import { animateHero, addPortfolioContentOverflowVisible, animateNumbers } from './commonAnimations';
+import { animateHero, addPortfolioContentOverflowVisible, animateStagger } from './commonAnimations';
 import animateHome from './animateHome';
 import animateAbout from './animateAbout';
 
 export default function setAnimations() {
   animateHero();
   addPortfolioContentOverflowVisible();
-  animateNumbers();
+  animateStagger();
 
   animateHome();
   animateAbout();

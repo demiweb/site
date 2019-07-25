@@ -38,12 +38,34 @@
         </div>
         {% endif %}
 
-        {% if hero.btns %}
+        {% if hero.btns %}          
         <div class="hero__btns">
+          {% if hero.btns.yellow or hero.btns.white %}
+            {% if hero.btns.yellow %}
+            <div class="hero__btn">
+              {{ mixins.btn(
+                title = hero.btns.yellow,
+                mod = 'js-popup-open',
+                attributes = { 'data-popup-target': 'call' }
+              ) }}
+            </div>
+            {% endif %}
+            {% if hero.btns.white %}
+            <div class="hero__btn">
+              {{ mixins.btn(
+                title = hero.btns.white,
+                mod = 'btn--transp-white'
+              ) }}
+            </div>
+            {% endif %}
+
+          {% else %}
+
           <div class="hero__btn">
             {{ mixins.btn(
               title = 'замовити консультацію',
-              mod = ''
+              mod = 'js-popup-open',
+              attributes = { 'data-popup-target': 'call' }
             ) }}
           </div>
           <div class="hero__btn">
@@ -52,6 +74,8 @@
               mod = 'btn--transp-white'
             ) }}
           </div>
+
+          {% endif %}          
         </div>
         {% endif %}
 
@@ -85,10 +109,12 @@
   <div class="hero__bg js-lazy" data-background-image="img/hero/{{ hero.bgImageRight }}"></div>
   {% endif %}
 
+  {% if hero.scrollToTarget %}
   <div class="hero__scroll-down{% if hero.modifications.scrollTo %} {{ hero.modifications.scrollTo }}{% endif %}">
     <a href="{{ hero.scrollToTarget }}" class="scroll-to scroll-to--down js-scroll-to-btn">
       {{ mixins.icon('arrow') }}
     </a>
   </div>
+  {% endif %}
 </section>
 <!-- end hero -->

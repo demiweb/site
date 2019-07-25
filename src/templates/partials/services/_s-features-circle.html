@@ -1,0 +1,16 @@
+<!-- begin section -->
+<section class="section pb-lg">
+  <div class="section__title-block">
+    {{ mixins.titleBlock(
+      subttl = sectoinPrinciples.titleBlock.subttl | safe,
+      title = sectoinPrinciples.titleBlock.title | safe,
+      text = sectoinPrinciples.titleBlock.text,
+      titleMod = sectoinPrinciples.titleBlock.titleMod
+    ) }}
+  </div>
+
+  <div class="container">
+    {% include "partials/_principles.html" %}
+  </div>
+</section>
+<!-- end section -->

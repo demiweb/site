@@ -16,6 +16,8 @@ import setParralax from './components/setParralax';
 import setGallery from './components/gallery/setGallery';
 import setTextareaAutoHeight from './components/setTextareaAutoHeight';
 import setInputsFocus from './components/setInputsFocus';
+import setAccordion from './components/setAccordion';
+import setPopups from './components/setPopups';
 
 $(function() {
   // sayHello();
@@ -34,4 +36,6 @@ $(function() {
   setGallery();
   setTextareaAutoHeight();
   setInputsFocus();
+  setAccordion();
+  setPopups();
 });

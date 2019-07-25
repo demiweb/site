@@ -1,0 +1,35 @@
+<!-- begin section -->
+<section class="section s-laptop-right overflow-hidden pt-lg pb-sml">
+  <div class="s-laptop-right__inner">
+    <div class="s-laptop-right__title-block">
+      {{ mixins.titleBlock(
+        subttl = sectionLaptop.titleBlock.subttl | safe,
+        title = sectionLaptop.titleBlock.title | safe,
+        text = sectionLaptop.titleBlock.text,
+        titleMod = sectionLaptop.titleBlock.titleMod,
+        par = sectionLaptop.titleBlock.par | safe,
+        word = sectionLaptop.titleBlock.word,
+        innerMod = sectionLaptop.titleBlock.innerMod
+      ) }}
+    </div>
+
+    <div class="s-laptop-right__img">
+      <!-- begin laptop -->
+      <div class="laptop">
+        <div class="laptop__inner">
+          {# <div class="laptop__bg js-lazy" data-background-image="img/services/laptop.png"> #}
+          <div class="laptop__bg">
+            <img data-src="img/services/laptop.png" alt="" class="js-lazy animated-img">
+          </div>
+
+          {# <div class="laptop__img js-lazy" data-background-image="img/portfolio-item/preview-img.jpg"> #}
+          <div class="laptop__img">
+            <img data-src="img/portfolio-item/{{ sectionLaptop.img }}" alt="" class="js-lazy animated-img">
+          </div>
+        </div>      
+      </div>
+      <!-- end laptop -->
+    </div>
+  </div>
+</section>
+<!-- end section -->

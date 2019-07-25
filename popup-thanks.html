@@ -2,18 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>about</title>
+    <title>home</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" media="all" href="css/app.css" />
   </head>
-  <body>
+  <body class="no-scroll">
     <!-- BEGIN content -->
     <div class="out">
       <!-- begin header -->
-      <header class="header js-header">
+      <header class="header header--transparent js-header">
         <div class="header__logo">
           <a href="/" class="logo">
             <!-- begin icon-logo -->
@@ -220,33 +220,50 @@
       </div>
       <!-- end menu -->
       <!-- begin main -->
-      <main class="main page-about">
+      <main class="main page-home">
         <!-- begin hero -->
-        <section class="hero hero--content js-lazy" data-background-image="img/hero/bg-hero-about.jpg" data-scroll-to-target="hero">
+        <section class="hero js-lazy" data-background-image="img/hero/bg-hero.jpg" data-scroll-to-target="hero">
           <div class="container">
             <div class="hero__inner">
-              <div class="hero__breadcrumbs">
-                <!-- begin breadcrumbs -->
-                <div class="breadcrumbs">
-                  <ul>
-                    <li><a href="#">Головна</a></li>
-                    <li>-</li>
-                    <li><a href="#" class=" is-active">про компанію</a></li>
-                  </ul>
-                </div>
-                <!-- end breadcrumbs -->
-              </div>
               <div class="hero__content">
-                <div class="hero__subttl">ми цінуємо свою репутацію</div>
+                <div class="hero__subttl">Створення та розробка сайтів в Україні</div>
                 <div class="hero__title overlayed">
-                  <div class="title"><small>не вміємо робити погано,</small> <strong class="glitch" data-text="видаємо тільки">видаємо тільки найкращі</strong> <small>результати та проекти</small></div>
+                  <div class="title"><small>Допоможемо</small> <strong class="glitch" data-text="реалізувати">реалізувати ваші ідеї</strong> <small>у якісний продукт</small></div>
                 </div>
-                <div class="hero__text">З перших секунд співпраці з нами ви зрозумієте, що потрапили до правильних рук. Дружелюбні менеджери з’ясують, як реалізувати для вас найкращий проект. А професійні технічні спеціалісти втілять це у життя.</div>
+                <div class="hero__btns">
+                  <div class="hero__btn">
+                    <a href="#" class="btn js-popup-open" data-popup-target="call">замовити консультацію</a>
+                  </div>
+                  <div class="hero__btn">
+                    <a href="#" class="btn btn--transp-white">наші послуги</a>
+                  </div>
+                </div>
+              </div>
+              <div class="hero__img">
+                <div class="hero__img-in js-parallax-scene">
+                  <div data-depth="0.1">
+                    <!-- begin icon-D -->
+                    <svg width="1.000em" height="1em" viewBox="0 0 2834.65 2834.65" class="icon icon-D">
+                      <path d="M2277.478 452.18C2004.532 191.052 1652.85 60.488 1222.475 60.488H147.778v1693.604h606.261V607.661h468.436c246.699 0 446.796 77.456 600.331 232.271 153.487 154.864 230.278 354.34 230.278 598.382 0 246.7-76.127 446.789-228.333 600.324-152.205 153.536-352.967 230.279-602.276 230.279H147.778v547.173h1074.696c427.765 0 778.782-131.181 1053.009-393.638 274.228-262.457 411.389-590.506 411.389-984.139 0-396.294-136.497-725.005-409.394-986.133z" />
+                    </svg>
+                    <!-- end icon-D -->
+                  </div>
+                  <svg data-depth="0.2" width="1em" height="1em" viewBox="0 0 2834.65 2834.65" class="letter-shadow">
+                    <defs>
+                      <pattern x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse" id="mypattern">
+                        <path fill="rgba(255, 255, 255, .6)" d="M4,0.990777969 C4,0.443586406 4.44386482,0 5,0 C5.55228475,0 6,0.45097518 6,0.990777969 L6,5.00922203 C6,5.55641359 5.55613518,6 5,6 C4.44771525,6 4,5.54902482 4,5.00922203 L4,0.990777969 Z M10,8.99077797 C10,8.44358641 10.4438648,8 11,8 C11.5522847,8 12,8.45097518 12,8.99077797 L12,13.009222 C12,13.5564136 11.5561352,14 11,14 C10.4477153,14 10,13.5490248 10,13.009222 L10,8.99077797 Z"></path>
+                      </pattern>
+                    </defs>
+                    <g fill="url(#mypattern)">
+                      <path d="M2277.478 452.18C2004.532 191.052 1652.85 60.488 1222.475 60.488H147.778v1693.604h606.261V607.661h468.436c246.699 0 446.796 77.456 600.331 232.271 153.487 154.864 230.278 354.34 230.278 598.382 0 246.7-76.127 446.789-228.333 600.324-152.205 153.536-352.967 230.279-602.276 230.279H147.778v547.173h1074.696c427.765 0 778.782-131.181 1053.009-393.638 274.228-262.457 411.389-590.506 411.389-984.139 0-396.294-136.497-725.005-409.394-986.133z" />
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
           <div class="hero__scroll-down">
-            <a href="numbers" class="scroll-to scroll-to--down js-scroll-to-btn">
+            <a href="more" class="scroll-to scroll-to--down js-scroll-to-btn">
               <!-- begin icon-arrow -->
               <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
                 <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
@@ -257,313 +274,340 @@
         </section>
         <!-- end hero -->
         <!-- begin section -->
-        <section class="section s-numbers pt-lg pb-sml overflow-hidden" data-scroll-to-target="numbers">
-          <div class="section__title-block s-numbers__title-block">
-            <!-- begin title-block -->
-            <div class="title-block">
-              <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
-              <div class="container">
-                <div class="title-block__inner">
-                  <div class="title-block__subttl js-anim-el" data-anim-name="fadeInTopSm">нам є чим пишатися</div>
-                  <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
-                    <div class="title glitch glitch--bottom" data-text="це цифрами"><small>і ми доведемо</small>це цифрами</div>
-                  </div>
-                </div>
-              </div>
-              <div class="title-block__word word js-anim-el" data-anim-name="fadeInLeft">
-                <div class="word__inner js-parallax-scroll">numbers</div>
-              </div>
-            </div>
-            <!-- end title-block -->
+        <section class="section s-more overflow-hidden pt-xll pb-lg" data-scroll-to-target="more">
+          <div class="word js-anim-el" data-anim-name="fadeInLeft">
+            <div class="word__inner js-parallax-scroll">DEMIWEB</div>
           </div>
-          <div class="s-numbers__numbers">
+          <div class="container">
+            <div class="s-more__title js-anim-el overlayed" data-anim-name="overlayedLeft">
+              <div class="h3 js-anim-el" data-anim-name="fadeIn">для компаній, які прагнуть більше</div>
+            </div>
+            <div class="s-more__block js-anim-el" data-anim-name="fadeInBottomSm">
+              <div class="s-more__block-title">
+                <div class="h4 h4--ttn">Мы — веб студія комплексних рішень для ваших задач, і це означає, що ми повністю формуємо ваш BRAND на ринку України.</div>
+              </div>
+              <div class="s-more__text">Наша студія веб дизайну по розробці сайтів під ключ в Києві пропонує вам розробку сайтів будь-якої складності і тематики. Нашої компанії під силу виготовлення сайтів будь-якого типу: створення інтернет-магазину, сайт візитка, корпоративний сайт, сайт для бізнесу, сайт каталог, створення Лендінгем (landing page). Так, ви можете замовити у нас сайт будь-якого призначення в Вінниці, Києві та по всій Україні. У нас в команді працюють кращі розробники з усієї країни по веб-програмуванню, у яких більше 5 років досвіду і навичок створення якісного продукту.</div>
+              <div class="s-more__title-lg overlayed js-anim-el" data-anim-name="overlayedLeft">
+                <div class="title glitch" data-text="7 років на ринку IT">7 років на ринку IT<br> 100+ реалізованих проектів<br> +150% середній приріст конверсій</div>
+              </div>
+              <div class="s-more__btn">
+                <a href="#" class="btn btn--half"><span class="btn__title">детальніше про нашу компанію</span></a>
+              </div>
+              <a href="portfolio" class="s-more__arrow js-scroll-to-btn">
+                <!-- begin icon-arrow -->
+                <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
+                  <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
+                </svg>
+                <!-- end icon-arrow -->
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- end section -->
+        <!-- begin section -->
+        <section class="section s-portfolio overflow-hidden pb-lg" data-scroll-to-target="portfolio">
+          <!-- begin title-block -->
+          <div class="title-block s-portfolio__title">
+            <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
             <div class="container">
-              <!-- begin numbers -->
-              <div class="numbers js-stagger">
-                <!-- begin number -->
-                <div class="number js-stagger-el">
-                  <div class="number__title title">100+</div>
-                  <div class="number__text text--gray-light">Успішних реалізованих проектів, які <br> до сьогоднішнього дня працюють<br> на своїх власників</div>
+              <div class="title-block__inner">
+                <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
+                  <div class="title glitch" data-text="роботи, якими">роботи, якими<br> ми пишаємося</div>
                 </div>
-                <!-- end number -->
-                <!-- begin number -->
-                <div class="number js-stagger-el">
-                  <div class="number__title title">7+</div>
-                  <div class="number__text text--gray-light">Років на ринку IT. За цей час ми отримали <br> стільки досвіду, що не одна проблема<br> не встоїть перед нами</div>
-                </div>
-                <!-- end number -->
-                <!-- begin number -->
-                <div class="number js-stagger-el">
-                  <div class="number__title title">0</div>
-                  <div class="number__text text--gray-light">Незадоволених клієнтів,<br> провалених проектів,<br> негативних відгуків</div>
-                </div>
-                <!-- end number -->
-                <!-- begin number -->
-                <div class="number js-stagger-el">
-                  <div class="number__title title">10</div>
-                  <div class="number__text text--gray-light">За десятибальною шкалою - середня <br> оцінка наших послуг клієнтами<br> у 2019 році</div>
-                </div>
-                <!-- end number -->
               </div>
-              <!-- end numbers -->
+            </div>
+            <div class="title-block__word word js-anim-el" data-anim-name="fadeInLeft">
+              <div class="word__inner js-parallax-scroll">portfolio</div>
             </div>
           </div>
-        </section>
-        <!-- end section -->
-        <!-- begin section -->
-        <section class="section s-office section--img pt-sml pb-md">
+          <!-- end title-block -->
+          <div class="s-portfolio__portfolio">
+            <!-- begin portfolio -->
+            <div class="portfolio">
+              <!-- begin portfolio-item -->
+              <div class="portfolio-item js-vieport-related-el" data-threshold="0.4">
+                <div class="portfolio-item__inner">
+                  <div class="container">
+                    <div class="portfolio-item__content">
+                      <div class="portfolio-item__content-inner">
+                        <div class="portfolio-item__subttl">Корпоративний сайт</div>
+                        <div class="portfolio-item__block">
+                          <div class="portfolio-item__nmb">01</div>
+                          <div class="portfolio-item__title">
+                            <div class="title title--medium title--ttn">Olmaks</div>
+                          </div>
+                          <div class="portfolio-item__text">Перший мультибрендовий салон електромобілей в Україні. 12 років досвіду на автомобільному ринку США дозволяють «Olmaks Group» купувати дійсно якісні електромобілі за вигідними цінами.</div>
+                          <div class="portfolio-item__link">
+                            <a href="#" class="link-arrow">
+                              <span class="link-arrow__title">Дивитися проект</span>
+                              <span class="link-arrow__arrow">
+                                <!-- begin icon-arrow-long -->
+                                <svg height="1em" width="8.304em" viewBox="0 0 66.433596 8" class="icon icon-arrow-long">
+                                  <path style="stroke-width:.99999994" d="M62.434 0l-1 1 2 2H0v2h63.434l-2 2 1 1 4-4z" />
+                                </svg>
+                                <!-- end icon-arrow-long -->
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="portfolio-item__right">
+                    <div class="portfolio-item__right-inner">
+                      <div class="portfolio-item__logo" style="background-color: #10ad44;">
+                        <img data-src="img/logos/1.png" alt="" class="js-lazy">
+                      </div>
+                      <div class="portfolio-item__img js-lazy" data-background-image="img/portfolio/1.jpg"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end portfolio-item -->
+              <!-- begin portfolio-item -->
+              <div class="portfolio-item js-vieport-related-el" data-threshold="0.4">
+                <div class="portfolio-item__inner">
+                  <div class="container">
+                    <div class="portfolio-item__content">
+                      <div class="portfolio-item__content-inner">
+                        <div class="portfolio-item__subttl">Корпоративний сайт</div>
+                        <div class="portfolio-item__block">
+                          <div class="portfolio-item__nmb">02</div>
+                          <div class="portfolio-item__title">
+                            <div class="title title--medium title--ttn">ABS</div>
+                          </div>
+                          <div class="portfolio-item__text">Компанія «ABS» є офіціальним дистриб’ютором ООО «МОНБАТ УКРАЇНА» - ексклюзивного представника акумуляторних батарей ТМ «MONBAT»; ТМ «START»; ТМ «WINMAXX» та ТМ «MONOIL».</div>
+                          <div class="portfolio-item__link">
+                            <a href="#" class="link-arrow">
+                              <span class="link-arrow__title">Дивитися проект</span>
+                              <span class="link-arrow__arrow">
+                                <!-- begin icon-arrow-long -->
+                                <svg height="1em" width="8.304em" viewBox="0 0 66.433596 8" class="icon icon-arrow-long">
+                                  <path style="stroke-width:.99999994" d="M62.434 0l-1 1 2 2H0v2h63.434l-2 2 1 1 4-4z" />
+                                </svg>
+                                <!-- end icon-arrow-long -->
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="portfolio-item__right">
+                    <div class="portfolio-item__right-inner">
+                      <div class="portfolio-item__logo" style="background-color: #d8232a;">
+                        <img data-src="img/logos/2.png" alt="" class="js-lazy">
+                      </div>
+                      <div class="portfolio-item__img js-lazy" data-background-image="img/portfolio/2.jpg"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end portfolio-item -->
+              <!-- begin portfolio-item -->
+              <div class="portfolio-item js-vieport-related-el" data-threshold="0.4">
+                <div class="portfolio-item__inner">
+                  <div class="container">
+                    <div class="portfolio-item__content">
+                      <div class="portfolio-item__content-inner">
+                        <div class="portfolio-item__subttl">Інтернет-магазин</div>
+                        <div class="portfolio-item__block">
+                          <div class="portfolio-item__nmb">03</div>
+                          <div class="portfolio-item__title">
+                            <div class="title title--medium title--ttn">Mario</div>
+                          </div>
+                          <div class="portfolio-item__text">Продукція під торговою маркою Маріо добре відома і затребувана на території України і за її межами. Компанія лідирує на Україні і в країнах СНД серед виробників даної продукції.</div>
+                          <div class="portfolio-item__link">
+                            <a href="#" class="link-arrow">
+                              <span class="link-arrow__title">Дивитися проект</span>
+                              <span class="link-arrow__arrow">
+                                <!-- begin icon-arrow-long -->
+                                <svg height="1em" width="8.304em" viewBox="0 0 66.433596 8" class="icon icon-arrow-long">
+                                  <path style="stroke-width:.99999994" d="M62.434 0l-1 1 2 2H0v2h63.434l-2 2 1 1 4-4z" />
+                                </svg>
+                                <!-- end icon-arrow-long -->
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="portfolio-item__right">
+                    <div class="portfolio-item__right-inner">
+                      <div class="portfolio-item__logo" style="background-color: #ff8200;">
+                        <img data-src="img/logos/3.png" alt="" class="js-lazy">
+                      </div>
+                      <div class="portfolio-item__img js-lazy" data-background-image="img/portfolio/3.jpg"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end portfolio-item -->
+            </div>
+            <!-- end portfolio -->
+          </div>
           <div class="container">
-            <div class="section--img__inner">
-              <div class="section--img__content">
-                <!-- begin title-block -->
-                <div class="title-block title-block--no-container">
-                  <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRightShort"></div>
-                  <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
-                    <div class="title glitch glitch--bottom" data-text="у центрі києва"><small>наш офіс знаходиться</small> у центрі києва</div>
-                  </div>
-                  <div class="title-block__text js-anim-el" data-anim-name="fadeInBottomSm">Ви можете завітати до нас за адресою: м.Київ, бул. Марії Приймаченко, 1/27, офіс 107, 108. Наші спеціалісти з радістю зустрінуть вас та ви зможете особисто обговорити свій проект, розрахувати його вартість та з’ясувати усі моменти, які вас до цього хвилювали. Також ви можете написати нам або зателефонувати за контактними даними у розділі <a href="#">Контакти</a>. </div>
-                </div>
-                <!-- end title-block -->
-              </div>
-              <div class="section--img__img">
-                <div class="section-img">
-                  <div class="section-img__inner overlayed js-anim-el" data-anim-name="overlayedLeft">
-                    <div class="section-img__img js-lazy js-anim-el" data-anim-name="fadeIn" data-anim-duration="1.5s" data-background-image="img/about/office.jpg"></div>
-                  </div>
-                </div>
-              </div>
+            <div class="s-portfolio__link-wrap">
+              <a href="#" class="s-portfolio__link">
+                <!-- begin icon-web-design -->
+                <svg height="1em" viewBox="0 0 496 496" width="1.000em" class="icon icon-web-design">
+                  <path d="M456 128h-56V0H48v128h-8c-22.055 0-40 17.945-40 40v240c0 22.055 17.945 40 40 40h104v32h-32v16h272v-16h-32v-32h104c22.055 0 40-17.945 40-40V168c0-22.055-17.945-40-40-40zm-72 64h16v48h-16zm-16 16H224v-16h144zm-160 28.457l-45.703-17.137c-1.375-.52-2.297-1.847-2.297-3.32s.922-2.8 2.305-3.32L208 195.543zM224 224h144v16H224zm192-32h8c13.23 0 24 10.77 24 24s-10.77 24-24 24h-8zm-201.457-16l-57.856 21.695C149.106 200.535 144 207.895 144 216s5.105 15.465 12.68 18.305L214.543 256H384v80H64V80h320v96zM384 16v48H64V16zM40 144h8v208h352v-96h24c22.055 0 40-17.945 40-40s-17.945-40-40-40h-24v-32h56c13.23 0 24 10.77 24 24v216H16V168c0-13.23 10.77-24 24-24zm296 336H160v-32h176zm120-48H40c-13.23 0-24-10.77-24-24v-8h464v8c0 13.23-10.77 24-24 24zm0 0" />
+                  <path d="M80 32h16v16H80zm0 0M112 32h16v16h-16zm0 0M144 32h16v16h-16zm0 0M80 160h96V96H80zm16-48h64v32H96zm0 0M200 96v64h96V96zm80 48h-64v-32h64zm0 0M80 176h56v16H80zm0 0M80 208h48v16H80zm0 0M80 240h56v16H80zm0 0M80 272h288v16H80zm0 0M352 304h16v16h-16zm0 0M80 304h256v16H80zm0 0" />
+                </svg>
+                <!-- end icon-web-design --> Дивитися портфоліо </a>
             </div>
           </div>
         </section>
         <!-- end section -->
         <!-- begin section -->
-        <section class="section overflow-hidden s-team pt-md pb-md">
-          <div class="section__title-block s-team__title-block">
-            <!-- begin title-block -->
-            <div class="title-block title-block--gray">
-              <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
-              <div class="container">
-                <div class="title-block__inner">
-                  <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
-                    <div class="title glitch" data-text="наша команда:">наша команда:</div>
-                  </div>
-                  <div class="title-block__subttl title-block__subttl-bottom js-anim-el" data-anim-name="fadeInBottomSm">Ми відібрали лише найкращих спеціалістів</div>
+        <section class="section s-services overflow-hidden">
+          <!-- begin title-block -->
+          <div class="title-block">
+            <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
+            <div class="container">
+              <div class="title-block__inner">
+                <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
+                  <div class="title glitch" data-text="Послуги">Послуги <br> для реалізації ваших ідей</div>
                 </div>
+              </div>
+            </div>
+            <div class="title-block__word word js-anim-el" data-anim-name="fadeInLeft">
+              <div class="word__inner js-parallax-scroll">services</div>
+            </div>
+          </div>
+          <!-- end title-block -->
+          <!-- begin services -->
+          <div class="services">
+            <!-- begin service-item -->
+            <div class="service-item__wrap js-vieport-related-el">
+              <a href="#" class="service-item">
+                <span class="container">
+                  <span class="service-item__inner">
+                    <span class="service-item__block">
+                      <span class="service-item__title">
+                        <span class="title title--ttn">Web site development</span>
+                      </span>
+                      <span class="service-item__text">Ми створюємо сайти, які є природним продовженням фірмового стилю компанії, викликають довіру відвідувачів і бажання співпрацювати з компанією.</span>
+                    </span>
+                    <span class="service-item__link">
+                      <!-- begin icon-arrow -->
+                      <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
+                        <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
+                      </svg>
+                      <!-- end icon-arrow -->
+                    </span>
+                  </span>
+                </span>
+              </a>
+            </div>
+            <!-- end service-item -->
+            <!-- begin service-item -->
+            <div class="service-item__wrap js-vieport-related-el">
+              <a href="#" class="service-item">
+                <span class="container">
+                  <span class="service-item__inner">
+                    <span class="service-item__block">
+                      <span class="service-item__title">
+                        <span class="title title--ttn">Seo + Adwords</span>
+                      </span>
+                      <span class="service-item__text">Ми створимо максимальну віддачу від кожного переходу на сайт, так як вашу рекламу побачать ті, хто є частиною вашої цільової аудиторії</span>
+                    </span>
+                    <span class="service-item__link">
+                      <!-- begin icon-arrow -->
+                      <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
+                        <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
+                      </svg>
+                      <!-- end icon-arrow -->
+                    </span>
+                  </span>
+                </span>
+              </a>
+            </div>
+            <!-- end service-item -->
+            <!-- begin service-item -->
+            <div class="service-item__wrap js-vieport-related-el">
+              <a href="#" class="service-item">
+                <span class="container">
+                  <span class="service-item__inner">
+                    <span class="service-item__block">
+                      <span class="service-item__title">
+                        <span class="title title--ttn">Branding</span>
+                      </span>
+                      <span class="service-item__text">Ми створимо максимальну віддачу від кожного переходу на сайт, так як вашу рекламу побачать ті, хто є частиною вашої цільової аудиторії</span>
+                    </span>
+                    <span class="service-item__link">
+                      <!-- begin icon-arrow -->
+                      <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
+                        <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
+                      </svg>
+                      <!-- end icon-arrow -->
+                    </span>
+                  </span>
+                </span>
+              </a>
+            </div>
+            <!-- end service-item -->
+            <!-- begin service-item -->
+            <div class="service-item__wrap js-vieport-related-el">
+              <a href="#" class="service-item">
+                <span class="container">
+                  <span class="service-item__inner">
+                    <span class="service-item__block">
+                      <span class="service-item__title">
+                        <span class="title title--ttn">Smm</span>
+                      </span>
+                      <span class="service-item__text">Ми створимо максимальну віддачу від кожного переходу на сайт, так як вашу рекламу побачать ті, хто є частиною вашої цільової аудиторії</span>
+                    </span>
+                    <span class="service-item__link">
+                      <!-- begin icon-arrow -->
+                      <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
+                        <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
+                      </svg>
+                      <!-- end icon-arrow -->
+                    </span>
+                  </span>
+                </span>
+              </a>
+            </div>
+            <!-- end service-item -->
+          </div>
+          <!-- end services -->
+        </section>
+        <!-- end section -->
+        <!-- begin section -->
+        <section class="section s-we-know pb-lg">
+          <div class="s-we-know__title-block title-block title-block--btn">
+            <div class="container">
+              <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
+                <div class="title glitch" data-text="ми знаємо,">ми знаємо, що потрібно саме вам</div>
               </div>
               <div class="title-block__word word js-anim-el" data-anim-name="fadeInLeft">
-                <div class="word__inner js-parallax-scroll">Team</div>
+                <div class="word__inner js-parallax-scroll">we know</div>
+              </div>
+              <div class="title-block__btn js-anim-el" data-anim-name="fadeIn">
+                <a href="#" class="btn btn--xl">замовити консультацію</a>
               </div>
             </div>
-            <!-- end title-block -->
           </div>
           <div class="container">
-            <!-- begin team -->
-            <div class="team">
-              <!-- begin specialist -->
-              <div class="specialist__wrap">
-                <div class="specialist">
-                  <div class="specialist__img-wrap overlayed">
-                    <div class="specialist__img js-lazy" data-background-image="img/team/1.jpg"></div>
-                  </div>
-                  <div class="specialist__bottom">
-                    <div class="specialist__title h4 h4--ttn h4--medium">Олександра Сандюк</div>
-                    <div class="specialist__subttl text--gray-light">Project Manager</div>
-                  </div>
+            <div class="s-we-know__content">
+              <div class="s-we-know__content">
+                <div class="s-we-know__title overlayed js-anim-el" data-anim-name="overlayedLeft">
+                  <div class="title title--ttn js-anim-el" data-anim-name="fadeIn">Ми працюємо для вас,<br> і ділимося своїм досвідом</div>
                 </div>
-              </div>
-              <!-- end specialist -->
-              <!-- begin specialist -->
-              <div class="specialist__wrap">
-                <div class="specialist">
-                  <div class="specialist__img-wrap overlayed">
-                    <div class="specialist__img js-lazy" data-background-image="img/team/1.jpg"></div>
-                  </div>
-                  <div class="specialist__bottom">
-                    <div class="specialist__title h4 h4--ttn h4--medium">Євгеній Кроха</div>
-                    <div class="specialist__subttl text--gray-light">Web designer</div>
-                  </div>
-                </div>
-              </div>
-              <!-- end specialist -->
-              <!-- begin specialist -->
-              <div class="specialist__wrap">
-                <div class="specialist">
-                  <div class="specialist__img-wrap overlayed">
-                    <div class="specialist__img js-lazy" data-background-image="img/team/1.jpg"></div>
-                  </div>
-                  <div class="specialist__bottom">
-                    <div class="specialist__title h4 h4--ttn h4--medium">Юрій Прізвище</div>
-                    <div class="specialist__subttl text--gray-light">Front-end developer</div>
-                  </div>
-                </div>
-              </div>
-              <!-- end specialist -->
-              <!-- begin specialist -->
-              <div class="specialist__wrap">
-                <div class="specialist">
-                  <div class="specialist__img-wrap overlayed">
-                    <div class="specialist__img js-lazy" data-background-image="img/team/1.jpg"></div>
-                  </div>
-                  <div class="specialist__bottom">
-                    <div class="specialist__title h4 h4--ttn h4--medium">Інна Прізвище</div>
-                    <div class="specialist__subttl text--gray-light">Marketing Manager</div>
-                  </div>
-                </div>
-              </div>
-              <!-- end specialist -->
-            </div>
-            <!-- end team -->
-          </div>
-        </section>
-        <!-- end section -->
-        <!-- begin section -->
-        <section class="section s-principles pt-sml pb-mdl overflow-hidden">
-          <div class="section__title-block s-principles__title-block">
-            <!-- begin title-block -->
-            <div class="title-block">
-              <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
-              <div class="container">
-                <div class="title-block__inner">
-                  <div class="title-block__subttl js-anim-el" data-anim-name="fadeInTopSm">ми завжди керуємося</div>
-                  <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
-                    <div class="title glitch glitch--bottom" data-text="принципами роботи"><small>єдиними та непохитними</small> принципами роботи</div>
-                  </div>
-                  <div class="title-block__text js-anim-el" data-anim-name="fadeInBottomSm">Ніякі договори та контракти не гарантують вам вдалої співпраці.<br> Тільки, якщо у компанії є свої власні норми та правила, <br> виковані роками — ви можете бути впевнені у результаті.</div>
-                </div>
-              </div>
-              <div class="title-block__word word js-anim-el" data-anim-name="fadeInLeft">
-                <div class="word__inner js-parallax-scroll">principles</div>
-              </div>
-            </div>
-            <!-- end title-block -->
-          </div>
-          <div class="container">
-            <!-- begin principles -->
-            <div class="principles js-stagger">
-              <!-- begin principle -->
-              <div class="principle__wrap">
-                <div class="principle js-stagger-el">
-                  <div class="principle__nmb text--gray-light">01/</div>
-                  <div class="principle__title h4 h4--ttn h4--bold">Відповідаємо за якість</div>
-                  <div class="principle__text text--gray-light">Ми не прагнемо «сдати» проект поскоріше,<br> нам важливо, щоб продукт працював<br> і ви розповідали про нас друзям</div>
-                </div>
-              </div>
-              <!-- end principle -->
-              <!-- begin principle -->
-              <div class="principle__wrap">
-                <div class="principle js-stagger-el">
-                  <div class="principle__nmb text--gray-light">02/</div>
-                  <div class="principle__title h4 h4--ttn h4--bold">Чуємо клієнта</div>
-                  <div class="principle__text text--gray-light">Перед початком роботи, ми уважно вислухаємо<br> усі ваші побажання та зробимо усе,<br> щоб втілити їх у життя</div>
-                </div>
-              </div>
-              <!-- end principle -->
-              <!-- begin principle -->
-              <div class="principle__wrap">
-                <div class="principle js-stagger-el">
-                  <div class="principle__nmb text--gray-light">03/</div>
-                  <div class="principle__title h4 h4--ttn h4--bold">Підходимо з розумом </div>
-                  <div class="principle__text text--gray-light">Спочатку ми продумуємо, аналізуємо та плануємо,<br> а вже потім починаємо розробляти, проектувати<br> та впроваджувати</div>
-                </div>
-              </div>
-              <!-- end principle -->
-              <!-- begin principle -->
-              <div class="principle__wrap">
-                <div class="principle js-stagger-el">
-                  <div class="principle__nmb text--gray-light">04/</div>
-                  <div class="principle__title h4 h4--ttn h4--bold">Будуємо на майбутнє</div>
-                  <div class="principle__text text--gray-light">Нам цікаво працювати з вами на постійній основі,<br> тому ми вкладаємося у кожний проект,<br> як у довгострокову інвестицію</div>
-                </div>
-              </div>
-              <!-- end principle -->
-              <!-- begin principle -->
-              <div class="principle__wrap">
-                <div class="principle js-stagger-el">
-                  <div class="principle__nmb text--gray-light">05/</div>
-                  <div class="principle__title h4 h4--ttn h4--bold">Діємо рішуче</div>
-                  <div class="principle__text text--gray-light">Ми завжди орієнтуємося на розробку найкращого<br> проекту в Україні за вашою тематикою, а це<br> потребує сміливих ідей</div>
-                </div>
-              </div>
-              <!-- end principle -->
-              <!-- begin principle -->
-              <div class="principle__wrap">
-                <div class="principle js-stagger-el">
-                  <div class="principle__nmb text--gray-light">06/</div>
-                  <div class="principle__title h4 h4--ttn h4--bold">Пишаємося собою</div>
-                  <div class="principle__text text--gray-light">Після кожного проекту ми стаємо на декілька<br> пунктів щасливішими, адже ми знову<br> створили продукт, який цінують</div>
-                </div>
-              </div>
-              <!-- end principle -->
-            </div>
-            <!-- end principles -->
-          </div>
-        </section>
-        <!-- end section -->
-        <!-- begin section -->
-        <section class="section s-order section--gray-lighten s-order--bg pt-md pb-md js-lazy" data-background-image="img/about/bg-order.jpg">
-          <div class="container">
-            <div class="s-order__inner">
-              <div class="s-order__left">
-                <div class="s-order__title overlayed js-anim-el" data-anim-name="overlayedLeft">
-                  <div class="title title--ttn glitch js-anim-el" data-anim-name="fadeIn" data-text="Це - Олександра.">Це - Олександра. Вона знає,<br> як зробити крутий проект<br> для вашого бізнесу</div>
-                </div>
-                <div class="s-order__contacts js-anim-el" data-anim-name="fadeInBottomSm">
-                  <!-- begin order-contacts -->
-                  <div class="order-contacts">
-                    <div class="order-contacts__mail">
-                      <a href="mailto:order@demiweb.pro" class="">order@demiweb.pro</a>
-                    </div>
-                    <div class="order-contacts__phone">
-                      <a href="tel:0800337167" class="">0 800 337 167</a>
-                    </div>
-                    <div class="order-contacts__phone">
-                      <a href="tel:0443338538" class="">0 800 337 167</a>
-                    </div>
-                    <div class="order-contacts__text">м. Київ, вул. бульвар марії приймаченко 1/27 | м. дружби народів</div>
-                  </div>
-                  <!-- end order-contacts -->
-                </div>
-                <div class="s-order__btns js-anim-el" data-anim-name="fadeInBottomSm">
-                  <div class="s-order__btn">
-                    <a href="#" class="btn btn--lg btn--full">ДІЗНАТИСЯ ВАРТІСТЬ</a>
-                  </div>
-                  <div class="s-order__btn">
-                    <a href="#" class="btn btn--lg btn--transp-black btn--full">ДИВИТИСЯ СХОЖІ ПРОЕКТИ</a>
-                  </div>
-                </div>
+                <div class="s-we-know__text js-anim-el" data-anim-name="fadeInBottomSm">Наша студія веб дизайну по розробці сайтів під ключ в Києві пропонує вам розробку сайтів будь-якої складності і тематики. Нашої компанії під силу виготовлення сайтів будь-якого типу: створення інтернет-магазину, сайт візитка, корпоративний сайт, сайт для бізнесу, сайт каталог, створення Лендінгем (landing page). Так, ви можете замовити у нас сайт будь-якого призначення в Вінниці, Києві та по всій Україні. У нас в команді працюють кращі розробники з усієї країни по веб-програмуванню, у яких більше 5 років досвіду і навичок створення якісного продукту.</div>
               </div>
             </div>
           </div>
-        </section>
-        <!-- end section -->
-        <!-- begin section -->
-        <section class="section s-feedbacks pt-lg pb-md overflow-hidden">
-          <div class="section__title-block s-feedbacks__title-block">
-            <!-- begin title-block -->
-            <div class="title-block">
-              <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
-              <div class="container">
-                <div class="title-block__inner">
-                  <div class="title-block__subttl js-anim-el" data-anim-name="fadeInTopSm">про нас з радістю</div>
-                  <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
-                    <div class="title glitch glitch--bottom" data-text="клієнти та партнери"><small>розповідають наші</small> клієнти та партнери</div>
-                  </div>
-                  <div class="title-block__text js-anim-el" data-anim-name="fadeInBottomSm">У нас багато прикладів, коли клієнти були нам вдячні та поверталися до нас знову.<br> Ми цінуємо кожного, хто завітає до нас, тому у відповідь отримуємо<br> ще більше позитиву та визнання.</div>
-                </div>
-              </div>
-              <div class="title-block__word word word--sm js-anim-el" data-anim-name="fadeInLeft">
-                <div class="word__inner js-parallax-scroll">Client’s <br> feedback</div>
-              </div>
-            </div>
-            <!-- end title-block -->
-          </div>
-          <div class="s-feedbacks__table">
+          <div class="s-we-know__clients">
             <!-- begin clients -->
             <div class="clients">
               <div class="container">
                 <div class="clients__table">
                   <!-- begin clients-table -->
-                  <div class="clients-table clients-table--full js-anim-in-vieport-with-gsap">
+                  <div class="clients-table js-anim-in-vieport-with-gsap">
+                    <div class="clients-table__item clients-table__item-lg"> 100+ </div>
                     <div class="clients-table__item">
                       <img data-src="img/logos/4.png" alt="" class="js-lazy animated-img">
                     </div>
@@ -598,81 +642,93 @@
         </section>
         <!-- end section -->
         <!-- begin section -->
-        <section class="section s-gallery pt-md pb-lg overflow-hidden">
-          <div class="section__title-block s-gallery__title-block">
-            <!-- begin title-block -->
-            <div class="title-block">
-              <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
-              <div class="container">
-                <div class="title-block__inner">
-                  <div class="title-block__subttl js-anim-el" data-anim-name="fadeInTopSm">ми завжди відкриті до вас і показуємо це</div>
-                  <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
-                    <div class="title glitch glitch--bottom" data-text="фотогалереї"><small>у нашій власній</small> фотогалереї</div>
-                  </div>
-                </div>
-              </div>
-              <div class="title-block__word word word--sm js-anim-el" data-anim-name="fadeInLeft">
-                <div class="word__inner js-parallax-scroll">Gallery</div>
-              </div>
+        <section class="section s-testimonials pt-md pb-mdl">
+          <div class="container">
+            <div class="s-testimonials__title overlayed js-anim-el" data-anim-name="overlayedLeft">
+              <div class="title title--ttn title--white glitch js-anim-el" data-anim-name="fadeIn" data-text="Нас рекомендують,">Нас рекомендують, <br> тому що ми створюємо не просто сайти...</div>
             </div>
-            <!-- end title-block -->
           </div>
-          <div class="section__gallery s-gallery__gallery">
-            <div class="container">
-              <!-- begin gallery -->
-              <div class="gallery js-gallery js-anim-in-vieport-with-gsap">
-                <div class="gallery__inner">
-                  <div class="gallery__square gallery-cover"></div>
-                  <div class="gallery__img-wrap  js-lightgallery">
-                    <a class="gallery__img gallery-img js-lazy" href="img/gallery/1.jpg" data-exthumbimage="img/gallery/1.jpg" data-background-image="img/gallery/1.jpg">
-                      <div class="gallery__caption">
-                        <div class="gallery__title h4 h4--ttn h4--bold">Офісні будні</div>
-                        <div class="gallery__subttl">26.06.2019</div>
+          <div class="s-testimonials__slider">
+            <!-- begin testimonials-slider -->
+            <div class="testimonials-slider__wrap js-anim-in-vieport-with-gsap">
+              <div class="container">
+                <div class="custom-slider-wrap js-slider-custom">
+                  <div class="testimonials-slider custom-slider">
+                    <!-- begin testimonial -->
+                    <div class="testimonial custom-slide">
+                      <div class="testimonial__inner">
+                        <div class="testimonial__left">
+                          <div class="testimonial__img js-lazy" data-background-image="img/testimonials/28-reviews_1.jpg"></div>
+                        </div>
+                        <div class="testimonial__right">
+                          <div class="testimonial__text">Наша студія веб дизайну по розробці сайтів під ключ в Києві пропонує вам розробку сайтів будь-якої складності і тематики. Нашої компанії під силу виготовлення сайтів будь-якого типу: створення інтернет-магазину, сайт візитка, корпоративний сайт, сайт для бізнесу, сайт каталог, створення Лендінгем (landing page). Так, ви можете замовити у нас сайт будь-якого призначення в Вінниці, Києві та по всій Україні. У нас в команді працюють кращі розробники з усієї країни по веб-програмуванню, у яких більше 5 років досвіду і навичок створення якісного продукту.</div>
+                        </div>
+                        <div class="testimonial__caption">
+                          <div class="testimonial__title">Шатилов А.С.</div>
+                          <div class="testimonial__subttl">Керівник інформаціонно-рекламного відділу "100 ШИН"</div>
+                        </div>
                       </div>
-                    </a>
-                    <a class="gallery__img gallery-img js-lazy" href="img/testimonials/28-reviews_1.jpg" data-exthumbimage="img/testimonials/28-reviews_1.jpg" data-background-image="img/testimonials/28-reviews_1.jpg">
-                      <div class="gallery__caption">
-                        <div class="gallery__title h4 h4--ttn h4--bold">Офісні будні</div>
-                        <div class="gallery__subttl">26.06.2019</div>
+                    </div>
+                    <!-- end testimonial -->
+                    <!-- begin testimonial -->
+                    <div class="testimonial custom-slide">
+                      <div class="testimonial__inner">
+                        <div class="testimonial__left">
+                          <div class="testimonial__img js-lazy" data-background-image="img/testimonials/32-reviews_3.png"></div>
+                        </div>
+                        <div class="testimonial__right">
+                          <div class="testimonial__text">Наша студія веб дизайну по розробці сайтів під ключ в Києві пропонує вам розробку сайтів будь-якої складності і тематики. Нашої компанії під силу виготовлення сайтів будь-якого типу: створення інтернет-магазину, сайт візитка, корпоративний сайт, сайт для бізнесу, сайт каталог, створення Лендінгем (landing page). Так, ви можете замовити у нас сайт будь-якого призначення в Вінниці, Києві та по всій Україні. У нас в команді працюють кращі розробники з усієї країни по веб-програмуванню, у яких більше 5 років досвіду і навичок створення якісного продукту.</div>
+                        </div>
+                        <div class="testimonial__caption">
+                          <div class="testimonial__title">Шатилов А.С.</div>
+                          <div class="testimonial__subttl">Керівник інформаціонно-рекламного відділу "100 ШИН"</div>
+                        </div>
                       </div>
-                    </a>
-                    <a class="gallery__img gallery-img js-lazy" href="img/gallery/1.jpg" data-exthumbimage="img/gallery/1.jpg" data-background-image="img/gallery/1.jpg">
-                      <div class="gallery__caption">
-                        <div class="gallery__title h4 h4--ttn h4--bold">Офісні будні</div>
-                        <div class="gallery__subttl">26.06.2019</div>
+                    </div>
+                    <!-- end testimonial -->
+                    <!-- begin testimonial -->
+                    <div class="testimonial custom-slide">
+                      <div class="testimonial__inner">
+                        <div class="testimonial__left">
+                          <div class="testimonial__img js-lazy" data-background-image="img/testimonials/28-reviews_1.jpg"></div>
+                        </div>
+                        <div class="testimonial__right">
+                          <div class="testimonial__text">Наша студія веб дизайну по розробці сайтів під ключ в Києві пропонує вам розробку сайтів будь-якої складності і тематики. Нашої компанії під силу виготовлення сайтів будь-якого типу: створення інтернет-магазину, сайт візитка, корпоративний сайт, сайт для бізнесу, сайт каталог, створення Лендінгем (landing page). Так, ви можете замовити у нас сайт будь-якого призначення в Вінниці, Києві та по всій Україні. У нас в команді працюють кращі розробники з усієї країни по веб-програмуванню, у яких більше 5 років досвіду і навичок створення якісного продукту.</div>
+                        </div>
+                        <div class="testimonial__caption">
+                          <div class="testimonial__title">Шатилов А.С.</div>
+                          <div class="testimonial__subttl">Керівник інформаціонно-рекламного відділу "100 ШИН"</div>
+                        </div>
                       </div>
-                    </a>
-                    <a class="gallery__img gallery-img js-lazy" href="img/testimonials/28-reviews_1.jpg" data-exthumbimage="img/testimonials/28-reviews_1.jpg" data-background-image="img/testimonials/28-reviews_1.jpg">
-                      <div class="gallery__caption">
-                        <div class="gallery__title h4 h4--ttn h4--bold">Офісні будні</div>
-                        <div class="gallery__subttl">26.06.2019</div>
+                    </div>
+                    <!-- end testimonial -->
+                    <!-- begin testimonial -->
+                    <div class="testimonial custom-slide">
+                      <div class="testimonial__inner">
+                        <div class="testimonial__left">
+                          <div class="testimonial__img js-lazy" data-background-image="img/testimonials/32-reviews_3.png"></div>
+                        </div>
+                        <div class="testimonial__right">
+                          <div class="testimonial__text">Наша студія веб дизайну по розробці сайтів під ключ в Києві пропонує вам розробку сайтів будь-якої складності і тематики. Нашої компанії під силу виготовлення сайтів будь-якого типу: створення інтернет-магазину, сайт візитка, корпоративний сайт, сайт для бізнесу, сайт каталог, створення Лендінгем (landing page). Так, ви можете замовити у нас сайт будь-якого призначення в Вінниці, Києві та по всій Україні. У нас в команді працюють кращі розробники з усієї країни по веб-програмуванню, у яких більше 5 років досвіду і навичок створення якісного продукту.</div>
+                        </div>
+                        <div class="testimonial__caption">
+                          <div class="testimonial__title">Шатилов А.С.</div>
+                          <div class="testimonial__subttl">Керівник інформаціонно-рекламного відділу "100 ШИН"</div>
+                        </div>
                       </div>
-                    </a>
-                    <a class="gallery__img gallery-img js-lazy" href="img/gallery/1.jpg" data-exthumbimage="img/gallery/1.jpg" data-background-image="img/gallery/1.jpg">
-                      <div class="gallery__caption">
-                        <div class="gallery__title h4 h4--ttn h4--bold">Офісні будні</div>
-                        <div class="gallery__subttl">26.06.2019</div>
-                      </div>
-                    </a>
+                    </div>
+                    <!-- end testimonial -->
                   </div>
-                  <div class="gallery__btns">
-                    <button class="gallery__prev slider-btn slider-btn--prev slider-btn--two-svg js-prev">
-                      <span class="slider-btn__front-svg">
-                        <!-- begin icon-arrow -->
-                        <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
-                          <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
-                        </svg>
-                        <!-- end icon-arrow -->
-                      </span>
-                      <span class="slider-btn__back-svg">
-                        <!-- begin icon-arrow -->
-                        <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
-                          <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
-                        </svg>
-                        <!-- end icon-arrow -->
-                      </span>
+                  <div class="testimonials-slider__img-cover js-img-cover"></div>
+                  <div class="testimonials-slider__btns">
+                    <button class="testimonials-slider__prev slider-btn slider-btn--prev js-prev">
+                      <!-- begin icon-arrow -->
+                      <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
+                        <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
+                      </svg>
+                      <!-- end icon-arrow -->
                     </button>
-                    <button class="gallery__next slider-btn slider-btn--next slider-btn--two-svg js-next">
+                    <button class="testimonials-slider__next slider-btn slider-btn--two-svg slider-btn--next js-next">
                       <span class="slider-btn__front-svg">
                         <!-- begin icon-arrow -->
                         <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
@@ -691,8 +747,8 @@
                   </div>
                 </div>
               </div>
-              <!-- end gallery -->
             </div>
+            <!-- end testimonials-slider -->
           </div>
         </section>
         <!-- end section -->
@@ -853,7 +909,7 @@
     </div>
     <!-- end popup -->
     <!-- begin popup -->
-    <div class="popup js-popup" data-popup="thanks">
+    <div class="popup js-popup is-active" data-popup="thanks">
       <div class="popup__inner">
         <a href="#" class="popup__close js-popup-close"></a>
         <div class="popup__title">

@@ -1,7 +1,7 @@
 <!-- begin section -->
-<section class="section s-laptop-right overflow-hidden pt-lg pb-sml">
-  <div class="s-laptop-right__inner">
-    <div class="s-laptop-right__title-block">
+<section class="section s-img-right overflow-hidden pt-lg pb-sml" {% if sectionLaptop.scrollTarget %}data-scroll-to-target="right-img-top"{% endif %}>
+  <div class="s-img-right__inner">
+    <div class="s-img-right__title-block">
       {{ mixins.titleBlock(
         subttl = sectionLaptop.titleBlock.subttl | safe,
         title = sectionLaptop.titleBlock.title | safe,
@@ -13,7 +13,8 @@
       ) }}
     </div>
 
-    <div class="s-laptop-right__img">
+    <div class="s-img-right__img">
+      {% if sectionLaptop.img %}
       <!-- begin laptop -->
       <div class="laptop">
         <div class="laptop__inner">
@@ -29,6 +30,11 @@
         </div>      
       </div>
       <!-- end laptop -->
+
+      {% elseif sectionLaptop.simpleImg %}
+
+      <img data-src="img/services/{{ sectionLaptop.simpleImg }}" alt="" class="js-lazy animated-img">
+      {% endif %}
     </div>
   </div>
 </section>

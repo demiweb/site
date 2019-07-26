@@ -10,9 +10,11 @@
   visibility: hidden
   opacity: 0
   color: $white
-  +tr(opacity .5s, visibility .5s, transform .5s)
+  
   +flex()
   transform: translate(-100%, 0)
+  +ready
+    +tr(opacity .5s, visibility .5s, transform .5s)
   &.is-active
     visibility: visible
     opacity: 1
@@ -49,7 +51,9 @@
     position: relative
     overflow: auto
     opacity: 0
-    +tr(transform .8s, opacity .8s)
+    +scrollbar 
+    +ready
+      +tr(transform .8s, opacity .8s)
     > .container
       height: 100%
   &__logo

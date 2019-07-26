@@ -1,5 +1,5 @@
 <!-- begin portfolio -->
-<div class="portfolio">
+<div class="portfolio{% if portfolioMod %} {{ portfolioMod }}{% endif %}">
   {% for i in portfolio %}
   <!-- begin portfolio-item -->
   <div class="portfolio-item js-vieport-related-el"  data-threshold="0.4">
@@ -10,8 +10,10 @@
           <div class="portfolio-item__subttl">{{ i.subttl }}</div>
 
           <div class="portfolio-item__block">
+            {% if i.nmb %}
             <div class="portfolio-item__nmb">{{ i.nmb }}</div>
-
+            {% endif %}
+            
             <div class="portfolio-item__title">
               <div class="title title--medium title--ttn">{{ i.title }}</div>
             </div>
@@ -34,8 +36,12 @@
       <div class="portfolio-item__right">
         <div class="portfolio-item__right-inner">
 
-          <div class="portfolio-item__logo" style="background-color: {{ i.logoColor }};">
+          <div class="portfolio-item__logo{% if i.logoMod %} {{ i.logoMod }}{% endif %}" {% if i.logoColor %}style="background-color: {{ i.logoColor }};"{% endif %}>
+            {% if i.logoSvg %}
+            <img data-src="img/{{ i.logoSvg }}" alt="" class="js-lazy">
+            {% else %}
             <img data-src="img/logos/{{ i.logo }}" alt="" class="js-lazy">
+            {% endif %}
           </div>
           <div class="portfolio-item__img js-lazy" data-background-image="img/portfolio/{{ i.img }}"></div>
         </div>

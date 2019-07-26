@@ -1,4 +1,5 @@
 .ps
+  padding-right: 8px
   &:hover
     // .ps__rail-y
     //   opacity: 1 !important
@@ -7,7 +8,7 @@
     background-color: transparent
     width: 6px
     &:hover
-      background-color: transparent
+      background-color: transparent !important
     +before
       position: absolute
       height: 100%
@@ -21,4 +22,7 @@
     width: 100% !important
     left: 0
     border-radius: 0
-    background-color: $gray-dark !important
+    background-color: $gray-dark
+    +tr(background-color .3s)
+    &:hover
+      background-color: $gray-light !important

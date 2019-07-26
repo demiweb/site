@@ -49,7 +49,7 @@ sectionLaptop: {
 і контактними даними. Після того, як сайт готовий, ви отримуєте <br> повністю редагований ресурс, де ви самі можете <br>
 змінювати інформацію.',
     word: 'web site',
-    innerMod:'title-block__inner-50'
+    innerMod: 'title-block__inner-50'
   },
   img: 'preview-img-2.jpg'
 }
@@ -162,6 +162,10 @@ features: [
   {% include "partials/services/_s-hero.html" %}
   {% include "partials/services/_s-features.html" %}
   {% include "partials/sections/_s-order-bg.html" %}
+
+  {% import "./data/_questions.html" as questions %}
+  {% set questions = questions.questions %}
+  
   {% include "partials/services/_s-faq.html" %}
   {% include "partials/sections/_s-portfolio.html" %}
   {% include "partials/services/_s-features-circle.html" %}

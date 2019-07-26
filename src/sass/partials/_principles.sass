@@ -67,9 +67,72 @@
       +md
         display: none
 
+  &--two-col
+    position: relative
+    +before
+      position: absolute
+      height: 1px
+      background-color: $white
+      bottom: 0px
+      left: 0
+      right: 0
+      z-index: 2
+    .principle
+      padding-top: 40px
+      padding-bottom: 40px
+      +hover
+        color: $white
+        .underlined
+          +before
+            transform: translate(0, 0)
+        .principle__arrow
+          color: $white
+          .icon
+            transform: translate(15px, 0)
+        .principle__text
+          color: $white
+        .principle__nmb
+          color: $white
+        .principle__bg
+          opacity: 1
+          visibility: visible
+
+      +md
+        padding-top: 30px
+        padding-bottom: 30px
+      +sm
+        padding-top: 20px
+        padding-bottom: 20px
+      +xs
+        padding-top: 15px
+        padding-bottom: 15px      
+      &__wrap
+        width: 50%
+        border-right: 1px dashed $c-border
+        border-bottom: 1px dashed $c-border
+        margin-bottom: 0
+        +xss
+          width: 100%
+          border-right-color: transparent
+        &:nth-child(even)
+          border-right-color: transparent
+      &__text
+        margin-bottom: 25px
+        +md
+          margin-bottom: 15px
+        +sm
+          margin-bottom: 10px
+
+  &--two-col-simple
+    .principle
+      &__wrap
+        width: 50%
+
 .principle
+  $this: &
   padding-left: 10%
   padding-right: 10px
+  display: block
   opacity: 0
   +sm
     padding-left: 0
@@ -80,6 +143,12 @@
     margin-bottom: 50px
     position: relative
     z-index: 1
+    &:nth-child(odd)
+      #{$this}__bg
+        left: auto
+        right: -15px
+    &:nth-child(even)
+
     +xl
       margin-bottom: 40px
     +md
@@ -93,17 +162,45 @@
       width: 100%
   &__title
     margin-bottom: 20px
+    display: block
+    +tr(color .3s)
     +lg
       margin-bottom: 15px
     +md
       margin-bottom: 10px
   &__nmb
     margin-bottom: 20px
+    display: block
+    +tr(color .3s)
     +lg
       margin-bottom: 15px
     +md
       margin-bottom: 10px
   &__text
+    display: block
+    +tr(color .3s)
     +xl
       br
         display: none
+  &__arrow
+    color: $gray-light
+    +tr(color .3s)
+    .icon
+      font-size: 8px
+      +tr(transform .3s)
+  &__inner
+    display: block
+    position: relative
+    z-index: 1
+  &__bg
+    position: absolute
+    +cover
+    z-index: 0
+    top: 0
+    bottom: 0
+    display: block
+    left: -15px
+    width: 50vw
+    opacity: 0
+    visibility: hidden
+    +tr(opacity .5s, visibility .5s)

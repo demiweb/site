@@ -1,0 +1,119 @@
+---
+title: services-branding
+page: services-branding
+mainClass: page-services-branding
+hero: {
+  modifications: {
+    section: 'hero--content'
+  },
+  title: '<strong class="glitch" data-text="branding">branding</strong>',
+  text: 'Ми розробляємо фірмовий стиль, айдентику, лого та інше. Працюємо для людей та бізнесу, які хочуть виділятися серед конкурентів.
+Робимо вас впізнаваними та популярними.',
+  bgImage: 'bg-hero-services-branding.jpg',
+  btns: {
+    yellow: 'замовити консультацію',
+    white: 'наші послуги'
+  },
+  breadcrumbs: {
+    list: [
+      { link: 'Головна' },
+      { item: '-' },
+      { link: 'послуги' },
+      { item: '-' },
+      { link: 'Branding',  modLink: 'is-active' }
+    ]
+  },
+  scrollToTarget: 'principles'
+}
+
+sectionFeatures: {
+  imgRight: 'features-4.png',
+  titleBlock: {
+    title: '<small>ми знаємо, що таке</small> впізнаваний branding',
+    text: 'впізнаваний branding',
+    titleMod: 'glitch--bottom glitch--xs-none',
+    word: 'instruments'
+  }
+}
+
+sectionPrinciples: {
+  scrollTarget: true,
+  titleBlock: {
+    subttl: 'ми знаємо, як виділятися серед інших',
+    title: '<small>ми робимо так,</small> щоб ваш бізнес <small>впізнавали</small>',
+    titleMod: 'glitch--bottom',
+    text: '',
+    word: 'success'
+  }
+}
+
+principles: {
+  mod: 'principles--two-col',
+  link: true,
+  list: [
+    {
+      nmb: '01/',
+      title: 'Брендбук та фірмовий стиль',
+      text: 'Фірмовий стиль - це те, що зробить ваш бренд найвпізнаванішим брендом в Україні або, навіть, у світі. '
+    },
+    {
+      nmb: '02/',
+      title: 'Логотип та неймінг',
+     text: 'Саме логотипу мають бути вдячні такі компанії, як: CocaCola та Apple. Адже їх впізнають з першого погляду, як будуть впізнавати і вас.'
+    },
+    {
+      nmb: '03/',
+      title: 'Білборди',
+      text: 'А ви б хотіли, щоб про вас дізналася вся Україна? Тоді білборд - це те, що вам потрібно, адже розмір 3x6м. точно не залишить вас без уваги.'
+    },
+    {
+      nmb: '04/',
+      title: 'Брендування торгівельної точки',
+      text: 'Що зробить вашу торгівельну точну впізнаванішою за інші? Якісно та професійно пророблений дизайн зовнішнього вигляду приміщення.'
+    }
+  ]
+}
+features: [
+  {
+    icon: 'project-management',
+    title: '<span class="underlined"><span>Продумуємо концепцію</span></span>',
+    text: 'Перед початком створення вашого нового логотипу,
+банера чи фірмового стилю, ми обов’язково
+продумуємо, для кого він створюється
+та якій меті буде служити.'
+  },
+  {
+    icon: 'paint',
+    title: '<span class="underlined"><span>Створюємо дизайн</span></span>',
+    text: 'Добре продуманий та спланований дизайн, 
+який відповідає останнім трендам, точно 
+зробить вашу компанію найпопулярнішою.'
+  },
+  {
+    icon: 'research',
+    title: '<span class="underlined"><span>Проробляємо до дрібниць</span></span>',
+    text: 'Ми перфікціоністи своєї справи, тому завжди
+до найменших дрібниць проробляємо
+дизайн-макет і не залишаємо недоліків
+та питань до своєї роботи.'
+  },
+  {
+    icon: '3d-design',
+    title: <span class="underlined"><span>Презентуємо та моделюємо</span></span>,
+    text: 'Нам важливо, щоб ви побачили, як ваш новий дизайн
+буде виглядати у реальному світі, тому ми завжди
+моделюємо на живих прикладах усе, що
+малюємо у цифровому варіанті.'
+  }
+]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}  
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-principles.html" %}  
+  {% include "partials/sections/_s-order-bg.html" %}
+  
+  {% include "partials/services/_s-features.html" %}
+  {% include "partials/sections/_s-order.html" %}
+{% endblock %}

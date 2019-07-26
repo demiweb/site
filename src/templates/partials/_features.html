@@ -1,5 +1,5 @@
 <!-- begin features -->
-<div class="features js-stagger">
+<div class="features js-stagger{% if featuresMod %} {{ featuresMod}}{% endif %}">
   {% for i in features %}
   <div class="feature__wrap">
     <!-- begin feature -->

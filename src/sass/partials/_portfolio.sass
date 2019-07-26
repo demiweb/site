@@ -1,8 +1,42 @@
+.portfolio
+  &--reverse
+    .portfolio-item
+      $this: &
+      &:nth-child(odd)
+        color: inherit
+        background-color: $white
+        .link-arrow
+          color: inherit
+          .icon
+            fill: $gray-light
+        #{$this}__subttl
+          color: inherit
+        #{$this}__nmb
+          color: inherit
+      &:nth-child(even)
+        color: $white
+        background-color: $black-lighten
+        .link-arrow
+          color: $gray
+          .icon
+            fill: $white
+        #{$this}__subttl
+          color: $gray-dark
+        #{$this}__nmb
+          color: $gray-dark
+  &--short
+    .portfolio-item
+      &__content
+        height: auto
+        min-height: 60vh
+        +xs
+          min-height: 0
+
 .portfolio-item
   $this: &
   $transition-time: .5s
   position: relative
-  // transform: scaleX(0)
+  background-color: $white
   +tr(transform $transition-time)
   &:nth-child(odd)
     color: $white
@@ -61,6 +95,7 @@
       height: auto
       padding-top: 25px
       padding-bottom: 25px
+      padding-right: 0      
   &__img
     +cover
     +coverdiv
@@ -82,6 +117,16 @@
       bottom: 0
       left: 50%
       transform: translate(-50%, 0)
+  &__logo-own
+    background-color: $black
+    +before
+      width: 17%
+      height: 25%
+      bottom: 0
+      right: 0
+      position: absolute
+      background-color: $yellow
+      z-index: 0
   &__subttl
     margin-bottom: 40px
     color: $gray-light

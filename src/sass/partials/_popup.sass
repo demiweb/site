@@ -12,12 +12,14 @@
   +vertical
   visibility: hidden
   opacity: 0
-  // +tr(opacity .3s, visibility .3s)
+  +ready
+    +tr(opacity .3s, visibility .3s)
   &.is-active
     visibility: visible
     opacity: 1
     #{$this}__inner
-      transform: scale(1)
+      opacity: 1
+      transform: translate(0, 0)
   &__inner
     display: inline-block
     position: relative
@@ -27,8 +29,11 @@
     width: 100%
     max-width: 450px
     padding: 55px 30px
-    transform: scale(0)
-    // +tr(transform .3s)
+    // transform: scale(0)
+    opacity: 0
+    transform: translate(0, 30px)
+    +ready
+      +tr(transform .8s, opacity .8s)
     +md
       padding: 30px 20px
     +sm

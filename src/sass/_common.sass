@@ -18,6 +18,21 @@ input, textarea
     font-family: inherit
     font-size: inherit
 
+=scrollbar($background: $black)
+
+  &::-webkit-scrollbar
+    width: 6px
+  &::-webkit-scrollbar-track
+    background-color: $gray-dark
+    box-shadow: inset 2px 0 0px $background, inset -2px 0 0px $background
+    outline: none
+  &::-webkit-scrollbar-thumb
+    background-color: $gray-dark
+    +tr(background-color .3s)
+    +hover
+      background-color: $gray-light
+
+
 .icon
   display: inline-block
   fill: currentColor
@@ -154,9 +169,10 @@ input, textarea
 .scrolled-text
   font-size: 10px
   max-height: 460px
-  overflow: hidden
+  overflow: auto
   position: relative
-  padding-right: 8px  
+  // padding-right: 8px
+  +scrollbar
   h1, h2, h3, h4, h5, h6
     margin-bottom: 25px
     +lg

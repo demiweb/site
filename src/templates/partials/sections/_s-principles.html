@@ -1,15 +1,16 @@
 <!-- begin section -->
-<section class="section s-principles pt-sml pb-mdl overflow-hidden">
+<section class="section s-principles pt-sml pb-mdl overflow-hidden" {% if sectionPrinciples.scrollTarget %}data-scroll-to-target="principles"{% endif %}>
   <div class="section__title-block s-principles__title-block">
-    {{ mixins.titleBlock(
-      subttl = 'ми завжди керуємося',
-      title = '<small>єдиними та непохитними</small> принципами роботи',
-      titleMod = 'glitch--bottom',
-      text = 'принципами роботи',
-      par = 'Ніякі договори та контракти не гарантують вам вдалої співпраці.<br> Тільки, якщо у компанії є свої власні норми та правила, <br>
-      виковані роками — ви можете бути впевнені у результаті.',
-      word = 'principles'
-    ) }}
+    {% if sectionPrinciples.titleBlock %}
+      {{ mixins.titleBlock(
+        subttl = sectionPrinciples.titleBlock.subttl | safe,
+        title = sectionPrinciples.titleBlock.title | safe,
+        titleMod = sectionPrinciples.titleBlock.titleMod,
+        text = sectionPrinciples.titleBlock.text,
+        par = sectionPrinciples.titleBlock.par | safe,
+        word = sectionPrinciples.titleBlock.word
+      ) }}
+    {% endif %}
   </div>
 
   <div class="container">

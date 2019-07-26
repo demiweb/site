@@ -8,7 +8,7 @@
 {%set
 form = [
   { name: 'input', type: 'text', placeholder: 'Введіть ваше ім’я', icon: mixins.icon('man-user', false), mod: 'input--has-icon', fieldClass: 'js-input' },
-  { name: 'input', type: 'tel', placeholder: 'tel', icon: mixins.icon('man-user', false), mod: 'input--has-icon', fieldClass: 'js-input' },
+  { name: 'input', type: 'tel', placeholder: 'tel', icon: mixins.icon('man-user', false), mod: 'input--has-icon', fieldClass: 'js-input js-mask', fieldAttributes: { 'data-mask-input': 'phone' } },
   { name: 'textarea', type: '', placeholder: 'Коротко опишіть ваше питання', icon: mixins.icon('pencil-edit-button', false), mod: 'textarea--has-icon', fieldClass: 'js-textarea js-input' }
 ]
 %}
@@ -36,7 +36,8 @@ form = [
             placeholder = i.placeholder,
             value = '',
             fieldClass = i.fieldClass,
-            label = { first: i.icon }
+            label = { first: i.icon },
+            fieldAttributes = i.fieldAttributes
           ) }}
         </div>
         {% endfor %}

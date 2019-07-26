@@ -1,0 +1,47 @@
+<!-- begin section -->
+<section class="section s-features overflow-hidden pt-sml pb-lg">
+  {% if sectionPrinciplesImg.titleBlock %}
+    <div class="section__title-block">
+      {{ mixins.titleBlock(
+        subttl = sectionPrinciplesImg.titleBlock.subttl | safe,
+        title = sectionPrinciplesImg.titleBlock.title | safe,
+        text = sectionPrinciplesImg.titleBlock.text,
+        titleMod = sectionPrinciplesImg.titleBlock.titleMod,
+        word = sectionPrinciplesImg.titleBlock.word
+      ) }}
+    </div>
+  {% endif %}
+
+  <div class="container">
+    <div class="s-features__inner">
+      {% if sectionPrinciplesImg.img %}
+      <div class="s-features__img section--img__img section--img__img-left">
+        <div class="section-img section-img--reverse">
+          <div class="section-img__inner overlayed js-anim-el" data-anim-name="overlayedLeft">
+            <div class="section-img__img js-lazy js-anim-el" data-anim-name="fadeIn" data-anim-duration="1.5s" data-background-image="img/services/{{ sectionPrinciplesImg.img }}"></div>
+          </div>          
+        </div>
+      </div>
+
+      <div class="s-features__content">
+        {% include "partials/_principles.html" %}
+      </div>
+      
+      {% elseif sectionPrinciplesImg.imgRight %}
+
+      <div class="s-features__content">
+        {% include "partials/_principles.html" %}
+      </div>
+      
+      <div class="s-features__img section--img__img">
+        <img data-src="img/services/{{ sectionPrinciplesImg.imgRight }}" alt="" class="js-lazy animated-img">
+      </div>      
+
+      {% else %}
+
+      {% include "partials/_principles.html" %}
+      {% endif %}
+    </div>
+  </div>
+</section>
+<!-- end section -->

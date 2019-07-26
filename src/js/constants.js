@@ -17,7 +17,8 @@ export const {
   ERROR,
   HASTEXT,
   VALID,
-  FIXED
+  FIXED,
+  READY
 } = {
   $DOC: $(document),
   $WIN: $(window),
@@ -37,5 +38,6 @@ export const {
   ERROR: 'has-error',
   HASTEXT: 'has-text',
   VALID: 'is-valid',
-  FIXED: 'is-fixed'
+  FIXED: 'is-fixed',
+  READY: 'is-ready'
 };

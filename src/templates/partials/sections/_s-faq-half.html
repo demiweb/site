@@ -1,0 +1,25 @@
+<!-- begin section -->
+<section class="section section--img pt-sml pb-md">
+  <div class="container">
+    <div class="section--img__inner">
+      <div class="section--img__content">
+        <!-- begin title-block -->
+        <div class="title-block title-block--no-container">
+          <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRightShort"></div>
+
+          <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
+            <div class="title glitch glitch--bottom" data-text="{{ sectionLaptop.titleBlock.text }}">{{ sectionLaptop.titleBlock.title | safe }}</div>
+          </div>
+
+          <div class="title-block__text js-anim-el" data-anim-name="fadeInBottomSm">{{ sectionLaptop.titleBlock.par | safe }}</div>
+        </div>
+        <!-- end title-block -->
+      </div>
+
+      <div class="section--img__img">
+        {% include "partials/_faq.html" %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

@@ -3,6 +3,25 @@
   {% for i in principles.list %}
   <!-- begin principle -->
   <div class="principle__wrap">
+    {% if principles.link %}
+    <a href="#" class="principle js-stagger-el">
+      <span class="principle__bg js-lazy" data-background-image="img/bg-principle.jpg"></span>
+      
+      <span class="principle__inner">
+        <span class="principle__nmb text--gray-light">{{ i.nmb | safe }}</span>
+
+        <span class="principle__title h4 h4--ttn h4--bold">
+          <span class="underlined underlined--hover"><span>{{ i.title | safe }}</span></span>
+        </span>
+
+        <span class="principle__text text--gray-light">{{ i.text | safe }}</span>
+
+        <span class="principle__arrow">
+          {{ mixins.icon('arrow-long') }}
+        </span>
+      </span>
+    </a>
+    {% else %}
     <div class="principle js-stagger-el">
       <div class="principle__nmb text--gray-light">{{ i.nmb | safe }}</div>
 
@@ -10,6 +29,7 @@
 
       <div class="principle__text text--gray-light">{{ i.text | safe }}</div>
     </div>
+    {% endif %}
   </div>
   <!-- end principle -->  
   {% endfor %}

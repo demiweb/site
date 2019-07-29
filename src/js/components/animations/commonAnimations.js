@@ -1,5 +1,4 @@
 import BlockAnimator from './BlockAnimator';
-// import PageAnimator from './PageAnimator';
 import { TimelineLite } from 'gsap';
 import { isInView } from '../../helpers';
 import { ANIMATE } from '../../constants';
@@ -40,6 +39,7 @@ export function animateHero() {
     letterWrap,
     letter,
     letterShadow,
+    splitText,
     heroContent,
     heroSubttl,
     heroTitle,
@@ -48,12 +48,14 @@ export function animateHero() {
     text,
     breadcrumbs,
     heroBtns,
-    heroMeta
+    heroMeta,
+    heroNav
   } = {
     header: document.querySelector('.header'),
     letterWrap: document.querySelector('.hero__img'),
     letter: document.querySelector('.hero__img .icon-D'),
     letterShadow: document.querySelector('.hero__img .letter-shadow'),
+    splitText: document.querySelectorAll('.hero__img .letter'),
     heroContent: document.querySelector('.hero__content'),
     heroSubttl: document.querySelector('.hero__subttl'),
     heroTitle: document.querySelector('.hero__title'),
@@ -62,7 +64,8 @@ export function animateHero() {
     text: document.querySelector('.hero__text'),
     breadcrumbs: document.querySelector('.breadcrumbs'),
     heroBtns: document.querySelectorAll('.hero__btn'),
-    heroMeta: document.querySelectorAll('.hero__blog-meta')
+    heroMeta: document.querySelectorAll('.hero__blog-meta'),
+    heroNav: document.querySelectorAll('.hero__nav .nav li')
   };
 
   const tl = new TimelineLite();
@@ -77,7 +80,9 @@ export function animateHero() {
         { opacity: 1 }
       )
       .call(() => {
-        letter.classList.add(ANIMATE);
+        if (letter.classList) {
+          letter.classList.add(ANIMATE);
+        };        
       })
       .fromTo(
         letterShadow,
@@ -90,6 +95,50 @@ export function animateHero() {
         0.5,
         { x: '-100%' },
         { x: '0%' }
+      );
+  };
+  if (splitText.length > 0 && window.matchMedia('(min-width: 768px)').matches) {
+    tl
+      .fromTo(
+        letterWrap,
+        1,
+        { opacity: 0 },
+        { opacity: 1 }
+      )
+      .staggerFromTo(
+        splitText,
+        0.7,
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0 },
+        0.1
+      )
+      .fromTo(
+        letterWrap,
+        0.5,
+        { x: '-100%' },
+        { x: '0%' }
+      );
+  };
+  if (splitText.length > 0 && window.matchMedia('(max-width: 767px)').matches) {
+    tl
+      .fromTo(
+        letterWrap,
+        0,
+        { x: '-100%' },
+        { x: '0%' }
+      )
+      .fromTo(
+        letterWrap,
+        1,
+        { opacity: 0 },
+        { opacity: 1 }
+      )
+      .staggerFromTo(
+        splitText,
+        0.7,
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0 },
+        0.1
       );
   };
   // ============= end CONDITION timeline =============
@@ -183,6 +232,17 @@ export function animateHero() {
       0.5,
       { opacity: 0, y: 30 },
       { opacity: 1, y: 0 }
+    );
+  };
+
+  if (heroNav.length > 0) {
+    tl.staggerFromTo(
+      heroNav,
+      0.5,
+      { opacity: 0, y: 15 },
+      { opacity: 1, y: 0 },
+      0.1,
+      '-=.3'
     );
   };
   // ============= end CONDITION timeline =============

@@ -1,7 +1,9 @@
-import { ACTIVE } from '../../constants';
+import { ACTIVE, ANIMATE, VISIBLE } from '../../constants';
 import { getObjectValues } from '../../helpers';
 import Animator from './Animator';
 import { debounce } from 'throttle-debounce';
+import BlockAnimator from '../../components/animations/BlockAnimator';
+import { TimelineLite } from 'gsap';
 
 class Slider {
   constructor(wrap) {
@@ -87,5 +89,41 @@ export default function setCustomSlider() {
     const mySlider = new Slider(slider);
     mySlider.init();    
   });
-  
+
+  // animate slider
+  const slider = document.querySelector('.js-anim-in-vieport-with-gsap.testimonials-slider__wrap');
+
+  if(slider) {
+    const blockAnimator = new BlockAnimator(slider, {
+      observer: {
+        threshold: 0.4
+      }
+    });
+    blockAnimator.animate = (entry, observer) => {
+      const img = entry.target.querySelector('.testimonial__img');
+      const imgCover = entry.target.querySelector('.testimonials-slider__img-cover');
+      const IMG_ANIM_DURATION = 500;
+
+      const tl = new TimelineLite({
+        onComplete: () => {
+          observer.unobserve(entry.target);
+        }
+      });
+
+      tl        
+        .call(() => {
+          imgCover.classList.add(ANIMATE);
+          setTimeout(() => {
+            imgCover.classList.remove(ANIMATE);
+            imgCover.classList.add('is-finishing-animate');
+            entry.target.classList.add(VISIBLE);
+
+            setTimeout(() => {
+              imgCover.classList.remove('is-finishing-animate');              
+            }, IMG_ANIM_DURATION);
+          }, IMG_ANIM_DURATION);
+        });
+    };
+    blockAnimator.init();
+  };  
 };

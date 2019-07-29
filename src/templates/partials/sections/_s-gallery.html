@@ -1,14 +1,26 @@
 <!-- begin section -->
 <section class="section s-gallery pt-md pb-lg overflow-hidden">
+
   <div class="section__title-block s-gallery__title-block">
-    {{ mixins.titleBlock(
-      title = '<small>у нашій власній</small> фотогалереї',
-      titleMod = 'glitch--bottom',
-      text = 'фотогалереї',
-      subttl = 'ми завжди відкриті до вас і показуємо це',
-      word = 'Gallery',
-      wordMod = 'word--sm'
+    {% if sectionGallery.titleBlock %}
+      {{ mixins.titleBlock(
+        mod = sectionGallery.titleBlock.mod,
+        title = sectionGallery.titleBlock.title,
+        text = sectionGallery.titleBlock.text,
+        word = sectionGallery.titleBlock.word,
+        wordMod = sectionGallery.titleBlock.wordMod,
+        subttl = sectionGallery.titleBlock.subttl
     ) }}
+      {% else %}
+      {{ mixins.titleBlock(
+        title = '<small>у нашій власній</small> фотогалереї',
+        titleMod = 'glitch--bottom',
+        text = 'фотогалереї',
+        subttl = 'ми завжди відкриті до вас і показуємо це',
+        word = 'Gallery',
+        wordMod = 'word--sm'
+      ) }}
+    {% endif %}
   </div>
 
   <div class="section__gallery s-gallery__gallery">

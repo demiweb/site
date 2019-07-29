@@ -7,7 +7,9 @@
         title = sectionFeatures.titleBlock.title | safe,
         text = sectionFeatures.titleBlock.text,
         titleMod = sectionFeatures.titleBlock.titleMod,
-        word = sectionFeatures.titleBlock.word
+        word = sectionFeatures.titleBlock.word,
+        wordMod = sectionFeatures.titleBlock.wordMod,
+        par = sectionFeatures.titleBlock.par | safe
       ) }}
     </div>
   {% endif %}
@@ -19,7 +21,7 @@
         <div class="section-img">
           <div class="section-img__inner overlayed js-anim-el" data-anim-name="overlayedLeft">
             <div class="section-img__img js-lazy js-anim-el" data-anim-name="fadeIn" data-anim-duration="1.5s" data-background-image="img/services/{{ sectionFeatures.img }}"></div>
-          </div>          
+          </div>
         </div>
       </div>
 
@@ -33,9 +35,21 @@
         {% include "partials/_features.html" %}
       </div>
       
-      <div class="s-features__img section--img__img">
-        <img data-src="img/services/{{ sectionFeatures.imgRight }}" alt="" class="js-lazy animated-img">
-      </div>      
+      {% if sectionFeatures.imgRightSquare %}
+        <div class="s-features__img section--img__img">
+          <div class="section-img section-img--reverse">
+            <div class="section-img__inner overlayed js-anim-el" data-anim-name="overlayedLeft">
+              <div class="section-img__img js-lazy js-anim-el" data-anim-name="fadeIn" data-anim-duration="1.5s" data-background-image="img/services/{{ sectionFeatures.imgRight }}"></div>
+            </div>
+          </div>
+        </div>
+        
+        {% else %}     
+
+        <div class="s-features__img section--img__img">
+          <img data-src="img/services/{{ sectionFeatures.imgRight }}" alt="" class="js-lazy animated-img">
+        </div>
+      {% endif %} 
 
       {% else %}
 

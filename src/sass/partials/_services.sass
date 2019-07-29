@@ -37,7 +37,18 @@
     position: relative
     z-index: 1
     +flex(space-between, center)
-
+    +xss
+      flex-wrap: wrap
+  &__price
+    display: block
+    margin-left: 15px
+    margin-right: 15px
+    +xs
+      width: 100%
+      padding-top: 15px
+      margin-left: 0
+      margin-right: 0
+      order: 2
   &__title
     margin-bottom: 30px
     display: block
@@ -49,9 +60,14 @@
     max-width: 590px
     display: block
     padding-right: 10px
+    +xss
+      width: 80%
   &__link
     display: block    
     +tr(transform .3s)
+    +xss
+      width: 20%
+      text-align: right
     .icon
       font-size: $fz-arrow
       +tr(transform .3s)
@@ -66,7 +82,61 @@
     background-color: $white
     color: $black
     border-bottom-color: transparent
+    .title
+      +tr(color 0s)
     +before
       background-color: $purple-dark
     +hover
       color: $white
+
+.service-item-lg
+  color: $gray-light
+  +cover
+  +flex(center, normal, column)
+  min-height: 60vh
+  position: relative
+  padding-left: percentage(80/705)
+  padding-left: 15px
+  +hover
+    color: $white
+    +before
+      opacity: 1
+    .link-arrow
+      .icon
+        transform: translate(15px, 0)
+    .underlined
+      +before
+        transform: translate(0, 0)
+  +before
+    +coverdiv
+    background-color: $purple-dark
+    z-index: 0
+    opacity: .7
+    +tr(opacity .3s, visibility .3s)
+  +xs
+    padding-left: 10px
+    padding-right: 10px
+
+  &__content
+    position: relative
+    z-index: 1
+    display: block
+  &__nmb
+    margin-bottom: 15px
+    display: block
+    +md
+      margin-bottom: 10px
+  &__title,
+  &__text
+    margin-bottom: 25px
+    display: block
+    +md
+      margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+  &__title
+    color: $white
+  &__text
+    +tr(color .3s)
+  &__arrow
+    display: block

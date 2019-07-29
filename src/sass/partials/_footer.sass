@@ -23,8 +23,12 @@
   &__inner
     +flex(flex-start, center)
     opacity: 0
+    height: $footer-height
+    +sm
+      height: $footer-height-sm
     +xs
       display: block
+      height: auto
   &__meta
     flex-grow: 1
     text-transform: uppercase

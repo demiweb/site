@@ -115,12 +115,15 @@ input, textarea
   z-index: 0
   opacity: 0
   &__inner
-    -webkit-text-fill-color: transparent
-    -webkit-background-clip: text
-    +image('black-pattern.png')
-    background-repeat: repeat
-    background-size: auto
-    color: $gray-lighten
+    html:not(.is-ie) &
+      -webkit-text-fill-color: transparent
+      -webkit-background-clip: text
+      +image('black-pattern.png')
+      background-repeat: repeat
+      background-size: auto
+      color: $gray-lighten
+    .is-ie &
+      opacity: .1
 
   &--sm
     +css-lock(70, 170, 320, 1499, font-size)
@@ -193,13 +196,14 @@ input, textarea
       margin-bottom: 10px
 
 .overlayed
-  position: relative
-  overflow: hidden
-  +before
-    +coverdiv
-    z-index: 2
-    background-color: $yellow
-    transform: translate(-100%, 0)
+  html:not(.is-ie)
+    position: relative
+    overflow: hidden
+    +before
+      +coverdiv
+      z-index: 2
+      background-color: $yellow
+      transform: translate(-100%, 0)
 
 .recommend
   +flex(flex-start, normal, row, wrap)
@@ -350,8 +354,28 @@ input, textarea
     overflow: hidden
     display: inline-block
     +before
-      transform: translate(-100%, 0)
+      transform: translate(-101%, 0)
       +tr(transform .3s)
     +hover
       +before
         transform: translate(0, 0)
+.price
+  @extend .title
+  small
+    font-size: .3em
+    text-transform: none
+  &--sm
+    +css-lock(18, 24, 320, 1499, font-size)
+    small
+      font-size: .58em
+
+.error-nmb
+  text-transform: uppercase
+  +bold
+  color: $yellow
+  +css-lock(100, 284, 320, 1499, font-size)
+  line-height: .75
+
+.letter
+  display: inline-block
+  min-width: .5em

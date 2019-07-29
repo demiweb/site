@@ -1,34 +1,54 @@
-{%set
-gallery = [
-  { img: 'img/gallery/1.jpg', title: 'Офісні будні', date: '26.06.2019' },
-  { img: 'img/testimonials/28-reviews_1.jpg', title: 'Офісні будні', date: '26.06.2019' },
-  { img: 'img/gallery/1.jpg', title: 'Офісні будні', date: '26.06.2019' },
-  { img: 'img/testimonials/28-reviews_1.jpg', title: 'Офісні будні', date: '26.06.2019' },
-  { img: 'img/gallery/1.jpg', title: 'Офісні будні', date: '26.06.2019' }
-]
-%}
 
 <!-- begin gallery -->
-<div class="gallery js-gallery js-anim-in-vieport-with-gsap">  
+<div class="gallery{% if gallery.mod %} {{ gallery.mod }}{% endif %} js-gallery js-anim-in-vieport-with-gsap">  
 
   <div class="gallery__inner">
     <div class="gallery__square gallery-cover"></div>
 
     
     <div class="gallery__img-wrap  js-lightgallery">
-      {% for i in gallery %}
-      <a
-        class="gallery__img gallery-img js-lazy"
-        href="{{ i.img }}"        
-        data-exthumbimage="{{ i.img }}"
-        data-background-image="{{ i.img }}">
-        <div class="gallery__caption">
-          <div class="gallery__title h4 h4--ttn h4--bold">{{ i.title }}</div>
+      {% if gallery.simple %}
+        {% for i in gallery.slides %}
+        <a href="#" class="gallery__img gallery-img js-lazy" data-background-image="{{ i.img }}">
+          <span class="gallery__caption">
+            <span class="gallery__title">
+              <span class="title title--ttn">{{ i.title }}</span>
+            </span>
 
-          <div class="gallery__subttl">{{ i.date }}</div>
-        </div>
-      </a>
-      {% endfor %}   
+            <span class="gallery__subttl">{{ i.subttl }}</span>
+          </span>
+
+          <span class="gallery__meta">
+            <!-- begin gallery-meta -->
+            <span class="gallery-meta">
+              {% for j in i.meta %}
+              <span class="gallery-meta-item">
+                <span class="gallery-meta-item__title">{{ j.title | safe }}</span>
+                <span class="gallery-meta-item__price price price--sm">{{ j.price | safe }}</span>
+              </span>
+              {% endfor %}
+            </span>
+            <!-- end gallery-meta -->
+          </span>
+        </a>
+        {% endfor %}
+
+        {% else %}
+
+        {% for i in gallery.slides %}
+        <a
+          class="gallery__img gallery-img js-lazy"
+          href="{{ i.img }}"
+          data-exthumbimage="{{ i.img }}"
+          data-background-image="{{ i.img }}">
+          <span class="gallery__caption">
+            <span class="gallery__title h4 h4--ttn h4--bold">{{ i.title }}</span>
+
+            <span class="gallery__subttl">{{ i.date }}</span>
+          </span>
+        </a>
+        {% endfor %}
+      {% endif %}
     </div>    
     
     

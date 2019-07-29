@@ -168,3 +168,22 @@
         transform: translate(-100%, 0)
         +tr(transform .3s)
 
+  &--two-cols
+    +bold
+    ul
+      +flex(flex-start, normal, row, wrap)
+    li
+      width: 50%
+      margin-bottom: 10px
+      +notlast
+        margin-right: 0
+    a
+      text-transform: none
+      @extend .underlined
+      @extend .underlined--hover
+      @extend .underlined--sm
+      +before
+        z-index: -1
+      +hover
+        color: inherit
+

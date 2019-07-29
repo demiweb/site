@@ -1,0 +1,72 @@
+<!-- begin hero -->
+<section class="hero hero--single s-order hero--half js-lazy" data-background-image="img/bg-contacts.jpg">
+    <div class="hero__inner">
+      <div class="hero__left">
+          <div class="container">
+            <div class="hero__left-in">
+              <div class="hero__title overlayed">
+                <div class="title">створимо найкращий проект разом?</div>
+              </div>
+
+              <div class="s-order__contacts hero__contacts js-anim-el" data-anim-name="fadeInBottomSm">
+                
+                <!-- begin contacts-list -->
+                <div class="contacts-list">
+                  <div class="contacts-list__item">
+                    <a href="tel:0443338538" class="contacts-list__phone">044 333 8538</a>
+                    <small>(Для існуючих клієнтів)</small>
+                  </div>
+                  <div class="contacts-list__item">
+                    <a href="tel:0800337167" class="contacts-list__phone">0 800 337 167</a>
+                    <small>(Для нових клієнтів)</small>
+                  </div>
+                  <div class="contacts-list__item">
+                    <div class="contacts-list__item-title">Слідкуйте за нами:</div>
+
+                    {{ mixins.list(
+                      name = 'social',
+                      modifications = { wrap: 'social--sm', item: '', link: '' },
+                      list = [
+                        { link: mixins.icon('facebook') },
+                        { link: mixins.icon('instagram') }
+                      ]
+                    ) }}
+                  </div>
+
+                  <div class="contacts-list__item">
+                    <div class="contacts-list__item-title">email:</div>
+                    <a href="mailto:order@demiweb.pro" class="">order@demiweb.pro</a>
+                  </div>
+
+                  <div class="contacts-list__item">
+                    <div class="contacts-list__item-title">адреса:</div>
+                    Київ, вул. Бульвар Марії Приймаченко 1/27, <br> м. Дружби Народів
+                  </div>
+                </div>
+                <!-- end contacts-list -->
+              </div>
+
+              <div class="s-order__btns js-anim-el" data-anim-name="fadeInBottomSm">
+                <div class="s-order__btn">
+                  {{ mixins.btn(
+                    title = 'замовити консультацію',
+                    mod = 'btn--lg btn--full'
+                  ) }}
+                </div>
+                <div class="s-order__btn">
+                  {{ mixins.btn(
+                    title = 'презентація компанії',
+                    mod = 'btn--lg btn--transp-white btn--full'
+                  ) }}
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="hero__right">
+        <iframe class="js-lazy animated-img" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.1913822023826!2d30.538895315895225!3d50.41890579751812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf6b4f1cc763%3A0xe47b95c124ec5102!2z0LHRg9C7LiDQnNCw0YDQuNC4INCf0YDQuNC50LzQsNGH0LXQvdC60L4sIDEvMjcsINCa0LjQtdCyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1564407115521!5m2!1sru!2sua"  frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+</section>
+<!-- end hero -->

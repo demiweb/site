@@ -50,6 +50,13 @@
           width: 100%
     &__img-left
       text-align: left
+  &--two-cols    
+    &__row
+      +flex(flex-start, normal, row, wrap)
+    &__col
+      width: 50%
+      +xss
+        width: 100%
 
 .section-img
   $this: &
@@ -519,3 +526,20 @@
       width: 100%
       // padding-left: 0
       order: 0
+
+.s-error
+  &__content
+    +md
+      width: 50%
+    +sm
+      order: 1
+  &__nmb
+    white-space: nowrap
+    width: 50%
+    margin-right: 0
+    text-align: left
+    +sm
+      width: 100%
+      display: block
+      order: 0
+      margin-bottom: 25px

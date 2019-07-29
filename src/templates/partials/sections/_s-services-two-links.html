@@ -1,0 +1,69 @@
+<!-- begin section -->
+<section class="section section--two-cols pt-lg pb-sm">
+  {% if sectionTwoCols.titleBlock %}
+  <div class="section__title-block">
+    {{ mixins.titleBlock(
+      mod = sectionTwoCols.titleBlock.mod,
+      title = sectionTwoCols.titleBlock.title,
+      text = sectionTwoCols.titleBlock.text,
+      word = sectionTwoCols.titleBlock.word,
+      subttl = sectionTwoCols.titleBlock.subttl
+    ) }}
+  </div>
+  {% endif %}
+
+  <div class="container">
+    <div class="section--two-cols__row">
+      <div class="section--two-cols__col">
+        <!-- begin service-item -->
+        <a href="#" class="service-item-lg js-lazy js-anim-el" data-anim-name="fadeInBottomSm" data-background-image="img/services/link-bg.jpg">
+          <span class="service-item-lg__content">
+            <span class="service-item-lg__nmb">01/</span>
+
+            <span class="service-item-lg__title">
+              <span class="title title--ttn underlined underlined--hover"><span>Seo</span></span>
+            </span>
+
+            <span class="service-item-lg__text">Просуваємо ваш проект у топові позиції
+  Google та Яндекс</span>
+
+            <span class="service-item-lg__arrow">
+              <span class="link-arrow">
+                <span class="link-arrow__arrow">
+                  {{ mixins.icon('arrow-long') }}
+                </span>
+              </span>
+            </span>
+          </span>
+        </a>
+        <!-- end service-item -->
+      </div>
+
+      <div class="section--two-cols__col">
+        <!-- begin service-item -->
+        <a href="#" class="service-item-lg js-lazy js-anim-el" data-anim-name="fadeInBottomSm" data-anim-delay="0.2s" data-background-image="img/services/link-bg.jpg">
+          <span class="service-item-lg__content">
+            <span class="service-item-lg__nmb">01/</span>
+
+            <span class="service-item-lg__title">
+              <span class="title title--ttn underlined underlined--hover"><span>AdWords</span></span>
+            </span>
+
+            <span class="service-item-lg__text">Максимальна віддача від кожного 
+  переходу на сайт</span>
+
+            <span class="service-item-lg__arrow">
+              <span class="link-arrow">
+                <span class="link-arrow__arrow">
+                  {{ mixins.icon('arrow-long') }}
+                </span>
+              </span>
+            </span>
+          </span>
+        </a>
+        <!-- end service-item -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

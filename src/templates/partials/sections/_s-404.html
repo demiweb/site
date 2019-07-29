@@ -1,0 +1,37 @@
+<!-- begin hero -->
+<section class="hero s-error hero--single">
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__content s-error__content">
+        <div class="hero__title hero__title-mb-sm overlayed">
+          <div class="title">Вибачте!</div>
+        </div>
+
+        <div class="hero__text">
+          <p>Нажаль, такої сторінки не існує.</p>
+          <p>Але ми підготували для вас декілька корисних посилань:</p>
+        </div>
+
+        <div class="hero__nav">
+          {{ mixins.list(
+            name = 'nav',
+            modifications = { wrap: 'nav--two-cols', item: '', link: '' },
+            list = [
+              { link: 'Головна' },
+              { link: 'Про компанію' },
+              { link: 'Послуги' },
+              { link: 'Зв’язок з нами' },
+              { link: 'Проекти' },
+              { link: 'Політика конфеденційності' }
+            ]
+          ) }}
+        </div>
+      </div>
+
+      <div class="s-error__nmb hero__img">
+        <div class="error-nmb js-splitme">404</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end hero -->

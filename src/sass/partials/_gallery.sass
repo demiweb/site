@@ -55,6 +55,8 @@
     padding-top: 40%
     +sm
       padding-top: 50%
+    +xs
+      padding-top: 60%
   &__img-wrap
     +coverdiv
     
@@ -69,6 +71,7 @@
   &__caption
     position: absolute
     bottom: 30px
+    display: block
     left: 30px
     +lg
       bottom: 20px
@@ -81,6 +84,9 @@
       left: 10px
   &__subttl
     color: $gray-light
+    display: block
+  &__title
+    display: block
   &__btns
     position: absolute
     z-index: 3
@@ -100,3 +106,66 @@
   &__prev,
   &__next
     color: $white
+
+  &--slider
+    #{$this}__inner
+      padding-top: 60%
+      +sm
+        padding-top: 60%
+      +xs
+        padding-top: 70%
+      +xss
+        padding-top: 80%
+    #{$this}__caption
+      +vcenter
+      bottom: auto
+      text-align: center
+      +xs
+        position: relative
+        transform: translate(0, 0)
+        left: auto
+        top: auto
+    #{$this}__subttl
+      color: $gray-light-100
+    #{$this}__img
+      +flex(flex-end, normal, column)
+      +before
+        +coverdiv
+        z-index: 0
+        background-color: rgba($black, .4)
+      +xs
+        justify-content: space-around
+    #{$this}__meta
+      display: block
+      position: relative
+      z-index: 1
+      padding-bottom: 3%
+      padding-left: 3%
+      width: 75%
+
+.gallery-meta
+  +flex(flex-start, normal, row)
+  +reg
+  color: $gray-light-100
+  +xs
+    flex-wrap: wrap
+
+.gallery-meta-item
+  display: block
+  +xs
+    width: 50%
+  +notlast
+    margin-right: 3%
+    +md
+      margin-right: 2%
+    +xs
+      margin-right: 0
+  &__subttl
+    display: block
+  &__title
+    display: block
+    margin-bottom: 10px
+  &__price
+    display: block
+    color: $yellow
+    white-space: nowrap

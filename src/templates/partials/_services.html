@@ -14,6 +14,12 @@
             <span class="service-item__text">{{ i.text | safe }}</span>
           </span>
 
+          {% if i.price %}
+          <span class="service-item__price">
+            <span class="price">{{ i.price | safe }}</span>
+          </span>
+          {% endif %}
+
           <span class="service-item__link">{{ mixins.icon('arrow') }}</span>
         </span>
       </span>

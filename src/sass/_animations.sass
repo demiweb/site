@@ -11,11 +11,12 @@
   animation-name: fadeInRightSm
   animation-fill-mode: forwards
 .overlayedLeft
-  animation-name: fadeIn
-  +before
-    animation-name: overlayedLeft
-    animation-fill-mode: forwards
-    animation-duration: 1s
+  html:not(.is-ie)
+    animation-name: fadeIn
+    +before
+      animation-name: overlayedLeft
+      animation-fill-mode: forwards
+      animation-duration: 1s
 .fadeInBottomSm
   animation-name: fadeInBottomSm
 .fadeInTopSm

@@ -15,7 +15,7 @@
   +sm
     margin-top: -$header-height-sm
   &__inner
-    +flex(flex-start, center)
+    +flex(flex-start, center, row, wrap)
     position: relative
     padding-top: $padding-lg
     padding-bottom: $padding-lg
@@ -66,13 +66,14 @@
     .icon
       position: relative
       z-index: 1
-      fill: transparent
-      &.is-animate
-        stroke: $white
-        stroke-width: 5px
-        stroke-dasharray: 15000
-        stroke-dashoffset: 15000
-        animation: logo 1s forwards
+      html:not(.is-ie) &
+        fill: transparent
+        &.is-animate
+          stroke: $white
+          stroke-width: 5px
+          stroke-dasharray: 15000
+          stroke-dashoffset: 15000
+          animation: logo 1s forwards
     .letter-shadow
       &:nth-child(2)
         fill: $white
@@ -96,6 +97,14 @@
     +md
       margin-bottom: 30px
     +sm
+      margin-bottom: 15px
+  &__title-mb-sm
+    margin-bottom: 20px
+    +xl
+      margin-bottom: 20px
+    +lg
+      margin-bottom: 20px
+    +md
       margin-bottom: 15px
   &__subttl
     text-transform: uppercase
@@ -148,6 +157,12 @@
     z-index: 0
     right: 0
     width: percentage(1065/1920)
+  &__nav
+    max-width: 420px
+    li
+      opacity: 0
+  &__contacts
+    max-width: 450px
 
 
   &--content
@@ -195,6 +210,83 @@
     #{$this}__text
       margin-left: auto
       margin-right: auto
+  &--single
+    #{$this}__inner
+      height: auto
+      +sm
+        height: auto
+      +xs
+        height: auto
+        padding-top: 30%
+        padding-bottom: 30%
+  &--half
+    #{$this}__inner
+      display: block
+      padding-top: 0
+      padding-bottom: 0
+      +md
+        padding-bottom: 0
+      +xs
+        padding-bottom: 0
+        padding-top: 20%
+    #{$this}__left
+      height: 100%
+    #{$this}__left-in
+      height: 100%
+      +flex(center, normal, column)
+      min-height: calc(100vh - #{$footer-height})
+      min-height: calc((var(--vh, 1vh) * 100) - #{$footer-height})
+      padding-top: $padding-lg
+      padding-bottom: $padding-lg
+      padding-right: calc(50% + 30px)
+      +xl
+        padding-top: $padding-mdl
+        padding-bottom: $padding-mdl
+        padding-right: calc(50% + 15px)
+      +lg
+        padding-top: $padding-md + 15px
+        padding-bottom: $padding-md + 15px
+      +md
+        display: block
+        margin-bottom: 25px
+        padding-right: 0
+        padding-bottom: 0
+        min-height: 0
+      +sm
+        
+      +xs
+        padding-top: 0
+      .s-order__btns
+        margin-left: -15px
+        margin-right: -15px
+        +xl
+          margin-left: 0
+          margin-right: 0
+      .s-order__btn
+        width: calc(50% - 30px)
+        margin-left: 15px
+        margin-right: 15px
+        +xl
+          width: 100%
+          margin-left: 0
+          margin-right: 0
+      
+    #{$this}__right
+      width: 50%
+      position: absolute
+      z-index: 1
+      right: 0
+      top: $header-height
+      bottom: 0
+      iframe
+        +coverdiv
+      +md
+        position: relative
+        top: auto
+        padding-top: 50%
+        width: 100%
+        margin-left: 0
+        margin-right: 0
 
   @keyframes logo
     0%

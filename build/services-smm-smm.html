@@ -1,0 +1,896 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>services-smm-smm</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" media="all" href="css/app.css" />
+  </head>
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <!-- begin header -->
+      <header class="header js-header">
+        <div class="header__logo">
+          <a href="/" class="logo">
+            <!-- begin icon-logo -->
+            <svg viewBox="0 0 601.14471 139.6992" height="1em" width="4.303em" class="icon icon-logo">
+              <path d="M93.55 83.627V.238h62.899v16.32h-44.673v16.917h39.312v16.32h-39.312v17.512h45.268v16.32H93.55zM173.364 83.627V.238h19.775L215.06 35.5 236.977.238h19.775v83.39h-18.227V29.185l-23.468 35.619h-.476l-23.23-35.261v54.083zM277.6 83.627V.238h18.345v83.39zM338.83 84.222L310.36.238h19.655l17.273 56.466L365.991 0h15.725l18.703 56.704L417.69.238h19.18L408.4 84.222h-15.962l-18.822-54.56-18.823 54.56zM450.451 83.627V.238h62.898v16.32h-44.672v16.917h39.311v16.32h-39.31v17.512h45.267v16.32h-63.494zM530.265 83.627V.238h38.716c9.609 0 16.876 2.463 21.8 7.386 3.813 3.812 5.719 8.618 5.719 14.414 0 7.863-3.654 13.86-10.96 17.988 5.161 1.986 9.054 4.587 11.674 7.803 2.62 3.216 3.93 7.526 3.93 12.925 0 7.466-2.78 13.145-8.338 17.035-5.56 3.892-13.184 5.838-22.872 5.838h-39.669zm17.87-49.676h16.916c8.814 0 13.223-3.017 13.223-9.053 0-2.78-1.034-4.903-3.098-6.373-2.066-1.47-5.044-2.204-8.934-2.204h-18.107zm0 33.594h21.8c8.655 0 12.984-3.098 12.984-9.292 0-6.035-4.527-9.054-13.58-9.054h-21.204zM64.84 12.091C56.58 4.191 45.94.24 32.916.24H.394v50.473h18.345V16.797h14.176c7.464 0 13.52 2.343 18.167 7.028 4.646 4.688 6.968 10.722 6.968 18.108 0 7.466-2.304 13.52-6.909 18.167-4.607 4.645-10.682 6.968-18.226 6.968H18.739v-.173H.394v16.732h32.521c12.944 0 23.567-3.97 31.866-11.912 8.298-7.941 12.45-17.87 12.45-29.782 0-11.99-4.131-21.938-12.39-29.842z" />
+              <g>
+                <path d="M0 139.034V100.25h2.881v38.785zM24.766 139.034V100.25h2.716l26.761 33.744v-33.744h2.77v38.785h-2.16l-27.316-34.463v34.463zM89.26 139.034V102.91H75.741v-2.66h29.92v2.66h-13.52v36.125zM124.389 139.034V100.25h27.593v2.66H127.27v15.237h22.219v2.66H127.27v15.57h24.989v2.659h-27.87zM171.485 139.034V100.25h16.29c4.728 0 8.366 1.275 10.915 3.824 1.958 1.958 2.937 4.396 2.937 7.313 0 3.14-1.035 5.652-3.103 7.536-2.07 1.883-4.82 3.066-8.256 3.546l12.8 16.566h-3.657l-12.356-16.068h-12.689v16.068h-2.881zm2.881-18.672h13.076c3.325 0 6.04-.803 8.145-2.41 2.106-1.607 3.159-3.795 3.159-6.566 0-2.622-.98-4.69-2.937-6.205-1.959-1.515-4.692-2.272-8.2-2.272h-13.243zM221.518 139.034V100.25h2.715l26.761 33.744v-33.744h2.77v38.785h-2.16l-27.316-34.463v34.463zM271.938 139.034l18.063-39.061h2.77l18.064 39.061h-3.159l-4.93-10.86h-22.884l-4.932 10.86zm9.143-13.463h20.445l-10.195-22.44zM339.757 139.034V102.91h-13.52v-2.66h29.92v2.66h-13.519v36.125zM375.273 139.034V100.25h2.881v38.785zM431.844 133.77c-3.658 3.954-8.35 5.93-14.074 5.93-5.726 0-10.398-1.968-14.018-5.902-3.62-3.933-5.43-8.652-5.43-14.156 0-5.467 1.828-10.176 5.485-14.13 3.657-3.952 8.348-5.928 14.074-5.928 5.725 0 10.397 1.967 14.017 5.901 3.62 3.934 5.431 8.653 5.431 14.157 0 5.467-1.829 10.177-5.485 14.128zm-25.792-1.773c3.158 3.4 7.1 5.099 11.83 5.099 4.727 0 8.65-1.68 11.773-5.043 3.12-3.36 4.682-7.498 4.682-12.41 0-4.84-1.58-8.958-4.737-12.357-3.159-3.398-7.102-5.098-11.83-5.098-4.73 0-8.654 1.682-11.774 5.043-3.122 3.361-4.682 7.499-4.682 12.411 0 4.84 1.579 8.958 4.738 12.355zM457.108 139.034V100.25h2.715l26.762 33.744v-33.744h2.77v38.785h-2.16l-27.316-34.463v34.463zM507.529 139.034l18.063-39.061h2.77l18.063 39.061h-3.158l-4.931-10.86h-22.883l-4.932 10.86zm9.143-13.463h20.444l-10.195-22.44zM564.599 139.034V100.25h2.881v36.126h22.772v2.66z" />
+              </g>
+            </svg>
+            <!-- end icon-logo -->
+          </a>
+        </div>
+        <div class="header__phone">
+          <!-- begin header-phone -->
+          <div class="header-phone">
+            <div class="header-phone__inner">
+              <a href="tel:0800337167" class="header-phone__title">0 800 337 167</a>
+              <div class="header-phone__list">
+                <a href="tel:0800337167" class="header-phone__phone">0 800 337 167</a>
+                <a href="tel:0800337167" class="header-phone__phone">0 800 337 167</a>
+              </div>
+            </div>
+            <div class="header-phone__subttl">(Безкоштовно по всій Україні)</div>
+          </div>
+          <!-- end header-phone -->
+        </div>
+        <div class="header__nav">
+          <!-- begin nav -->
+          <nav class="nav">
+            <ul>
+              <li class=" has-dropdown"><a href="#">послуги</a>
+                <!-- begin nav -->
+                <nav class="nav nav--dropdown">
+                  <ul>
+                    <li><a href="#">Web Site development</a></li>
+                    <li><a href="#">Seo + Adwords</a></li>
+                    <li><a href="#">Branding</a></li>
+                    <li><a href="#">Smm</a></li>
+                  </ul>
+                </nav>
+                <!-- end nav -->
+              </li>
+              <li><a href="#">проекти</a></li>
+              <li><a href="#">про компанію</a></li>
+              <li><a href="#">зв’язок з нами</a></li>
+            </ul>
+          </nav>
+          <!-- end nav -->
+          <a href="#" class="header__nav-close js-menu-close"></a>
+        </div>
+        <div class="header__burger">
+          <a href="#" class="burger js-burger"><span></span></a>
+        </div>
+      </header>
+      <!-- end header -->
+      <!-- begin menu -->
+      <div class="menu js-menu">
+        <div class="menu__content js-scrollbar">
+          <div class="menu__word word word--purple">
+            <div class="word__inner">menu</div>
+          </div>
+          <div class="container">
+            <div class="menu__inner">
+              <div class="menu__top">
+                <div class="menu__logo">
+                  <a href="/" class="logo">
+                    <!-- begin icon-logo -->
+                    <svg viewBox="0 0 601.14471 139.6992" height="1em" width="4.303em" class="icon icon-logo">
+                      <path d="M93.55 83.627V.238h62.899v16.32h-44.673v16.917h39.312v16.32h-39.312v17.512h45.268v16.32H93.55zM173.364 83.627V.238h19.775L215.06 35.5 236.977.238h19.775v83.39h-18.227V29.185l-23.468 35.619h-.476l-23.23-35.261v54.083zM277.6 83.627V.238h18.345v83.39zM338.83 84.222L310.36.238h19.655l17.273 56.466L365.991 0h15.725l18.703 56.704L417.69.238h19.18L408.4 84.222h-15.962l-18.822-54.56-18.823 54.56zM450.451 83.627V.238h62.898v16.32h-44.672v16.917h39.311v16.32h-39.31v17.512h45.267v16.32h-63.494zM530.265 83.627V.238h38.716c9.609 0 16.876 2.463 21.8 7.386 3.813 3.812 5.719 8.618 5.719 14.414 0 7.863-3.654 13.86-10.96 17.988 5.161 1.986 9.054 4.587 11.674 7.803 2.62 3.216 3.93 7.526 3.93 12.925 0 7.466-2.78 13.145-8.338 17.035-5.56 3.892-13.184 5.838-22.872 5.838h-39.669zm17.87-49.676h16.916c8.814 0 13.223-3.017 13.223-9.053 0-2.78-1.034-4.903-3.098-6.373-2.066-1.47-5.044-2.204-8.934-2.204h-18.107zm0 33.594h21.8c8.655 0 12.984-3.098 12.984-9.292 0-6.035-4.527-9.054-13.58-9.054h-21.204zM64.84 12.091C56.58 4.191 45.94.24 32.916.24H.394v50.473h18.345V16.797h14.176c7.464 0 13.52 2.343 18.167 7.028 4.646 4.688 6.968 10.722 6.968 18.108 0 7.466-2.304 13.52-6.909 18.167-4.607 4.645-10.682 6.968-18.226 6.968H18.739v-.173H.394v16.732h32.521c12.944 0 23.567-3.97 31.866-11.912 8.298-7.941 12.45-17.87 12.45-29.782 0-11.99-4.131-21.938-12.39-29.842z" />
+                      <g>
+                        <path d="M0 139.034V100.25h2.881v38.785zM24.766 139.034V100.25h2.716l26.761 33.744v-33.744h2.77v38.785h-2.16l-27.316-34.463v34.463zM89.26 139.034V102.91H75.741v-2.66h29.92v2.66h-13.52v36.125zM124.389 139.034V100.25h27.593v2.66H127.27v15.237h22.219v2.66H127.27v15.57h24.989v2.659h-27.87zM171.485 139.034V100.25h16.29c4.728 0 8.366 1.275 10.915 3.824 1.958 1.958 2.937 4.396 2.937 7.313 0 3.14-1.035 5.652-3.103 7.536-2.07 1.883-4.82 3.066-8.256 3.546l12.8 16.566h-3.657l-12.356-16.068h-12.689v16.068h-2.881zm2.881-18.672h13.076c3.325 0 6.04-.803 8.145-2.41 2.106-1.607 3.159-3.795 3.159-6.566 0-2.622-.98-4.69-2.937-6.205-1.959-1.515-4.692-2.272-8.2-2.272h-13.243zM221.518 139.034V100.25h2.715l26.761 33.744v-33.744h2.77v38.785h-2.16l-27.316-34.463v34.463zM271.938 139.034l18.063-39.061h2.77l18.064 39.061h-3.159l-4.93-10.86h-22.884l-4.932 10.86zm9.143-13.463h20.445l-10.195-22.44zM339.757 139.034V102.91h-13.52v-2.66h29.92v2.66h-13.519v36.125zM375.273 139.034V100.25h2.881v38.785zM431.844 133.77c-3.658 3.954-8.35 5.93-14.074 5.93-5.726 0-10.398-1.968-14.018-5.902-3.62-3.933-5.43-8.652-5.43-14.156 0-5.467 1.828-10.176 5.485-14.13 3.657-3.952 8.348-5.928 14.074-5.928 5.725 0 10.397 1.967 14.017 5.901 3.62 3.934 5.431 8.653 5.431 14.157 0 5.467-1.829 10.177-5.485 14.128zm-25.792-1.773c3.158 3.4 7.1 5.099 11.83 5.099 4.727 0 8.65-1.68 11.773-5.043 3.12-3.36 4.682-7.498 4.682-12.41 0-4.84-1.58-8.958-4.737-12.357-3.159-3.398-7.102-5.098-11.83-5.098-4.73 0-8.654 1.682-11.774 5.043-3.122 3.361-4.682 7.499-4.682 12.411 0 4.84 1.579 8.958 4.738 12.355zM457.108 139.034V100.25h2.715l26.762 33.744v-33.744h2.77v38.785h-2.16l-27.316-34.463v34.463zM507.529 139.034l18.063-39.061h2.77l18.063 39.061h-3.158l-4.931-10.86h-22.883l-4.932 10.86zm9.143-13.463h20.444l-10.195-22.44zM564.599 139.034V100.25h2.881v36.126h22.772v2.66z" />
+                      </g>
+                    </svg>
+                    <!-- end icon-logo -->
+                  </a>
+                </div>
+                <div class="menu__phone">
+                  <!-- begin header-phone -->
+                  <div class="header-phone header-phone--menu">
+                    <a href="tel:0800337167" class="header-phone__title">0 800 337 167</a>
+                    <div class="header-phone__subttl">(Безкоштовно по всій Україні)</div>
+                  </div>
+                  <!-- end header-phone -->
+                </div>
+              </div>
+              <div class="menu__main">
+                <div class="menu__main-in">
+                  <div class="menu__left">
+                    <div class="menu__nav">
+                      <!-- begin nav -->
+                      <nav class="nav nav--lg">
+                        <ul>
+                          <li><a href="#">послуги</a><span>01</span></li>
+                          <li><a href="#">проекти</a><span>02</span></li>
+                          <li><a href="#">про компанію</a><span>03</span></li>
+                          <li><a href="#">відгуки</a><span>04</span></li>
+                          <li><a href="#">зв’язок з нами</a><span>05</span></li>
+                        </ul>
+                      </nav>
+                      <!-- end nav -->
+                    </div>
+                  </div>
+                  <div class="menu__center">
+                    <div class="menu__nav">
+                      <div class="menu__title">послуги</div>
+                      <!-- begin nav -->
+                      <nav class="nav nav--sm">
+                        <ul>
+                          <li><a href="#">Web site development</a></li>
+                          <li><a href="#">Seo + Adwords</a></li>
+                          <li><a href="#">Branding</a></li>
+                          <li><a href="#">Smm</a></li>
+                        </ul>
+                      </nav>
+                      <!-- end nav -->
+                    </div>
+                  </div>
+                  <div class="menu__right">
+                    <div class="menu__contacts">
+                      <div class="menu__title">зв’язок з нами</div>
+                      <!-- begin contacts -->
+                      <div class="contacts">
+                        <!-- begin contact -->
+                        <div class="contact contact--lg">
+                          <div class="contact__icon">
+                            <!-- begin icon-call-answer -->
+                            <svg width="1.000em" height="1em" viewBox="0 0 348.077 348.077" class="icon icon-call-answer">
+                              <path d="M340.273 275.083l-53.755-53.761c-10.707-10.664-28.438-10.34-39.518.744l-27.082 27.076a792.327 792.327 0 0 1-5.344-2.973c-17.102-9.476-40.509-22.464-65.14-47.113-24.704-24.701-37.704-48.144-47.209-65.257-1.003-1.813-1.964-3.561-2.913-5.221l18.176-18.149 8.936-8.947c11.097-11.1 11.403-28.826.721-39.521L73.39 8.194c-10.682-10.68-28.421-10.356-39.518.744l-15.15 15.237.414.411c-5.08 6.482-9.325 13.958-12.484 22.02C3.74 54.28 1.927 61.603 1.098 68.941-6 127.785 20.89 181.564 93.866 254.541c100.875 100.868 182.167 93.248 185.674 92.876 7.638-.913 14.958-2.738 22.397-5.627 7.992-3.122 15.463-7.361 21.941-12.43l.331.294 15.348-15.029c11.074-11.098 11.393-28.83.716-39.542z" />
+                            </svg>
+                            <!-- end icon-call-answer -->
+                          </div>
+                          <div class="contact__text">
+                            <a href="tel:0443338538">044 333 8538</a>
+                            <a href="tel:0800337167">0 800 337 167</a>
+                          </div>
+                        </div>
+                        <!-- end contact -->
+                        <!-- begin contact -->
+                        <div class="contact">
+                          <div class="contact__icon">
+                            <!-- begin icon-location -->
+                            <svg width="1.000em" height="1em" viewBox="0 0 97.713 97.713" class="icon icon-location">
+                              <path d="M48.855 0C29.021 0 12.883 16.138 12.883 35.974c0 5.174 1.059 10.114 3.146 14.684 8.994 19.681 26.238 40.46 31.31 46.359a2.003 2.003 0 0 0 3.034 0c5.07-5.898 22.314-26.676 31.311-46.359 2.088-4.57 3.146-9.51 3.146-14.684C84.828 16.138 68.69 0 48.855 0zm0 54.659c-10.303 0-18.686-8.383-18.686-18.686 0-10.304 8.383-18.687 18.686-18.687s18.686 8.383 18.686 18.687c.001 10.303-8.382 18.686-18.686 18.686z" />
+                            </svg>
+                            <!-- end icon-location -->
+                          </div>
+                          <div class="contact__text"> Київ, вул. Бульвар Марії Приймаченко 1/27, м. Дружби Народів </div>
+                        </div>
+                        <!-- end contact -->
+                        <!-- begin contact -->
+                        <div class="contact">
+                          <div class="contact__icon">
+                            <!-- begin icon-envelope -->
+                            <svg viewBox="0 0 14 14" class="icon icon-envelope" width="1.000em" height="1em">
+                              <path d="M7 9L5.268 7.484.316 11.729c.18.167.423.271.691.271h11.986c.267 0 .509-.104.688-.271L8.732 7.484 7 9z" />
+                              <path d="M13.684 2.271A1.007 1.007 0 0 0 12.993 2H1.007c-.267 0-.509.104-.689.273L7 8l6.684-5.729zM0 2.878v8.308l4.833-4.107zM9.167 7.079L14 11.186V2.875z" />
+                            </svg>
+                            <!-- end icon-envelope -->
+                          </div>
+                          <div class="contact__text">
+                            <a href="mailto:order@demiweb.pro">order@demiweb.pro</a>
+                          </div>
+                        </div>
+                        <!-- end contact -->
+                        <div class="contacts__btn">
+                          <a href="#" class="btn btn--half btn--half-white btn--half-sm"><span class="btn__title">ПОСТАВИТИ ПИТАННЯ</span></a>
+                        </div>
+                      </div>
+                      <!-- end contacts -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menu__aside">
+          <a href="#" class="menu__close js-menu-close"></a>
+          <div class="menu__social">
+            <!-- begin social -->
+            <div class="social">
+              <ul>
+                <li><a href="#">
+                    <!-- begin icon-instagram -->
+                    <svg viewBox="0 0 512 512" class="icon icon-instagram" width="1.000em" height="1em">
+                      <path d="M352 0H160C71.648 0 0 71.648 0 160v192c0 88.352 71.648 160 160 160h192c88.352 0 160-71.648 160-160V160C512 71.648 440.352 0 352 0zm112 352c0 61.76-50.24 112-112 112H160c-61.76 0-112-50.24-112-112V160C48 98.24 98.24 48 160 48h192c61.76 0 112 50.24 112 112v192z" />
+                      <path d="M256 128c-70.688 0-128 57.312-128 128s57.312 128 128 128 128-57.312 128-128-57.312-128-128-128zm0 208c-44.096 0-80-35.904-80-80 0-44.128 35.904-80 80-80s80 35.872 80 80c0 44.096-35.904 80-80 80z" />
+                      <circle cx="393.6" cy="118.4" r="17.056" />
+                    </svg>
+                    <!-- end icon-instagram -->
+                  </a></li>
+                <li><a href="#">
+                    <!-- begin icon-facebook -->
+                    <svg viewBox="0 0 155.139 155.139" class="icon icon-facebook" width="1.000em" height="1em">
+                      <path d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z" />
+                    </svg>
+                    <!-- end icon-facebook -->
+                  </a></li>
+              </ul>
+            </div>
+            <!-- end social -->
+          </div>
+        </div>
+      </div>
+      <!-- end menu -->
+      <!-- begin main -->
+      <main class="main">
+        <!-- begin hero -->
+        <section class="hero hero--content js-lazy" data-background-image="img/hero/bg-hero-services-seo-a-words.jpg">
+          <div class="container">
+            <div class="hero__inner">
+              <div class="hero__breadcrumbs">
+                <!-- begin breadcrumbs -->
+                <div class="breadcrumbs">
+                  <ul>
+                    <li><a href="#">Головна</a></li>
+                    <li>-</li>
+                    <li><a href="#">послуги</a></li>
+                    <li>-</li>
+                    <li><a href="#" class=" is-active">Smm</a></li>
+                  </ul>
+                </div>
+                <!-- end breadcrumbs -->
+              </div>
+              <div class="hero__content">
+                <div class="hero__title overlayed">
+                  <div class="title"><strong class="glitch" data-text="Smm">Smm</strong></div>
+                </div>
+                <div class="hero__text">Присутність у соціальних медіа вже є нормою для кожного бізнесу, який цінує своїх клієнтів. Перж за все, важливо визначитися, з якою аудиторією ви працюєте, а вже потім планувати ваше просування у соц. медіа.</div>
+                <div class="hero__btns">
+                  <div class="hero__btn">
+                    <a href="#" class="btn js-popup-open" data-popup-target="call">замовити консультацію</a>
+                  </div>
+                  <div class="hero__btn">
+                    <a href="#" class="btn btn--transp-white">наші послуги</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero__scroll-down">
+            <a href="#" class="scroll-to scroll-to--down js-scroll-to-next">
+              <!-- begin icon-arrow -->
+              <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
+                <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
+              </svg>
+              <!-- end icon-arrow -->
+            </a>
+          </div>
+        </section>
+        <!-- end hero -->
+        <!-- begin section -->
+        <section class="section s-principles pt-sml pb-mdl overflow-hidden">
+          <div class="section__title-block s-principles__title-block">
+            <!-- begin title-block -->
+            <div class="title-block">
+              <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
+              <div class="container">
+                <div class="title-block__inner">
+                  <div class="title-block__subttl js-anim-el" data-anim-name="fadeInTopSm">за останні декілька років smm-просування</div>
+                  <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
+                    <div class="title glitch" data-text=""><small>стала необхідною частиною</small>вашого бізнесу</div>
+                  </div>
+                  <div class="title-block__text js-anim-el" data-anim-name="fadeInBottomSm"></div>
+                </div>
+              </div>
+              <div class="title-block__word word js-anim-el" data-anim-name="fadeInLeft">
+                <div class="word__inner js-parallax-scroll">necessity</div>
+              </div>
+            </div>
+            <!-- end title-block -->
+          </div>
+          <div class="container">
+            <!-- begin principles -->
+            <div class="principles js-stagger">
+              <!-- begin principle -->
+              <div class="principle__wrap">
+                <div class="principle js-stagger-el">
+                  <div class="principle__nmb text--gray-light">01/</div>
+                  <div class="principle__title h4 h4--ttn h4--bold">Зріст кількості заявок та звернень у компанію</div>
+                  <div class="principle__text text--gray-light">Після проведення робіт по оптимізації вашого сайту у пошукових системах, у вас неодмінно зросте кількість заявок</div>
+                </div>
+              </div>
+              <!-- end principle -->
+              <!-- begin principle -->
+              <div class="principle__wrap">
+                <div class="principle js-stagger-el">
+                  <div class="principle__nmb text--gray-light">02/</div>
+                  <div class="principle__title h4 h4--ttn h4--bold">Ваш сайт знаходиться в топі пошуку Google</div>
+                  <div class="principle__text text--gray-light">Тепер, ваш сайт побачать одним із перших і про ваші послуги дізнаються вже тисячі користувачів</div>
+                </div>
+              </div>
+              <!-- end principle -->
+              <!-- begin principle -->
+              <div class="principle__wrap">
+                <div class="principle js-stagger-el">
+                  <div class="principle__nmb text--gray-light">03/</div>
+                  <div class="principle__title h4 h4--ttn h4--bold">Економія на інших видах реклами та просування</div>
+                  <div class="principle__text text--gray-light">Зявдяки професійній роботі наших SEO-спеціалістів, вам більше не доведеться витрачати зайвих грошей та додаткові способи реклами </div>
+                </div>
+              </div>
+              <!-- end principle -->
+              <!-- begin principle -->
+              <div class="principle__wrap">
+                <div class="principle js-stagger-el">
+                  <div class="principle__nmb text--gray-light">04/</div>
+                  <div class="principle__title h4 h4--ttn h4--bold">Збільшення цільових клієнтів на сайті</div>
+                  <div class="principle__text text--gray-light">Тепер, більшість користувачів, що заходять до вас на сайт - ваші цільові клієнти, які вірогідніше зроблять замовлення</div>
+                </div>
+              </div>
+              <!-- end principle -->
+              <!-- begin principle -->
+              <div class="principle__wrap">
+                <div class="principle js-stagger-el">
+                  <div class="principle__nmb text--gray-light">05/</div>
+                  <div class="principle__title h4 h4--ttn h4--bold">Загальне збільшення замовлень на сайті</div>
+                  <div class="principle__text text--gray-light">Після проведення професіної роботи збільшиться кількість прямих замовлень ваших товарів та послуг на сайті </div>
+                </div>
+              </div>
+              <!-- end principle -->
+              <!-- begin principle -->
+              <div class="principle__wrap">
+                <div class="principle js-stagger-el">
+                  <div class="principle__nmb text--gray-light">06/</div>
+                  <div class="principle__title h4 h4--ttn h4--bold">Тепер кількість замовлень не залежить від сезону</div>
+                  <div class="principle__text text--gray-light">Вам більше не доведеться хвилюватися про «простійні» місяці, коли клієнтів стає менше, або вони взагалі перестають залишати заявки</div>
+                </div>
+              </div>
+              <!-- end principle -->
+            </div>
+            <!-- end principles -->
+          </div>
+        </section>
+        <!-- end section -->
+        <!-- begin section -->
+        <section class="section s-services overflow-hidden">
+          <!-- begin title-block -->
+          <div class="title-block">
+            <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
+            <div class="container">
+              <div class="title-block__inner">
+                <div class="title-block__subttl js-anim-el" data-anim-name="fadeInTopSm">вартість для кожного клієнта розраховується індивідуално, але</div>
+                <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
+                  <div class="title glitch" data-text=""><small>сми приблизно склали середні</small> тарифи на наші послуги</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end title-block -->
+          <!-- begin services -->
+          <div class="services">
+            <!-- begin service-item -->
+            <div class="service-item__wrap js-vieport-related-el">
+              <a href="#" class="service-item service-item--white">
+                <span class="container">
+                  <span class="service-item__inner">
+                    <span class="service-item__block">
+                      <span class="service-item__title">
+                        <span class="title title--ttn">Instagram</span>
+                      </span>
+                      <span class="service-item__text">Ми створюємо сайти, які є природним продовженням фірмового стилю компанії, викликають довіру відвідувачів і бажання співпрацювати з компанією.</span>
+                    </span>
+                    <span class="service-item__price">
+                      <span class="price"><small>Від </small>3500<small>грн</small></span>
+                    </span>
+                    <span class="service-item__link">
+                      <!-- begin icon-arrow -->
+                      <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
+                        <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
+                      </svg>
+                      <!-- end icon-arrow -->
+                    </span>
+                  </span>
+                </span>
+              </a>
+            </div>
+            <!-- end service-item -->
+            <!-- begin service-item -->
+            <div class="service-item__wrap js-vieport-related-el">
+              <a href="#" class="service-item service-item--white">
+                <span class="container">
+                  <span class="service-item__inner">
+                    <span class="service-item__block">
+                      <span class="service-item__title">
+                        <span class="title title--ttn">Facebook</span>
+                      </span>
+                      <span class="service-item__text">Ми створимо максимальну віддачу від кожного переходу на сайт, так як вашу рекламу побачать ті, хто є частиною вашої цільової аудиторії</span>
+                    </span>
+                    <span class="service-item__price">
+                      <span class="price"><small>Від </small>6500<small>грн</small></span>
+                    </span>
+                    <span class="service-item__link">
+                      <!-- begin icon-arrow -->
+                      <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
+                        <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
+                      </svg>
+                      <!-- end icon-arrow -->
+                    </span>
+                  </span>
+                </span>
+              </a>
+            </div>
+            <!-- end service-item -->
+          </div>
+          <!-- end services -->
+        </section>
+        <!-- end section -->
+        <!-- begin section -->
+        <section class="section s-features overflow-hidden pt-sml pb-lg">
+          <div class="section__title-block">
+            <!-- begin title-block -->
+            <div class="title-block">
+              <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
+              <div class="container">
+                <div class="title-block__inner">
+                  <div class="title-block__subttl js-anim-el" data-anim-name="fadeInTopSm"></div>
+                  <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
+                    <div class="title glitch glitch--bottom glitch--xs-none" data-text=""><small>використовуємо лише</small> сучасні інструменти</div>
+                  </div>
+                  <div class="title-block__text js-anim-el" data-anim-name="fadeInBottomSm">Ми відповідаємо за кожне рішення для просування вас в соціальних мережах, так щоб вони працювали на ваш бізнес. <br> Не використовуємо заїжджені фрази, дешеві трюкі з продажу, не тиснемо на потенційного клієнта. Все це дає нам <br> можливість презентувати ваш бізнес у найкращому світлі.</div>
+                </div>
+              </div>
+              <div class="title-block__word word word--sm js-anim-el" data-anim-name="fadeInLeft">
+                <div class="word__inner js-parallax-scroll">instruments</div>
+              </div>
+            </div>
+            <!-- end title-block -->
+          </div>
+          <div class="container">
+            <div class="s-features__inner">
+              <div class="s-features__content">
+                <!-- begin features -->
+                <div class="features js-stagger">
+                  <div class="feature__wrap">
+                    <!-- begin feature -->
+                    <div class="feature js-stagger-el">
+                      <div class="feature__inner">
+                        <div class="feature__icon">
+                          <!-- begin icon-promotion -->
+                          <svg viewBox="0 -14 512.00001 512" class="icon icon-promotion" width="1.000em" height="1em">
+                            <path d="M136.965 308.234c4.781-2.757 6.418-8.879 3.66-13.66-2.762-4.777-8.879-6.418-13.66-3.66-4.781 2.762-6.422 8.883-3.66 13.66 2.757 4.781 8.879 6.422 13.66 3.66zm0 0" />
+                            <path d="M95.984 377.254l50.36 87.23c10.867 18.844 35.312 25.82 54.644 14.645 19.13-11.055 25.703-35.496 14.637-54.64l-30-51.97 25.98-15c4.782-2.765 6.422-8.878 3.66-13.66l-13.003-22.523c1.55-.3 11.746-2.3 191.539-37.57 22.226-1.207 35.543-25.516 24.316-44.95l-33.234-57.562 21.238-32.168a10.004 10.004 0 0 0 .317-10.512l-20-34.64a10.02 10.02 0 0 0-9.262-4.98l-38.473 2.308-36.894-63.907c-5.344-9.257-14.918-14.863-25.606-14.996-.129-.004-.254-.004-.383-.004-10.328 0-19.703 5.141-25.257 13.832L119.93 202.602l-84.926 49.03C1.602 270.91-9.97 313.763 9.383 347.255c17.68 30.625 54.953 42.672 86.601 30zm102.325 57.238c5.523 9.555 2.254 21.781-7.329 27.317-9.613 5.558-21.855 2.144-27.316-7.32l-50-86.614 34.64-20c57.868 100.242 49.075 85.012 50.005 86.617zm-22.684-79.297l-10-17.32 17.32-10 10 17.32zm196.582-235.91l13.82 23.938-12.324 18.664-23.82-41.262zM267.289 47.152c2.684-4.39 6.941-4.843 8.668-4.797 1.707.02 5.961.551 8.527 4.997l116.313 201.464c3.789 6.559-.817 14.805-8.414 14.993-1.363.03-1.992.277-5.485.93L263.863 51.632c2.582-3.32 2.914-3.64 3.426-4.48zm-16.734 21.434l115.597 200.223-174.46 34.218-53.047-91.879zM26.703 337.254a49.933 49.933 0 0 1-6.71-24.95c0-17.835 9.585-34.445 25.01-43.35l77.942-45 50 86.6-77.941 45.005c-23.879 13.78-54.516 5.57-68.3-18.305zm0 0" />
+                            <path d="M105.984 314.574c-2.761-4.781-8.879-6.422-13.66-3.66l-17.32 10c-4.774 2.758-10.902 1.113-13.66-3.66-2.762-4.781-8.88-6.422-13.66-3.66s-6.422 8.879-3.66 13.66c8.23 14.258 26.59 19.285 40.98 10.98l17.32-10c4.781-2.761 6.422-8.875 3.66-13.66zm0 0M497.137 43.746l-55.723 31.008c-4.824 2.687-6.562 8.777-3.875 13.601 2.68 4.82 8.766 6.567 13.602 3.875l55.718-31.007c4.829-2.688 6.563-8.778 3.875-13.602-2.683-4.828-8.773-6.562-13.597-3.875zm0 0M491.293 147.316l-38.637-10.351c-5.336-1.43-10.82 1.734-12.25 7.07-1.43 5.336 1.739 10.817 7.074 12.246l38.641 10.352c5.367 1.441 10.824-1.774 12.246-7.07 1.43-5.336-1.738-10.82-7.074-12.247zm0 0M394.2 7.414l-10.364 38.64c-1.43 5.337 1.734 10.817 7.07 12.25 5.332 1.426 10.817-1.73 12.25-7.07l10.36-38.64c1.43-5.336-1.735-10.82-7.07-12.25-5.333-1.43-10.817 1.734-12.247 7.07zm0 0" />
+                          </svg>
+                          <!-- end icon-promotion -->
+                        </div>
+                        <div class="feature__title">
+                          <div class="h4 h4--ttn h4--bold"><span class="underlined"><span>Правильне налаштування</span></span> рекламної кампанії</div>
+                        </div>
+                        <div class="feature__text">Ми використовуємо лише якісні графічні елементи: логотипи, фірмовий колір, бренд-персонажі і т.п. Ми працюємо без шаблонів, лише унікальний та сучасний дизайн, у якому ми впевнені</div>
+                      </div>
+                    </div>
+                    <!-- end feature -->
+                  </div>
+                  <div class="feature__wrap">
+                    <!-- begin feature -->
+                    <div class="feature js-stagger-el">
+                      <div class="feature__inner">
+                        <div class="feature__icon">
+                          <!-- begin icon-content -->
+                          <svg viewBox="0 0 512 512" class="icon icon-content" width="1.000em" height="1em">
+                            <path d="M502 108h-59.47c-5.522 0-10 4.477-10 10v19.763H328.797c-5.522 0-10 4.477-10 10s4.478 10 10 10H432.53v19.763c0 5.523 4.478 10 10 10h19.734V220c0 5.523 4.478 10 10 10s10-4.477 10-10v-32.475H502c5.522 0 10-4.477 10-10V118c0-5.523-4.478-10-10-10zm-10 59.525h-39.47V128H492v39.525zM289.7 140.69a10.076 10.076 0 0 0-7.07-2.93c-2.64 0-5.21 1.07-7.07 2.93a10.033 10.033 0 0 0-2.93 7.07c0 2.64 1.06 5.21 2.93 7.07a10.017 10.017 0 0 0 7.07 2.93c2.63 0 5.21-1.06 7.07-2.93a10.062 10.062 0 0 0 2.93-7.07c0-2.63-1.07-5.21-2.93-7.07zM234.025 137.763H79.47V118c0-5.523-4.478-10-10-10H10c-5.522 0-10 4.477-10 10v59.525c0 5.523 4.478 10 10 10h19.735V220c0 5.523 4.478 10 10 10s10-4.477 10-10v-32.475H69.47c5.522 0 10-4.477 10-10v-19.763h154.555v.001c5.522 0 10-4.477 10-10s-4.478-10-10-10zM59.47 167.525H20V128h39.47v39.525zM502 432.475h-19.735V394c0-5.522-4.478-10-10-10s-10 4.478-10 10v38.475H442.53c-5.522 0-10 4.478-10 10v19.763H155c-5.522 0-10 4.478-10 10s4.478 10 10 10h277.53V502c0 5.522 4.478 10 10 10H502c5.522 0 10-4.478 10-10v-59.525c0-5.523-4.478-10-10-10zM492 492h-39.47v-39.525H492V492zM69.47 432.475H49.735V394c0-5.522-4.478-10-10-10s-10 4.478-10 10v38.475H10c-5.522 0-10 4.478-10 10V502c0 5.522 4.478 10 10 10h59.47c5.522 0 10-4.478 10-10v-59.525c0-5.523-4.478-10-10-10zM59.47 492H20v-39.525h39.47V492zM124.569 465.17c-1.859-1.87-4.439-2.93-7.069-2.93s-5.21 1.06-7.07 2.93a10.058 10.058 0 0 0-2.93 7.07c0 2.63 1.069 5.21 2.93 7.069 1.86 1.86 4.44 2.931 7.07 2.931s5.21-1.07 7.069-2.931a10.092 10.092 0 0 0 2.931-7.069c0-2.631-1.07-5.21-2.931-7.07zM68.857 334.07H57.682c-4.382 0-7.946-3.564-7.946-7.946v-34.051c-.001-4.382 3.564-7.946 7.946-7.946h11.175c5.522 0 10-4.478 10-10s-4.478-10-10-10H57.682c-15.409 0-27.946 12.537-27.946 27.946v34.051c0 15.409 12.537 27.946 27.946 27.946h11.175c5.522 0 10-4.478 10-10s-4.478-10-10-10zM117.5 264.127c-16.542 0-30 13.458-30 30v32c0 16.542 13.458 30 30 30s30-13.458 30-30v-32c0-16.542-13.458-30-30-30zm10 62c0 5.514-4.486 10-10 10s-10-4.486-10-10v-32c0-5.514 4.486-10 10-10s10 4.486 10 10v32zM210.669 264.128c-5.522 0-10 4.476-10 9.999v33.409L179.41 269.27a10.001 10.001 0 0 0-18.741 4.857v72c0 5.522 4.478 10 10 10s10-4.478 10-10v-33.409l21.259 38.266a10.003 10.003 0 0 0 11.25 4.825 10.001 10.001 0 0 0 7.491-9.681v-72c0-5.522-4.478-10-10-10zM424 264.128c-5.522 0-10 4.478-10 10v33.409l-21.259-38.266A10.001 10.001 0 0 0 374 274.128v72c0 5.522 4.478 10 10 10s10-4.479 10-10.001v-33.409l21.259 38.266a10.003 10.003 0 0 0 11.25 4.825 10.001 10.001 0 0 0 7.491-9.681v-72c0-5.522-4.478-10-10-10zM282.627 264.127h-35c-5.522 0-10 4.478-10 10s4.478 10 10 10h7.5v62c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-62h7.5c5.522 0 10-4.478 10-10s-4.478-10-10-10zM489.765 264.127h-35c-5.522 0-10 4.478-10 10s4.478 10 10 10h7.5v62c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-62h7.5c5.522 0 10-4.478 10-10s-4.478-10-10-10zM346.201 336.127h-21.297v-16h11.771c5.522 0 10-4.478 10-10s-4.478-10-10-10h-11.771v-16h21.297c5.522 0 10-4.478 10-10s-4.478-10-10-10h-31.297c-5.522 0-10 4.478-10 10v72c0 5.522 4.478 10 10 10h31.297c5.522 0 10-4.478 10-10s-4.478-10-10-10zM434.124 0H135.505c-1.408 0-2.8.297-4.085.873l-71.505 32a9.998 9.998 0 0 0 0 18.254l71.505 32c1.285.575 2.677.873 4.085.873h298.619C447.289 84 458 73.289 458 60.124V23.876C458 10.711 447.289 0 434.124 0zM125.505 58.569L88.48 42l37.025-16.569v33.138zM391.586 64H145.505V20h246.081v44zM438 60.124A3.88 3.88 0 0 1 434.124 64h-22.538V20h22.538A3.88 3.88 0 0 1 438 23.876v36.248z" />
+                          </svg>
+                          <!-- end icon-content -->
+                        </div>
+                        <div class="feature__title">
+                          <div class="h4 h4--ttn h4--bold"><span class="underlined"><span>Ефективні оголошення,</span></span> які продають</div>
+                        </div>
+                        <div class="feature__text">Ми використовуємо лише якісні графічні елементи: логотипи, фірмовий колір, бренд-персонажі і т.п. Ми працюємо без шаблонів, лише унікальний та сучасний дизайн, у якому ми впевнені</div>
+                      </div>
+                    </div>
+                    <!-- end feature -->
+                  </div>
+                  <div class="feature__wrap">
+                    <!-- begin feature -->
+                    <div class="feature js-stagger-el">
+                      <div class="feature__inner">
+                        <div class="feature__icon">
+                          <!-- begin icon-design -->
+                          <svg height="1em" viewBox="0 0 510.36 510" width="1.000em" class="icon icon-design">
+                            <path d="M398.36.18v214.968a285.304 285.304 0 0 0-144-38.968c-104.5.172-200.747 56.824-251.626 148.105L.551 328.18l2.183 3.894C44.891 408.102 119.18 460.973 204.82 475.891c85.645 14.918 173.434-9.72 238.813-67.016l-10.543-12a271.462 271.462 0 0 1-223.34 63.64A271.455 271.455 0 0 1 18.922 328.18c48.652-84.032 138.336-135.836 235.437-136a269.38 269.38 0 0 1 144 41.601V310.5l56 88.664 56-88.664V.18zm16 64h16v223.054l-16 8zm40 305.015l-15.801-25.015h31.601zm25.906-41.015h-51.809l-10.61-16.801 19.712-9.832 16.8 12.633 16.801-12.633 19.711 9.832zm-33.907-40v-224h16v224l-8 6zm48 7.054l-16-8V64.18h16zm0-247.054h-80v-32h80zm0 0" />
+                            <path d="M134.36 328.18c0 66.273 53.726 120 120 120s120-53.727 120-120c0-66.274-53.727-120-120-120-66.243.074-119.926 53.757-120 120zm94.136-100.618l8.367 47.458a55.854 55.854 0 0 0-19.75 11.464l-36.968-31.023a103.91 103.91 0 0 1 48.351-27.899zm25.863 60.618c22.094 0 40 17.91 40 40s-17.906 40-40 40c-22.09 0-40-17.91-40-40 .028-22.082 17.922-39.973 40-40zm-84.472-20.442l36.93 30.992A55.508 55.508 0 0 0 199 320.18h-48.23a103.225 103.225 0 0 1 19.117-52.442zm188.472 60.442c-.023 55.836-44.156 101.675-99.949 103.828-55.793 2.148-103.32-40.16-107.64-95.828H199c4.27 29.59 31.031 50.605 60.79 47.742 29.76-2.863 52.023-28.598 50.57-58.461-1.45-29.86-26.102-53.316-56-53.281-.583 0-1.153.074-1.735.09l-8.395-47.579c3.336-.32 6.715-.511 10.13-.511 57.41.066 103.933 46.59 104 104zm0 0M285.559 494.578l1.648 15.922a320.617 320.617 0 0 0 196.93-95.84l-11.504-11.12a304.516 304.516 0 0 1-187.074 91.038zm0 0M137.45 183.723l-6.177-14.743A321.113 321.113 0 0 0 0 270.293l12.762 9.703a305.076 305.076 0 0 1 124.687-96.273zm0 0M238.734 160.652l-.75-16a313.459 313.459 0 0 0-65.68 10.262l4.11 15.457a297.683 297.683 0 0 1 62.32-9.719zm0 0M270.36 16.18h112v16h-112zm0 0M302.36 56.18h80v16h-80zm0 0M334.36 96.18h48v16h-48zm0 0" />
+                          </svg>
+                          <!-- end icon-design -->
+                        </div>
+                        <div class="feature__title">
+                          <div class="h4 h4--ttn h4--bold"><span class="underlined"><span>Заощадження до 85% </span></span> вашого бюджету</div>
+                        </div>
+                        <div class="feature__text">Вже ні для кого не секрет, що більше 60% користувачів відвідують сайти з мобільних пристроїв, тому ми дуже відповідально ставимося до створення адаптивних версій вашого майбутнього сайту</div>
+                      </div>
+                    </div>
+                    <!-- end feature -->
+                  </div>
+                  <div class="feature__wrap">
+                    <!-- begin feature -->
+                    <div class="feature js-stagger-el">
+                      <div class="feature__inner">
+                        <div class="feature__icon">
+                          <!-- begin icon-laptop -->
+                          <svg height="1em" viewBox="0 0 496 496" width="1.000em" class="icon icon-laptop">
+                            <path d="M48 448h16v16H48zm0 0M80 448h16v16H80zm0 0M112 448h16v16h-16zm0 0M384 448h64v16h-64zm0 0" />
+                            <path d="M480 416V152c0-22.055-17.945-40-40-40h-24C416 50.238 365.762 0 304 0S192 50.238 192 112H56c-22.055 0-40 17.945-40 40v264H0v40c0 22.055 17.945 40 40 40h416c22.055 0 40-17.945 40-40v-40zm-40-288c13.23 0 24 10.77 24 24v264h-16V160c0-8.824-7.176-16-16-16h-20.719c1.543-5.184 2.656-10.535 3.438-16zM212.648 82.602l84.91 35.382 29.075 87.207C319.359 206.961 311.809 208 304 208c-52.938 0-96-43.063-96-96a95.522 95.522 0 0 1 4.648-29.398zm129.184 117.597l-28.68-86.039 64.078-64.082C391.406 66.808 400 88.406 400 112c0 39.504-24 73.488-58.168 88.2zM304 16c23.594 0 45.191 8.594 61.93 22.762l-63.793 63.789-83.29-34.696C234.856 37.09 266.985 16 304 16zM32 152c0-13.23 10.77-24 24-24h137.281c.781 5.465 1.887 10.816 3.438 16H64c-8.824 0-16 7.176-16 16v256H32zm448 304c0 13.23-10.77 24-24 24H40c-13.23 0-24-10.77-24-24v-24h164.816c11.504 10.344 26.223 16 41.817 16h50.742c15.594 0 30.313-5.656 41.816-16H416v-16H308.687l-2.343 2.344C297.535 427.152 285.832 432 273.367 432h-50.742c-12.457 0-24.168-4.848-32.977-13.656L187.313 416H64V160h138.96c18.024 37.777 56.474 64 101.04 64s83.016-26.223 101.04-64H432v272h48zm0 0" />
+                            <path d="M392 336c-4.91 0-9.48 1.496-13.29 4.04l-27.91-20.927c.712-2.265 1.2-4.625 1.2-7.113 0-13.23-10.77-24-24-24s-24 10.77-24 24c0 2.754.559 5.36 1.414 7.824l-44.805 35.848C256.938 353.382 252.641 352 248 352c-5.383 0-10.305 1.848-14.313 4.848l-34.496-23c.48-1.88.809-3.817.809-5.848 0-13.23-10.77-24-24-24s-24 10.77-24 24c0 2.031.328 3.969.809 5.848l-34.496 23C114.305 353.84 109.382 352 104 352c-13.23 0-24 10.77-24 24s10.77 24 24 24 24-10.77 24-24c0-2.031-.328-3.969-.809-5.848l34.496-23C165.696 350.16 170.618 352 176 352s10.305-1.84 14.313-4.848l34.496 23c-.48 1.88-.809 3.825-.809 5.848 0 13.23 10.77 24 24 24s24-10.77 24-24c0-2.754-.559-5.36-1.414-7.824l44.805-35.848c3.671 2.29 7.968 3.672 12.609 3.672 4.91 0 9.48-1.496 13.29-4.04l27.91 20.927c-.712 2.265-1.2 4.625-1.2 7.113 0 13.23 10.77 24 24 24s24-10.77 24-24-10.77-24-24-24zm-288 48c-4.406 0-8-3.594-8-8s3.594-8 8-8 8 3.594 8 8-3.594 8-8 8zm72-48c-4.406 0-8-3.594-8-8s3.594-8 8-8 8 3.594 8 8-3.594 8-8 8zm72 48c-4.406 0-8-3.594-8-8s3.594-8 8-8 8 3.594 8 8-3.594 8-8 8zm80-64c-4.406 0-8-3.594-8-8s3.594-8 8-8 8 3.594 8 8-3.594 8-8 8zm64 48c-4.406 0-8-3.594-8-8s3.594-8 8-8 8 3.594 8 8-3.594 8-8 8zm0 0M208 176H80v112h128zm-16 96H96v-80h96zm0 0" />
+                            <path d="M112 208h64v16h-64zm0 0M112 240h64v16h-64zm0 0M224 256h16v16h-16zm0 0M256 256h160v16H256zm0 0" />
+                          </svg>
+                          <!-- end icon-laptop -->
+                        </div>
+                        <div class="feature__title">
+                          <div class="h4 h4--ttn h4--bold"><span class="underlined"><span>Заощадження до 85% </span></span> вашого бюджету</div>
+                        </div>
+                        <div class="feature__text">Вже ні для кого не секрет, що більше 60% користувачів відвідують сайти з мобільних пристроїв, тому ми дуже відповідально ставимося до створення адаптивних версій вашого майбутнього сайту</div>
+                      </div>
+                    </div>
+                    <!-- end feature -->
+                  </div>
+                </div>
+                <!-- end features -->
+              </div>
+              <div class="s-features__img section--img__img">
+                <div class="section-img section-img--reverse">
+                  <div class="section-img__inner overlayed js-anim-el" data-anim-name="overlayedLeft">
+                    <div class="section-img__img js-lazy js-anim-el" data-anim-name="fadeIn" data-anim-duration="1.5s" data-background-image="img/services/features-1.jpg"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end section -->
+        <!-- begin section -->
+        <section class="section s-order section--gray-lighten s-order--bg pt-md pb-md js-lazy" data-background-image="img/about/bg-order.jpg">
+          <div class="container">
+            <div class="s-order__inner">
+              <div class="s-order__left">
+                <div class="s-order__title overlayed js-anim-el" data-anim-name="overlayedLeft">
+                  <div class="title title--ttn glitch js-anim-el" data-anim-name="fadeIn" data-text="Це - Олександра.">Це - Олександра. Вона знає,<br> як зробити крутий проект<br> для вашого бізнесу</div>
+                </div>
+                <div class="s-order__contacts js-anim-el" data-anim-name="fadeInBottomSm">
+                  <!-- begin order-contacts -->
+                  <div class="order-contacts">
+                    <div class="order-contacts__mail">
+                      <a href="mailto:order@demiweb.pro" class="">order@demiweb.pro</a>
+                    </div>
+                    <div class="order-contacts__phone">
+                      <a href="tel:0800337167" class="">0 800 337 167</a>
+                    </div>
+                    <div class="order-contacts__phone">
+                      <a href="tel:0443338538" class="">044 333 8538</a>
+                    </div>
+                    <div class="order-contacts__text">м. Київ, вул. бульвар марії приймаченко 1/27 | м. дружби народів</div>
+                  </div>
+                  <!-- end order-contacts -->
+                </div>
+                <div class="s-order__btns js-anim-el" data-anim-name="fadeInBottomSm">
+                  <div class="s-order__btn">
+                    <a href="#" class="btn btn--lg btn--full">ДІЗНАТИСЯ ВАРТІСТЬ</a>
+                  </div>
+                  <div class="s-order__btn">
+                    <a href="#" class="btn btn--lg btn--transp-black btn--full">ДИВИТИСЯ СХОЖІ ПРОЕКТИ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end section -->
+        <!-- begin section -->
+        <section class="section s-gallery pt-md pb-lg overflow-hidden">
+          <div class="section__title-block s-gallery__title-block">
+            <!-- begin title-block -->
+            <div class="title-block">
+              <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRight"></div>
+              <div class="container">
+                <div class="title-block__inner">
+                  <div class="title-block__subttl js-anim-el" data-anim-name="fadeInTopSm">у нас вже є результати, які </div>
+                  <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
+                    <div class="title glitch" data-text=""><small>розповідають</small> залишатися на плаву</div>
+                  </div>
+                </div>
+              </div>
+              <div class="title-block__word word word--sm js-anim-el" data-anim-name="fadeInLeft">
+                <div class="word__inner js-parallax-scroll">progress</div>
+              </div>
+            </div>
+            <!-- end title-block -->
+          </div>
+          <div class="section__gallery s-gallery__gallery">
+            <div class="container">
+              <!-- begin gallery -->
+              <div class="gallery gallery--slider js-gallery js-anim-in-vieport-with-gsap">
+                <div class="gallery__inner">
+                  <div class="gallery__square gallery-cover"></div>
+                  <div class="gallery__img-wrap  js-lightgallery">
+                    <a href="#" class="gallery__img gallery-img js-lazy" data-background-image="img/gallery/1.jpg">
+                      <span class="gallery__caption">
+                        <span class="gallery__title">
+                          <span class="title title--ttn">Santay</span>
+                        </span>
+                        <span class="gallery__subttl"> Весільний салон у Вінниці</span>
+                      </span>
+                      <span class="gallery__meta">
+                        <!-- begin gallery-meta -->
+                        <span class="gallery-meta">
+                          <span class="gallery-meta-item">
+                            <span class="gallery-meta-item__title">Витрати:</span>
+                            <span class="gallery-meta-item__price price price--sm"><small>До</small> 16 000 <small>грн</small></span>
+                          </span>
+                          <span class="gallery-meta-item">
+                            <span class="gallery-meta-item__title">Залучено клієнтів:</span>
+                            <span class="gallery-meta-item__price price price--sm">1842</span>
+                          </span>
+                          <span class="gallery-meta-item">
+                            <span class="gallery-meta-item__title">Досягнуто конверсій:</span>
+                            <span class="gallery-meta-item__price price price--sm">291</span>
+                          </span>
+                          <span class="gallery-meta-item">
+                            <span class="gallery-meta-item__title">Збільшення доходу:</span>
+                            <span class="gallery-meta-item__price price price--sm">480%</span>
+                          </span>
+                        </span>
+                        <!-- end gallery-meta -->
+                      </span>
+                    </a>
+                    <a href="#" class="gallery__img gallery-img js-lazy" data-background-image="img/gallery/1.jpg">
+                      <span class="gallery__caption">
+                        <span class="gallery__title">
+                          <span class="title title--ttn">Santay</span>
+                        </span>
+                        <span class="gallery__subttl"> Весільний салон у Вінниці</span>
+                      </span>
+                      <span class="gallery__meta">
+                        <!-- begin gallery-meta -->
+                        <span class="gallery-meta">
+                          <span class="gallery-meta-item">
+                            <span class="gallery-meta-item__title">Витрати:</span>
+                            <span class="gallery-meta-item__price price price--sm"><small>До</small> 16 000 <small>грн</small></span>
+                          </span>
+                          <span class="gallery-meta-item">
+                            <span class="gallery-meta-item__title">Залучено клієнтів:</span>
+                            <span class="gallery-meta-item__price price price--sm">1842</span>
+                          </span>
+                          <span class="gallery-meta-item">
+                            <span class="gallery-meta-item__title">Досягнуто конверсій:</span>
+                            <span class="gallery-meta-item__price price price--sm">291</span>
+                          </span>
+                          <span class="gallery-meta-item">
+                            <span class="gallery-meta-item__title">Збільшення доходу:</span>
+                            <span class="gallery-meta-item__price price price--sm">480%</span>
+                          </span>
+                        </span>
+                        <!-- end gallery-meta -->
+                      </span>
+                    </a>
+                  </div>
+                  <div class="gallery__btns">
+                    <button class="gallery__prev slider-btn slider-btn--prev slider-btn--two-svg js-prev">
+                      <span class="slider-btn__front-svg">
+                        <!-- begin icon-arrow -->
+                        <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
+                          <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
+                        </svg>
+                        <!-- end icon-arrow -->
+                      </span>
+                      <span class="slider-btn__back-svg">
+                        <!-- begin icon-arrow -->
+                        <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
+                          <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
+                        </svg>
+                        <!-- end icon-arrow -->
+                      </span>
+                    </button>
+                    <button class="gallery__next slider-btn slider-btn--next slider-btn--two-svg js-next">
+                      <span class="slider-btn__front-svg">
+                        <!-- begin icon-arrow -->
+                        <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
+                          <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
+                        </svg>
+                        <!-- end icon-arrow -->
+                      </span>
+                      <span class="slider-btn__back-svg">
+                        <!-- begin icon-arrow -->
+                        <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
+                          <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
+                        </svg>
+                        <!-- end icon-arrow -->
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- end gallery -->
+            </div>
+          </div>
+        </section>
+        <!-- end section -->
+        <!-- begin section -->
+        <section class="section section--black section--white-color s-order pt-lgl pb-xl">
+          <div class="container">
+            <div class="s-order__inner">
+              <div class="s-order__left">
+                <div class="s-order__title overlayed js-anim-el" data-anim-name="overlayedLeft">
+                  <div class="title title--ttn glitch js-anim-el" data-anim-name="fadeIn" data-text="А ви готові">А ви готові розробити <br> по справжньому крутий проект?</div>
+                </div>
+                <div class="s-order__contacts js-anim-el" data-anim-name="fadeInBottomSm">
+                  <!-- begin order-contacts -->
+                  <div class="order-contacts">
+                    <div class="order-contacts__mail">
+                      <a href="mailto:order@demiweb.pro" class="">order@demiweb.pro</a>
+                    </div>
+                    <div class="order-contacts__phone">
+                      <a href="tel:0800337167" class="">0 800 337 167</a>
+                    </div>
+                    <div class="order-contacts__phone">
+                      <a href="tel:0443338538" class="">044 333 8538</a>
+                    </div>
+                    <div class="order-contacts__text">м. Київ, вул. бульвар марії приймаченко 1/27 | м. дружби народів</div>
+                  </div>
+                  <!-- end order-contacts -->
+                </div>
+                <div class="s-order__btns js-anim-el" data-anim-name="fadeInBottomSm">
+                  <div class="s-order__btn">
+                    <a href="#" class="btn btn--lg btn--full">замовити консультацію</a>
+                  </div>
+                  <div class="s-order__btn">
+                    <a href="#" class="btn btn--lg btn--transp-white btn--full">презентація компанії</a>
+                  </div>
+                </div>
+              </div>
+              <div class="s-order__right js-anim-el" data-anim-name="fadeInRightSm" data-anim-delay="0.5s">
+                <!-- begin scrolled-text -->
+                <div class="scrolled-text js-scrollbar">
+                  <h1>СТУДИЯ ВЕБ ДИЗАЙНА "DEMIWEB INTERNATIONAL"</h1>
+                  <p>Наша студия веб дизайна по разработке сайтов под ключ в Киеве предлагает вам разработку сайтов любой сложности и тематики. Нашей компании под силу изготовление сайтов любого типа: создание интернет-магазина, сайт визитка, корпоративный сайт, сайт для бизнеса, сайт каталог, создание лендинг (landing page). Так, вы можете заказать у нас сайт любого назначения в Виннице, Киеве и по всей Украине. У нас в команде работают лучшие разработчики со всей страны по веб-программированию, у которых более 5 лет опыта и навыков создания качественного продукта.</p>
+                  <p>Если вас интересует web разработка сайтов, цена которой будет весьма доступна и оправдана, обращайтесь к специалистам веб студии «Demiweb International». За годы успешной работы они реализовали десятки эффективных и действенных веб-проектов, и сегодня в числе их довольных клиентов можно увидеть как крупные организации различной сферы деятельности, так и частных лиц и компании, которые только начали свой путь в мире интернет-бизнеса. Вне зависимости от сложности и объемов заказа, вы получите комплексный и профессиональный подход.</p>
+                  <h2>Каким требованиям должен соответствовать веб-разработчик?</h2>
+                  <p>Выбирая подрядчика для создания ресурса, который сможет помочь Вам реализовать Ваши цели в бизнесе, следует учитывать несколько важных моментов:</p>
+                  <p>Веб-студия должна иметь солидное портфолио, опыт работы с разнообразными сферами бизнеса; Собственный web ресурс компании должен соответствовать качеству их работы, </p>
+                  <h2>Каким требованиям должен соответствовать веб-разработчик?</h2>
+                  <p>Выбирая подрядчика для создания ресурса, который сможет помочь Вам реализовать Ваши цели в бизнесе, следует учитывать несколько важных моментов:</p>
+                  <p>Веб-студия должна иметь солидное портфолио, опыт работы с разнообразными сферами бизнеса; Собственный web ресурс компании должен соответствовать качеству их работы, </p>
+                  <h2>Каким требованиям должен соответствовать веб-разработчик?</h2>
+                  <p>Выбирая подрядчика для создания ресурса, который сможет помочь Вам реализовать Ваши цели в бизнесе, следует учитывать несколько важных моментов:</p>
+                  <p>Веб-студия должна иметь солидное портфолио, опыт работы с разнообразными сферами бизнеса; Собственный web ресурс компании должен соответствовать качеству их работы, </p>
+                </div>
+                <!-- end scrolled-text -->
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end section -->
+      </main>
+      <!-- end main -->
+      <!-- begin footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner js-anim-el" data-anim-name="fadeInBottomSm">
+            <div class="footer__logo">
+              <!-- begin icon-D -->
+              <svg width="1.000em" height="1em" viewBox="0 0 2834.65 2834.65" class="icon icon-D">
+                <path d="M2277.478 452.18C2004.532 191.052 1652.85 60.488 1222.475 60.488H147.778v1693.604h606.261V607.661h468.436c246.699 0 446.796 77.456 600.331 232.271 153.487 154.864 230.278 354.34 230.278 598.382 0 246.7-76.127 446.789-228.333 600.324-152.205 153.536-352.967 230.279-602.276 230.279H147.778v547.173h1074.696c427.765 0 778.782-131.181 1053.009-393.638 274.228-262.457 411.389-590.506 411.389-984.139 0-396.294-136.497-725.005-409.394-986.133z" />
+              </svg>
+              <!-- end icon-D -->
+            </div>
+            <div class="footer__meta">
+              <p><a href="#">Веб студія "Demiweb International"</a> Всі права захищені &copy; 2019</p>
+              <p>При копіюванні матеріалу посилання на першоджерело demiweb.pro обов'язкове.</p>
+            </div>
+            <div class="footer__scroll-top">
+              <a href="#" class="scroll-to scroll-to--up js-scroll-to-top">
+                <!-- begin icon-arrow -->
+                <svg viewBox="0 0 31.49 31.49" class="icon icon-arrow" width="1.000em" height="1em">
+                  <path d="M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z" />
+                </svg>
+                <!-- end icon-arrow -->
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end footer -->
+    </div>
+    <!-- END content -->
+    <!-- begin popups -->
+    <!-- begin popup -->
+    <div class="popup js-popup" data-popup="call">
+      <div class="popup__inner">
+        <a href="#" class="popup__close js-popup-close"></a>
+        <!-- begin form -->
+        <div class="form form--sm form--center">
+          <form>
+            <div class="form__inner">
+              <div class="popup__title">
+                <div class="h4 h4--bold">З’явилися питання?</div>
+              </div>
+              <div class="popup__subttl">Залиште ваші дані внизу та ми зв’яжемося з вами у найближчий час</div>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input input--has-icon">
+                  <label>
+                    <svg viewBox="0 0 350 350" class="icon icon-man-user" width="1.000em" height="1em">
+                      <path d="M175 171.173c38.914 0 70.463-38.318 70.463-85.586C245.463 38.318 235.105 0 175 0s-70.465 38.318-70.465 85.587c0 47.268 31.549 85.586 70.465 85.586zM41.909 301.853c-.012-2.882-.024-.812 0 0zM308.085 304.104c.038-.789.013-5.474 0 0z" />
+                      <path d="M307.935 298.397c-1.305-82.342-12.059-105.805-94.352-120.657 0 0-11.584 14.761-38.584 14.761s-38.586-14.761-38.586-14.761C55.018 192.43 43.61 215.545 42.11 295.722c-.123 6.547-.18 6.891-.202 6.131.005 1.424.011 4.058.011 8.651 0 0 19.592 39.496 133.08 39.496 113.486 0 133.08-39.496 133.08-39.496 0-2.951.002-5.003.005-6.399-.022.47-.066-.441-.149-5.708z" />
+                    </svg>
+                  </label>
+                  <input class="js-input" type="text" placeholder="Введіть ваше ім’я">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input input--has-icon">
+                  <label>
+                    <svg width="1.000em" height="1em" viewBox="0 0 348.077 348.077" class="icon icon-call-answer">
+                      <path d="M340.273 275.083l-53.755-53.761c-10.707-10.664-28.438-10.34-39.518.744l-27.082 27.076a792.327 792.327 0 0 1-5.344-2.973c-17.102-9.476-40.509-22.464-65.14-47.113-24.704-24.701-37.704-48.144-47.209-65.257-1.003-1.813-1.964-3.561-2.913-5.221l18.176-18.149 8.936-8.947c11.097-11.1 11.403-28.826.721-39.521L73.39 8.194c-10.682-10.68-28.421-10.356-39.518.744l-15.15 15.237.414.411c-5.08 6.482-9.325 13.958-12.484 22.02C3.74 54.28 1.927 61.603 1.098 68.941-6 127.785 20.89 181.564 93.866 254.541c100.875 100.868 182.167 93.248 185.674 92.876 7.638-.913 14.958-2.738 22.397-5.627 7.992-3.122 15.463-7.361 21.941-12.43l.331.294 15.348-15.029c11.074-11.098 11.393-28.83.716-39.542z" />
+                    </svg>
+                  </label>
+                  <input class="js-input js-mask" type="tel" placeholder="+38(___)___-__-__" data-mask-input="phone">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin textarea -->
+                <div class="textarea textarea--has-icon">
+                  <label>
+                    <svg width="1.000em" height="1em" viewBox="0 0 528.899 528.899" class="icon icon-pencil-edit-button">
+                      <path d="M328.883 89.125l107.59 107.589-272.34 272.34L56.604 361.465l272.279-272.34zm189.23-25.948l-47.981-47.981c-18.543-18.543-48.653-18.543-67.259 0l-45.961 45.961 107.59 107.59 53.611-53.611c14.382-14.383 14.382-37.577 0-51.959zM.3 512.69c-1.958 8.812 5.998 16.708 14.811 14.565l119.891-29.069L27.473 390.597.3 512.69z" />
+                    </svg>
+                  </label>
+                  <textarea class="js-textarea js-input" placeholder="Коротко опишіть ваше питання"></textarea>
+                </div>
+                <!-- end textarea -->
+              </div>
+              <div class="form__field form__btn">
+                <button class="btn btn--full">замовити дзвінок</button>
+              </div>
+              <div class="form__checkbox form__field">
+                <!-- begin checkbox -->
+                <label class="checkbox">
+                  <input type="checkbox" checked="">
+                  <span>Ви погоджуєтеся з умовами обробки персональних даних.<br> <a href="#">Політика конфеденційності.</a></span>
+                </label>
+                <!-- end checkbox -->
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- end form -->
+      </div>
+    </div>
+    <!-- end popup -->
+    <!-- begin popup -->
+    <div class="popup js-popup" data-popup="thanks">
+      <div class="popup__inner">
+        <a href="#" class="popup__close js-popup-close"></a>
+        <div class="popup__title">
+          <div class="h4 h4--bold">Дякуємо за заявку</div>
+        </div>
+        <div class="popup__subttl">Наш менеджер зв’яжеться з вами у найближчий час</div>
+        <div class="popup__time">
+          <!-- begin icon-passage-of-time -->
+          <svg width="1.000em" height="1em" viewBox="0 0 47.001 47.001" class="icon icon-passage-of-time">
+            <path d="M46.907 20.12a.989.989 0 0 0-.896-.569h-2.927C41.223 9.452 32.355 1.775 21.726 1.775 9.747 1.775 0 11.522 0 23.501s9.746 21.725 21.726 21.725c7.731 0 14.941-4.161 18.816-10.857a1.975 1.975 0 0 0-.722-2.699 1.971 1.971 0 0 0-2.697.72c-3.172 5.481-9.072 8.887-15.397 8.887-9.801 0-17.776-7.974-17.776-17.774 0-9.802 7.975-17.776 17.776-17.776 8.442 0 15.515 5.921 17.317 13.825h-2.904a.99.99 0 0 0-.896.569.985.985 0 0 0 .136 1.051l4.938 5.925a.988.988 0 0 0 1.517 0l4.938-5.925a.987.987 0 0 0 .135-1.052z" />
+            <path d="M21.726 6.713a1.975 1.975 0 0 0-1.975 1.975v11.984a3.451 3.451 0 0 0-1.481 2.83 3.461 3.461 0 0 0 3.457 3.457c.522 0 1.014-.125 1.458-.334l6.87 3.965a1.974 1.974 0 0 0 1.974-3.419L25.152 23.2a3.44 3.44 0 0 0-1.449-2.526V8.688a1.979 1.979 0 0 0-1.977-1.975zm0 18.269a1.483 1.483 0 0 1-1.481-1.48c0-.816.665-1.481 1.481-1.481s1.481.665 1.481 1.481c0 .815-.665 1.48-1.481 1.48z" />
+          </svg>
+          <!-- end icon-passage-of-time -->
+          <p>Пн - Пт</p>
+          <p>10:00 - 18:00</p>
+        </div>
+        <div class="popup__btn">
+          <a href="#" class="btn btn--full">на головну</a>
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
+    <!-- end popups -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>

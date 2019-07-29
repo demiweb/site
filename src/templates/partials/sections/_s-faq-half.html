@@ -7,6 +7,10 @@
         <div class="title-block title-block--no-container">
           <div class="title-block__square-wrap js-anim-el" data-anim-name="slideBeforeRightShort"></div>
 
+          {% if sectionLaptop.titleBlock.subttl %}
+          <div class="title-block__subttl js-anim-el" data-anim-name="fadeInTopSm">{{ sectionLaptop.titleBlock.subttl | safe }}</div>
+          {% endif %}
+
           <div class="title-block__title js-anim-el" data-anim-name="fadeInBottomSm">
             <div class="title glitch glitch--bottom" data-text="{{ sectionLaptop.titleBlock.text }}">{{ sectionLaptop.titleBlock.title | safe }}</div>
           </div>

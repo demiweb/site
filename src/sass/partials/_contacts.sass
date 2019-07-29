@@ -30,3 +30,32 @@
 
   &--lg
     font-size: 20px
+
+.contacts-list
+  +flex(flex-start, normal, row, wrap)
+  &__item
+    width: 50%
+    margin-bottom: 35px
+    &:last-child
+      width: 100%
+    +md
+      margin-bottom: 25px
+    +sm
+      margin-bottom: 10px
+    small
+      display: block
+      font-size: 10px
+      color: $gray-light
+    a
+      +tr(color .3s)
+      +hover
+        color: $gray
+  &__phone
+    @extend .h4
+  &__item-title
+    color: $gray-light
+    text-transform: uppercase
+    margin-bottom: 10px
+    font-size: 11px
+    +sm
+      margin-bottom: 5px

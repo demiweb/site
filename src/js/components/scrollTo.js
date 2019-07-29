@@ -2,14 +2,20 @@ import { $DOC, $HTMLBODY, ACTIVE, OUT } from '../constants';
 
 export default function scrollTo() {
   const btn = 'js-scroll-to-btn';
+  const toTopBtn = 'js-scroll-to-top';
+  const toNextBtn = 'js-scroll-to-next';
 
-  $DOC.on('click', `.${btn}`, (e) => {
+  function scrollToTop(e) {
     e.preventDefault();
-    const id = $(e.currentTarget).attr('href');
-    const $target = $(`[data-scroll-to-target="${id}"]`);
-    let OFFSET = 0;
+    $HTMLBODY.animate({
+      scrollTop: 0
+    }, 1000);
+  };
 
-    console.log(OUT);
+  function scrollToNext(e) {
+    e.preventDefault();
+    let OFFSET = 0;
+    const $target = $(e.currentTarget).closest('section').next('section');
 
     if ($(OUT).hasClass('has-fixed-header')) {
       OFFSET = 75;
@@ -22,5 +28,9 @@ export default function scrollTo() {
     $HTMLBODY.animate({
       scrollTop: $target.offset().top - OFFSET
     }, 1000);
-  });
+
+  };
+
+  $DOC.on('click', `.${toTopBtn}`, scrollToTop);
+  $DOC.on('click', `.${toNextBtn}`, scrollToNext);
 };

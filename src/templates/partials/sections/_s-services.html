@@ -1,11 +1,24 @@
 <!-- begin section -->
-<section class="section s-services overflow-hidden{% if servicesSection.mod %} {{ servicesSection.mod }}{% endif %}" {% if servicesSection.scrollTarget %}data-scroll-to-target="services"{% endif %}>
+<section class="section s-services overflow-hidden{% if servicesSection.mod %} {{ servicesSection.mod }}{% endif %}">
+  {% if servicesSection.titleBlock %}
+  {{ mixins.titleBlock(
+      mod = servicesSection.titleBlock.mod,
+      title = servicesSection.titleBlock.title,
+      text = servicesSection.titleBlock.text,
+      word = servicesSection.titleBlock.word,
+      wordMod = servicesSection.titleBlock.wordMod,
+      subttl = servicesSection.titleBlock.subttl
+    ) }}
+
+    {% else %}
+
     {{ mixins.titleBlock(
       mod = '',
       title = 'Послуги <br> для реалізації ваших ідей',
       text = 'Послуги',
       word = 'services'
     ) }}
+  {% endif %}    
 
   {% include "partials/_services.html" %}
 </section>

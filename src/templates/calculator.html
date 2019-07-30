@@ -1,0 +1,27 @@
+---
+title: calculator
+page: calculator
+hero: {
+  modifications: {
+    section: 'hero--content'
+  },
+  subttl: 'ми створили для вас',
+  title: '<small>інтерактивний</small><strong class="glitch" data-text="калькулятор">калькулятор</strong>',
+  text: 'За допомогою нашого онлайн-калькулятору ви зможете розрахувати приблизну вартість вашого проекту онлайн. ',
+  bgImage: 'bg-hero-calculator.jpg',
+  breadcrumbs: {
+    list: [
+      { link: 'Головна' },
+      { item: '-' },
+      { link: 'калькулятор вартості', modLink: 'is-active' }
+    ]
+  },
+  scrollToTarget: true
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}  
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-calculator.html" %}
+{% endblock %}

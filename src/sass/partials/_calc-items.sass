@@ -1,0 +1,95 @@
+.calculator-order
+  background-color: $gray-lighten
+  text-align: center
+  &__title
+    margin-bottom: 20px
+    +md
+      margin-bottom: 10px
+  &__price
+    margin-bottom: 45px
+    +lg
+      margin-bottom: 35px
+    +md
+      margin-bottom: 25px
+    +sm
+      margin-bottom: 15px
+    .price
+      display: inline-block
+  &__btn
+    width: percentage(3/12)
+    margin-left: 10px
+    margin-right: 10px
+    display: inline-block
+
+.calc-block
+  +flex(flex-start, normal, row, wrap)
+  position: relative
+  +before
+    width: 100%
+    position: absolute
+    height: 1px
+    background-color: $white
+    left: 0
+    bottom: 0
+
+  &--two-cols
+    .calc-item
+      &__wrap
+        width: 50%
+        padding-bottom: 80px
+        +xl
+          padding-bottom: 70px
+        +lg
+          padding-bottom: 50px
+        +md
+          padding-bottom: 30px
+        +sm
+          padding-bottom: 15px
+        +xs
+          padding-bottom: 10px
+        &:nth-child(3n - 3)
+          border-right-color: $c-border
+        &:nth-child(even)
+          border-right-color: transparent
+
+.calc-item
+  position: relative
+  display: block
+  cursor: pointer
+  text-align: center
+  padding-bottom: 15px
+  padding-top: 15px
+  opacity: 0
+  .radio, .checkbox
+    cursor: pointer
+  &__wrap
+    padding-left: 15px
+    padding-right: 15px
+    width: 33.33333%
+    border-right: 1px dashed  $c-border
+    border-bottom: 1px dashed  $c-border
+    &:nth-child(3n - 3)
+      border-right-color: transparent
+  &__img
+    +cover
+    background-size: contain
+    padding-top: 40%
+    margin-bottom: 20px
+    display: block
+    +md
+      margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+  &__title,
+  &__radio
+    display: block
+    margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+  &__content
+    display: block
+  &__text
+    display: block
+
+  &--no-img
+    +css-lock(30, 100, 320, 1499, padding-top)

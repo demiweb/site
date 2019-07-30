@@ -1,0 +1,204 @@
+{% import "../../data/_calculator.html" as calculator %}
+
+<!-- begin section -->
+<section class="section pt-lg">
+  <!-- begin calculator -->
+  <div class="calculator">
+    <form>
+      <div class="pb-mdl">
+        {{ mixins.titleBlock(
+          mod = 'title-block--nmb section__title-block',
+          title = 'оберіть тип проекту',
+          text = 'оберіть',
+          word = '01'
+        ) }}
+
+        <div class="container">
+          <!-- begin calc-block -->
+          <div class="calc-block ">
+            {% for i in calculator.types %}
+            <!-- begin calc-item -->
+            <div class="calc-item__wrap">
+              <label for="{{ i.id }}" class="calc-item js-anim-el" data-anim-name="fadeInBottomSm">    
+
+                <span class="calc-item__img js-lazy" data-background-image="img/calculator/{{ i.img }}"></span>
+
+                <span class="calc-item__content">
+                  <span class="calc-item__radio">
+                    {{ mixins.input(
+                      name = 'radio',
+                      mod = 'radio--lg radio--empty',
+                      type = 'radio',
+                      placeholder = '',
+                      value = '',
+                      fieldClass = '',
+                      fieldAttributes = i.fieldAttributes,
+                      label = { last: ' ', span: true }
+                    ) }}
+                  </span>
+
+                  <span class="calc-item__title">
+                    <span class="h4 h4--ttn h4--bold">{{ i.title | safe }}</span>
+                  </span>
+
+                  <span class="calc-item__text">{{ i.text | safe }}</span>
+                </span>
+              </label>
+            </div>
+            <!-- end calc-item -->
+            {% endfor %}
+          </div>
+          <!-- end calc-block -->
+        </div>
+      </div>
+
+      <div class="pb-mdl">
+        {{ mixins.titleBlock(
+          mod = 'title-block--nmb section__title-block',
+          title = 'оберіть рівень дизайну',
+          text = 'оберіть',
+          word = '02'
+        ) }}
+
+        <div class="container">
+          <!-- begin calc-block -->
+          <div class="calc-block ">
+            {% for i in calculator.design %}
+            <!-- begin calc-item -->
+            <div class="calc-item__wrap">
+              <label for="{{ i.id }}" class="calc-item calc-item--no-img js-anim-el" data-anim-name="fadeInBottomSm">    
+
+                <span class="calc-item__content">
+                  <span class="calc-item__radio">
+                    {{ mixins.input(
+                      name = 'radio',
+                      mod = 'radio--lg radio--empty',
+                      type = 'radio',
+                      placeholder = '',
+                      value = '',
+                      fieldClass = '',
+                      fieldAttributes = i.fieldAttributes,
+                      label = { last: ' ', span: true }
+                    ) }}
+                  </span>
+
+                  <span class="calc-item__title">
+                    <span class="h4 h4--ttn h4--bold">{{ i.title | safe }}</span>
+                  </span>
+
+                  <span class="calc-item__text">{{ i.text | safe }}</span>
+                </span>
+              </label>
+            </div>
+            <!-- end calc-item -->
+            {% endfor %}
+          </div>
+          <!-- end calc-block -->
+        </div>
+      </div>
+
+      <div class="pb-mdl">
+        {{ mixins.titleBlock(
+          mod = 'title-block--nmb section__title-block',
+          title = 'оберіть модулі вашого сайту',
+          text = 'оберіть',
+          word = '03'
+        ) }}
+
+        <div class="container">
+          <!-- begin checkboxes-list -->
+          <div class="checkboxes-list js-stagger" data-iteration-delay="0.07">
+            {% for i in calculator.checkboxes %}
+            <div class="checkbox__wrap">
+              {{ mixins.input(
+                name = 'checkbox',
+                mod = 'checkbox--md checkbox--black js-stagger-el',
+                type = 'checkbox',
+                placeholder = '',
+                value = '',
+                fieldClass = '',
+                label = { span: true, last: i.label }
+              ) }}
+            </div>
+            {% endfor %}
+          </div>
+          <!-- end checkboxes-list -->
+        </div>
+      </div>
+
+      <div class="">
+        {{ mixins.titleBlock(
+          mod = 'title-block--nmb section__title-block',
+          title = 'оберіть додатковий функціонал',
+          text = 'оберіть',
+          word = '04'
+        ) }}
+
+        <div class="container">
+          <!-- begin calc-block -->
+          <div class="calc-block calc-block--two-cols">
+            {% for i in calculator.functions %}
+            <!-- begin calc-item -->
+            <div class="calc-item__wrap">
+              <label for="{{ i.id }}" class="calc-item calc-item--no-img js-anim-el" data-anim-name="fadeInBottomSm">    
+                
+                <span class="calc-item__img js-lazy" data-background-image="img/calculator/{{ i.img }}"></span>
+
+                <span class="calc-item__content">
+                  <span class="calc-item__radio">
+                    {{ mixins.input(
+                      name = 'checkbox',
+                      mod = 'checkbox--lg checkbox--empty',
+                      type = 'checkbox',
+                      placeholder = '',
+                      value = '',
+                      fieldClass = '',
+                      fieldAttributes = i.fieldAttributes,
+                      label = { last: ' ', span: true }
+                    ) }}
+                  </span>
+
+                  <span class="calc-item__title">
+                    <span class="h4 h4--ttn h4--bold">{{ i.title | safe }}</span>
+                  </span>
+
+                  <span class="calc-item__text">{{ i.text | safe }}</span>
+                </span>
+              </label>
+            </div>
+            <!-- end calc-item -->
+            {% endfor %}
+          </div>
+          <!-- end calc-block -->
+        </div>
+      </div>
+
+      <div class="calculator__bottom calculator-order pt-lg pb-lg">
+        <div class="calculator-order__title js-anim-el" data-anim-name="fadiInTopSm">Підсумкова вартість проекту:</div>
+
+        <div class="calculator-order__price js-anim-el" data-anim-name="fadeInBottomSm">
+          <div class="price price--bold underlined"><span>65 500<small>грн</small></span></div>
+        </div>
+
+        <div class="calculator-order__btns js-anim-el" data-anim-name="fadeInBottomSm" data-anim-delay="0.3s">
+          <div class="calculator-order__btn">
+            {{ mixins.btn(
+              title = 'замовити послугу',
+              mod = 'btn--full btn--lg',
+              href = false
+            ) }}
+          </div>
+          <div class="calculator-order__btn">
+            {{ mixins.btn(
+              title = 'хочу знижку',
+              mod = 'btn--full btn--lg btn--transp-black',
+              href = false
+            ) }}
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- end calculator -->
+</section>
+<!-- end section -->

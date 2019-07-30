@@ -25,3 +25,6 @@ PageList:
 - file: services-smm-facebook.html
 - file: contacts.html
 - file: 404.html
+- file: calculator.html
+- file: letter-blog.html
+- file: letter-new-project.html

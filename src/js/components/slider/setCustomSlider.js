@@ -4,6 +4,7 @@ import Animator from './Animator';
 import { debounce } from 'throttle-debounce';
 import BlockAnimator from '../../components/animations/BlockAnimator';
 import { TimelineLite } from 'gsap';
+import '../../lib/touchevents';
 
 class Slider {
   constructor(wrap) {
@@ -26,6 +27,52 @@ class Slider {
     this._paginate();
   };
 
+  setLoopPagination() {
+    if (this.next > this.slides.length - 1) {
+      this.next = 0;
+    };
+    if (this.next < 0) {
+      this.next = this.slides.length - 1;
+    };
+  };
+
+  paginateOnClick(e) {
+    e.preventDefault();
+    const btn = e.currentTarget;
+
+    if (btn.classList.contains(Slider.classNames.prev)) {
+      this.next = this.current - 1;
+    } else if(btn.classList.contains(Slider.classNames.next)) {
+      this.next = this.current + 1;
+    };    
+  };
+
+  paginate(e) {
+    if (e && e.type === 'click') {
+      this.paginateOnClick(e);
+    };
+
+    if (e && e.type === 'swl') {
+      this.next = this.current + 1;
+    };
+
+    if (e && e.type === 'swr') {
+      this.next = this.current - 1;
+    };
+
+    this.setLoopPagination() ;
+
+    this.animator = new Animator({
+      wrap: this.wrap,
+      slides: this.slides,
+      current: this.current,
+      next: this.next
+    });
+    this.animator.animate();
+
+    this.current = this.next;
+  };
+
   _setSlidesPosition() {
     const left = this.slides[0].getBoundingClientRect().left;
 
@@ -44,31 +91,11 @@ class Slider {
 
   _paginate() {
     getObjectValues(this.btns).forEach(btn => {
-      btn.addEventListener('click', e => {
-        if (btn.classList.contains(Slider.classNames.prev)) {
-          this.next = this.current - 1;
-        } else if(btn.classList.contains(Slider.classNames.next)) {
-          this.next = this.current + 1;
-        };        
-
-        if (this.next > this.slides.length - 1) {
-          this.next = 0;
-        };
-        if (this.next < 0) {
-          this.next = this.slides.length - 1;
-        };        
-
-        this.animator = new Animator({
-          wrap: this.wrap,
-          slides: this.slides,
-          current: this.current,
-          next: this.next
-        });
-        this.animator.animate();
-
-        this.current = this.next;
-      });
+      btn.addEventListener('click', this.paginate.bind(this));
     });
+
+    this.slider.addEventListener('swl', this.paginate.bind(this));
+    this.slider.addEventListener('swr', this.paginate.bind(this));
   }
 };
 

@@ -1,21 +1,21 @@
 import isTouch from '../lib/detectTouch';
-import { $HTML, NOTOUCH, READY } from '../constants';
+import { NOTOUCH, READY } from '../constants';
 import { detect } from 'detect-browser';
 
 export function setTouch() {
   if (!isTouch()) {
-    $HTML.addClass(NOTOUCH);
+    document.documentElement.classList.add(NOTOUCH);
   };
 };
 
 export function setReady() {
-  $HTML.addClass(READY);
+  document.documentElement.classList.add(READY);
 };
 
 export function setBrowser() {
   const browser = detect();
 
   if(browser.name === 'ie') {
-    $HTML.addClass('is-ie');
+    document.documentElement.classList.add('is-ie');
   };
 };

@@ -3,6 +3,7 @@ import Animator from './Animator';
 import { debounce } from 'throttle-debounce';
 import BlockAnimator from '../animations/BlockAnimator';
 import { TimelineLite } from 'gsap';
+import '../../lib/touchevents';
 
 import lightGallery from 'lightgallery';
 import 'lg-zoom';
@@ -26,24 +27,41 @@ class Gallery {
   init() {
     this.slides[0].classList.add(ACTIVE);
 
-    this.btns.next.addEventListener('click', this.paginate.bind(this));
-    this.btns.prev.addEventListener('click', this.paginate.bind(this));
+    this._paginate();    
   };
 
-  paginate(e) {
-    e.preventDefault();
-    if (e.currentTarget === this.btns.prev) {
-      this.next = this.current - 1;
-    }else if (e.currentTarget === this.btns.next) {
-      this.next = this.current + 1;
-    };
-
+  setLoopPagination() {
     if (this.next > this.slides.length - 1) {
       this.next = 0;
     };
     if (this.next < 0) {
       this.next = this.slides.length - 1;
     };
+  };
+
+  paginateOnClick(e) {
+    e.preventDefault();
+    if (e.currentTarget === this.btns.prev) {
+      this.next = this.current - 1;
+    }else if (e.currentTarget === this.btns.next) {
+      this.next = this.current + 1;
+    };
+  };
+
+  paginate(e) {
+    if (e && e.type === 'click') {
+      this.paginateOnClick(e);
+    };
+
+    if (e && e.type === 'swl') {
+      this.next = this.current + 1;
+    };
+
+    if (e && e.type === 'swr') {
+      this.next = this.current - 1;
+    };
+
+    this.setLoopPagination();    
 
     this.animator = new Animator({
       slides: this.slides,
@@ -54,7 +72,14 @@ class Gallery {
     this.animator.animate();
 
     this.current = this.next;    
-  };  
+  };
+
+  _paginate() {
+    this.btns.next.addEventListener('click', this.paginate.bind(this));
+    this.btns.prev.addEventListener('click', this.paginate.bind(this));
+    this.gallery.addEventListener('swl', this.paginate.bind(this));
+    this.gallery.addEventListener('swr', this.paginate.bind(this));
+  };
 };
 
 

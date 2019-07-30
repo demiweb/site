@@ -1,39 +1,10 @@
-import BlockAnimator from './BlockAnimator';
 import { TimelineLite } from 'gsap';
-import { isInView } from '../../helpers';
 import { ANIMATE } from '../../constants';
 
-export function animateTable() {
-  const table = document.querySelector('.js-anim-in-vieport-with-gsap.clients-table');
-  if(table) {
-    const blockAnimator = new BlockAnimator(table, {
-      observer: {
-        threshold: 0.25
-      }
-    });
-    blockAnimator.animate = (entry, observer) => {
-      const cols = entry.target.querySelectorAll('.clients-table__item');
-
-      const tl = new TimelineLite({
-        onComplete: () => {
-          observer.unobserve(entry.target);
-        }
-      });
-
-      tl
-        .staggerFromTo(
-          cols,
-          0.7,
-          { opacity: 0, y: 15, x: 15 },
-          { opacity: 1, y: 0, x: 0 },
-          0.1
-        );
-    };
-    blockAnimator.init();
-  };
-};
-
-export function animateHero() {
+export default function animateHero() {
+  const hero = document.querySelector('.hero');
+  if(!hero) return;
+  
   const {
     header,
     letterWrap,
@@ -79,9 +50,11 @@ export function animateHero() {
         { opacity: 0 },
         { opacity: 1 }
       )
-      .call(() => {
+      .call(() => {      
         if (letter.classList) {
           letter.classList.add(ANIMATE);
+        } else if(letter.className) {
+          // letter.className.baseVal += ` ${ANIMATE}`;
         };        
       })
       .fromTo(
@@ -246,94 +219,4 @@ export function animateHero() {
     );
   };
   // ============= end CONDITION timeline =============
-};
-
-export function animateTeam() {
-  const teams = [].slice.call(document.querySelectorAll('.team'));
-
-  if(!teams.length) return;
-
-  teams.forEach(wrap => {
-    isInView({
-      el: wrap,
-      onEnter: (entry, observer) => {
-        const blocks = entry.target.querySelectorAll('.specialist');
-        const imgs = entry.target.querySelectorAll('.specialist__img');
-        const imgWraps = entry.target.querySelectorAll('.overlayed');
-        const captions = entry.target.querySelectorAll('.specialist__bottom');
-
-        if(!blocks.length) return;
-
-        const tl = new TimelineLite();
-
-        tl
-          .call(() => {
-            const covers = [].slice.call(imgWraps);
-            covers.forEach(cover => {
-              cover.classList.add('overlayedLeft');
-            });
-          })
-          .staggerFromTo(
-            imgs,
-            0.5,
-            { opacity: 0 },
-            { opacity: 1 },
-            0,
-            '+=.5'
-          )
-          .staggerFromTo(
-            captions,
-            0.5,
-            { y: 15, opacity: 0 },
-            { y: 0, opacity: 1 },
-            0,
-            '-=.5'
-          );
-      }
-    });
-  });
-};
-
-export function addPortfolioContentOverflowVisible() {
-  const portfolioItems = [].slice.call(document.querySelectorAll('.js-vieport-related-el.portfolio-item'));
-
-  if(portfolioItems.length > 0) {
-    portfolioItems.forEach(item => {
-      const content = item.querySelector('.portfolio-item__content-inner');
-
-      content.addEventListener('transitionend', (e) => {
-        const contentWrap = e.currentTarget.parentNode.classList.contains('portfolio-item__content') ? e.currentTarget.parentNode : null;
-
-        if (!contentWrap) return;
-
-        contentWrap.classList.add('overflow-visible');
-      });      
-    });
-  };
-};
-
-export function animateStagger() {
-  const numbersWraps = [].slice.call(document.querySelectorAll('.js-stagger'));
-
-  if(numbersWraps.length > 0) {
-    numbersWraps.forEach(wrap => {
-      isInView({
-        el: wrap,
-        onEnter: (entry, observer) => {
-          const blocks = entry.target.querySelectorAll('.js-stagger-el');
-
-          if(!blocks) return;
-          const tl = new TimelineLite();
-          tl
-            .staggerFromTo(
-              blocks,
-              0.5,
-              { opacity: 0, y: 30 },
-              { opacity: 1, y: 0 },
-              0.2
-            );
-        }
-      });
-    });
-  };
 };

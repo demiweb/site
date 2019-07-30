@@ -27,6 +27,7 @@ $(function() {
   setReady();
   setVhProperty();
   setBrowser();
+
   setLazy();
   splitToChars();
   setCustomSlider();
@@ -44,5 +45,4 @@ $(function() {
   setAccordion();
   setPopups();
   setInputMask();
-
 });

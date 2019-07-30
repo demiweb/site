@@ -196,7 +196,7 @@ input, textarea
       margin-bottom: 10px
 
 .overlayed
-  html:not(.is-ie)
+  html:not(.is-ie) &
     position: relative
     overflow: hidden
     +before
@@ -368,6 +368,10 @@ input, textarea
     +css-lock(18, 24, 320, 1499, font-size)
     small
       font-size: .58em
+  &--bold
+    +bold
+    small
+      font-family: inherit
 
 .error-nmb
   text-transform: uppercase

@@ -44,7 +44,7 @@
     width: 50%
     text-align: right
     margin-right: -10%
-    margin-top: 5%
+    // margin-top: 5%
     opacity: 0
     transform: translate(-100%, 0)  
     +md
@@ -212,9 +212,12 @@
       margin-right: auto
   &--single
     #{$this}__inner
-      height: auto
+      // height: auto
+      height: calc(100vh - #{$footer-height})
+      height: calc((var(--vh, 1vh) * 100) - #{$footer-height})
       +sm
-        height: auto
+        height: calc(100vh - #{$footer-height-sm})
+        height: calc((var(--vh, 1vh) * 100) - #{$footer-height-sm})
       +xs
         height: auto
         padding-top: 30%
@@ -224,9 +227,13 @@
       display: block
       padding-top: 0
       padding-bottom: 0
+      height: auto
       +md
         padding-bottom: 0
+      +sm
+        height: auto
       +xs
+        height: auto
         padding-bottom: 0
         padding-top: 20%
     #{$this}__left

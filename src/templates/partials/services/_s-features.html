@@ -15,7 +15,7 @@
   {% endif %}
 
   <div class="container">
-    <div class="s-features__inner">
+    <div class="s-features__inner{% if sectionFeatures.img or sectionFeatures.imgRight or sectionFeatures.imgRightSquare %} s-features__inner-flex{% endif %}">
       {% if sectionFeatures.img %}
       <div class="s-features__img section--img__img">
         <div class="section-img">

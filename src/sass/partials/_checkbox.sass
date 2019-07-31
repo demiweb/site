@@ -1,10 +1,21 @@
 .checkbox
+  --square-size-lg: 3.5em
+  --fill-size-lg: 1.6em
+  --fill-offset-lg: .9em
   position: relative
   padding-left: 1.5em
   user-select: none
   color: $gray-light
   font-size: 10px
   display: inline-block
+  +md
+    --square-size-lg: 3em
+    --fill-size-lg: 1.4em
+    --fill-offset-lg: .8em
+  +sm
+    --square-size-lg: 2em
+    --fill-size-lg: 1em
+    --fill-offset-lg: .5em
   input[type="checkbox"],
   input[type="radio"]
     opacity: 0
@@ -35,10 +46,12 @@
       position: absolute
       display: block
 
-  &--lg
+  &--lg 
     padding: 0
     min-width: 3.5em
     min-height: 3.5em
+    min-width: var(--square-size-lg, 3.5em)
+    min-height: var(--square-size-lg, 3.5em)    
     input[type="checkbox"],
     input[type="radio"]
       &:checked + span
@@ -46,32 +59,42 @@
           content: ''
           top: .9em
           left: .9em
+          top: var(--fill-offset-lg, .9em)
+          left: var(--fill-offset-lg, .9em)
           width: 1.6em
           height: 1.6em
+          width: var(--fill-size-lg, 1.6em)
+          height: var(--fill-size-lg, 1.6em)
         +before
           border-color: $yellow
     span
       +before
         height: 3.5em
         width: 3.5em
+        width: var(--square-size-lg, 3.5em)
+        height: var(--square-size-lg, 3.5em)
         border-color: currentColor
   &--empty
-    width: 3.5em
-    height: 3.5em
-    input[type="checkbox"],
-    input[type="radio"]
-      &:checked + span
-        &::after
-          content: ''
-          +vcenter
-    span
-      +before
-        width: 100%
-        height: 100%
+    // width: 3.5em
+    // height: 3.5em
+    // width: var(--square-size-lg, 3.5em)
+    // height: var(--square-size-lg, 3.5em)
+    // input[type="checkbox"],
+    // input[type="radio"]
+    //   &:checked + span
+    //     &::after
+    //       content: ''
+    //       +vcenter
+    // span
+    //   +before
+    //     width: 100%
+    //     height: 100%
   &--md
     font-size: $fz
     +bold
     padding-left: 1.8em
+    +xss
+      font-size: 12px
     input[type="checkbox"],
     input[type="radio"]
       &:checked + span
@@ -95,12 +118,18 @@
 .radio
   @extend .checkbox
   @extend .checkbox--lg
-  @extend .checkbox--empty
+  // @extend .checkbox--empty
 
 .checkboxes-list
   +flex(flex-start, normal, row, wrap)
   margin-left: -15px
   margin-right: -15px
+  +md
+    margin-left: -10px
+    margin-right: -10px
+  +sm
+    padding-left: 5px
+    padding-right: 5px
   .checkbox
     opacity: 0
     &__wrap
@@ -114,7 +143,13 @@
         margin-bottom: 25px
       +md
         margin-bottom: 15px
+        padding-left: 10px
+        padding-right: 10px
       +sm
         margin-bottom: 10px
+        width: 33.33333%
+        padding-left: 5px
+        padding-right: 5px
       +xs
         margin-bottom: 5px
+        width: 50%

@@ -1,7 +1,100 @@
-.testimonials-slider
+.custom-slider
   overflow: hidden
   +flex()
+  &__img-cover
+    position: absolute
+    top: 0
+    width: 50%
+    padding-top: 31.5%
+    left: auto
+    pointer-events: none
+    overflow: hidden
+    +md
+      height: 350px
+      width: 100%
+    +before
+      position: absolute
+      background-color: $yellow
+      width: 100%
+      top: 0
+      left: 0
+      height: 100%
+      z-index: 1      
+      transform: translate(-100%, 0)
+    &.is-animate
+      +before
+        transform: translate(0, 0)
+        +tr(transform .3s)
+    &.is-finishing-animate
+      +before
+        +tr(transform .3s)
+        transform: translate(100%, 0)
 
+.custom-slider-wrap
+  position: relative
+
+.custom-slide
+  flex: 0 0 100%
+  visibility: hidden
+  opacity: 0
+  +tr(opacity .3s, visibility .3s)
+  +xs
+    .portfolio, .portfolio-item, .portfolio-item__inner
+      height: 100%
+    .portfolio-item__inner
+      +flex(space-between, normal, column)
+
+  &.is-active
+    visibility: visible
+    opacity: 1
+    .portfolio-item
+      &__img
+        display: block
+      &__logo
+        display: flex
+      &__subttl,
+      &__block
+        opacity: 1
+        transform: translate(0, 0)
+  &.is-animate
+    .portfolio-item
+      &__subttl,
+      &__block
+        opacity: 0
+        transform: translate(0, 15px)
+
+.portfolio-slider
+  .portfolio-item
+    &__img,
+    &__logo
+      display: none
+    &__subttl,
+    &__block
+      opacity: 0
+      transform: translate(0, 15px)
+      +tr(transform .5s, opacity .5s)
+  &__img-cover
+    padding-top: 0
+    height: 60vh
+    right: 0
+    top: 0
+    bottom: 0
+    +md
+      width: 50%
+      height: 60vh
+    +xs
+      bottom: 93px
+      top: auto
+      height: 230px
+      width: 100%
+  &__btns
+    +xs
+      height: 93px
+
+
+
+
+.testimonials-slider
   &__wrap
     position: relative
     max-width: 1675px
@@ -53,36 +146,7 @@
       padding-top: 0
       top: 350px
       left: auto
-      right: 0
-  &__img-cover
-    position: absolute
-    top: 0
-    width: 50%
-    padding-top: 31.5%
-    left: auto
-    pointer-events: none
-    overflow: hidden
-    +md
-      height: 350px
-      width: 100%
-    +before
-      position: absolute
-      background-color: $yellow
-      width: 100%
-      top: 0
-      left: 0
-      height: 100%
-      z-index: 1      
-      transform: translate(-100%, 0)
-    &.is-animate
-      +before
-        transform: translate(0, 0)
-        +tr(transform .3s)
-    &.is-finishing-animate
-      +before
-        +tr(transform .3s)
-        transform: translate(100%, 0)
-  
+      right: 0  
 
 .testimonial
   $this: &
@@ -93,16 +157,7 @@
     visibility: visible
     opacity: 1
     #{$this}__img
-      display: block
-    // #{$this}__caption,
-    // #{$this}__text
-    //   opacity: 1
-    //   transform: translate(0, 0)    
-  &.is-animate
-    // #{$this}__caption,
-    // #{$this}__text
-    //   opacity: 0
-    //   transform: translate(0, 15px)   
+      display: block   
   &__inner
     +flex(flex-start, normal, row, wrap)
   &__left

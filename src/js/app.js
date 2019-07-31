@@ -4,6 +4,7 @@ import { setVhProperty } from './helpers';
 import { setTouch, setReady, setBrowser } from './components/setHTMLClassNames';
 // import sayHello from './lib/sayHello';
 import setLazy from './components/setLazy';
+import setCanvasNoise from './components/setCanvasNoise';
 import setCustomSlider from './components/slider/setCustomSlider';
 import setScrollbar from './components/setScrollbar';
 import toggleMenu from './components/toggleMenu';
@@ -29,6 +30,7 @@ $(function() {
   setBrowser();
 
   setLazy();
+  setCanvasNoise();
   splitToChars();
   setCustomSlider();
   setScrollbar();

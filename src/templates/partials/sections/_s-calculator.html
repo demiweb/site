@@ -27,7 +27,7 @@
                   <span class="calc-item__radio">
                     {{ mixins.input(
                       name = 'radio',
-                      mod = 'radio--lg radio--empty',
+                      mod = 'radio--lg',
                       type = 'radio',
                       placeholder = '',
                       value = '',
@@ -148,7 +148,7 @@
                   <span class="calc-item__radio">
                     {{ mixins.input(
                       name = 'checkbox',
-                      mod = 'checkbox--lg checkbox--empty',
+                      mod = 'checkbox--lg',
                       type = 'checkbox',
                       placeholder = '',
                       value = '',
@@ -174,26 +174,28 @@
       </div>
 
       <div class="calculator__bottom calculator-order pt-lg pb-lg">
-        <div class="calculator-order__title js-anim-el" data-anim-name="fadiInTopSm">Підсумкова вартість проекту:</div>
+        <div class="container">
+          <div class="calculator-order__title js-anim-el" data-anim-name="fadiInTopSm">Підсумкова вартість проекту:</div>
 
-        <div class="calculator-order__price js-anim-el" data-anim-name="fadeInBottomSm">
-          <div class="price price--bold underlined"><span>65 500<small>грн</small></span></div>
-        </div>
-
-        <div class="calculator-order__btns js-anim-el" data-anim-name="fadeInBottomSm" data-anim-delay="0.3s">
-          <div class="calculator-order__btn">
-            {{ mixins.btn(
-              title = 'замовити послугу',
-              mod = 'btn--full btn--lg',
-              href = false
-            ) }}
+          <div class="calculator-order__price js-anim-el" data-anim-name="fadeInBottomSm">
+            <div class="price price--bold underlined"><span>65 500<small>грн</small></span></div>
           </div>
-          <div class="calculator-order__btn">
-            {{ mixins.btn(
-              title = 'хочу знижку',
-              mod = 'btn--full btn--lg btn--transp-black',
-              href = false
-            ) }}
+
+          <div class="calculator-order__btns js-anim-el" data-anim-name="fadeInBottomSm" data-anim-delay="0.3s">
+            <div class="calculator-order__btn">
+              {{ mixins.btn(
+                title = 'замовити послугу',
+                mod = 'btn--full btn--lg',
+                href = false
+              ) }}
+            </div>
+            <div class="calculator-order__btn">
+              {{ mixins.btn(
+                title = 'хочу знижку',
+                mod = 'btn--full btn--lg btn--transp-black',
+                href = false
+              ) }}
+            </div>
           </div>
         </div>
       </div>

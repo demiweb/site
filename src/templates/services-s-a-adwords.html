@@ -5,7 +5,7 @@ hero: {
   modifications: {
     section: 'hero--content'
   },
-  title: '<strong class="glitch" data-text="Google adWords">Google adWords</strong>',
+  title: '<strong class="glitch" data-text="Google">Google adWords</strong>',
   text: 'Контекстна реклама - це кращий спосіб збільшити кількість потенційних клієнтів і продажів. Віддачу від розміщення оголошень ви побачите вже в перші години після налаштування.',
   bgImage: 'bg-hero-services-a-words.jpg',
   btns: {
@@ -29,7 +29,7 @@ sectionLaptop: {
   titleBlock: {
     subttl: 'мі знаємо, як вам потрібні швидкі',
     title: '<small>результати від</small>контекстної реклами',
-    text: 'реклами',
+    text: '',
     titleMod: 'glitch--bottom glitch--xs-none',
     par: 'Максимальна віддача від кожного переходу на сайт, так як рекламу <br> бачать лише ті, хто є частиною цільової аудиторії. За допомогою <br> контекстної реклами ви можете виділити цільову аудиторію серед <br> великої кількості інтернет-користувачів.',
     word: 'Seoerce',
@@ -59,8 +59,7 @@ sectionPortfolio: {
     title: '30 компаніям',
     text: '30 компаніям',
     word: 'projects'
-  },
-  prevNext: true
+  }
 }
 sectionPrinciples: {
   titleBlock: {
@@ -70,18 +69,60 @@ sectionPrinciples: {
     titleMod: 'glitch--bottom glitch--xs-none'
   }
 }
-portfolioMod: portfolio--short
-portfolio: [
-  {
-    subttl: 'Інтернет-магазин',
-    title: 'Olmaks Shop',
-    text: 'Інтернет-магазин з найбільшим каталогом нових
-та Б/У запчастин, аксесуарів для електромобілів в Україні.',
-    img: '5.jpg',
-    logo: '1.png',
-    logoColor: '#10ad44'
-  }
-]
+portfolioSlider: {
+  slides: [
+    {
+      portfolio: {
+        mod: 'portfolio--short',
+        items: [
+          {
+            subttl: 'Інтернет-магазин',
+            title: 'Olmaks Shop',
+            text: 'Інтернет-магазин з найбільшим каталогом нових
+        та Б/У запчастин, аксесуарів для електромобілів в Україні.',
+            img: '5.jpg',
+            logo: '1.png',
+            logoColor: '#10ad44'
+          }
+        ]
+      }
+    },
+    {
+      portfolio: {
+        mod: 'portfolio--short portfolio--reverse',
+        items: [
+          {
+            subttl: 'Корпоративний сайт',
+            title: 'ABS',
+            text: 'Компанія «ABS» є офіціальним дистриб’ютором 
+        ООО «МОНБАТ УКРАЇНА» - ексклюзивного представника акумуляторних 
+        батарей ТМ «MONBAT»; ТМ «START»; ТМ «WINMAXX» та ТМ «MONOIL».',
+            img: '2.jpg',
+            logo: '2.png',
+            logoColor: '#d8232a'
+          }
+        ]
+      }
+    },
+    {
+      portfolio: {
+        mod: 'portfolio--short',
+        items: [
+          {
+            subttl: 'Інтернет-магазин',
+            title: 'Mario',
+            text: 'Продукція під торговою маркою Маріо добре відома
+        і затребувана на території України і за її межами. Компанія 
+        лідирує на Україні і в країнах СНД серед виробників даної продукції.',
+            img: '3.jpg',
+            logo: '3.png',
+            logoColor: '#ff8200'
+          }
+        ]
+      }
+    }
+  ]
+}
 principles: {
   mod: principles--two-col-simple,
   list: [

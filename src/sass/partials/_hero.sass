@@ -6,14 +6,19 @@
   position: relative
   margin-top: -$header-height  
   +cover
-  +before
-    +coverdiv
-    +image('white-transp-pattern.png')
-    background-repeat: repeat
-    background-size: auto
-    z-index: 0
+  // +before
+    // +coverdiv
+    // +image('white-transp-pattern.png')
+    // background-repeat: repeat
+    // background-size: auto
+    // z-index: 0
   +sm
     margin-top: -$header-height-sm
+  &__texture
+    +coverdiv
+    z-index: 0
+    opacity: .2
+    overflow: hidden
   &__inner
     +flex(flex-start, center, row, wrap)
     position: relative
@@ -194,6 +199,8 @@
       color: $black
     +before
       display: none
+    #{$this}__texture
+      opacity: .1
   &--content-center
     #{$this}__content
       width: 100%

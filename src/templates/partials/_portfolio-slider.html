@@ -1,0 +1,40 @@
+<!-- begin portfolio-slider -->
+<div class="portfolio-slider__wrap">
+    <div class="custom-slider-wrap js-slider-custom">    
+      <div class="portfolio-slider custom-slider">
+        
+        {% for i in portfolioSlider.slides %}
+        {% set portfolio = i.portfolio %}
+        <div class="custom-slide">
+          {% include "partials/_portfolio.html" %}
+        </div> 
+        {% endfor %}
+               
+      </div>
+
+      <div class="custom-slider__img-cover portfolio-slider__img-cover js-img-cover"></div>
+
+      <div class="portfolio-slider__btns">
+        <div class="container">
+          <div class="s-portfolio__link-wrap">
+            <div class="pi-section__links">
+              <a href="#" class="link-arrow link-arrow--prev js-prev">
+                <span class="link-arrow__arrow">
+                  {{ mixins.icon('arrow-long') }}
+                </span>
+                <span class="link-arrow__title">попередній проект</span>
+              </a>
+
+              <a href="#" class="link-arrow link-arrow--next js-next">
+                <span class="link-arrow__title">наступний проект</span>
+                <span class="link-arrow__arrow">
+                  {{ mixins.icon('arrow-long') }}
+                </span>
+              </a>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- end portfolio-slider -->

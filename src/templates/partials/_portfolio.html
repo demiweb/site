@@ -1,6 +1,6 @@
 <!-- begin portfolio -->
-<div class="portfolio{% if portfolioMod %} {{ portfolioMod }}{% endif %}">
-  {% for i in portfolio %}
+<div class="portfolio{% if portfolio.mod %} {{ portfolio.mod }}{% endif %}">
+  {% for i in portfolio.items %}
   <!-- begin portfolio-item -->
   <div class="portfolio-item js-vieport-related-el"  data-threshold="0.4">
     <div class="portfolio-item__inner">

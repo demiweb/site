@@ -57,8 +57,7 @@ sectionPortfolio: {
     title: 'фірмовий стиль',
     text: 'фірмовий',
     word: 'projects'
-  },
-  prevNext: true
+  }
 }
 
 sectionPrinciples: {
@@ -69,20 +68,79 @@ sectionPrinciples: {
     titleMod: 'glitch--bottom glitch--xs-none'
   }
 }
-portfolioMod: portfolio--short portfolio--reverse
-portfolio: [
-  {
-    subttl: 'Фірмовий стиль',
-    nmb: '',
-    title: 'Demiweb International',
-    text: 'Компанія Demiweb International займається розробкою сайтів будь-якої складності 
-для різних бізнес-завдань.  Допомагають реалізувати ідеї в якісний продукт
-та займаються підтримкою існуючих веб-проектів.',
-    img: '4.jpg',
-    logoSvg: 'logo-white.svg',
-    logoMod: 'portfolio-item__logo-own'
-  }
-]
+
+portfolioSlider: {
+  slides: [
+    {
+      portfolio: {
+        mod: 'portfolio--short portfolio--reverse',
+        items: [
+          {
+            subttl: 'Фірмовий стиль',
+            nmb: '',
+            title: 'Demiweb International',
+            text: 'Компанія Demiweb International займається розробкою сайтів будь-якої складності 
+        для різних бізнес-завдань.  Допомагають реалізувати ідеї в якісний продукт
+        та займаються підтримкою існуючих веб-проектів.',
+            img: '4.jpg',
+            logoSvg: 'logo-white.svg',
+            logoMod: 'portfolio-item__logo-own'
+          }
+        ]
+      }
+    },
+    {
+      portfolio: {
+        mod: 'portfolio--short',
+        items: [
+          {
+            subttl: 'Інтернет-магазин',
+            title: 'Olmaks Shop',
+            text: 'Інтернет-магазин з найбільшим каталогом нових
+        та Б/У запчастин, аксесуарів для електромобілів в Україні.',
+            img: '5.jpg',
+            logo: '1.png',
+            logoColor: '#10ad44'
+          }
+        ]
+      }
+    },
+    {
+      portfolio: {
+        mod: 'portfolio--short portfolio--reverse',
+        items: [
+          {
+            subttl: 'Корпоративний сайт',
+            title: 'ABS',
+            text: 'Компанія «ABS» є офіціальним дистриб’ютором 
+        ООО «МОНБАТ УКРАЇНА» - ексклюзивного представника акумуляторних 
+        батарей ТМ «MONBAT»; ТМ «START»; ТМ «WINMAXX» та ТМ «MONOIL».',
+            img: '2.jpg',
+            logo: '2.png',
+            logoColor: '#d8232a'
+          }
+        ]
+      }
+    },
+    {
+      portfolio: {
+        mod: 'portfolio--short',
+        items: [
+          {
+            subttl: 'Інтернет-магазин',
+            title: 'Mario',
+            text: 'Продукція під торговою маркою Маріо добре відома
+        і затребувана на території України і за її межами. Компанія 
+        лідирує на Україні і в країнах СНД серед виробників даної продукції.',
+            img: '3.jpg',
+            logo: '3.png',
+            logoColor: '#ff8200'
+          }
+        ]
+      }
+    }
+  ]
+}
 
 principles: {
   img: 'style-bottom.png',

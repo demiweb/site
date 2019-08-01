@@ -6,14 +6,18 @@
     position: relative
     +notlast
       margin-right: 45px
-    &.has-dropdown  
+    &.has-dropdown
+      height: $header-height
+      +inline-flex(flex-start, cneter)
       a
         position: relative
         padding-right: 15px
+        +flex(flex-start, center)
         +before
           +icon-arrow(8, 8, 1, currentColor, -45)
           position: absolute
-          top: .4em
+          top: 50%
+          transform: translate(0, -50%) rotate(-45deg)
           right: 0
       &:hover
         #{$this}--dropdown
@@ -31,7 +35,7 @@
     opacity: 0
     position: absolute
     z-index: 1
-    top: calc(100%)
+    top: 100%
     padding: 10px
     padding-top: 25px
     left: 0

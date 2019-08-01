@@ -2,7 +2,7 @@ import 'intersection-observer';
 
 import { setVhProperty } from './helpers';
 import { setTouch, setReady, setBrowser } from './components/setHTMLClassNames';
-// import sayHello from './lib/sayHello';
+import sayHello from './lib/sayHello';
 import setLazy from './components/setLazy';
 import setCanvasNoise from './components/setCanvasNoise';
 import setCustomSlider from './components/slider/setCustomSlider';
@@ -21,9 +21,10 @@ import setAccordion from './components/setAccordion';
 import setPopups from './components/setPopups';
 import setInputMask from './components/setInputMask';
 import splitToChars from './components/splitToChars';
+import toggleTooltip from './components/toggleTooltip';
 
 $(function() {
-  // sayHello();
+  sayHello();
   setTouch();
   setReady();
   setVhProperty();
@@ -47,4 +48,5 @@ $(function() {
   setAccordion();
   setPopups();
   setInputMask();
+  toggleTooltip();
 });

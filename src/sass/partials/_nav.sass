@@ -32,11 +32,13 @@
     position: absolute
     z-index: 1
     top: calc(100%)
+    padding: 10px
     padding-top: 25px
     left: 0
-    color: $gray
+    // color: $gray
     white-space: nowrap
     +tr(opacity .3s, visibility .3s)
+    background-color: rgba($black, .5)
     li
       display: block
       +notlast
@@ -46,7 +48,7 @@
       +before
         display: none
       +hover
-        color: $white
+        color: $yellow
 
   &--lg
     // color: $white

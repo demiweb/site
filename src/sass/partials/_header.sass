@@ -32,6 +32,11 @@
     padding-top: 10px
     padding-bottom: 10px
     box-shadow: 0 0 10px rgba($gray, .3)
+    .header-phone
+      &__list
+        color: $gray-lighten
+      &__subttl
+        color: $gray
     #{$this}__nav
       display: none
       &.is-active
@@ -104,8 +109,12 @@
     visibility: hidden
     opacity: 0
     +tr(visibility .3s, opacity .3s)
+    background-color: rgba($black, .5)
+    left: -10px
+    right: -10px
+    padding: 10px
   &__subttl
-    color: $gray
+    color: $gray-lighten
     font-size: 10px
   &__title
     +tr(color .3s)
@@ -121,8 +130,13 @@
       position: absolute
       top: .6em
       right: 0
+    +sm
+      +before
+        top: .5em
     +xs
       font-size: $fz
+      +before
+        top: .3em
   &__phone
     +tr(color .3s)
     +hover

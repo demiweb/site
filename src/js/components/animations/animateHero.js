@@ -1,5 +1,6 @@
 import { TimelineLite } from 'gsap';
 import { ANIMATE } from '../../constants';
+import { debounce } from 'throttle-debounce';
 
 export default function animateHero() {
   const hero = document.querySelector('.hero');
@@ -42,7 +43,7 @@ export default function animateHero() {
   const tl = new TimelineLite();
 
   // ============= start CONDITION timeline =============
-  if (letterWrap && letter && letterShadow && window.matchMedia('(min-width: 768px)').matches) {
+  if (letterWrap && letter && letterShadow) {
     tl
       .fromTo(
         letterWrap,
@@ -53,8 +54,6 @@ export default function animateHero() {
       .call(() => {      
         if (letter.classList) {
           letter.classList.add(ANIMATE);
-        } else if(letter.className) {
-          // letter.className.baseVal += ` ${ANIMATE}`;
         };        
       })
       .fromTo(
@@ -62,14 +61,27 @@ export default function animateHero() {
         1,
         { opacity: 0, y: -30, x: 30 },
         { opacity: 1, y: 0, x: 0 }
-      )
-      .fromTo(
-        letterWrap,
-        0.5,
-        { x: '-100%' },
-        { x: '0%' }
       );
+
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      tl
+        .fromTo(
+          letterWrap,
+          0.5,
+          { x: '-100%' },
+          { x: '0%' }
+        );
+    } else {
+      tl
+        .fromTo(
+          letterWrap,
+          0.5,
+          { x: '0vw' },
+          { x: '100vw' }
+        ); 
+    };
   };
+  
   if (splitText.length > 0 && window.matchMedia('(min-width: 768px)').matches) {
     tl
       .fromTo(
@@ -219,4 +231,28 @@ export default function animateHero() {
     );
   };
   // ============= end CONDITION timeline =============
+
+  // set letter position on resize
+  function setLetterPosition() {
+    if (!letterWrap || !letter) return;
+
+    const letterCSS = window.getComputedStyle(letterWrap);
+    const isVisible = (() => {
+      return +letterCSS.opacity !== 0 ? true : false;
+    })();
+
+    if (window.matchMedia('(max-width: 767px)').matches) {      
+      if (isVisible) {
+        letterWrap.style.transform = 'translate(100vw, 0)';
+      };      
+    } else {
+      if (isVisible) {
+        letterWrap.style.transform = 'translate(0, 0)';
+      }; 
+    };
+  };
+
+  const setLetterPositionDebounced = debounce(66, setLetterPosition);
+
+  window.addEventListener('resize', setLetterPositionDebounced);
 };

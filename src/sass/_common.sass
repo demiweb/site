@@ -196,14 +196,13 @@ input, textarea
       margin-bottom: 10px
 
 .overlayed
-  html:not(.is-ie) &
-    position: relative
-    overflow: hidden
-    +before
-      +coverdiv
-      z-index: 2
-      background-color: $yellow
-      transform: translate(-100%, 0)
+  position: relative
+  overflow: hidden
+  +before
+    +coverdiv
+    z-index: 2
+    background-color: $yellow
+    transform: translate(-100%, 0)
 
 .recommend
   +flex(flex-start, normal, row, wrap)

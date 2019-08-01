@@ -1,10 +1,6 @@
 import IMask from 'imask';
-// import { detect } from 'detect-browser';
 
 export default function setInputMask() {
-  // const browser = detect();
-  // if( browser.name === 'ie') return;
-
   const maskedInputs = [].slice.call(document.querySelectorAll('.js-mask'));
 
   if(!maskedInputs.length) return;

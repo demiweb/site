@@ -20,7 +20,7 @@
     opacity: .2
     overflow: hidden
   &__inner
-    +flex(flex-start, center, row, wrap)
+    +flex(flex-start, normal, row, wrap)
     position: relative
     padding-top: $padding-lg
     padding-bottom: $padding-lg
@@ -40,6 +40,8 @@
     width: 50%
     position: relative
     overflow: hidden
+    flex-grow: 1
+    +flex(center, normal, column)
     +md
       width: 70%
     +sm
@@ -49,13 +51,28 @@
     width: 50%
     text-align: right
     margin-right: -10%
+    +flex(flex-end, center)
     // margin-top: 5%
     opacity: 0
     transform: translate(-100%, 0)  
     +md
       width: 30%
     +sm
-      display: none
+      // display: none
+      position: absolute
+      width: 660px
+      margin-right: 0
+      top: 50%
+      left: 50%
+      margin-top: -125px
+      margin-left: -330px
+      transform: translate(0, 0)
+      justify-content: center
+    +xs
+      width: 320px
+      margin-top: -110px
+      margin-left: -160px
+
 
   &__img-in
     position: relative
@@ -68,6 +85,10 @@
       font-size: 350px
     +rmix(1199, 540)
       font-size: 300px
+    +sm
+      font-size: 300px
+    +xs
+      font-size: 200px
     .icon
       position: relative
       z-index: 1
@@ -176,9 +197,9 @@
       flex-direction: column
       align-items: normal
       justify-content: flex-start
-    #{$this}__content
-      flex-grow: 1
-      +flex(center, normal, column)
+    // #{$this}__content
+    //   flex-grow: 1
+    //   +flex(center, normal, column)
     #{$this}__scroll-down
       transform: translate(0, 0)
       left: percentage(375/1920)

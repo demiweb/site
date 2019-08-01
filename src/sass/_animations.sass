@@ -11,28 +11,38 @@
   animation-name: fadeInRightSm
   animation-fill-mode: forwards
 .overlayedLeft
-  html:not(.is-ie) &
-    animation-name: fadeIn
-    +before
+  animation-name: fadeIn
+  +before
+    animation-fill-mode: forwards
+    animation-duration: 1s
+    html:not(.is-ie) &
       animation-name: overlayedLeft
-      animation-fill-mode: forwards
-      animation-duration: 1s
+    .is-ie &
+      animation-name: overlayedLeftSimple
 .fadeInBottomSm
   animation-name: fadeInBottomSm
 .fadeInTopSm
   animation-name: fadeInTopSm
 .slideBeforeRight
-  animation-name: fadeIn
-  +before
-    animation-name: slideBeforeRight
+  animation-name: fadeIn  
+  +before    
     animation-fill-mode: forwards
     animation-duration: 1s
+    html:not(.is-ie) &
+      animation-name: slideBeforeRight
+    .is-ie &
+      animation-name: slideBeforeRightSimple
+
 .slideBeforeRightShort
   animation-name: fadeIn
   +before
-    animation-name: slideBeforeRightShort
     animation-fill-mode: forwards
     animation-duration: 1s
+    html:not(.is-ie) &
+      animation-name: slideBeforeRightShort
+    .is-ie &
+      animation-name: slideBeforeRightShortSimple
+    
 
 @keyframes fadeIn
   0%
@@ -74,6 +84,12 @@
   100%
     transform: translate(calc(100% + 2px), 0)
 
+@keyframes overlayedLeftSimple
+  0%
+    transform: translate(-100%, 0)
+  100%
+    transform: translate(102%, 0)
+
 @keyframes fadeInBottomSm
   0%
     opacity: 0
@@ -98,10 +114,23 @@
   100%
     transform: translate(-75%, 0)
 
+    
+@keyframes slideBeforeRightSimple
+  0%
+    transform: translate(100%, 0)
+  100%
+    transform: translate(-75%, 0)
+
 @keyframes slideBeforeRightShort
   0%
     transform: translate(100%, 0)
   50%
     transform: translate(0, 0)
+  100%
+    transform: translate(-57%, 0)
+
+@keyframes slideBeforeRightShortSimple
+  0%
+    transform: translate(100%, 0)
   100%
     transform: translate(-57%, 0)

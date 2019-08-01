@@ -69,9 +69,7 @@ export default function setCanvasNoise(argument) {
 
 
     // Reset
-
-
-    const setupDebounced = debounce(200, () => {
+    const setupDebounced = debounce(66, () => {
       setup(wrap);
     });
 

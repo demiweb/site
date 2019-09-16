@@ -45,7 +45,6 @@
     background-color: $white
     left: 0
     bottom: 0
-
   &--two-cols
     .calc-item
       &__wrap
@@ -66,6 +65,32 @@
           border-right-color: $c-border
         &:nth-child(even)
           border-right-color: transparent
+  &--four-cols
+    .calc-item
+      &__wrap
+        width: 25%
+        padding-bottom: 80px
+        +xl
+          padding-bottom: 70px
+        +lg
+          padding-bottom: 50px
+        +md
+          padding-bottom: 30px
+          width: 33.33333%
+          &:nth-child(3n - 3)
+            border-right-color: transparent
+          &:nth-child(4n - 4)
+            border-right-color: $c-border
+        +sm
+          padding-bottom: 15px
+        +xs
+          padding-bottom: 10px
+          width: 100%
+        &:nth-child(3n - 3)
+          border-right-color: $c-border
+        &:nth-child(4n - 4)
+          border-right-color: transparent
+
 
 .calc-item
   position: relative

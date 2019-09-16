@@ -1,4 +1,4 @@
-import { debounce } from 'throttle-debounce';
+// import { debounce } from 'throttle-debounce';
 
 export default function setCanvasNoise(argument) {
   const noise = () => {
@@ -69,11 +69,11 @@ export default function setCanvasNoise(argument) {
 
 
     // Reset
-    const setupDebounced = debounce(66, () => {
-      setup(wrap);
-    });
+    // const setupDebounced = debounce(66, () => {
+    //   setup(wrap);
+    // });
 
-    window.addEventListener('resize', setupDebounced);
+    // window.addEventListener('resize', setupDebounced);
 
 
     // Init

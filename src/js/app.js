@@ -5,6 +5,7 @@ import { setTouch, setReady, setBrowser } from './components/setHTMLClassNames';
 import sayHello from './lib/sayHello';
 import setLazy from './components/setLazy';
 import setCanvasNoise from './components/setCanvasNoise';
+// import setCanvasNoise from './components/noise/setNoise';
 import setCustomSlider from './components/slider/setCustomSlider';
 import setScrollbar from './components/setScrollbar';
 import toggleMenu from './components/toggleMenu';
@@ -22,6 +23,8 @@ import setPopups from './components/setPopups';
 import setInputMask from './components/setInputMask';
 import splitToChars from './components/splitToChars';
 import toggleTooltip from './components/toggleTooltip';
+
+import addPortfolioContentOverflowVisible from './components/animations/addPortfolioContentOverflowVisible';
 
 $(function() {
   sayHello();
@@ -50,3 +53,7 @@ $(function() {
   setInputMask();
   toggleTooltip();
 });
+
+window.setLazy = setLazy;
+window.addClassesOnScroll = addClassesOnScroll;
+window.addPortfolioContentOverflowVisible = addPortfolioContentOverflowVisible;

@@ -22,7 +22,10 @@
       &:hover
         #{$this}--dropdown
           visibility: visible
-          opacity: 1 
+          opacity: 1
+    &.current-menu-item
+      color: $yellow
+      +bold
   a
     +tr(color .3s)
     text-transform: uppercase

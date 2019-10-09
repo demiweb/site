@@ -20,7 +20,7 @@ import setTextareaAutoHeight from './components/setTextareaAutoHeight';
 import setInputsFocus from './components/setInputsFocus';
 import setAccordion from './components/setAccordion';
 import setPopups from './components/setPopups';
-import setInputMask from './components/setInputMask';
+// import setInputMask from './components/setInputMask';
 import splitToChars from './components/splitToChars';
 import toggleTooltip from './components/toggleTooltip';
 
@@ -50,7 +50,7 @@ $(function() {
   setInputsFocus();
   setAccordion();
   setPopups();
-  setInputMask();
+  // setInputMask();
   toggleTooltip();
 });
 

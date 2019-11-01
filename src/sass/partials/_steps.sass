@@ -1,0 +1,45 @@
+.steps
+  +flex(flex-start, normal, row, wrap)
+
+.step
+  width: 25%  
+  position: relative
+  &__nmb, &__icon
+    border-radius: 50%
+    width: 50px
+    height: 50px
+    +flex(center, center)
+    border: 1px solid $yellow
+    color: $black
+    position: relative
+    z-index: 1
+  &__nmb
+    background-color: $yellow
+    
+    +bold
+  &__icon
+    background-color: $white
+    .icon
+      font-size: 35px
+  &__top
+    position: relative
+    +flex(space-between)
+    margin-bottom: 50px
+    +lg
+      margin-bottom: 30px
+    +before
+      position: absolute
+      border-top: 1px dashed $c-border
+      left: 0
+      right: 0
+      top: 50%
+      transform: translate(0, -50%)
+      z-index: 0
+  &__title
+    margin-bottom: 25px
+    .underlined
+      display: inline-block
+    +md
+      margin-bottom: 15px
+  &__content
+    padding-right: 40px

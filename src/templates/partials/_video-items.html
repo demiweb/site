@@ -1,0 +1,32 @@
+<!-- begin video-thumbs -->
+<div class="video-thumbs">
+  <div class="video-thumbs__items">
+    {% for i in range(0, 3) %}
+    <div class="video-thumbs__item">
+      <!-- begin video-thumb -->
+      <a href="#" class="video-thumb">
+        <span class="video-thumb__title">
+          <span class="h4 h4--ttn h4--bold">
+            <span class="underlined"><span>Vision House</span></span>
+          </span>
+        </span>
+
+        <span class="video-thumb__img js-lazy" data-background-image="./img/video/thumb-01.jpg">
+          <span class="video-thumb__icon">
+            {{ mixins.icon('play-button-2') }}
+          </span>
+        </span>
+      </a>
+      <!-- end video-thumb -->
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="video-thumbs__btn">
+    {{ mixins.btn(
+      title = '<span class="btn__title">' + mixins.icon('loading') +'завантажити більше</span>',
+      mod = 'btn--half'
+    ) }}
+  </div>
+</div>
+<!-- end video-thumbs -->

@@ -1,0 +1,112 @@
+{%set
+plans = [
+  {
+    title: 'Пакет Basic',
+    text: 'Промо ролик о вашей компании продолжительностью
+до 60 секунд, с базовыми эффектами и переходами.
+Срок выполнения: 2-3 дня',
+    list: [
+      { item: '<span>Нарезка материала</span><strong>+</strong>' },
+      { item: '<span>Адаптация под все платформы</span><strong>+</strong>' },
+      { item: '<span>Монтаж</span><strong>+</strong>' },
+      { item: '<span>Звук</span><strong>+</strong>' },
+      { item: '<span>Дополнительные эффекты</span><strong>-</strong>' },
+      { item: '<span>Создание анимации</span><strong>-</strong>' },
+      { item: '<span>Уникальный формат</span><strong>-</strong>' },
+      { item: '<span>Эксклюзивный дизайн</span><strong>-</strong>' }
+    ],
+    btn: {
+      title: 'Заказать пакет Basic'
+    }
+  },
+  {
+    title: 'Пакет Optimal',
+    text: 'Промо ролик о вашей компании продолжительностью
+до 2 минут, с уникальными эффектами и переходами.
+Срок выполнения: 5-7 дней',
+    list: [
+      { item: '<span>Нарезка материала</span><strong>+</strong>' },
+      { item: '<span>Адаптация под все платформы</span><strong>+</strong>' },
+      { item: '<span>Монтаж</span><strong>+</strong>' },
+      { item: '<span>Звук</span><strong>+</strong>' },
+      { item: '<span>Дополнительные эффекты</span><strong>+</strong>' },
+      { item: '<span>Создание анимации</span><strong>+</strong>' },
+      { item: '<span>Уникальный формат</span><strong>-</strong>' },
+      { item: '<span>Эксклюзивный дизайн</span><strong>-</strong>' }
+    ],
+    btn: {
+      title: 'Заказать пакет Optimal'
+    }
+  },
+  {
+    title: 'Пакет Exclusive',
+    text: 'Уникальный промо ролик продолжительностью
+до 5 минут, с уникальными эффектами и переходами.
+Срок выполнения: 8-12 дней',
+    list: [
+      { item: '<span>Нарезка материала</span><strong>+</strong>' },
+      { item: '<span>Адаптация под все платформы</span><strong>+</strong>' },
+      { item: '<span>Монтаж</span><strong>+</strong>' },
+      { item: '<span>Звук</span><strong>+</strong>' },
+      { item: '<span>Дополнительные эффекты</span><strong>+</strong>' },
+      { item: '<span>Создание анимации</span><strong>+</strong>' },
+      { item: '<span>Уникальный формат</span><strong>+</strong>' },
+      { item: '<span>Эксклюзивный дизайн</span><strong>+</strong>' }
+    ],
+    btn: {
+      title: 'Заказать пакет Exclusive'
+    }
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section pt-sm pb-mdl">
+    {{ mixins.titleBlock(
+        subttl = 'мы предлагаем',
+        title = '<small>тарифы на любой</small>бюджет',
+        text = 'бюджет',
+        par = 'Подберите для себя оптимальный для вас тариф, который покроет <br> все ваши потребности. Бюджетный тариф Basic подойдет для <br> быстрого и недорого создания ролика. Или выбирайте тариф <br> Exclusive, если хотите получить уникальный промо ролик',
+        titleMod = 'glitch--bottom glitch--xs-none'
+      ) }}
+
+  <div class="container">
+    <!-- begin plans -->
+    <div class="plans">
+      {% for i in plans %}
+      <div class="plans__item">
+        <!-- begin plan-item -->
+        <a href="#" class="plan-item">
+          <span class="plan-item__title">
+            <div class="h4 h4--bold h4--black h4--ttn">
+              <span class="underlined"><span>{{ i.title | safe }}</span></span>
+            </div>
+          </span>
+
+          <span class="plan-item__text text text--gray-light">{{ i.text | safe }}</span>
+
+          <span class="plan-item__list">
+            {{ mixins.list(
+              name = 'info-list',
+              modifications = { wrap: '', item: '', link: '' },
+              list = i.list
+            ) }}
+          </span>
+
+          <span class="plan-item__btn">
+            {{ mixins.btn(
+              title = i.btn.title,
+              mod = 'btn--full btn--no-hover',
+              href = false,
+              isInline = true
+            ) }}
+          </span>
+        </a>
+        <!-- end plan-item -->
+      </div>
+      {% endfor %}
+    </div>
+    <!-- end plans -->
+  </div>  
+</section>
+<!-- end section -->

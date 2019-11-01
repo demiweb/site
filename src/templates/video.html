@@ -1,0 +1,156 @@
+---
+title: video
+page: video
+hero: {
+  modifications: {
+    section: 'hero--content'
+  },
+  title: '<strong class="glitch" data-text="promo clip">promo clip</strong>',
+  text: 'Создаем вирусные промо ролики, которые покоряют мир. 
+    Используйте ваш ролик на сайте, в Instagram, Facebook и других соцсетях.
+    Ну как? Готовы обогнать своих конкурентов на несколько шагов вперед?',
+  bgImage: '',
+  img: 'macbook.png',
+  btns: {
+    yellow: 'Заказать консультацию',
+    white: 'наши услуги'
+  },
+  breadcrumbs: {
+    list: [
+      { link: 'Главная' },
+      { item: '-' },
+      { link: 'услуги' },
+      { item: '-' },
+      { link: 'promo clip', modLink: 'is-active' }
+    ]
+  },
+  scrollToTarget: true
+}
+sectionLaptop: {
+  titleBlock: {
+    subttl: 'Почему вам необходимо',
+    title: '<small>заказать ролик</small>именно у нас',
+    text: 'именно у нас',
+    titleMod: 'glitch--bottom glitch--xs-none',
+    par: 'Сегодня каждый день ваши инструменты устаревают, ваши <br> конкуренты становятся на шаг впереди и у вас остается только <br>
+один способ удержаться на плаву - идти в ногу со временем! ',
+    word: 'promo',
+    innerMod: 'title-block__inner-50'
+  },
+  simpleImg: 'laptop-video.png'
+}
+sectionFeatures: {
+  video: true
+}
+
+
+sectionPrinciples: {
+  titleBlock: {
+    subttl: 'ми впевнені, що у вас є як мінімум',
+    title: '<small>6 причин замовити</small> білборд',
+    text: 'білборд',
+    titleMod: 'glitch--bottom glitch--xs-none'
+  }
+}
+
+
+featuresMod: 'features--three-col'
+features: [
+  {
+    icon: 'collective',
+    title: '<span class="underlined"><span>Анализируем</span></span>',
+    text: 'Мы не просто создаем крутой промо ролик.
+Мы делаем так, что все ваши конкуренты
+остаются далеко позади, а видео работает
+на вашу репутацию еще долгие годы '
+  },
+  {
+    icon: 'media-arts',
+    title: '<span class="underlined"><span>Всегда в тренде</span></span>',
+    text: 'Мы не просто создаем крутой промо ролик.
+Мы делаем так, что все ваши конкуренты
+остаются далеко позади, а видео работает
+на вашу репутацию еще долгие годы '
+  },
+  {
+    icon: 'flag',
+    title: '<span class="underlined"><span>Работаем на результат</span></span>',
+    text: 'Мы не просто создаем крутой промо ролик.
+Мы делаем так, что все ваши конкуренты
+остаются далеко позади, а видео работает
+на вашу репутацию еще долгие годы '
+  },
+  {
+    icon: 'specialist',
+    title: '<span class="underlined"><span>Опытные видеомейкеры</span></span>',
+    text: 'Мы не просто создаем крутой промо ролик.
+Мы делаем так, что все ваши конкуренты
+остаются далеко позади, а видео работает
+на вашу репутацию еще долгие годы '
+  },
+  {
+    icon: 'project-management',
+    title: '<span class="underlined"><span>Современные инструменты</span></span>',
+    text: 'Мы не просто создаем крутой промо ролик.
+Мы делаем так, что все ваши конкуренты
+остаются далеко позади, а видео работает
+на вашу репутацию еще долгие годы '
+  },
+  {
+    icon: 'computer-graphic',
+    title: '<span class="underlined"><span>Уникальные приемы</span></span>',
+    text: 'Мы не просто создаем крутой промо ролик.
+Мы делаем так, что все ваши конкуренты
+остаются далеко позади, а видео работает
+на вашу репутацию еще долгие годы '
+  },
+  {
+    icon: 'research-1',
+    title: '<span class="underlined"><span>Прислушиваемся к клиенту</span></span>',
+    text: 'Мы не просто создаем крутой промо ролик.
+Мы делаем так, что все ваши конкуренты
+остаются далеко позади, а видео работает
+на вашу репутацию еще долгие годы '
+  },
+  {
+    icon: 'counsel',
+    title: '<span class="underlined"><span>Подскажем и посоветуем</span></span>',
+    text: 'Мы не просто создаем крутой промо ролик.
+Мы делаем так, что все ваши конкуренты
+остаются далеко позади, а видео работает
+на вашу репутацию еще долгие годы '
+  },
+  {
+    icon: 'computer-2',
+    title: '<span class="underlined"><span>Видео для всех платформ</span></span>',
+    text: 'Мы не просто создаем крутой промо ролик.
+Мы делаем так, что все ваши конкуренты
+остаются далеко позади, а видео работает
+на вашу репутацию еще долгие годы '
+  }
+]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}  
+  {% include "partials/_hero.html" %}
+  {% include "partials/video/_s-video-for.html" %}
+  {% include "partials/services/_s-hero.html" %}
+
+  {% include "partials/services/_s-features.html" %}
+  {% include "partials/sections/_s-order-bg.html" %}
+  
+
+  {% import "./data/_features.html" as allFeatures %}
+  {% set featuresMod = 'features--border' %}
+  {% set features = allFeatures.video %}
+
+  {% include "partials/video/_s-video-why.html" %}
+  {% include "partials/video/_s-video-plans.html" %}
+  {% include "partials/video/_s-video-steps.html" %}
+  
+  
+   
+  
+  {% include "partials/sections/_s-order.html" %}
+{% endblock %}

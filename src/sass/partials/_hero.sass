@@ -59,8 +59,9 @@
     // margin-right: -10%
     +flex(flex-end, center)
     // margin-top: 5%
-    opacity: 0
-    transform: translate(-100%, 0)
+    &:not(.hero__img-absolute)
+      opacity: 0
+      transform: translate(-100%, 0)
     +xl
       margin-right: 0
     +md
@@ -82,6 +83,17 @@
       margin-left: -160px
 
 
+  &__img-absolute
+    position: absolute
+    z-index: 1
+    top: $header-height
+    bottom: 0
+    right: 0
+    +md
+      // width: 40%
+      display: none
+    // +sm
+      // display: none
   &__img-in
     position: relative
     display: inline-block

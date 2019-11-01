@@ -1,0 +1,40 @@
+.video-thumbs
+  &__items
+    +flex(flex-start, normal, row, wrap)
+    margin-left: -15px
+    margin-right: -15px
+    margin-bottom: 55px
+    +xl
+      margin-bottom: 40px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__item
+    padding-left: 15px
+    padding-right: 15px
+    width: 33.33333%
+  &__btn
+    text-align: center
+
+.video-thumb
+  display: block
+  text-align: center
+  &__title
+    display: block
+    margin-bottom: 15px
+  &__img
+    display: block
+    position: relative
+    padding-top: 60%
+    +cover
+  &__icon
+    +vcenter
+    z-index: 1
+    background-color: $black
+    color: $yellow
+    border-radius: 50%
+    overflow: hidden
+    font-size: 0
+    .icon
+      font-size: 48px

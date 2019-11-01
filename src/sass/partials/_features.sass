@@ -13,8 +13,32 @@
           width: 50%
         +xss
           width: 100%
+  &--border
+    border-top: 1px dashed $c-border
+    position: relative
+    +after
+      border-right: 1px solid  $white
+      top: 0
+      bottom: 0
+      right: 1px
+      z-index: 1
+      position: absolute
+    .feature
+      max-width: 320px
+      margin-left: auto
+      margin-right: auto
+      &__wrap
+        width: 33.33333%
+        border-bottom: 1px dashed $c-border
+        border-right: 1px dashed $c-border
+        +md
+          width: 50%
+        +xss
+          width: 100%
+
 
 .feature
+  $this: &
   color: $gray-light
   position: relative
   margin-bottom: 50px
@@ -62,3 +86,25 @@
     background-color: $white
     +md
       margin-bottom: 10px
+  &__nmb
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 1
+    transform: translate(100%, 0)
+
+  &--block
+    margin-top: 50px
+    +xl
+      margin-top: 40px
+    +lg
+      margin-top: 30px
+    +md
+      margin-top: 20px
+    +sm
+      margin-top: 10px
+    +before
+      display: none
+    #{$this}__icon
+      color: $yellow
+      

@@ -82,7 +82,6 @@
       </div>
 
       {% if hero.letter %}
-
       <div class="hero__img">
         <div class="hero__img-in js-parallax-scene">
           <div data-depth="0.1">
@@ -100,10 +99,17 @@
             </svg>
         </div>       
       </div>
-      {% endif %}    
+      {% endif %}
+      
     </div>
     
   </div>
+
+  {% if hero.img %}
+  <div class="hero__img hero__img-absolute">
+    <img class="js-lazy" alt="" src="" data-src="./img/hero/{{ hero.img }}"/>      
+  </div>
+  {% endif %}
 
   {% if hero.bgImageRight %}
   <div class="hero__bg js-lazy" data-background-image="img/hero/{{ hero.bgImageRight }}"></div>

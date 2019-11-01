@@ -1,0 +1,70 @@
+{%set
+items = [
+  {
+    img: '01.png',
+    title: 'Владельцам <br>
+бизнеса',
+    text: 'Если вы хотите быстро и эффектно заявить
+о себе и своем бизнеса в интернете - нет лучшего 
+способа, чем промо ролик от Demiweb International
+'
+  },
+  {
+    img: '02.png',
+    title: 'Крупным <br>
+компаниям',
+    text: 'Если вы хотите быстро и эффектно заявить
+о себе и своем бизнеса в интернете - нет лучшего 
+способа, чем промо ролик от Demiweb International
+'
+  },
+  {
+    img: '03.png',
+    title: 'Маргетинговым <br>
+агенствам',
+    text: 'Если вы хотите быстро и эффектно заявить
+о себе и своем бизнеса в интернете - нет лучшего 
+способа, чем промо ролик от Demiweb International
+'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section pt-lg pb-mdl">
+    {{ mixins.titleBlock(
+        subttl = 'для кого',
+        title = '<small>подойдет создание</small>промо ролика',
+        text = 'промо ролика',
+        par = 'Подберите для себя оптимальный для вас тариф, который покроет <br> все ваши потребности. Бюджетный тариф Basic подойдет для <br> быстрого и недорого создания ролика. Или выбирайте тариф <br> Exclusive, если хотите получить уникальный промо ролик',
+        titleMod = 'glitch--bottom glitch--xs-none'
+      ) }}
+
+  <div class="container">
+    <!-- begin for-items -->
+    <div class="for-items">
+      {% for i in items %}
+      <div class="for-items__item">
+        <!-- begin for-item -->
+        <div class="for-item">
+          <div class="for-item__img">
+            <img class="js-lazy" alt="" src="" data-src="./img/video/{{ i.img }}"/>
+          </div>
+
+          <div class="for-item__content">
+            <div class="for-item__title">
+              <div class="h4 h4--black h4--bold h4--ttn">{{ i.title | safe }}</div>
+            </div>
+
+            <div class="for-item__text text text--gray-light">{{ i.text | safe }}</div>
+          </div>
+        </div>
+        <!-- end for-item -->
+      </div>
+      {% endfor %}
+      
+    </div>
+    <!-- end for-items -->
+  </div>  
+</section>
+<!-- end section -->

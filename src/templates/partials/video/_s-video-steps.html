@@ -1,0 +1,67 @@
+{%set
+steps = [
+  {
+    title: 'Аудит компании<span class="underlined"><span>и анализ аудитории</span></span>',
+    nmb: '1'
+  },
+  {
+    title: 'Определяемся<span class="underlined"><span>со сценарием</span></span>',
+    nmb: '2'
+  },
+  {
+    title: 'Подбираем эффекты<span class="underlined"><span>и создаем видео</span></span>',
+    nmb: '3'
+  },
+  {
+    title: 'Утверждаем ролик<span class="underlined"><span>и закрываем проект</span></span>',
+    nmb: '4',
+    icon: true
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section pt-sm pb-mdl">
+    {{ mixins.titleBlock(
+        subttl = 'узнайте, какие',
+        title = '<small>этапы работы</small>нас ожидают',
+        text = 'нас ожидают',
+        par = 'Создание видео - непростой процесс, к которому нужно подходить <br> взвешено и обдумать каждый элемент. Ведь промо ролик-  это <br> визитная карточка компании и несет огромную ценность.',
+        titleMod = 'glitch--bottom glitch--xs-none'
+      ) }}
+
+  <div class="container">
+    <!-- begin steps -->
+    <div class="steps">
+      {% for i in steps %}
+      <!-- begin step -->
+      <div class="step">
+        <div class="step__top">
+          <div class="step__nmb">{{ i.nmb | safe }}</div>
+          {% if i.icon %}
+          <div class="step__icon">
+            {{ mixins.icon('racing-flag') }}
+          </div>
+          {% endif %}
+        </div>
+
+        <div class="step__content">
+          <div class="step__title">
+            <div class="h4 h4--bold h4--black h4--ttn">
+              {{ i.title | safe }}
+            </div>
+          </div>
+
+          <div class="step__text text text--gray-light">Мы находим сильные и слабые стороны 
+            Вашей компании; успешный и неудачный 
+            опыт конкурентов в создании промо видео.
+          </div>
+        </div>
+      </div>
+      <!-- end step -->
+      {% endfor %}
+    </div>
+    <!-- end steps -->
+  </div>  
+</section>
+<!-- end section -->

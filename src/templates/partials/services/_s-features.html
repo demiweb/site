@@ -55,6 +55,12 @@
 
       {% include "partials/_features.html" %}
       {% endif %}
+
+      {% if sectionFeatures.video %}
+      <div class="s-features__items">
+        {% include "partials/_video-items.html" %}
+      </div>
+      {% endif %}
     </div>
   </div>
 </section>

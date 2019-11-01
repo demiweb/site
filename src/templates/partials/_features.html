@@ -3,7 +3,7 @@
   {% for i in features %}
   <div class="feature__wrap">
     <!-- begin feature -->
-    <div class="feature js-stagger-el">
+    <div class="feature{% if i.mod %} {{ i.mod }}{% endif %} js-stagger-el">
       <div class="feature__inner">
         <div class="feature__icon">
           {{ mixins.icon(i.icon) }}
@@ -14,6 +14,10 @@
         </div>
 
         <div class="feature__text">{{ i.text | safe }}</div>
+
+        {% if i.nmb %}
+        <div class="feature__nmb">{{ i.nmb | safe }}</div>
+        {% endif %}
       </div>
     </div>
     <!-- end feature -->

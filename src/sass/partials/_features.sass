@@ -17,10 +17,10 @@
     border-top: 1px dashed $c-border
     position: relative
     +after
-      border-right: 1px solid  $white
+      border-right: 2px solid  $white
       top: 0
       bottom: 0
-      right: 1px
+      right: 0px
       z-index: 1
       position: absolute
     .feature
@@ -92,9 +92,15 @@
     right: 0
     z-index: 1
     transform: translate(100%, 0)
+    +lg
+      transform: translate(0, 0)
 
   &--block
     margin-top: 50px
+    .feature
+      &__wrap
+        +xs
+          width: 100%
     +xl
       margin-top: 40px
     +lg

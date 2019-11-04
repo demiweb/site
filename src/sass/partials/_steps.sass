@@ -4,6 +4,12 @@
 .step
   width: 25%  
   position: relative
+  margin-bottom: 30px
+  opacity: 0
+  +md
+    width: 50%
+  +xs
+    width: 100%
   &__nmb, &__icon
     border-radius: 50%
     width: 50px
@@ -43,3 +49,5 @@
       margin-bottom: 15px
   &__content
     padding-right: 40px
+    +lg
+      padding-right: 15px

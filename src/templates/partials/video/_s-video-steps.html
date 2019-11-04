@@ -32,10 +32,10 @@ steps = [
 
   <div class="container">
     <!-- begin steps -->
-    <div class="steps">
+    <div class="steps js-stagger">
       {% for i in steps %}
       <!-- begin step -->
-      <div class="step">
+      <div class="step js-stagger-el">
         <div class="step__top">
           <div class="step__nmb">{{ i.nmb | safe }}</div>
           {% if i.icon %}

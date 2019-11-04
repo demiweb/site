@@ -9,6 +9,7 @@ export default function animateHero() {
   const {
     header,
     letterWrap,
+    heroImgAbsolute,
     letter,
     letterShadow,
     splitText,
@@ -25,6 +26,7 @@ export default function animateHero() {
   } = {
     header: document.querySelector('.header'),
     letterWrap: document.querySelector('.hero__img'),
+    heroImgAbsolute: document.querySelector('.hero__img-absolute'),
     letter: document.querySelector('.hero__img .icon-D'),
     letterShadow: document.querySelector('.hero__img .letter-shadow'),
     splitText: document.querySelectorAll('.hero__img .letter'),
@@ -42,7 +44,7 @@ export default function animateHero() {
 
   const tl = new TimelineLite();
 
-  // ============= start CONDITION timeline =============
+  // ============= start CONDITION timeline =============  
   if (letterWrap && letter && letterShadow) {
     tl
       .fromTo(
@@ -230,6 +232,17 @@ export default function animateHero() {
       '-=.3'
     );
   };
+
+  if (heroImgAbsolute && window.matchMedia('(min-width: 992px)').matches) {
+    tl
+      .fromTo(
+        heroImgAbsolute,
+        1,
+        { opacity: 0 },
+        { opacity: 1 },
+        '-=.4'
+      );
+  }
   // ============= end CONDITION timeline =============
 
   // set letter position on resize

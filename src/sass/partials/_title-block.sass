@@ -2,11 +2,8 @@
   $this: &
   position: relative
   overflow: hidden
-  // padding-top: 15px
   +css-lock(20, 70, 320, 1499, padding-top)
   +css-lock(20, 70, 320, 1499, padding-bottom)
-  // padding-bottom: 15px
-  // min-height: 320px
   +css-lock(170, 320, 320, 1499, min-height)
   +flex(center, normal, column)
   > .container
@@ -66,6 +63,8 @@
     z-index: 1
     right: 0
     bottom: 0
+    +r(599)
+      display: none
   &__square-wrap
     @extend .container
     padding-left: 0

@@ -242,9 +242,17 @@
 
 .s-order
   $this: &
+  position: relative
+  +sm
+    +before
+      +coverdiv
+      z-index: 0
+      background-color: rgba($white, .5)
   &__inner
     +flex(flex-start, normal, row, wrap)
     overflow: hidden
+    position: relative
+    z-index: 1
   &__left
     width: percentage(8/12)
     padding-right: 15px

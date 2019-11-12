@@ -242,12 +242,7 @@
 
 .s-order
   $this: &
-  position: relative
-  +sm
-    +before
-      +coverdiv
-      z-index: 0
-      background-color: rgba($white, .5)
+  position: relative  
   &__inner
     +flex(flex-start, normal, row, wrap)
     overflow: hidden
@@ -316,6 +311,11 @@
   &--bg
     +cover
     #{$this}__title
+    +sm
+      +before
+        +coverdiv
+        z-index: 0
+        background-color: rgba($white, .5)
   &--sm
     #{$this}__left
       margin-left: percentage(2/12)

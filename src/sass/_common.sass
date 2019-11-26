@@ -360,6 +360,7 @@ input, textarea
         transform: translate(0, 0)
 .price
   @extend .title
+  text-transform: none
   small
     font-size: .3em
     text-transform: none
@@ -371,6 +372,8 @@ input, textarea
     +bold
     small
       font-family: inherit
+  &--medium
+    +medium
 
 .error-nmb
   text-transform: uppercase

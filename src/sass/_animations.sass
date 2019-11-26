@@ -112,7 +112,14 @@
   50%
     transform: translate(0, 0)
   100%
-    transform: translate(-75%, 0)
+    transform: translate(calc(-100% + 330px), 0)
+  +sm
+    0%
+      transform: translate(100%, 0)
+    50%
+      transform: translate(0, 0)
+    100%
+      transform: translate(-75%, 0)
   +r(599)
     0%
       transform: translate(100%, 0)
@@ -126,7 +133,7 @@
   0%
     transform: translate(100%, 0)
   100%
-    transform: translate(-75%, 0)
+    transform: translate(calc(-100% + 330px), 0)
 
 @keyframes slideBeforeRightShort
   0%

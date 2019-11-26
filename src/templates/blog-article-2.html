@@ -1,0 +1,31 @@
+---
+title: blog-article-2
+page: blog-article-2
+hero: {
+  modifications: {
+    section: 'hero--content'
+  },
+  subttl: 'події',
+  title: '<small>16 вересня відбудеться</small><strong class="glitch" data-text="IT-конференція">IT-конференція</strong>',
+  meta: true,
+  bgImage: 'bg-hero-blog-page.jpg',
+  breadcrumbs: {
+    list: [
+      { link: 'Головна' },
+      { item: '-' },
+      { link: 'блог' },
+      { item: '-' },
+      { link: '16 вересня відбудеться It-конференція', modLink: 'is-active' },
+    ]
+  },
+  scrollToTarget: 'blog-article'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}  
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-blog-article.html" %}
+  {% include "partials/sections/_s-popular-articles.html" %}
+  {% include "partials/sections/_s-subscribe-full.html" %}
+{% endblock %}

@@ -188,88 +188,93 @@
       animation-play-state: paused
 
 .blog-article
-  article
-    margin-bottom: 60px
-    +xl
+  figure, ul, ol, blockquote, article, .title-block
+    +notlast
       margin-bottom: 50px
-    +lg
-      margin-bottom: 40px
-    +md
-      margin-bottom: 30px
-    +sm
-      margin-bottom: 20px
-    +xs
-      margin-bottom: 15px
-  img
-    width: 100%
-    margin-bottom: 25px
-    &:last-child
-      margin-bottom: 0
-    +lg
-      margin-bottom: 20px
-    +md
-      margin-bottom: 15px
-    +sm
-      margin-bottom: 10px
+      +lg
+        margin-bottom: 40px
+      +md
+        margin-bottom: 30px
+      +sm
+        margin-bottom: 20px
+      +xs
+        margin-bottom: 15px
+  p, h1, h2, h3, h4, h5, h6
+    +notlast
+      margin-bottom: 25px
+      +lg
+        margin-bottom: 20px
+      +md
+        margin-bottom: 15px
+      +sm
+        margin-bottom: 10px
+  article
+    +clr
+    img
+      float: right
+      margin-left: 25px
+      margin-bottom: 25px
+      +md
+        margin-left: 0
+        float: none
+        width: 100%
+        margin-bottom: 15px
+      +sm
+
+  figure
+    img
+      width: 100%
   h2
     +css-lock(18, 24, 320, 1499, font-size)
     line-height: 1.2
     +medium
-    margin-bottom: 25px
-    +lg
-      margin-bottom: 20px
-    +md
-      margin-bottom: 15px
-    +sm
-      margin-bottom: 10px
+    
   ol
     list-style-type: decimal
     padding-left: 1em
-  ul
-    margin-bottom: 50px
-    &:last-child
-      margin-bottom: 0
-    +xl
-      margin-bottom: 40px
-    +lg
-      margin-bottom: 30px
-    +md
-      margin-bottom: 20px
-    +sm
-      margin-bottom: 15px
     li
-      &::before
-        content: "\2022"
-        // width: 1em
-        display: inline-block
-        margin-right: .5em
+      +before
+        display: none
+
   li
+    list-style-type: none
     position: relative
-    margin-bottom: 25px
-    &:last-child
-      margin-bottom: 0    
-    +lg
-      margin-bottom: 20px
-    +md
-      margin-bottom: 15px
-    +sm
-      margin-bottom: 10px
-  p
-    margin-bottom: 25px
-    &:last-child
-      margin-bottom: 0
-    +lg
-      margin-bottom: 20px
-    +md
-      margin-bottom: 15px
-    +sm
-      margin-bottom: 10px
+    &::before
+      content: "\2022"
+      // width: 1em
+      display: inline-block
+      margin-right: .5em
   a
     color: $blue
     text-decoration: underline
   blockquote
     li
       margin-bottom: 0
+  table    
+    td, th
+      border: 1px solid  $gray
+      padding: 20px
+      vertical-align: middle
+      text-align: center
+      +sm
+        padding-left: 20px
+        padding-right: 20px
+      +xs
+        padding: 15px
+      +xss
+        padding: 10px
+      .price
+        display: inline-block
+        white-space: nowrap
+      p
+        text-align: left
+    th
+      font-weight: 400
+      @extend .h4
+      +medium
+      text-transform: none
+      padding-left: 50px
+      padding-right: 50px
 
 .blog-aside
   &__article

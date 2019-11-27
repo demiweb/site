@@ -47,6 +47,9 @@ input, textarea
 .overflow-visible
   overflow: visible !important
 
+.regular
+  +reg
+
 .out
   &.has-fixed-header
     padding-top: $header-height
@@ -394,4 +397,47 @@ input, textarea
     margin-bottom: 10px
     strong
       color: $black
+
+.flex-block
+  $this: &
+  display: flex
+  // flex-wrap: wrap
+  // width: 100%
+  margin-left: -15px
+  margin-right: -15px
+  +lg
+    flex-wrap: wrap
+    // display: block
+  > img
+    max-width: calc(100% - 30px)
+    margin-left: 15px
+    margin-right: 15px
+  img
+    +lg
+      display: block
+      margin-left: auto
+      margin-right: auto
+      order: 0
+      +notlast
+        margin-bottom: 30px
+    +md
+      +notlast
+        margin-bottom: 15px
+  &__col
+    +flex(center, normal, column)
+    padding-left: 15px
+    padding-right: 15px
+    +lg
+      display: block
+      order: 1
+      +notlast
+        margin-bottom: 30px
+    +md
+      +notlast
+        margin-bottom: 15px
+  &--half
+    #{$this}__col
+      width: 50%
+      +lg
+        width: 100%
 

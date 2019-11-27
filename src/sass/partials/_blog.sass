@@ -188,7 +188,7 @@
       animation-play-state: paused
 
 .blog-article
-  figure, ul, ol, blockquote, article, .title-block
+  figure, ul, ol, blockquote, article, .title-block, .flex-block
     +notlast
       margin-bottom: 50px
       +lg
@@ -230,12 +230,7 @@
     +medium
     
   ol
-    list-style-type: decimal
-    padding-left: 1em
-    li
-      +before
-        display: none
-
+    +counter('article', '.')
   li
     list-style-type: none
     position: relative
@@ -275,6 +270,7 @@
       text-transform: none
       padding-left: 50px
       padding-right: 50px
+
 
 .blog-aside
   &__article

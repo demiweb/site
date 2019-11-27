@@ -9,6 +9,7 @@ PageList:
 - file: blog.html
 - file: blog-article.html
 - file: blog-article-2.html
+- file: blog-article-3.html
 - file: politic.html
 - file: review.html
 - file: services-web-site-corporate.html

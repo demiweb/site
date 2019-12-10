@@ -1,0 +1,64 @@
+{% set name = 'discount' %}
+{% set mod = 'popup--lg popup--discount' %}
+
+{% if popup.discount %}
+  {% set active = true %}
+{% endif %}
+
+{% extends "layouts/_popup.html" %}
+
+{% block content %}
+
+  <div class="popup__img-top">
+    <img class="js-lazy" alt="" src="" data-src="./img/santa.png"/>
+  </div>
+  
+  <div class="popup__discount">
+    <!-- begin popup-discount -->
+    <div class="popup-discount">
+      <form>
+        <div class="popup-discount__top">
+          <div class="popup-discount__date">Акция действует до 31.12.2019</div>
+          
+          <div class="popup-discount__title">
+            <div class="title">
+              Хо-хо-хо!  <br> Новогодняя скидка <span class="red">100$</span> <br> на все виды услуг
+            </div>
+          </div>
+
+          <div class="popup-discount__title-label">от Санты!</div>
+
+          
+        </div>
+
+        <div class="popup-discount__content">
+          <div class="popup-discount__text">
+            Теперь заказать можно <strong>еще выгодней!</strong> Успейте оформить ваш сайт перед Новогодними праздниками
+          </div>
+
+          <div class="popup-discount__input">
+            {{ mixins.input(
+              name = 'input',
+              mod = 'input--sm',
+              type = 'tel',
+              placeholder = 'Ваш номер телефона',
+              value = '',
+              fieldClass = ''
+            ) }}
+          </div>
+        </div>
+
+        <div class="popup-discount__btn">
+          {{ mixins.btn(
+            title = 'Получить скидку от Санты!',
+            mod = 'btn--red btn--full btn--xll',
+            href = false
+          ) }}
+        </div>
+      </form>
+    </div>
+    <!-- end popup-discount -->
+  </div>
+
+
+{% endblock %}

@@ -70,4 +70,71 @@
       margin-bottom: 10px
     .icon
       font-size: 16px
+  &__img-top
+    position: absolute
+    width: 100%
+    text-align: center
+    left: 50%
+    top: 0
+    transform: translate(-50%, -50%)
+    z-index: 1
+    pointer-events: none
+
+  &--lg
+    #{$this}__inner
+      max-width: 1000px
+  &--discount
+    #{$this}__inner
+      padding-top: 100px
+      text-align: left
+      +lg
+        padding-top: 80px
+
+.popup-discount
+  &__top
+    position: relative
+    margin-bottom: 45px
+    +lg
+      margin-bottom: 30px
+  &__date
+    position: absolute
+    top: .5em
+    right: 0
+    z-index: 1
+    font-size: $fz-sm
+    color: $gray
+    +lg
+      top: 0
+    +sm
+      position: static
+      margin-bottom: 15px
+      text-align: right
+  &__title-label
+    +css-lock(32, 48, 599, 1499, font-size)
+    line-height: 1
+    +mistral
+  &__content
+    +flex(flex-start, normal, row, wrap)
+    margin-bottom: 45px
+    +lg
+      margin-bottom: 30px
+  &__text
+    font-size: 21px
+    line-height: 1.2
+    width: 50%
+    padding-right: 15px
+    +lg
+      font-size: 18px
+    +md
+      font-size: 16px
+    +sm
+      width: 100%
+      padding-right: 0
+      margin-bottom: 15px
+  &__input
+    width: 50%
+    padding-left: 15px
+    +sm
+      width: 100%
+      padding-left: 0
 

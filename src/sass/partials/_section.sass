@@ -70,6 +70,8 @@
     z-index: 1
     padding-top: 150%
     opacity: 0
+    +r(599)
+      padding-top: 60%
   +before
     +coverdiv
     z-index: 0
@@ -83,6 +85,8 @@
       right: -10%
 
 .s-more
+  +r(599)
+    display: none
   +xs
     padding-top: 85px
   +r(320)
@@ -424,6 +428,9 @@
     bottom: auto
     top: 0
     right: -12%
+  &__title-block
+    +r(599)
+      display: none
 
 .s-feedbacks
   .word
